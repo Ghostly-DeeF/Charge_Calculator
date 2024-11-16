@@ -24,7 +24,13 @@ namespace IZNT {
 			//TODO: добавьте код конструктора
 			//
 		}
+	private:
+		System::Windows::Forms::CheckBox^ underwater_checkBox;
+		float thickness_balk = 0.0f;
+		float width_balk = 0.0f;
 		float answer = 0.0f;
+	public:
+		
 	protected:
 		/// <summary>
 		/// Освободить все используемые ресурсы.
@@ -78,18 +84,21 @@ namespace IZNT {
 			this->thickness_balk_textBox = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->type_wood_comboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->underwater_checkBox = (gcnew System::Windows::Forms::CheckBox());
 			this->SuspendLayout();
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 13.25F, System::Drawing::FontStyle::Bold));
-			this->label1->Location = System::Drawing::Point(23, 21);
+			this->label1->Location = System::Drawing::Point(58, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(653, 21);
+			this->label1->Size = System::Drawing::Size(593, 42);
 			this->label1->TabIndex = 1;
-			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания бруса\r\n";
+			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nбруса или плоского пакет"
+				L"а свай\r\n";
+			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// answer_textBox
 			// 
@@ -125,9 +134,9 @@ namespace IZNT {
 			this->label4->Location = System::Drawing::Point(13, 216);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(130, 15);
+			this->label4->Size = System::Drawing::Size(184, 15);
 			this->label4->TabIndex = 13;
-			this->label4->Text = L"Ширина бруса в см";
+			this->label4->Text = L"Ширина бруса (пакета) в см";
 			// 
 			// width_balk_textBox
 			// 
@@ -171,9 +180,9 @@ namespace IZNT {
 			this->label5->Location = System::Drawing::Point(16, 294);
 			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(137, 15);
+			this->label5->Size = System::Drawing::Size(191, 15);
 			this->label5->TabIndex = 18;
-			this->label5->Text = L"Толщина бруса в см";
+			this->label5->Text = L"Толщина бруса (пакета) в см";
 			// 
 			// thickness_balk_textBox
 			// 
@@ -183,6 +192,7 @@ namespace IZNT {
 			this->thickness_balk_textBox->Name = L"thickness_balk_textBox";
 			this->thickness_balk_textBox->Size = System::Drawing::Size(211, 26);
 			this->thickness_balk_textBox->TabIndex = 17;
+			this->thickness_balk_textBox->TextChanged += gcnew System::EventHandler(this, &Balk1::thickness_balk_textBox_TextChanged);
 			// 
 			// label2
 			// 
@@ -210,12 +220,24 @@ namespace IZNT {
 			this->type_wood_comboBox->Size = System::Drawing::Size(211, 28);
 			this->type_wood_comboBox->TabIndex = 19;
 			// 
+			// underwater_checkBox
+			// 
+			this->underwater_checkBox->AutoSize = true;
+			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->underwater_checkBox->Location = System::Drawing::Point(16, 355);
+			this->underwater_checkBox->Name = L"underwater_checkBox";
+			this->underwater_checkBox->Size = System::Drawing::Size(171, 24);
+			this->underwater_checkBox->TabIndex = 21;
+			this->underwater_checkBox->Text = L"Взрыв под водой";
+			this->underwater_checkBox->UseVisualStyleBackColor = true;
+			// 
 			// Balk1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->underwater_checkBox);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->type_wood_comboBox);
 			this->Controls->Add(this->label5);
@@ -238,5 +260,7 @@ namespace IZNT {
 		}
 #pragma endregion
 	private: System::Void calc_button_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void thickness_balk_textBox_TextChanged(System::Object^ sender, System::EventArgs^ e);
+	
 };
 }

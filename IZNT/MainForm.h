@@ -4,6 +4,9 @@
 
 #include "Wood1.h"
 #include "Balk1.h"
+#include "WoodTwoBalk.h"
+#include "WoodNoncontact.h"
+#include "WoodStump.h"
 
 namespace IZNT {
 
@@ -35,12 +38,13 @@ namespace IZNT {
 	private: System::Windows::Forms::Button^ btnWoodTwoBalk;
 
 
-	private: System::Windows::Forms::Button^ btnWoodPack;
 
 
-	private: System::Windows::Forms::Button^ btnWoodUnderwater;
+
+
 	private: System::Windows::Forms::Button^ btnWoodNoncontact;
-	private: System::Windows::Forms::Button^ btnWoodNoncontactUnderwater;
+	private: System::Windows::Forms::Button^ btnWoodStump;
+
 
 
 	private: System::Windows::Forms::Button^ btnSteelPlate;
@@ -71,10 +75,8 @@ namespace IZNT {
 			this->btnWood = (gcnew System::Windows::Forms::Button());
 			this->btnWoodBalk = (gcnew System::Windows::Forms::Button());
 			this->btnWoodTwoBalk = (gcnew System::Windows::Forms::Button());
-			this->btnWoodPack = (gcnew System::Windows::Forms::Button());
-			this->btnWoodUnderwater = (gcnew System::Windows::Forms::Button());
 			this->btnWoodNoncontact = (gcnew System::Windows::Forms::Button());
-			this->btnWoodNoncontactUnderwater = (gcnew System::Windows::Forms::Button());
+			this->btnWoodStump = (gcnew System::Windows::Forms::Button());
 			this->steel_group = (gcnew System::Windows::Forms::Button());
 			this->btnSteelPlate = (gcnew System::Windows::Forms::Button());
 			this->btnSteelBalk = (gcnew System::Windows::Forms::Button());
@@ -102,10 +104,8 @@ namespace IZNT {
 			this->flowLayoutPanel1->Controls->Add(this->btnWood);
 			this->flowLayoutPanel1->Controls->Add(this->btnWoodBalk);
 			this->flowLayoutPanel1->Controls->Add(this->btnWoodTwoBalk);
-			this->flowLayoutPanel1->Controls->Add(this->btnWoodPack);
-			this->flowLayoutPanel1->Controls->Add(this->btnWoodUnderwater);
 			this->flowLayoutPanel1->Controls->Add(this->btnWoodNoncontact);
-			this->flowLayoutPanel1->Controls->Add(this->btnWoodNoncontactUnderwater);
+			this->flowLayoutPanel1->Controls->Add(this->btnWoodStump);
 			this->flowLayoutPanel1->Controls->Add(this->steel_group);
 			this->flowLayoutPanel1->Controls->Add(this->btnSteelPlate);
 			this->flowLayoutPanel1->Controls->Add(this->btnSteelBalk);
@@ -139,7 +139,7 @@ namespace IZNT {
 			this->btnWood->Name = L"btnWood";
 			this->btnWood->Size = System::Drawing::Size(155, 86);
 			this->btnWood->TabIndex = 7;
-			this->btnWood->Text = L"Бревно";
+			this->btnWood->Text = L"Бревно или куст свай";
 			this->btnWood->UseVisualStyleBackColor = true;
 			this->btnWood->Visible = false;
 			this->btnWood->Click += gcnew System::EventHandler(this, &MainForm::btnWood_Click);
@@ -154,7 +154,7 @@ namespace IZNT {
 			this->btnWoodBalk->Name = L"btnWoodBalk";
 			this->btnWoodBalk->Size = System::Drawing::Size(155, 86);
 			this->btnWoodBalk->TabIndex = 8;
-			this->btnWoodBalk->Text = L"Брус";
+			this->btnWoodBalk->Text = L"Брус или пакет бревен";
 			this->btnWoodBalk->UseVisualStyleBackColor = false;
 			this->btnWoodBalk->Visible = false;
 			this->btnWoodBalk->Click += gcnew System::EventHandler(this, &MainForm::btnWoodBalk_Click);
@@ -166,53 +166,34 @@ namespace IZNT {
 			this->btnWoodTwoBalk->Name = L"btnWoodTwoBalk";
 			this->btnWoodTwoBalk->Size = System::Drawing::Size(155, 86);
 			this->btnWoodTwoBalk->TabIndex = 9;
-			this->btnWoodTwoBalk->Text = L"Деревянные двутавровые балки";
+			this->btnWoodTwoBalk->Text = L"Двутавровая балка";
 			this->btnWoodTwoBalk->UseVisualStyleBackColor = true;
 			this->btnWoodTwoBalk->Visible = false;
-			// 
-			// btnWoodPack
-			// 
-			this->btnWoodPack->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnWoodPack->Location = System::Drawing::Point(24, 329);
-			this->btnWoodPack->Name = L"btnWoodPack";
-			this->btnWoodPack->Size = System::Drawing::Size(155, 86);
-			this->btnWoodPack->TabIndex = 10;
-			this->btnWoodPack->Text = L"Пакеты бревен над водой";
-			this->btnWoodPack->UseVisualStyleBackColor = true;
-			this->btnWoodPack->Visible = false;
-			// 
-			// btnWoodUnderwater
-			// 
-			this->btnWoodUnderwater->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnWoodUnderwater->Location = System::Drawing::Point(24, 421);
-			this->btnWoodUnderwater->Name = L"btnWoodUnderwater";
-			this->btnWoodUnderwater->Size = System::Drawing::Size(155, 86);
-			this->btnWoodUnderwater->TabIndex = 11;
-			this->btnWoodUnderwater->Text = L"Одиночные бревна под водой";
-			this->btnWoodUnderwater->UseVisualStyleBackColor = true;
-			this->btnWoodUnderwater->Visible = false;
+			this->btnWoodTwoBalk->Click += gcnew System::EventHandler(this, &MainForm::btnWoodTwoBalk_Click);
 			// 
 			// btnWoodNoncontact
 			// 
 			this->btnWoodNoncontact->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnWoodNoncontact->Location = System::Drawing::Point(24, 513);
+			this->btnWoodNoncontact->Location = System::Drawing::Point(24, 329);
 			this->btnWoodNoncontact->Name = L"btnWoodNoncontact";
 			this->btnWoodNoncontact->Size = System::Drawing::Size(155, 86);
 			this->btnWoodNoncontact->TabIndex = 12;
 			this->btnWoodNoncontact->Text = L"Подрыв неконтактным зарядом";
 			this->btnWoodNoncontact->UseVisualStyleBackColor = true;
 			this->btnWoodNoncontact->Visible = false;
+			this->btnWoodNoncontact->Click += gcnew System::EventHandler(this, &MainForm::btnWoodNoncontact_Click);
 			// 
-			// btnWoodNoncontactUnderwater
+			// btnWoodStump
 			// 
-			this->btnWoodNoncontactUnderwater->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnWoodNoncontactUnderwater->Location = System::Drawing::Point(24, 605);
-			this->btnWoodNoncontactUnderwater->Name = L"btnWoodNoncontactUnderwater";
-			this->btnWoodNoncontactUnderwater->Size = System::Drawing::Size(155, 86);
-			this->btnWoodNoncontactUnderwater->TabIndex = 13;
-			this->btnWoodNoncontactUnderwater->Text = L"Подрыв неконтактным зарядом под водой";
-			this->btnWoodNoncontactUnderwater->UseVisualStyleBackColor = true;
-			this->btnWoodNoncontactUnderwater->Visible = false;
+			this->btnWoodStump->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
+			this->btnWoodStump->Location = System::Drawing::Point(24, 421);
+			this->btnWoodStump->Name = L"btnWoodStump";
+			this->btnWoodStump->Size = System::Drawing::Size(155, 86);
+			this->btnWoodStump->TabIndex = 13;
+			this->btnWoodStump->Text = L"Корчевка пня";
+			this->btnWoodStump->UseVisualStyleBackColor = true;
+			this->btnWoodStump->Visible = false;
+			this->btnWoodStump->Click += gcnew System::EventHandler(this, &MainForm::btnWoodStump_Click);
 			// 
 			// steel_group
 			// 
@@ -220,7 +201,7 @@ namespace IZNT {
 			this->steel_group->FlatAppearance->BorderColor = System::Drawing::Color::White;
 			this->steel_group->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->steel_group->Location = System::Drawing::Point(5, 697);
+			this->steel_group->Location = System::Drawing::Point(5, 513);
 			this->steel_group->Name = L"steel_group";
 			this->steel_group->Size = System::Drawing::Size(174, 44);
 			this->steel_group->TabIndex = 2;
@@ -231,7 +212,7 @@ namespace IZNT {
 			// btnSteelPlate
 			// 
 			this->btnSteelPlate->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnSteelPlate->Location = System::Drawing::Point(24, 747);
+			this->btnSteelPlate->Location = System::Drawing::Point(24, 563);
 			this->btnSteelPlate->Name = L"btnSteelPlate";
 			this->btnSteelPlate->Size = System::Drawing::Size(155, 86);
 			this->btnSteelPlate->TabIndex = 14;
@@ -242,7 +223,7 @@ namespace IZNT {
 			// btnSteelBalk
 			// 
 			this->btnSteelBalk->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnSteelBalk->Location = System::Drawing::Point(24, 839);
+			this->btnSteelBalk->Location = System::Drawing::Point(24, 655);
 			this->btnSteelBalk->Name = L"btnSteelBalk";
 			this->btnSteelBalk->Size = System::Drawing::Size(155, 86);
 			this->btnSteelBalk->TabIndex = 15;
@@ -253,7 +234,7 @@ namespace IZNT {
 			// btnSteelTube
 			// 
 			this->btnSteelTube->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnSteelTube->Location = System::Drawing::Point(24, 931);
+			this->btnSteelTube->Location = System::Drawing::Point(24, 747);
 			this->btnSteelTube->Name = L"btnSteelTube";
 			this->btnSteelTube->Size = System::Drawing::Size(155, 86);
 			this->btnSteelTube->TabIndex = 16;
@@ -264,7 +245,7 @@ namespace IZNT {
 			// btnSteelRod
 			// 
 			this->btnSteelRod->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnSteelRod->Location = System::Drawing::Point(24, 1023);
+			this->btnSteelRod->Location = System::Drawing::Point(24, 839);
 			this->btnSteelRod->Name = L"btnSteelRod";
 			this->btnSteelRod->Size = System::Drawing::Size(155, 86);
 			this->btnSteelRod->TabIndex = 17;
@@ -275,7 +256,7 @@ namespace IZNT {
 			// btnSteelCable
 			// 
 			this->btnSteelCable->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnSteelCable->Location = System::Drawing::Point(24, 1115);
+			this->btnSteelCable->Location = System::Drawing::Point(24, 931);
 			this->btnSteelCable->Name = L"btnSteelCable";
 			this->btnSteelCable->Size = System::Drawing::Size(155, 86);
 			this->btnSteelCable->TabIndex = 18;
@@ -308,5 +289,8 @@ private: System::Void wood_group_Click(System::Object^ sender, System::EventArgs
 private: System::Void steel_group_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void btnWood_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void btnWoodBalk_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void btnWoodTwoBalk_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void btnWoodNoncontact_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void btnWoodStump_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

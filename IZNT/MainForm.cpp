@@ -30,19 +30,15 @@ inline System::Void IZNT::MainForm::wood_group_Click(System::Object^ sender, Sys
         btnWood->Visible = true;
         btnWoodBalk->Visible = true;
         btnWoodTwoBalk->Visible = true;
-        btnWoodPack->Visible = true;
-        btnWoodUnderwater->Visible = true;
+        btnWoodStump->Visible = true;
         btnWoodNoncontact->Visible = true;
-        btnWoodNoncontactUnderwater->Visible = true;
     }
     else {
         btnWood->Visible = false;
         btnWoodBalk->Visible = false;
         btnWoodTwoBalk->Visible = false;
-        btnWoodPack->Visible = false;
-        btnWoodUnderwater->Visible = false;
+        btnWoodStump->Visible = false;
         btnWoodNoncontact->Visible = false;
-        btnWoodNoncontactUnderwater->Visible = false;
     }
 
     if (btnSteelPlate->Visible == true) {
@@ -75,10 +71,8 @@ inline System::Void IZNT::MainForm::steel_group_Click(System::Object^ sender, Sy
         btnWood->Visible = false;
         btnWoodBalk->Visible = false;
         btnWoodTwoBalk->Visible = false;
-        btnWoodPack->Visible = false;
-        btnWoodUnderwater->Visible = false;
+        btnWoodStump->Visible = false;
         btnWoodNoncontact->Visible = false;
-        btnWoodNoncontactUnderwater->Visible = false;
     }
 
 }
@@ -90,6 +84,18 @@ inline System::Void IZNT::MainForm::btnWood_Click(System::Object^ sender, System
 
 inline System::Void IZNT::MainForm::btnWoodBalk_Click(System::Object^ sender, System::EventArgs^ e) {
     SetForm(panel1, gcnew IZNT::Balk1());
+}
+
+inline System::Void IZNT::MainForm::btnWoodTwoBalk_Click(System::Object^ sender, System::EventArgs^ e) {
+    SetForm(panel1, gcnew IZNT::WoodTwoBalk());
+}
+
+inline System::Void IZNT::MainForm::btnWoodNoncontact_Click(System::Object^ sender, System::EventArgs^ e) {
+    SetForm(panel1, gcnew IZNT::WoodNoncontact());
+}
+
+inline System::Void IZNT::MainForm::btnWoodStump_Click(System::Object^ sender, System::EventArgs^ e) {
+    SetForm(panel1, gcnew IZNT::WoodStump());
 }
 
 

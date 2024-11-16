@@ -25,6 +25,8 @@ namespace IZNT {
 			//
 		}
 	private: System::Windows::Forms::CheckBox^ checkRing;
+	private: System::Windows::Forms::CheckBox^ underwater_checkBox;
+
 	public:
 
 		float answer = 0.0f;
@@ -80,18 +82,21 @@ namespace IZNT {
 			this->calc_button = (gcnew System::Windows::Forms::Button());
 			this->answer_textBox = (gcnew System::Windows::Forms::TextBox());
 			this->checkRing = (gcnew System::Windows::Forms::CheckBox());
+			this->underwater_checkBox = (gcnew System::Windows::Forms::CheckBox());
 			this->SuspendLayout();
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 13.25F, System::Drawing::FontStyle::Bold));
-			this->label1->Location = System::Drawing::Point(23, 21);
+			this->label1->Location = System::Drawing::Point(58, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(667, 21);
+			this->label1->Size = System::Drawing::Size(593, 42);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания бревна\r\n";
+			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nбревна или сосредоточенн"
+				L"ого куста свай";
+			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// type_wood_comboBox
 			// 
@@ -153,6 +158,7 @@ namespace IZNT {
 			this->diameter_log_textBox->Name = L"diameter_log_textBox";
 			this->diameter_log_textBox->Size = System::Drawing::Size(211, 26);
 			this->diameter_log_textBox->TabIndex = 5;
+			this->diameter_log_textBox->TextChanged += gcnew System::EventHandler(this, &Wood1::diameter_log_textBox_TextChanged);
 			// 
 			// label4
 			// 
@@ -161,9 +167,9 @@ namespace IZNT {
 			this->label4->Location = System::Drawing::Point(13, 216);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(142, 15);
+			this->label4->Size = System::Drawing::Size(188, 15);
 			this->label4->TabIndex = 6;
-			this->label4->Text = L"Диаметр бревна в см";
+			this->label4->Text = L"Диаметр бревна (куста) в см";
 			// 
 			// calc_button
 			// 
@@ -197,12 +203,23 @@ namespace IZNT {
 			// 
 			this->checkRing->AutoSize = true;
 			this->checkRing->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
-			this->checkRing->Location = System::Drawing::Point(16, 297);
+			this->checkRing->Location = System::Drawing::Point(16, 360);
 			this->checkRing->Name = L"checkRing";
 			this->checkRing->Size = System::Drawing::Size(171, 24);
 			this->checkRing->TabIndex = 9;
 			this->checkRing->Text = L"Кольцевой заряд";
 			this->checkRing->UseVisualStyleBackColor = true;
+			// 
+			// underwater_checkBox
+			// 
+			this->underwater_checkBox->AutoSize = true;
+			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->underwater_checkBox->Location = System::Drawing::Point(16, 297);
+			this->underwater_checkBox->Name = L"underwater_checkBox";
+			this->underwater_checkBox->Size = System::Drawing::Size(171, 24);
+			this->underwater_checkBox->TabIndex = 10;
+			this->underwater_checkBox->Text = L"Взрыв под водой";
+			this->underwater_checkBox->UseVisualStyleBackColor = true;
 			// 
 			// Wood1
 			// 
@@ -210,6 +227,7 @@ namespace IZNT {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->underwater_checkBox);
 			this->Controls->Add(this->checkRing);
 			this->Controls->Add(this->answer_textBox);
 			this->Controls->Add(this->calc_button);
@@ -233,5 +251,6 @@ namespace IZNT {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void answer_textBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+private: System::Void diameter_log_textBox_TextChanged(System::Object^ sender, System::EventArgs^ e);
 };
 }

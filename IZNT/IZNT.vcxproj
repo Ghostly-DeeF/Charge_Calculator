@@ -125,6 +125,8 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="Wood1.cpp" />
+    <ClCompile Include="WoodNoncontact.cpp" />
+    <ClCompile Include="WoodStump.cpp" />
     <ClCompile Include="WoodTwoBalk.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +140,12 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Wood1.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="WoodNoncontact.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="WoodStump.h">
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="WoodTwoBalk.h">
@@ -156,6 +164,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Wood1.resx">
       <DependentUpon>Wood1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WoodNoncontact.resx">
+      <DependentUpon>WoodNoncontact.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WoodStump.resx">
+      <DependentUpon>WoodStump.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WoodTwoBalk.resx">
       <DependentUpon>WoodTwoBalk.h</DependentUpon>

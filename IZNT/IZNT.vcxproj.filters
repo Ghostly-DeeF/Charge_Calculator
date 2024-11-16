@@ -36,6 +36,12 @@
     <ClInclude Include="WoodTwoBalk.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="WoodNoncontact.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="WoodStump.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainForm.cpp">
@@ -54,6 +60,12 @@
       <Filter>Исходные файлы\WoodGroup</Filter>
     </ClCompile>
     <ClCompile Include="WoodTwoBalk.cpp">
+      <Filter>Исходные файлы\WoodGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="WoodNoncontact.cpp">
+      <Filter>Исходные файлы\WoodGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="WoodStump.cpp">
       <Filter>Исходные файлы\WoodGroup</Filter>
     </ClCompile>
   </ItemGroup>

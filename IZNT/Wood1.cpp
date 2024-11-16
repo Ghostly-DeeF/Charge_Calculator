@@ -32,9 +32,13 @@ inline System::Void IZNT::Wood1::button1_Click(System::Object^ sender, System::E
         if (diameter_log > 30) {
             answer *= diameter_log / 30;
         }
-        if (checkRing->Checked == true) {
+        if (checkRing->Checked) {
             answer /= 3;
         }
+        if (underwater_checkBox->Checked) {
+            answer /= 2;
+        }
+
         answer = round(answer);
         answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
 
@@ -51,6 +55,16 @@ inline System::Void IZNT::Wood1::button1_Click(System::Object^ sender, System::E
         else {
             answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
         }
+    }
+}
+
+inline System::Void IZNT::Wood1::diameter_log_textBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    float diameter_log;
+    if (float::TryParse(diameter_log_textBox->Text, diameter_log) && diameter_log > 0) {
+        underwater_checkBox->Text = "Взрыв под водой\r\n(глубже " + (diameter_log * 2) + " см)";
+    }
+    else {
+        underwater_checkBox->Text = "Взрыв под водой";
     }
 }
 
