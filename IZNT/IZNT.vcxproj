@@ -124,7 +124,6 @@
     <ClCompile Include="HelloPanel.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainForm.cpp" />
-    <ClCompile Include="SteelSheets.cpp" />
     <ClCompile Include="Wood1.cpp" />
     <ClCompile Include="WoodNoncontact.cpp" />
     <ClCompile Include="WoodStump.cpp" />
@@ -139,9 +138,6 @@
     </ClInclude>
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="SteelSheets1.h">
-      <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="Wood1.h">
       <FileType>CppControl</FileType>
@@ -165,9 +161,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SteelSheets1.resx">
-      <DependentUpon>SteelSheets1.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wood1.resx">
       <DependentUpon>Wood1.h</DependentUpon>
