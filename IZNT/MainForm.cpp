@@ -98,4 +98,8 @@ inline System::Void IZNT::MainForm::btnWoodStump_Click(System::Object^ sender, S
     SetForm(panel1, gcnew IZNT::WoodStump());
 }
 
+inline System::Void IZNT::MainForm::btnSteelPlate_Click(System::Object^ sender, System::EventArgs^ e) {
+    SetForm(panel1, gcnew IZNT::SteelSheets1());
+}
+
 
