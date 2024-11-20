@@ -73,7 +73,7 @@ namespace IZNT {
 			this->label2->Location = System::Drawing::Point(13, 67);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(159, 15);
+			this->label2->Size = System::Drawing::Size(238, 22);
 			this->label2->TabIndex = 27;
 			this->label2->Text = L"Тип породы древесины";
 			// 
@@ -89,7 +89,7 @@ namespace IZNT {
 			this->type_wood_comboBox->Location = System::Drawing::Point(16, 85);
 			this->type_wood_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->type_wood_comboBox->Name = L"type_wood_comboBox";
-			this->type_wood_comboBox->Size = System::Drawing::Size(211, 28);
+			this->type_wood_comboBox->Size = System::Drawing::Size(211, 37);
 			this->type_wood_comboBox->TabIndex = 26;
 			// 
 			// answer_textBox
@@ -125,7 +125,7 @@ namespace IZNT {
 			this->label3->Location = System::Drawing::Point(13, 139);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(149, 15);
+			this->label3->Size = System::Drawing::Size(222, 22);
 			this->label3->TabIndex = 23;
 			this->label3->Text = L"Состояние древесины";
 			// 
@@ -140,9 +140,8 @@ namespace IZNT {
 			this->condition_wood_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->condition_wood_comboBox->Name = L"condition_wood_comboBox";
 			this->condition_wood_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->condition_wood_comboBox->Size = System::Drawing::Size(211, 28);
+			this->condition_wood_comboBox->Size = System::Drawing::Size(211, 37);
 			this->condition_wood_comboBox->TabIndex = 22;
-			this->condition_wood_comboBox->UseWaitCursor = true;
 			// 
 			// label1
 			// 
@@ -151,7 +150,7 @@ namespace IZNT {
 			this->label1->Location = System::Drawing::Point(23, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(655, 42);
+			this->label1->Size = System::Drawing::Size(969, 64);
 			this->label1->TabIndex = 21;
 			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания балок\r\nдвутаврового сечен"
 				L"ия";
@@ -159,7 +158,7 @@ namespace IZNT {
 			// 
 			// WoodTwoBalk
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
+			this->AutoScaleDimensions = System::Drawing::SizeF(10, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
