@@ -42,9 +42,6 @@
     <ClInclude Include="WoodStump.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="SteelSheets.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainForm.cpp">
@@ -70,9 +67,6 @@
     </ClCompile>
     <ClCompile Include="WoodStump.cpp">
       <Filter>Исходные файлы\WoodGroup</Filter>
-    </ClCompile>
-    <ClCompile Include="SteelSheets.cpp">
-      <Filter>Исходные файлы\StealGroup</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
