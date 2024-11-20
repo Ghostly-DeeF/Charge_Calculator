@@ -46,7 +46,8 @@ namespace IZNT {
 
 	private: System::Windows::Forms::Button^ btnWoodNoncontact;
 	private: System::Windows::Forms::Button^ btnWoodStump;
-	private: System::Windows::Forms::Button^ btnSteelSheets;
+	private: System::Windows::Forms::Button^ btnSteelPlate;
+
 
 
 
@@ -81,7 +82,7 @@ namespace IZNT {
 			this->btnWoodNoncontact = (gcnew System::Windows::Forms::Button());
 			this->btnWoodStump = (gcnew System::Windows::Forms::Button());
 			this->steel_group = (gcnew System::Windows::Forms::Button());
-			this->btnSteelSheets = (gcnew System::Windows::Forms::Button());
+			this->btnSteelPlate = (gcnew System::Windows::Forms::Button());
 			this->btnSteelBalk = (gcnew System::Windows::Forms::Button());
 			this->btnSteelTube = (gcnew System::Windows::Forms::Button());
 			this->btnSteelRod = (gcnew System::Windows::Forms::Button());
@@ -96,7 +97,7 @@ namespace IZNT {
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F));
 			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel1->Margin = System::Windows::Forms::Padding(4);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(959, 727);
 			this->panel1->TabIndex = 0;
@@ -111,7 +112,7 @@ namespace IZNT {
 			this->flowLayoutPanel1->Controls->Add(this->btnWoodNoncontact);
 			this->flowLayoutPanel1->Controls->Add(this->btnWoodStump);
 			this->flowLayoutPanel1->Controls->Add(this->steel_group);
-			this->flowLayoutPanel1->Controls->Add(this->btnSteelSheets);
+			this->flowLayoutPanel1->Controls->Add(this->btnSteelPlate);
 			this->flowLayoutPanel1->Controls->Add(this->btnSteelBalk);
 			this->flowLayoutPanel1->Controls->Add(this->btnSteelTube);
 			this->flowLayoutPanel1->Controls->Add(this->btnSteelRod);
@@ -119,7 +120,7 @@ namespace IZNT {
 			this->flowLayoutPanel1->Dock = System::Windows::Forms::DockStyle::Right;
 			this->flowLayoutPanel1->FlowDirection = System::Windows::Forms::FlowDirection::RightToLeft;
 			this->flowLayoutPanel1->Location = System::Drawing::Point(960, 0);
-			this->flowLayoutPanel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->flowLayoutPanel1->Margin = System::Windows::Forms::Padding(4);
 			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
 			this->flowLayoutPanel1->Size = System::Drawing::Size(265, 727);
 			this->flowLayoutPanel1->TabIndex = 1;
@@ -129,7 +130,7 @@ namespace IZNT {
 			this->wood_group->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->wood_group->Location = System::Drawing::Point(8, 4);
-			this->wood_group->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->wood_group->Margin = System::Windows::Forms::Padding(4);
 			this->wood_group->Name = L"wood_group";
 			this->wood_group->Size = System::Drawing::Size(232, 54);
 			this->wood_group->TabIndex = 1;
@@ -142,7 +143,7 @@ namespace IZNT {
 			this->btnWood->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->btnWood->Location = System::Drawing::Point(33, 66);
-			this->btnWood->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnWood->Margin = System::Windows::Forms::Padding(4);
 			this->btnWood->Name = L"btnWood";
 			this->btnWood->Size = System::Drawing::Size(207, 106);
 			this->btnWood->TabIndex = 7;
@@ -158,7 +159,7 @@ namespace IZNT {
 			this->btnWoodBalk->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->btnWoodBalk->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnWoodBalk->Location = System::Drawing::Point(33, 180);
-			this->btnWoodBalk->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnWoodBalk->Margin = System::Windows::Forms::Padding(4);
 			this->btnWoodBalk->Name = L"btnWoodBalk";
 			this->btnWoodBalk->Size = System::Drawing::Size(207, 106);
 			this->btnWoodBalk->TabIndex = 8;
@@ -171,7 +172,7 @@ namespace IZNT {
 			// 
 			this->btnWoodTwoBalk->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnWoodTwoBalk->Location = System::Drawing::Point(33, 294);
-			this->btnWoodTwoBalk->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnWoodTwoBalk->Margin = System::Windows::Forms::Padding(4);
 			this->btnWoodTwoBalk->Name = L"btnWoodTwoBalk";
 			this->btnWoodTwoBalk->Size = System::Drawing::Size(207, 106);
 			this->btnWoodTwoBalk->TabIndex = 9;
@@ -184,7 +185,7 @@ namespace IZNT {
 			// 
 			this->btnWoodNoncontact->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnWoodNoncontact->Location = System::Drawing::Point(33, 408);
-			this->btnWoodNoncontact->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnWoodNoncontact->Margin = System::Windows::Forms::Padding(4);
 			this->btnWoodNoncontact->Name = L"btnWoodNoncontact";
 			this->btnWoodNoncontact->Size = System::Drawing::Size(207, 106);
 			this->btnWoodNoncontact->TabIndex = 12;
@@ -197,7 +198,7 @@ namespace IZNT {
 			// 
 			this->btnWoodStump->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnWoodStump->Location = System::Drawing::Point(33, 522);
-			this->btnWoodStump->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnWoodStump->Margin = System::Windows::Forms::Padding(4);
 			this->btnWoodStump->Name = L"btnWoodStump";
 			this->btnWoodStump->Size = System::Drawing::Size(207, 106);
 			this->btnWoodStump->TabIndex = 13;
@@ -213,7 +214,7 @@ namespace IZNT {
 			this->steel_group->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->steel_group->Location = System::Drawing::Point(8, 636);
-			this->steel_group->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->steel_group->Margin = System::Windows::Forms::Padding(4);
 			this->steel_group->Name = L"steel_group";
 			this->steel_group->Size = System::Drawing::Size(232, 54);
 			this->steel_group->TabIndex = 2;
@@ -221,23 +222,24 @@ namespace IZNT {
 			this->steel_group->UseVisualStyleBackColor = false;
 			this->steel_group->Click += gcnew System::EventHandler(this, &MainForm::steel_group_Click);
 			// 
-			// btnSteelSheets
+			// btnSteelPlate
 			// 
-			this->btnSteelSheets->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnSteelSheets->Location = System::Drawing::Point(33, 698);
-			this->btnSteelSheets->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->btnSteelSheets->Name = L"btnSteelSheets";
-			this->btnSteelSheets->Size = System::Drawing::Size(207, 106);
-			this->btnSteelSheets->TabIndex = 14;
-			this->btnSteelSheets->Text = L"Стальные листы";
-			this->btnSteelSheets->UseVisualStyleBackColor = true;
-			this->btnSteelSheets->Visible = false;
+			this->btnSteelPlate->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
+			this->btnSteelPlate->Location = System::Drawing::Point(33, 698);
+			this->btnSteelPlate->Margin = System::Windows::Forms::Padding(4);
+			this->btnSteelPlate->Name = L"btnSteelPlate";
+			this->btnSteelPlate->Size = System::Drawing::Size(207, 106);
+			this->btnSteelPlate->TabIndex = 14;
+			this->btnSteelPlate->Text = L"Стальные листы";
+			this->btnSteelPlate->UseVisualStyleBackColor = true;
+			this->btnSteelPlate->Visible = false;
+			this->btnSteelPlate->Click += gcnew System::EventHandler(this, &MainForm::btnSteelPlate_Click);
 			// 
 			// btnSteelBalk
 			// 
 			this->btnSteelBalk->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnSteelBalk->Location = System::Drawing::Point(33, 812);
-			this->btnSteelBalk->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnSteelBalk->Margin = System::Windows::Forms::Padding(4);
 			this->btnSteelBalk->Name = L"btnSteelBalk";
 			this->btnSteelBalk->Size = System::Drawing::Size(207, 106);
 			this->btnSteelBalk->TabIndex = 15;
@@ -249,7 +251,7 @@ namespace IZNT {
 			// 
 			this->btnSteelTube->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnSteelTube->Location = System::Drawing::Point(33, 926);
-			this->btnSteelTube->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnSteelTube->Margin = System::Windows::Forms::Padding(4);
 			this->btnSteelTube->Name = L"btnSteelTube";
 			this->btnSteelTube->Size = System::Drawing::Size(207, 106);
 			this->btnSteelTube->TabIndex = 16;
@@ -261,7 +263,7 @@ namespace IZNT {
 			// 
 			this->btnSteelRod->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnSteelRod->Location = System::Drawing::Point(33, 1040);
-			this->btnSteelRod->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnSteelRod->Margin = System::Windows::Forms::Padding(4);
 			this->btnSteelRod->Name = L"btnSteelRod";
 			this->btnSteelRod->Size = System::Drawing::Size(207, 106);
 			this->btnSteelRod->TabIndex = 17;
@@ -273,7 +275,7 @@ namespace IZNT {
 			// 
 			this->btnSteelCable->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnSteelCable->Location = System::Drawing::Point(33, 1154);
-			this->btnSteelCable->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnSteelCable->Margin = System::Windows::Forms::Padding(4);
 			this->btnSteelCable->Name = L"btnSteelCable";
 			this->btnSteelCable->Size = System::Drawing::Size(207, 106);
 			this->btnSteelCable->TabIndex = 18;
@@ -293,7 +295,7 @@ namespace IZNT {
 			this->Controls->Add(this->panel1);
 			this->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"MainForm";
 			this->Text = L"Расчет зарядов";
 			this->flowLayoutPanel1->ResumeLayout(false);
@@ -310,5 +312,6 @@ private: System::Void btnWoodBalk_Click(System::Object^ sender, System::EventArg
 private: System::Void btnWoodTwoBalk_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void btnWoodNoncontact_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void btnWoodStump_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void btnSteelPlate_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }
