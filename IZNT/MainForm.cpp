@@ -98,4 +98,24 @@ inline System::Void IZNT::MainForm::btnWoodStump_Click(System::Object^ sender, S
     SetForm(panel1, gcnew IZNT::WoodStump());
 }
 
+System::Void IZNT::MainForm::btnSteelPlate_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    SetForm(panel1, gcnew IZNT::SteelSheets());
+}
+
+System::Void IZNT::MainForm::btnSteelTube_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    SetForm(panel1, gcnew IZNT::SteelTube());
+}
+
+System::Void IZNT::MainForm::btnSteelRod_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    SetForm(panel1, gcnew IZNT::SteelRod());
+}
+
+System::Void IZNT::MainForm::btnSteelCable_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    SetForm(panel1, gcnew IZNT::SteelCable());
+}
+
 

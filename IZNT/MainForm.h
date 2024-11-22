@@ -8,6 +8,11 @@
 #include "WoodNoncontact.h"
 #include "WoodStump.h"
 
+#include "SteelSheets.h"
+#include "SteelTube.h"
+#include "SteelRod.h"
+#include "SteelCable.h"
+
 namespace IZNT {
 
 	using namespace System;
@@ -55,6 +60,9 @@ namespace IZNT {
 	private: System::Windows::Forms::Button^ btnSteelTube;
 	private: System::Windows::Forms::Button^ btnSteelRod;
 	private: System::Windows::Forms::Button^ btnSteelCable;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ button3;
 
 
 	private:
@@ -85,6 +93,9 @@ namespace IZNT {
 			this->btnSteelTube = (gcnew System::Windows::Forms::Button());
 			this->btnSteelRod = (gcnew System::Windows::Forms::Button());
 			this->btnSteelCable = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->flowLayoutPanel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -114,6 +125,9 @@ namespace IZNT {
 			this->flowLayoutPanel1->Controls->Add(this->btnSteelTube);
 			this->flowLayoutPanel1->Controls->Add(this->btnSteelRod);
 			this->flowLayoutPanel1->Controls->Add(this->btnSteelCable);
+			this->flowLayoutPanel1->Controls->Add(this->button1);
+			this->flowLayoutPanel1->Controls->Add(this->button2);
+			this->flowLayoutPanel1->Controls->Add(this->button3);
 			this->flowLayoutPanel1->Dock = System::Windows::Forms::DockStyle::Right;
 			this->flowLayoutPanel1->FlowDirection = System::Windows::Forms::FlowDirection::RightToLeft;
 			this->flowLayoutPanel1->Location = System::Drawing::Point(720, 0);
@@ -270,6 +284,41 @@ namespace IZNT {
 			this->btnSteelCable->Visible = false;
 			this->btnSteelCable->Click += gcnew System::EventHandler(this, &MainForm::btnSteelCable_Click);
 			// 
+			// button1
+			// 
+			this->button1->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
+			this->button1->Location = System::Drawing::Point(24, 1023);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(155, 86);
+			this->button1->TabIndex = 19;
+			this->button1->Text = L"Стальные тросы";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Visible = false;
+			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->button2->FlatAppearance->BorderColor = System::Drawing::Color::White;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button2->Location = System::Drawing::Point(5, 1115);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(174, 44);
+			this->button2->TabIndex = 20;
+			this->button2->Text = L"Монолиты";
+			this->button2->UseVisualStyleBackColor = false;
+			// 
+			// button3
+			// 
+			this->button3->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
+			this->button3->Location = System::Drawing::Point(24, 1165);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(155, 86);
+			this->button3->TabIndex = 21;
+			this->button3->Text = L"Стальные тросы";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Visible = false;
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -298,5 +347,10 @@ private: System::Void btnWoodBalk_Click(System::Object^ sender, System::EventArg
 private: System::Void btnWoodTwoBalk_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void btnWoodNoncontact_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void btnWoodStump_Click(System::Object^ sender, System::EventArgs^ e);
+
+private: System::Void btnSteelPlate_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void btnSteelTube_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void btnSteelRod_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void btnSteelCable_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

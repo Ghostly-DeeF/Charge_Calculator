@@ -42,6 +42,18 @@
     <ClInclude Include="WoodStump.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="SteelCable.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="SteelRod.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="SteelSheets.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="SteelTube.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainForm.cpp">
@@ -68,5 +80,31 @@
     <ClCompile Include="WoodStump.cpp">
       <Filter>Исходные файлы\WoodGroup</Filter>
     </ClCompile>
+    <ClCompile Include="SteelTube.cpp">
+      <Filter>Исходные файлы\StealGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="SteelCable.cpp">
+      <Filter>Исходные файлы\StealGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="SteelRod.cpp">
+      <Filter>Исходные файлы\StealGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="SteelSheets.cpp">
+      <Filter>Исходные файлы\StealGroup</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SteelCable.resx">
+      <Filter>Файлы ресурсов</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SteelRod.resx">
+      <Filter>Файлы ресурсов</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SteelSheets.resx">
+      <Filter>Файлы ресурсов</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SteelTube.resx">
+      <Filter>Файлы ресурсов</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
