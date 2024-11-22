@@ -18,9 +18,9 @@ inline System::Void IZNT::SteelTube::calc_button_Click(System::Object^ sender, S
         return;
     }
 
-   
+
     answerz = 20 * diameter_steel_tube * thickness_steel_tube * 3;
-    
+
 
     answerz = round(answerz);
     answer_textBox->Text = " Точный вес требуемого заряда: " + (answerz / 1000).ToString() + " кг\r\n\r\n";

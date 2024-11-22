@@ -13,7 +13,7 @@ inline System::Void IZNT::SteelRod::calc_button_Click(System::Object^ sender, Sy
     if (diameter_steel_rod <= 2) {
         answer_textBox->Text = "Необходима 1 шашка по 0,2 кг";
         return;
-    } 
+    }
     else
     {
         answerz = 10 * pow(diameter_steel_rod, 3);

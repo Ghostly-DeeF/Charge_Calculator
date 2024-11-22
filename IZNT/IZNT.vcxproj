@@ -125,6 +125,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="SteelCable.cpp" />
+    <ClCompile Include="SteelCable1.cpp" />
     <ClCompile Include="SteelRod.cpp" />
     <ClCompile Include="SteelSheets.cpp" />
     <ClCompile Include="SteelTube.cpp" />
@@ -144,9 +145,18 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="SteelCable.h" />
-    <ClInclude Include="SteelRod.h" />
-    <ClInclude Include="SteelSheets.h" />
-    <ClInclude Include="SteelTube.h" />
+    <ClInclude Include="SteelCable1.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="SteelRod.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="SteelSheets.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="SteelTube.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="Wood1.h">
       <FileType>CppControl</FileType>
     </ClInclude>
