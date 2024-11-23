@@ -54,7 +54,10 @@
     <ClInclude Include="SteelRod.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="SteelCable1.h">
+    <ClInclude Include="SteelBar.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="SteelBeam.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
@@ -95,8 +98,11 @@
     <ClCompile Include="SteelRod.cpp">
       <Filter>Исходные файлы\StealGroup</Filter>
     </ClCompile>
-    <ClCompile Include="SteelCable1.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="SteelBar.cpp">
+      <Filter>Исходные файлы\StealGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="SteelBeam.cpp">
+      <Filter>Исходные файлы\StealGroup</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

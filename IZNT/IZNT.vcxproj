@@ -124,8 +124,9 @@
     <ClCompile Include="HelloPanel.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainForm.cpp" />
+    <ClCompile Include="SteelBar.cpp" />
+    <ClCompile Include="SteelBeam.cpp" />
     <ClCompile Include="SteelCable.cpp" />
-    <ClCompile Include="SteelCable1.cpp" />
     <ClCompile Include="SteelRod.cpp" />
     <ClCompile Include="SteelSheets.cpp" />
     <ClCompile Include="SteelTube.cpp" />
@@ -144,8 +145,13 @@
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="SteelCable.h" />
-    <ClInclude Include="SteelCable1.h">
+    <ClInclude Include="SteelBar.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="SteelBeam.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="SteelCable.h">
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="SteelRod.h">
@@ -179,6 +185,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SteelBar.resx">
+      <DependentUpon>SteelBar.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SteelBeam.resx">
+      <DependentUpon>SteelBeam.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SteelCable.resx" />
     <EmbeddedResource Include="SteelRod.resx" />

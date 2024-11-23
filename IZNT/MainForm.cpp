@@ -42,11 +42,12 @@ inline System::Void IZNT::MainForm::wood_group_Click(System::Object^ sender, Sys
     }
 
     if (btnSteelPlate->Visible == true) {
-        btnSteelBalk->Visible = false;
+        btnSteelBeam->Visible = false;
         btnSteelPlate->Visible = false;
         btnSteelTube->Visible = false;
         btnSteelRod->Visible = false;
         btnSteelCable->Visible = false;
+        btnSteelBeam->Visible = false;
     }
 
 }
@@ -54,17 +55,21 @@ inline System::Void IZNT::MainForm::wood_group_Click(System::Object^ sender, Sys
 inline System::Void IZNT::MainForm::steel_group_Click(System::Object^ sender, System::EventArgs^ e) {
     if (btnSteelPlate->Visible == false) {
         btnSteelPlate->Visible = true;
-        btnSteelBalk->Visible = true;
+        btnSteelBeam->Visible = true;
         btnSteelTube->Visible = true;
         btnSteelRod->Visible = true;
         btnSteelCable->Visible = true;
+        btnSteelBar->Visible = true;
+        
     }
     else {
         btnSteelPlate->Visible = false;
-        btnSteelBalk->Visible = false;
+        btnSteelBeam->Visible = false;
         btnSteelTube->Visible = false;
         btnSteelRod->Visible = false;
         btnSteelCable->Visible = false;
+        btnSteelBeam->Visible = false;
+        btnSteelBar->Visible = false;
     }
 
     if (btnWood->Visible == true) {
@@ -116,6 +121,16 @@ System::Void IZNT::MainForm::btnSteelRod_Click(System::Object^ sender, System::E
 System::Void IZNT::MainForm::btnSteelCable_Click(System::Object^ sender, System::EventArgs^ e)
 {
     SetForm(panel1, gcnew IZNT::SteelCable());
+}
+
+System::Void IZNT::MainForm::btnSteelBar_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    SetForm(panel1, gcnew IZNT::SteelBar());
+}
+
+System::Void IZNT::MainForm::btnSteelBeam_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    SetForm(panel1, gcnew IZNT::SteelBeam());
 }
 
 
