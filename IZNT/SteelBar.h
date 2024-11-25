@@ -73,9 +73,11 @@ namespace IZNT {
 			// checkUnderwaterExp
 			// 
 			this->checkUnderwaterExp->AutoSize = true;
-			this->checkUnderwaterExp->Location = System::Drawing::Point(11, 272);
+			this->checkUnderwaterExp->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->checkUnderwaterExp->Location = System::Drawing::Point(16, 215);
+			this->checkUnderwaterExp->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
-			this->checkUnderwaterExp->Size = System::Drawing::Size(152, 21);
+			this->checkUnderwaterExp->Size = System::Drawing::Size(187, 24);
 			this->checkUnderwaterExp->TabIndex = 37;
 			this->checkUnderwaterExp->Text = L"Подрыв под водой";
 			this->checkUnderwaterExp->UseVisualStyleBackColor = true;
@@ -87,19 +89,19 @@ namespace IZNT {
 			this->answer_textBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->answer_textBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->answer_textBox->ForeColor = System::Drawing::SystemColors::Window;
-			this->answer_textBox->Location = System::Drawing::Point(251, 178);
-			this->answer_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			this->answer_textBox->Location = System::Drawing::Point(249, 132);
+			this->answer_textBox->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
 			this->answer_textBox->Multiline = true;
 			this->answer_textBox->Name = L"answer_textBox";
-			this->answer_textBox->Size = System::Drawing::Size(451, 206);
+			this->answer_textBox->Size = System::Drawing::Size(451, 189);
 			this->answer_textBox->TabIndex = 36;
 			// 
 			// calc_button
 			// 
-			this->calc_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
+			this->calc_button->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
 			this->calc_button->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->calc_button->Location = System::Drawing::Point(251, 126);
-			this->calc_button->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			this->calc_button->Location = System::Drawing::Point(249, 85);
+			this->calc_button->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
 			this->calc_button->Name = L"calc_button";
 			this->calc_button->Size = System::Drawing::Size(451, 36);
 			this->calc_button->TabIndex = 35;
@@ -110,11 +112,11 @@ namespace IZNT {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Bold));
-			this->label1->Location = System::Drawing::Point(60, 16);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 13.25F, System::Drawing::FontStyle::Bold));
+			this->label1->Location = System::Drawing::Point(58, 21);
+			this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(759, 58);
+			this->label1->Size = System::Drawing::Size(593, 42);
 			this->label1->TabIndex = 32;
 			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nстального бруска\r\n";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -122,46 +124,46 @@ namespace IZNT {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->label2->Location = System::Drawing::Point(8, 192);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->label2->Location = System::Drawing::Point(13, 139);
+			this->label2->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(152, 20);
+			this->label2->Size = System::Drawing::Size(137, 15);
 			this->label2->TabIndex = 41;
-			this->label2->Text = L"Ширина листа в см";
+			this->label2->Text = L"Ширина бруска в см";
 			// 
 			// width_steel_bar_textBox
 			// 
 			this->width_steel_bar_textBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->width_steel_bar_textBox->Location = System::Drawing::Point(11, 215);
-			this->width_steel_bar_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			this->width_steel_bar_textBox->Location = System::Drawing::Point(16, 157);
+			this->width_steel_bar_textBox->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
 			this->width_steel_bar_textBox->Name = L"width_steel_bar_textBox";
-			this->width_steel_bar_textBox->Size = System::Drawing::Size(211, 31);
+			this->width_steel_bar_textBox->Size = System::Drawing::Size(211, 26);
 			this->width_steel_bar_textBox->TabIndex = 40;
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->label5->Location = System::Drawing::Point(11, 108);
-			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label5->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->label5->Location = System::Drawing::Point(13, 67);
+			this->label5->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(162, 20);
+			this->label5->Size = System::Drawing::Size(144, 15);
 			this->label5->TabIndex = 39;
-			this->label5->Text = L"Толщина листа в см";
+			this->label5->Text = L"Толщина бруска в см";
 			// 
 			// thickness_steel_bar_textBox
 			// 
 			this->thickness_steel_bar_textBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->thickness_steel_bar_textBox->Location = System::Drawing::Point(11, 131);
-			this->thickness_steel_bar_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			this->thickness_steel_bar_textBox->Location = System::Drawing::Point(16, 85);
+			this->thickness_steel_bar_textBox->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
 			this->thickness_steel_bar_textBox->Name = L"thickness_steel_bar_textBox";
-			this->thickness_steel_bar_textBox->Size = System::Drawing::Size(211, 31);
+			this->thickness_steel_bar_textBox->Size = System::Drawing::Size(211, 26);
 			this->thickness_steel_bar_textBox->TabIndex = 38;
 			// 
 			// SteelBar
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 17);
+			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
@@ -173,8 +175,9 @@ namespace IZNT {
 			this->Controls->Add(this->answer_textBox);
 			this->Controls->Add(this->calc_button);
 			this->Controls->Add(this->label1);
-			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F));
+			this->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 8.25F));
 			this->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Name = L"SteelBar";
 			this->Size = System::Drawing::Size(719, 591);
 			this->ResumeLayout(false);

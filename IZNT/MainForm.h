@@ -130,9 +130,8 @@ namespace IZNT {
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F));
 			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1078, 909);
+			this->panel1->Size = System::Drawing::Size(719, 591);
 			this->panel1->TabIndex = 0;
 			// 
 			// flowLayoutPanel1
@@ -158,20 +157,18 @@ namespace IZNT {
 			this->flowLayoutPanel1->Controls->Add(this->btnMonolithNoncontact);
 			this->flowLayoutPanel1->Dock = System::Windows::Forms::DockStyle::Right;
 			this->flowLayoutPanel1->FlowDirection = System::Windows::Forms::FlowDirection::RightToLeft;
-			this->flowLayoutPanel1->Location = System::Drawing::Point(1080, 0);
-			this->flowLayoutPanel1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->flowLayoutPanel1->Location = System::Drawing::Point(720, 0);
 			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
-			this->flowLayoutPanel1->Size = System::Drawing::Size(298, 909);
+			this->flowLayoutPanel1->Size = System::Drawing::Size(199, 591);
 			this->flowLayoutPanel1->TabIndex = 1;
 			// 
 			// wood_group
 			// 
 			this->wood_group->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->wood_group->Location = System::Drawing::Point(7, 5);
-			this->wood_group->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->wood_group->Location = System::Drawing::Point(5, 3);
 			this->wood_group->Name = L"wood_group";
-			this->wood_group->Size = System::Drawing::Size(261, 68);
+			this->wood_group->Size = System::Drawing::Size(174, 44);
 			this->wood_group->TabIndex = 1;
 			this->wood_group->Text = L"Дерево";
 			this->wood_group->UseVisualStyleBackColor = true;
@@ -181,10 +178,9 @@ namespace IZNT {
 			// 
 			this->btnWood->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->btnWood->Location = System::Drawing::Point(22, 83);
-			this->btnWood->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnWood->Location = System::Drawing::Point(15, 53);
 			this->btnWood->Name = L"btnWood";
-			this->btnWood->Size = System::Drawing::Size(246, 132);
+			this->btnWood->Size = System::Drawing::Size(164, 86);
 			this->btnWood->TabIndex = 7;
 			this->btnWood->Text = L"Бревно или куст свай";
 			this->btnWood->UseVisualStyleBackColor = true;
@@ -197,10 +193,9 @@ namespace IZNT {
 				static_cast<System::Int32>(static_cast<System::Byte>(90)));
 			this->btnWoodBalk->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->btnWoodBalk->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnWoodBalk->Location = System::Drawing::Point(22, 225);
-			this->btnWoodBalk->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnWoodBalk->Location = System::Drawing::Point(15, 145);
 			this->btnWoodBalk->Name = L"btnWoodBalk";
-			this->btnWoodBalk->Size = System::Drawing::Size(246, 132);
+			this->btnWoodBalk->Size = System::Drawing::Size(164, 86);
 			this->btnWoodBalk->TabIndex = 8;
 			this->btnWoodBalk->Text = L"Брус или пакет бревен";
 			this->btnWoodBalk->UseVisualStyleBackColor = false;
@@ -210,10 +205,9 @@ namespace IZNT {
 			// btnWoodTwoBalk
 			// 
 			this->btnWoodTwoBalk->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnWoodTwoBalk->Location = System::Drawing::Point(22, 367);
-			this->btnWoodTwoBalk->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnWoodTwoBalk->Location = System::Drawing::Point(15, 237);
 			this->btnWoodTwoBalk->Name = L"btnWoodTwoBalk";
-			this->btnWoodTwoBalk->Size = System::Drawing::Size(246, 132);
+			this->btnWoodTwoBalk->Size = System::Drawing::Size(164, 86);
 			this->btnWoodTwoBalk->TabIndex = 9;
 			this->btnWoodTwoBalk->Text = L"Двутавровая балка";
 			this->btnWoodTwoBalk->UseVisualStyleBackColor = true;
@@ -223,10 +217,9 @@ namespace IZNT {
 			// btnWoodNoncontact
 			// 
 			this->btnWoodNoncontact->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnWoodNoncontact->Location = System::Drawing::Point(22, 509);
-			this->btnWoodNoncontact->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnWoodNoncontact->Location = System::Drawing::Point(15, 329);
 			this->btnWoodNoncontact->Name = L"btnWoodNoncontact";
-			this->btnWoodNoncontact->Size = System::Drawing::Size(246, 132);
+			this->btnWoodNoncontact->Size = System::Drawing::Size(164, 86);
 			this->btnWoodNoncontact->TabIndex = 12;
 			this->btnWoodNoncontact->Text = L"Подрыв неконтактным зарядом";
 			this->btnWoodNoncontact->UseVisualStyleBackColor = true;
@@ -236,10 +229,9 @@ namespace IZNT {
 			// btnWoodStump
 			// 
 			this->btnWoodStump->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnWoodStump->Location = System::Drawing::Point(22, 651);
-			this->btnWoodStump->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnWoodStump->Location = System::Drawing::Point(15, 421);
 			this->btnWoodStump->Name = L"btnWoodStump";
-			this->btnWoodStump->Size = System::Drawing::Size(246, 132);
+			this->btnWoodStump->Size = System::Drawing::Size(164, 86);
 			this->btnWoodStump->TabIndex = 13;
 			this->btnWoodStump->Text = L"Корчевка пня";
 			this->btnWoodStump->UseVisualStyleBackColor = true;
@@ -252,10 +244,9 @@ namespace IZNT {
 			this->steel_group->FlatAppearance->BorderColor = System::Drawing::Color::White;
 			this->steel_group->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->steel_group->Location = System::Drawing::Point(7, 793);
-			this->steel_group->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->steel_group->Location = System::Drawing::Point(5, 513);
 			this->steel_group->Name = L"steel_group";
-			this->steel_group->Size = System::Drawing::Size(261, 68);
+			this->steel_group->Size = System::Drawing::Size(174, 44);
 			this->steel_group->TabIndex = 2;
 			this->steel_group->Text = L"Сталь";
 			this->steel_group->UseVisualStyleBackColor = false;
@@ -264,10 +255,9 @@ namespace IZNT {
 			// btnSteelPlate
 			// 
 			this->btnSteelPlate->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnSteelPlate->Location = System::Drawing::Point(22, 871);
-			this->btnSteelPlate->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnSteelPlate->Location = System::Drawing::Point(15, 563);
 			this->btnSteelPlate->Name = L"btnSteelPlate";
-			this->btnSteelPlate->Size = System::Drawing::Size(246, 132);
+			this->btnSteelPlate->Size = System::Drawing::Size(164, 86);
 			this->btnSteelPlate->TabIndex = 14;
 			this->btnSteelPlate->Text = L"Стальные листы";
 			this->btnSteelPlate->UseVisualStyleBackColor = true;
@@ -277,10 +267,9 @@ namespace IZNT {
 			// btnSteelBalk
 			// 
 			this->btnSteelBalk->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnSteelBalk->Location = System::Drawing::Point(22, 1013);
-			this->btnSteelBalk->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnSteelBalk->Location = System::Drawing::Point(15, 655);
 			this->btnSteelBalk->Name = L"btnSteelBalk";
-			this->btnSteelBalk->Size = System::Drawing::Size(246, 132);
+			this->btnSteelBalk->Size = System::Drawing::Size(164, 86);
 			this->btnSteelBalk->TabIndex = 15;
 			this->btnSteelBalk->Text = L"Стальные балки";
 			this->btnSteelBalk->UseVisualStyleBackColor = true;
@@ -290,10 +279,9 @@ namespace IZNT {
 			// btnSteelTube
 			// 
 			this->btnSteelTube->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnSteelTube->Location = System::Drawing::Point(22, 1155);
-			this->btnSteelTube->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnSteelTube->Location = System::Drawing::Point(15, 747);
 			this->btnSteelTube->Name = L"btnSteelTube";
-			this->btnSteelTube->Size = System::Drawing::Size(246, 132);
+			this->btnSteelTube->Size = System::Drawing::Size(164, 86);
 			this->btnSteelTube->TabIndex = 16;
 			this->btnSteelTube->Text = L"Стальные трубы";
 			this->btnSteelTube->UseVisualStyleBackColor = true;
@@ -303,10 +291,9 @@ namespace IZNT {
 			// btnSteelRod
 			// 
 			this->btnSteelRod->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnSteelRod->Location = System::Drawing::Point(22, 1297);
-			this->btnSteelRod->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnSteelRod->Location = System::Drawing::Point(15, 839);
 			this->btnSteelRod->Name = L"btnSteelRod";
-			this->btnSteelRod->Size = System::Drawing::Size(246, 132);
+			this->btnSteelRod->Size = System::Drawing::Size(164, 86);
 			this->btnSteelRod->TabIndex = 17;
 			this->btnSteelRod->Text = L"Стальные стержни";
 			this->btnSteelRod->UseVisualStyleBackColor = true;
@@ -316,10 +303,9 @@ namespace IZNT {
 			// btnSteelCable
 			// 
 			this->btnSteelCable->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnSteelCable->Location = System::Drawing::Point(22, 1439);
-			this->btnSteelCable->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnSteelCable->Location = System::Drawing::Point(15, 931);
 			this->btnSteelCable->Name = L"btnSteelCable";
-			this->btnSteelCable->Size = System::Drawing::Size(246, 132);
+			this->btnSteelCable->Size = System::Drawing::Size(164, 86);
 			this->btnSteelCable->TabIndex = 18;
 			this->btnSteelCable->Text = L"Стальные тросы";
 			this->btnSteelCable->UseVisualStyleBackColor = true;
@@ -329,10 +315,9 @@ namespace IZNT {
 			// btnSteelBar
 			// 
 			this->btnSteelBar->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnSteelBar->Location = System::Drawing::Point(22, 1581);
-			this->btnSteelBar->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnSteelBar->Location = System::Drawing::Point(15, 1023);
 			this->btnSteelBar->Name = L"btnSteelBar";
-			this->btnSteelBar->Size = System::Drawing::Size(246, 132);
+			this->btnSteelBar->Size = System::Drawing::Size(164, 86);
 			this->btnSteelBar->TabIndex = 19;
 			this->btnSteelBar->Text = L"Стальные бруски";
 			this->btnSteelBar->UseVisualStyleBackColor = true;
@@ -345,10 +330,9 @@ namespace IZNT {
 			this->monolith_group->FlatAppearance->BorderColor = System::Drawing::Color::White;
 			this->monolith_group->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->monolith_group->Location = System::Drawing::Point(7, 1723);
-			this->monolith_group->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->monolith_group->Location = System::Drawing::Point(5, 1115);
 			this->monolith_group->Name = L"monolith_group";
-			this->monolith_group->Size = System::Drawing::Size(261, 68);
+			this->monolith_group->Size = System::Drawing::Size(174, 44);
 			this->monolith_group->TabIndex = 20;
 			this->monolith_group->Text = L"Монолиты";
 			this->monolith_group->UseVisualStyleBackColor = false;
@@ -357,10 +341,9 @@ namespace IZNT {
 			// btnMonolithColumn
 			// 
 			this->btnMonolithColumn->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnMonolithColumn->Location = System::Drawing::Point(22, 1801);
-			this->btnMonolithColumn->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnMonolithColumn->Location = System::Drawing::Point(15, 1165);
 			this->btnMonolithColumn->Name = L"btnMonolithColumn";
-			this->btnMonolithColumn->Size = System::Drawing::Size(246, 132);
+			this->btnMonolithColumn->Size = System::Drawing::Size(164, 86);
 			this->btnMonolithColumn->TabIndex = 21;
 			this->btnMonolithColumn->Text = L"Колонны, столбы, балки";
 			this->btnMonolithColumn->UseVisualStyleBackColor = true;
@@ -370,10 +353,9 @@ namespace IZNT {
 			// btnMonolithHole
 			// 
 			this->btnMonolithHole->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnMonolithHole->Location = System::Drawing::Point(22, 1943);
-			this->btnMonolithHole->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnMonolithHole->Location = System::Drawing::Point(15, 1257);
 			this->btnMonolithHole->Name = L"btnMonolithHole";
-			this->btnMonolithHole->Size = System::Drawing::Size(246, 132);
+			this->btnMonolithHole->Size = System::Drawing::Size(164, 86);
 			this->btnMonolithHole->TabIndex = 22;
 			this->btnMonolithHole->Text = L"Пробивание отверстия";
 			this->btnMonolithHole->UseVisualStyleBackColor = true;
@@ -383,10 +365,9 @@ namespace IZNT {
 			// btnMonolithSpur
 			// 
 			this->btnMonolithSpur->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnMonolithSpur->Location = System::Drawing::Point(22, 2085);
-			this->btnMonolithSpur->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnMonolithSpur->Location = System::Drawing::Point(15, 1349);
 			this->btnMonolithSpur->Name = L"btnMonolithSpur";
-			this->btnMonolithSpur->Size = System::Drawing::Size(246, 132);
+			this->btnMonolithSpur->Size = System::Drawing::Size(164, 86);
 			this->btnMonolithSpur->TabIndex = 23;
 			this->btnMonolithSpur->Text = L"Шпуровый заряд";
 			this->btnMonolithSpur->UseVisualStyleBackColor = true;
@@ -396,10 +377,9 @@ namespace IZNT {
 			// btnMonolithNoncontact
 			// 
 			this->btnMonolithNoncontact->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnMonolithNoncontact->Location = System::Drawing::Point(22, 2227);
-			this->btnMonolithNoncontact->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnMonolithNoncontact->Location = System::Drawing::Point(15, 1441);
 			this->btnMonolithNoncontact->Name = L"btnMonolithNoncontact";
-			this->btnMonolithNoncontact->Size = System::Drawing::Size(246, 132);
+			this->btnMonolithNoncontact->Size = System::Drawing::Size(164, 86);
 			this->btnMonolithNoncontact->TabIndex = 24;
 			this->btnMonolithNoncontact->Text = L"Неконтактный заряд";
 			this->btnMonolithNoncontact->UseVisualStyleBackColor = true;
@@ -408,17 +388,18 @@ namespace IZNT {
 			// 
 			// MainForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSize = true;
+			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
-			this->ClientSize = System::Drawing::Size(1378, 909);
+			this->ClientSize = System::Drawing::Size(919, 591);
 			this->Controls->Add(this->flowLayoutPanel1);
 			this->Controls->Add(this->panel1);
 			this->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
-			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->MinimumSize = System::Drawing::Size(935, 630);
 			this->Name = L"MainForm";
 			this->Text = L"Расчет зарядов";
 			this->flowLayoutPanel1->ResumeLayout(false);
