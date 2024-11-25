@@ -49,11 +49,16 @@ namespace IZNT {
 	private: System::Windows::Forms::TextBox^ width_steel_sheets_textBox;
 
 
-	private: System::Windows::Forms::CheckBox^ checkChargeÑumulative;
-	private: System::Windows::Forms::CheckBox^ checkConcentratedCharge;
+
+
 	private: System::Windows::Forms::CheckBox^ checkArm;
 	private: System::Windows::Forms::CheckBox^ checkUnderwaterExp;
 	private: System::Windows::Forms::CheckBox^ checkDemolitionSkin;
+	private: System::Windows::Forms::ComboBox^ type_charge_comboBox;
+
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Button^ btnWaterLeft;
+	private: System::Windows::Forms::Button^ btnWaterRight;
 
 
 
@@ -80,11 +85,13 @@ namespace IZNT {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->width_steel_sheets_textBox = (gcnew System::Windows::Forms::TextBox());
-			this->checkChargeÑumulative = (gcnew System::Windows::Forms::CheckBox());
-			this->checkConcentratedCharge = (gcnew System::Windows::Forms::CheckBox());
 			this->checkArm = (gcnew System::Windows::Forms::CheckBox());
 			this->checkUnderwaterExp = (gcnew System::Windows::Forms::CheckBox());
 			this->checkDemolitionSkin = (gcnew System::Windows::Forms::CheckBox());
+			this->type_charge_comboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->btnWaterLeft = (gcnew System::Windows::Forms::Button());
+			this->btnWaterRight = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label5
@@ -166,35 +173,11 @@ namespace IZNT {
 			this->width_steel_sheets_textBox->Size = System::Drawing::Size(211, 26);
 			this->width_steel_sheets_textBox->TabIndex = 24;
 			// 
-			// checkChargeÑumulative
-			// 
-			this->checkChargeÑumulative->AutoSize = true;
-			this->checkChargeÑumulative->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
-			this->checkChargeÑumulative->Location = System::Drawing::Point(14, 201);
-			this->checkChargeÑumulative->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
-			this->checkChargeÑumulative->Name = L"checkChargeÑumulative";
-			this->checkChargeÑumulative->Size = System::Drawing::Size(208, 44);
-			this->checkChargeÑumulative->TabIndex = 26;
-			this->checkChargeÑumulative->Text = L"Êóìóëÿòèâíûé çàðÿä \r\n(èç ïëàñòèòà-4)";
-			this->checkChargeÑumulative->UseVisualStyleBackColor = true;
-			// 
-			// checkConcentratedCharge
-			// 
-			this->checkConcentratedCharge->AutoSize = true;
-			this->checkConcentratedCharge->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
-			this->checkConcentratedCharge->Location = System::Drawing::Point(14, 251);
-			this->checkConcentratedCharge->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
-			this->checkConcentratedCharge->Name = L"checkConcentratedCharge";
-			this->checkConcentratedCharge->Size = System::Drawing::Size(234, 44);
-			this->checkConcentratedCharge->TabIndex = 27;
-			this->checkConcentratedCharge->Text = L"Ñîñðåäîòî÷åííûé çàðÿä\r\n(èç ïëàñòèòà-4)";
-			this->checkConcentratedCharge->UseVisualStyleBackColor = true;
-			// 
 			// checkArm
 			// 
 			this->checkArm->AutoSize = true;
 			this->checkArm->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
-			this->checkArm->Location = System::Drawing::Point(15, 307);
+			this->checkArm->Location = System::Drawing::Point(16, 268);
 			this->checkArm->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->checkArm->Name = L"checkArm";
 			this->checkArm->Size = System::Drawing::Size(152, 24);
@@ -206,25 +189,77 @@ namespace IZNT {
 			// 
 			this->checkUnderwaterExp->AutoSize = true;
 			this->checkUnderwaterExp->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
-			this->checkUnderwaterExp->Location = System::Drawing::Point(15, 348);
+			this->checkUnderwaterExp->Location = System::Drawing::Point(16, 309);
 			this->checkUnderwaterExp->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
 			this->checkUnderwaterExp->Size = System::Drawing::Size(187, 24);
 			this->checkUnderwaterExp->TabIndex = 29;
 			this->checkUnderwaterExp->Text = L"Ïîäðûâ ïîä âîäîé";
 			this->checkUnderwaterExp->UseVisualStyleBackColor = true;
+			this->checkUnderwaterExp->CheckedChanged += gcnew System::EventHandler(this, &SteelSheets::checkUnderwaterExp_CheckedChanged);
 			// 
 			// checkDemolitionSkin
 			// 
 			this->checkDemolitionSkin->AutoSize = true;
 			this->checkDemolitionSkin->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
-			this->checkDemolitionSkin->Location = System::Drawing::Point(15, 388);
+			this->checkDemolitionSkin->Location = System::Drawing::Point(16, 445);
 			this->checkDemolitionSkin->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->checkDemolitionSkin->Name = L"checkDemolitionSkin";
-			this->checkDemolitionSkin->Size = System::Drawing::Size(310, 24);
+			this->checkDemolitionSkin->Size = System::Drawing::Size(176, 44);
 			this->checkDemolitionSkin->TabIndex = 30;
-			this->checkDemolitionSkin->Text = L"Ïîäðûâ ñòàëüíîé îáøèâêè ñóäíà\r\n";
+			this->checkDemolitionSkin->Text = L"Ïîäðûâ ñòàëüíîé\r\nîáøèâêè ñóäíà\r\n";
 			this->checkDemolitionSkin->UseVisualStyleBackColor = true;
+			this->checkDemolitionSkin->CheckedChanged += gcnew System::EventHandler(this, &SteelSheets::checkDemolitionSkin_CheckedChanged);
+			// 
+			// type_charge_comboBox
+			// 
+			this->type_charge_comboBox->Cursor = System::Windows::Forms::Cursors::Default;
+			this->type_charge_comboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->type_charge_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->type_charge_comboBox->FormattingEnabled = true;
+			this->type_charge_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
+				L"Óäëèíåííûé èç øàøåê", L"Óäëèíåííûé èç ïëàñòèòà",
+					L"Êóìóëÿòèâíûé", L"Ñîñðåäîòî÷åííûé "
+			});
+			this->type_charge_comboBox->Location = System::Drawing::Point(16, 219);
+			this->type_charge_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			this->type_charge_comboBox->Name = L"type_charge_comboBox";
+			this->type_charge_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->type_charge_comboBox->Size = System::Drawing::Size(211, 28);
+			this->type_charge_comboBox->TabIndex = 31;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->label2->Location = System::Drawing::Point(13, 201);
+			this->label2->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(79, 15);
+			this->label2->TabIndex = 33;
+			this->label2->Text = L"Òèï çàðÿäà";
+			// 
+			// btnWaterLeft
+			// 
+			this->btnWaterLeft->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnWaterLeft->Location = System::Drawing::Point(17, 339);
+			this->btnWaterLeft->Name = L"btnWaterLeft";
+			this->btnWaterLeft->Size = System::Drawing::Size(75, 100);
+			this->btnWaterLeft->TabIndex = 34;
+			this->btnWaterLeft->Text = L" ";
+			this->btnWaterLeft->UseVisualStyleBackColor = true;
+			this->btnWaterLeft->Click += gcnew System::EventHandler(this, &SteelSheets::btnWaterLeft_Click);
+			// 
+			// btnWaterRight
+			// 
+			this->btnWaterRight->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnWaterRight->Location = System::Drawing::Point(98, 339);
+			this->btnWaterRight->Name = L"btnWaterRight";
+			this->btnWaterRight->Size = System::Drawing::Size(75, 100);
+			this->btnWaterRight->TabIndex = 35;
+			this->btnWaterRight->Text = L" ";
+			this->btnWaterRight->UseVisualStyleBackColor = true;
+			this->btnWaterRight->Click += gcnew System::EventHandler(this, &SteelSheets::btnWaterRight_Click);
 			// 
 			// SteelSheets
 			// 
@@ -232,11 +267,13 @@ namespace IZNT {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->btnWaterRight);
+			this->Controls->Add(this->btnWaterLeft);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->type_charge_comboBox);
 			this->Controls->Add(this->checkDemolitionSkin);
 			this->Controls->Add(this->checkUnderwaterExp);
 			this->Controls->Add(this->checkArm);
-			this->Controls->Add(this->checkConcentratedCharge);
-			this->Controls->Add(this->checkChargeÑumulative);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->width_steel_sheets_textBox);
 			this->Controls->Add(this->label5);
@@ -255,5 +292,9 @@ namespace IZNT {
 		}
 #pragma endregion
 	private: System::Void calc_button_Click(System::Object^ sender, System::EventArgs^ e);
-	};
+	private: System::Void checkUnderwaterExp_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void checkDemolitionSkin_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void btnWaterLeft_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void btnWaterRight_Click(System::Object^ sender, System::EventArgs^ e);
+};
 }
