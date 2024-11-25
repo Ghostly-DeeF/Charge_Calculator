@@ -128,6 +128,8 @@
     <ClCompile Include="MonolithHole.cpp" />
     <ClCompile Include="MonolithNoncontact.cpp" />
     <ClCompile Include="MonolithSpur.cpp" />
+    <ClCompile Include="SteelBar.cpp" />
+    <ClCompile Include="SteelBeam.cpp" />
     <ClCompile Include="SteelCable.cpp" />
     <ClCompile Include="SteelRod.cpp" />
     <ClCompile Include="SteelSheets.cpp" />
@@ -159,10 +161,24 @@
     <ClInclude Include="MonolithSpur.h">
       <FileType>CppControl</FileType>
     </ClInclude>
-    <ClInclude Include="SteelCable.h" />
-    <ClInclude Include="SteelRod.h" />
-    <ClInclude Include="SteelSheets.h" />
-    <ClInclude Include="SteelTube.h" />
+    <ClInclude Include="SteelBar.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="SteelBeam.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="SteelCable.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="SteelRod.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="SteelSheets.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="SteelTube.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="Wood1.h">
       <FileType>CppControl</FileType>
     </ClInclude>

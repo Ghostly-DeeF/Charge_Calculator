@@ -36,6 +36,20 @@ inline System::Void IZNT::SteelSheets::calc_button_Click(System::Object^ sender,
         answer = 2.5 * pow(thickness_steel_sheets, 3);
     }
 
+    if (checkArm->Checked) {
+        answer *= 2;
+    }
+
+    if (checkUnderwaterExp->Checked) {
+        answer *= 2;
+    }
+
+    if (checkDemolitionSkin->Checked) {
+        answer *= 4;
+    }
+
+
+
     answer = round(answer);
     answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
 

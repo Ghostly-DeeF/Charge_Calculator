@@ -47,6 +47,7 @@ inline System::Void IZNT::MainForm::wood_group_Click(System::Object^ sender, Sys
         btnSteelTube->Visible = false;
         btnSteelRod->Visible = false;
         btnSteelCable->Visible = false;
+        btnSteelBar->Visible = false;
     }
 
     if (btnMonolithColumn->Visible == true) {
@@ -65,6 +66,7 @@ inline System::Void IZNT::MainForm::steel_group_Click(System::Object^ sender, Sy
         btnSteelTube->Visible = true;
         btnSteelRod->Visible = true;
         btnSteelCable->Visible = true;
+        btnSteelBar->Visible = true;
     }
     else {
         btnSteelPlate->Visible = false;
@@ -72,6 +74,7 @@ inline System::Void IZNT::MainForm::steel_group_Click(System::Object^ sender, Sy
         btnSteelTube->Visible = false;
         btnSteelRod->Visible = false;
         btnSteelCable->Visible = false;
+        btnSteelBar->Visible = false;
     }
 
     if (btnWood->Visible == true) {
@@ -111,6 +114,7 @@ inline System::Void IZNT::MainForm::monolith_group_Click(System::Object^ sender,
         btnSteelTube->Visible = false;
         btnSteelRod->Visible = false;
         btnSteelCable->Visible = false;
+        btnSteelBar->Visible = false;
     }
 
     if (btnWood->Visible == true) {
@@ -173,6 +177,14 @@ inline System::Void IZNT::MainForm::btnMonolithSpur_Click(System::Object^ sender
 
 inline System::Void IZNT::MainForm::btnMonolithNoncontact_Click(System::Object^ sender, System::EventArgs^ e) {
     SetForm(panel1, gcnew IZNT::MonolithNoncontact());
+}
+
+inline System::Void IZNT::MainForm::btnSteelBar_Click(System::Object^ sender, System::EventArgs^ e) {
+    SetForm(panel1, gcnew IZNT::SteelBar());
+}
+
+inline System::Void IZNT::MainForm::btnSteelBalk_Click(System::Object^ sender, System::EventArgs^ e) {
+    SetForm(panel1, gcnew IZNT::SteelBeam());
 }
 
 

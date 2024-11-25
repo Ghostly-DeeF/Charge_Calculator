@@ -11,12 +11,16 @@ inline System::Void IZNT::SteelCable::calc_button_Click(System::Object^ sender, 
         return;
     }
 
-    
- 
+
+
     answerz = 10 * pow(diameter_steel_cable, 3);
 
     if (checkBox_Steel_Cable->Checked) {
         answerz /= 4;
+    }
+
+    if (checkUnderwaterExp->Checked) {
+        answerz *= 2;
     }
 
     answerz = round(answerz);
@@ -30,7 +34,7 @@ inline System::Void IZNT::SteelCable::calc_button_Click(System::Object^ sender, 
         answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerz / 400) * 2 + " по 0,4 кг";
     }
     else if (answerz / 400 >= 1) {
-        answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerz / 400) * 2 + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(answerz / 400) * 2) + 1) * 2  + " по 0,2 кг";
+        answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerz / 400) * 2 + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(answerz / 400) * 2) + 1) * 2 + " по 0,2 кг";
     }
     else {
         answer_textBox->Text += " Требуется шашек:\r\n 2 по 0,2 кг";

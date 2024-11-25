@@ -37,6 +37,9 @@ namespace IZNT {
 		}
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::TextBox^ thickness_steel_sheets_textBox;
+
+
+
 	protected:
 
 	private: System::Windows::Forms::TextBox^ answer_textBox;
@@ -44,8 +47,16 @@ namespace IZNT {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::TextBox^ width_steel_sheets_textBox;
+
+
 	private: System::Windows::Forms::CheckBox^ checkChargeСumulative;
 	private: System::Windows::Forms::CheckBox^ checkConcentratedCharge;
+	private: System::Windows::Forms::CheckBox^ checkArm;
+	private: System::Windows::Forms::CheckBox^ checkUnderwaterExp;
+	private: System::Windows::Forms::CheckBox^ checkDemolitionSkin;
+
+
+
 
 
 
@@ -53,7 +64,7 @@ namespace IZNT {
 		/// <summary>
 		/// Обязательная переменная конструктора.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -71,6 +82,9 @@ namespace IZNT {
 			this->width_steel_sheets_textBox = (gcnew System::Windows::Forms::TextBox());
 			this->checkChargeСumulative = (gcnew System::Windows::Forms::CheckBox());
 			this->checkConcentratedCharge = (gcnew System::Windows::Forms::CheckBox());
+			this->checkArm = (gcnew System::Windows::Forms::CheckBox());
+			this->checkUnderwaterExp = (gcnew System::Windows::Forms::CheckBox());
+			this->checkDemolitionSkin = (gcnew System::Windows::Forms::CheckBox());
 			this->SuspendLayout();
 			// 
 			// label5
@@ -127,22 +141,21 @@ namespace IZNT {
 			this->label1->Location = System::Drawing::Point(41, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(759, 58);
+			this->label1->Size = System::Drawing::Size(759, 87);
 			this->label1->TabIndex = 19;
-			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nбруса или плоского пакет"
-				L"а свай\r\n";
+			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nстального листа\r\n\r\n";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->label4->Location = System::Drawing::Point(1, 195);
+			this->label4->Location = System::Drawing::Point(1, 190);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(216, 20);
+			this->label4->Size = System::Drawing::Size(152, 20);
 			this->label4->TabIndex = 25;
-			this->label4->Text = L"Ширина бруса (пакета) в см";
+			this->label4->Text = L"Ширина листа в см";
 			// 
 			// width_steel_sheets_textBox
 			// 
@@ -173,12 +186,45 @@ namespace IZNT {
 			this->checkConcentratedCharge->Text = L"Сосредоточенный заряд \r\n(из пластита-4)";
 			this->checkConcentratedCharge->UseVisualStyleBackColor = true;
 			// 
+			// checkArm
+			// 
+			this->checkArm->AutoSize = true;
+			this->checkArm->Location = System::Drawing::Point(5, 396);
+			this->checkArm->Name = L"checkArm";
+			this->checkArm->Size = System::Drawing::Size(128, 21);
+			this->checkArm->TabIndex = 28;
+			this->checkArm->Text = L"Броневой лист";
+			this->checkArm->UseVisualStyleBackColor = true;
+			// 
+			// checkUnderwaterExp
+			// 
+			this->checkUnderwaterExp->AutoSize = true;
+			this->checkUnderwaterExp->Location = System::Drawing::Point(5, 440);
+			this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
+			this->checkUnderwaterExp->Size = System::Drawing::Size(152, 21);
+			this->checkUnderwaterExp->TabIndex = 29;
+			this->checkUnderwaterExp->Text = L"Подрыв под водой";
+			this->checkUnderwaterExp->UseVisualStyleBackColor = true;
+			// 
+			// checkDemolitionSkin
+			// 
+			this->checkDemolitionSkin->AutoSize = true;
+			this->checkDemolitionSkin->Location = System::Drawing::Point(5, 483);
+			this->checkDemolitionSkin->Name = L"checkDemolitionSkin";
+			this->checkDemolitionSkin->Size = System::Drawing::Size(249, 21);
+			this->checkDemolitionSkin->TabIndex = 30;
+			this->checkDemolitionSkin->Text = L"Подрыв стальной обшивки судна\r\n";
+			this->checkDemolitionSkin->UseVisualStyleBackColor = true;
+			// 
 			// SteelSheets
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 17);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->checkDemolitionSkin);
+			this->Controls->Add(this->checkUnderwaterExp);
+			this->Controls->Add(this->checkArm);
 			this->Controls->Add(this->checkConcentratedCharge);
 			this->Controls->Add(this->checkChargeСumulative);
 			this->Controls->Add(this->label4);
@@ -198,5 +244,5 @@ namespace IZNT {
 		}
 #pragma endregion
 	private: System::Void calc_button_Click(System::Object^ sender, System::EventArgs^ e);
-};
+	};
 }
