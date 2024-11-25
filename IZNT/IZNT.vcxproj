@@ -124,6 +124,10 @@
     <ClCompile Include="HelloPanel.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainForm.cpp" />
+    <ClCompile Include="MonolithColumn.cpp" />
+    <ClCompile Include="MonolithHole.cpp" />
+    <ClCompile Include="MonolithNoncontact.cpp" />
+    <ClCompile Include="MonolithSpur.cpp" />
     <ClCompile Include="SteelCable.cpp" />
     <ClCompile Include="SteelRod.cpp" />
     <ClCompile Include="SteelSheets.cpp" />
@@ -142,6 +146,18 @@
     </ClInclude>
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MonolithColumn.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="MonolithHole.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="MonolithNoncontact.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="MonolithSpur.h">
+      <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="SteelCable.h" />
     <ClInclude Include="SteelRod.h" />
@@ -169,6 +185,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonolithColumn.resx">
+      <DependentUpon>MonolithColumn.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonolithHole.resx">
+      <DependentUpon>MonolithHole.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonolithNoncontact.resx">
+      <DependentUpon>MonolithNoncontact.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonolithSpur.resx">
+      <DependentUpon>MonolithSpur.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SteelCable.resx" />
     <EmbeddedResource Include="SteelRod.resx" />
