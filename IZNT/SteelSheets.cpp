@@ -1,5 +1,5 @@
 #include "SteelSheets.h"
-#include <corecrt_math.h>
+#include <cmath>
 
 double thickness_steel_sheets = 0.0;
 double width_steel_sheets = 0.0;

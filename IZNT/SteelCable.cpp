@@ -1,5 +1,5 @@
 #include "SteelCable.h"
-#include <corecrt_math.h>
+#include <cmath>
 
 
 float diameter_steel_cable;

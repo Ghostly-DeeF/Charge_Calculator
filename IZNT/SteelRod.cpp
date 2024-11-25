@@ -1,5 +1,5 @@
 #include "SteelRod.h"
-#include <corecrt_math.h>
+#include <cmath>
 
 float diameter_steel_rod = 0.0f;
 float answery = 0.0f;

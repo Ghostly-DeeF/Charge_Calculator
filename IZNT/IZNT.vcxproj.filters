@@ -126,10 +126,10 @@
       <Filter>Исходные файлы\Monolith</Filter>
     </ClCompile>
     <ClCompile Include="SteelBar.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\StealGroup</Filter>
     </ClCompile>
     <ClCompile Include="SteelBeam.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\StealGroup</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

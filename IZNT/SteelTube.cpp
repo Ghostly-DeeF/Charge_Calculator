@@ -1,5 +1,5 @@
 #include "SteelTube.h"
-#include <corecrt_math.h>
+#include <cmath>
 
 float diameter_steel_tube;
 float thickness_steel_tube;
