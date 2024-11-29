@@ -16,7 +16,6 @@
 #include "SteelBar.h"
 
 #include "MonolithColumn.h"
-#include "MonolithHole.h"
 #include "MonolithSpur.h"
 #include "MonolithNoncontact.h"
 
@@ -72,7 +71,7 @@ namespace IZNT {
 
 	private: System::Windows::Forms::Button^ monolith_group;
 	private: System::Windows::Forms::Button^ btnMonolithColumn;
-	private: System::Windows::Forms::Button^ btnMonolithHole;
+
 	private: System::Windows::Forms::Button^ btnMonolithSpur;
 	private: System::Windows::Forms::Button^ btnMonolithNoncontact;
 
@@ -117,7 +116,6 @@ namespace IZNT {
 			this->btnSteelBar = (gcnew System::Windows::Forms::Button());
 			this->monolith_group = (gcnew System::Windows::Forms::Button());
 			this->btnMonolithColumn = (gcnew System::Windows::Forms::Button());
-			this->btnMonolithHole = (gcnew System::Windows::Forms::Button());
 			this->btnMonolithSpur = (gcnew System::Windows::Forms::Button());
 			this->btnMonolithNoncontact = (gcnew System::Windows::Forms::Button());
 			this->flowLayoutPanel1->SuspendLayout();
@@ -152,7 +150,6 @@ namespace IZNT {
 			this->flowLayoutPanel1->Controls->Add(this->btnSteelBar);
 			this->flowLayoutPanel1->Controls->Add(this->monolith_group);
 			this->flowLayoutPanel1->Controls->Add(this->btnMonolithColumn);
-			this->flowLayoutPanel1->Controls->Add(this->btnMonolithHole);
 			this->flowLayoutPanel1->Controls->Add(this->btnMonolithSpur);
 			this->flowLayoutPanel1->Controls->Add(this->btnMonolithNoncontact);
 			this->flowLayoutPanel1->Dock = System::Windows::Forms::DockStyle::Right;
@@ -345,27 +342,15 @@ namespace IZNT {
 			this->btnMonolithColumn->Name = L"btnMonolithColumn";
 			this->btnMonolithColumn->Size = System::Drawing::Size(164, 86);
 			this->btnMonolithColumn->TabIndex = 21;
-			this->btnMonolithColumn->Text = L"Колонны, столбы, балки";
+			this->btnMonolithColumn->Text = L"Колонны, столбы, балки, плиты";
 			this->btnMonolithColumn->UseVisualStyleBackColor = true;
 			this->btnMonolithColumn->Visible = false;
 			this->btnMonolithColumn->Click += gcnew System::EventHandler(this, &MainForm::btnMonolithColumn_Click);
 			// 
-			// btnMonolithHole
-			// 
-			this->btnMonolithHole->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnMonolithHole->Location = System::Drawing::Point(15, 1257);
-			this->btnMonolithHole->Name = L"btnMonolithHole";
-			this->btnMonolithHole->Size = System::Drawing::Size(164, 86);
-			this->btnMonolithHole->TabIndex = 22;
-			this->btnMonolithHole->Text = L"Пробивание отверстия";
-			this->btnMonolithHole->UseVisualStyleBackColor = true;
-			this->btnMonolithHole->Visible = false;
-			this->btnMonolithHole->Click += gcnew System::EventHandler(this, &MainForm::btnMonolithHole_Click);
-			// 
 			// btnMonolithSpur
 			// 
 			this->btnMonolithSpur->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnMonolithSpur->Location = System::Drawing::Point(15, 1349);
+			this->btnMonolithSpur->Location = System::Drawing::Point(15, 1257);
 			this->btnMonolithSpur->Name = L"btnMonolithSpur";
 			this->btnMonolithSpur->Size = System::Drawing::Size(164, 86);
 			this->btnMonolithSpur->TabIndex = 23;
@@ -377,7 +362,7 @@ namespace IZNT {
 			// btnMonolithNoncontact
 			// 
 			this->btnMonolithNoncontact->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
-			this->btnMonolithNoncontact->Location = System::Drawing::Point(15, 1441);
+			this->btnMonolithNoncontact->Location = System::Drawing::Point(15, 1349);
 			this->btnMonolithNoncontact->Name = L"btnMonolithNoncontact";
 			this->btnMonolithNoncontact->Size = System::Drawing::Size(164, 86);
 			this->btnMonolithNoncontact->TabIndex = 24;
@@ -411,6 +396,8 @@ namespace IZNT {
 
 private: System::Void wood_group_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void steel_group_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void monolith_group_Click(System::Object^ sender, System::EventArgs^ e);
+
 private: System::Void btnWood_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void btnWoodBalk_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void btnWoodTwoBalk_Click(System::Object^ sender, System::EventArgs^ e);
@@ -421,13 +408,12 @@ private: System::Void btnSteelPlate_Click(System::Object^ sender, System::EventA
 private: System::Void btnSteelTube_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void btnSteelRod_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void btnSteelCable_Click(System::Object^ sender, System::EventArgs^ e);
-
-private: System::Void monolith_group_Click(System::Object^ sender, System::EventArgs^ e);
-private: System::Void btnMonolithColumn_Click(System::Object^ sender, System::EventArgs^ e);
-private: System::Void btnMonolithHole_Click(System::Object^ sender, System::EventArgs^ e);
-private: System::Void btnMonolithSpur_Click(System::Object^ sender, System::EventArgs^ e);
-private: System::Void btnMonolithNoncontact_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void btnSteelBar_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void btnSteelBalk_Click(System::Object^ sender, System::EventArgs^ e);
+
+private: System::Void btnMonolithColumn_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void btnMonolithSpur_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void btnMonolithNoncontact_Click(System::Object^ sender, System::EventArgs^ e);
+
 };
 }

@@ -125,7 +125,6 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="MonolithColumn.cpp" />
-    <ClCompile Include="MonolithHole.cpp" />
     <ClCompile Include="MonolithNoncontact.cpp" />
     <ClCompile Include="MonolithSpur.cpp" />
     <ClCompile Include="SteelBar.cpp" />
@@ -150,9 +149,6 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MonolithColumn.h">
-      <FileType>CppControl</FileType>
-    </ClInclude>
-    <ClInclude Include="MonolithHole.h">
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="MonolithNoncontact.h">
@@ -204,9 +200,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MonolithColumn.resx">
       <DependentUpon>MonolithColumn.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MonolithHole.resx">
-      <DependentUpon>MonolithHole.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MonolithNoncontact.resx">
       <DependentUpon>MonolithNoncontact.h</DependentUpon>

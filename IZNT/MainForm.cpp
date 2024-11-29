@@ -52,7 +52,6 @@ inline System::Void IZNT::MainForm::wood_group_Click(System::Object^ sender, Sys
 
     if (btnMonolithColumn->Visible == true) {
         btnMonolithColumn->Visible = false;
-        btnMonolithHole->Visible = false;
         btnMonolithSpur->Visible = false;
         btnMonolithNoncontact->Visible = false;
     }
@@ -87,7 +86,6 @@ inline System::Void IZNT::MainForm::steel_group_Click(System::Object^ sender, Sy
 
     if (btnMonolithColumn->Visible == true) {
         btnMonolithColumn->Visible = false;
-        btnMonolithHole->Visible = false;
         btnMonolithSpur->Visible = false;
         btnMonolithNoncontact->Visible = false;
     }
@@ -97,13 +95,11 @@ inline System::Void IZNT::MainForm::steel_group_Click(System::Object^ sender, Sy
 inline System::Void IZNT::MainForm::monolith_group_Click(System::Object^ sender, System::EventArgs^ e) {
     if (btnMonolithColumn->Visible == false) {
         btnMonolithColumn->Visible = true;
-        btnMonolithHole->Visible = true;
         btnMonolithSpur->Visible = true;
         btnMonolithNoncontact->Visible = true;
     }
     else {
         btnMonolithColumn->Visible = false;
-        btnMonolithHole->Visible = false;
         btnMonolithSpur->Visible = false;
         btnMonolithNoncontact->Visible = false;
     }
@@ -165,10 +161,6 @@ inline System::Void IZNT::MainForm::btnSteelCable_Click(System::Object^ sender, 
 
 inline System::Void IZNT::MainForm::btnMonolithColumn_Click(System::Object^ sender, System::EventArgs^ e) {
     SetForm(panel1, gcnew IZNT::MonolithColumn());
-}
-
-inline System::Void IZNT::MainForm::btnMonolithHole_Click(System::Object^ sender, System::EventArgs^ e) {
-    SetForm(panel1, gcnew IZNT::MonolithHole());
 }
 
 inline System::Void IZNT::MainForm::btnMonolithSpur_Click(System::Object^ sender, System::EventArgs^ e) {
