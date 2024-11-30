@@ -30,7 +30,6 @@ inline System::Void IZNT::MonolithSpur::calc_button_Click(System::Object^ sender
         answer_textBox->Text = " Ошибка: вы некорректно ввели толщину\r\n Число должно быть больше 0\r\n Дробное число задается через запятую";
         return;
     }
-    thickness /= 100;
     
     float lengthH = 0.0f;
     float coefK = 0.0f;
@@ -41,7 +40,7 @@ inline System::Void IZNT::MonolithSpur::calc_button_Click(System::Object^ sender
             break;
         }
         else if (thickness > coef[i][0] && thickness < coef[i + 1][0]) {
-            if (i >= 12) {
+            if (i >= 11) {
                 answer_textBox->Text = " Ошибка: Толщина больше 2 метров!";
                 return;
             }

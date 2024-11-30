@@ -101,9 +101,9 @@ namespace IZNT {
 			this->label2->Location = System::Drawing::Point(13, 170);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(150, 15);
+			this->label2->Size = System::Drawing::Size(193, 15);
 			this->label2->TabIndex = 21;
-			this->label2->Text = L"Толщина объекта в см";
+			this->label2->Text = L"Толщина H объекта в метрах";
 			// 
 			// thickness_textBox
 			// 
