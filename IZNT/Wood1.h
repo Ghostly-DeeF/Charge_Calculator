@@ -20,12 +20,11 @@ namespace IZNT {
 		Wood1(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
+			pictureBox1->Image = Image::FromFile(".\\Picture\\img1Wood.bmp");
 		}
 	private: System::Windows::Forms::CheckBox^ checkRing;
 	private: System::Windows::Forms::CheckBox^ underwater_checkBox;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 	public:
 
@@ -83,6 +82,8 @@ namespace IZNT {
 			this->answer_textBox = (gcnew System::Windows::Forms::TextBox());
 			this->checkRing = (gcnew System::Windows::Forms::CheckBox());
 			this->underwater_checkBox = (gcnew System::Windows::Forms::CheckBox());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -166,9 +167,9 @@ namespace IZNT {
 			this->label4->Location = System::Drawing::Point(13, 216);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(188, 15);
+			this->label4->Size = System::Drawing::Size(202, 15);
 			this->label4->TabIndex = 6;
-			this->label4->Text = L"Диаметр бревна (куста) в см";
+			this->label4->Text = L"Диаметр D бревна (куста) в см";
 			// 
 			// calc_button
 			// 
@@ -221,11 +222,20 @@ namespace IZNT {
 			this->underwater_checkBox->Text = L"Взрыв под водой";
 			this->underwater_checkBox->UseVisualStyleBackColor = true;
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Location = System::Drawing::Point(249, 327);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(451, 251);
+			this->pictureBox1->TabIndex = 11;
+			this->pictureBox1->TabStop = false;
+			// 
 			// Wood1
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->underwater_checkBox);
 			this->Controls->Add(this->checkRing);
 			this->Controls->Add(this->answer_textBox);
@@ -243,6 +253,7 @@ namespace IZNT {
 			this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Name = L"Wood1";
 			this->Size = System::Drawing::Size(719, 591);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

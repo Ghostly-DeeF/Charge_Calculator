@@ -20,9 +20,7 @@ namespace IZNT {
 		WoodStump(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
+			pictureBox1->Image = Image::FromFile(".\\Picture\\img1Stump.bmp");
 		}
 
 	protected:
@@ -48,6 +46,7 @@ namespace IZNT {
 
 
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 	protected:
 
@@ -75,6 +74,8 @@ namespace IZNT {
 			this->calc_button = (gcnew System::Windows::Forms::Button());
 			this->diameter_log_textBox = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label2
@@ -84,9 +85,9 @@ namespace IZNT {
 			this->label2->Location = System::Drawing::Point(13, 67);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(159, 15);
+			this->label2->Size = System::Drawing::Size(134, 15);
 			this->label2->TabIndex = 41;
-			this->label2->Text = L"Тип породы древесины";
+			this->label2->Text = L"Диаметр D пня в см";
 			// 
 			// answer_textBox
 			// 
@@ -137,12 +138,21 @@ namespace IZNT {
 			this->label1->Text = L"Расчет сосредоточенного заряда, необходимого для корчевания пня";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Location = System::Drawing::Point(16, 373);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(684, 202);
+			this->pictureBox1->TabIndex = 42;
+			this->pictureBox1->TabStop = false;
+			// 
 			// WoodStump
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->answer_textBox);
 			this->Controls->Add(this->calc_button);
@@ -153,6 +163,7 @@ namespace IZNT {
 			this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Name = L"WoodStump";
 			this->Size = System::Drawing::Size(719, 591);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

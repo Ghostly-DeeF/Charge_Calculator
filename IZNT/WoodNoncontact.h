@@ -20,9 +20,7 @@ namespace IZNT {
 		WoodNoncontact(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
+			pictureBox1->Image = Image::FromFile(".\\Picture\\img1WoodNonContact.bmp");
 		}
 
 	protected:
@@ -53,6 +51,7 @@ namespace IZNT {
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::ComboBox^ condition_wood_comboBox;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 	private:
 		/// <summary>
@@ -79,6 +78,8 @@ namespace IZNT {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->condition_wood_comboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// underwater_checkBox
@@ -127,7 +128,7 @@ namespace IZNT {
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(218, 45);
 			this->label5->TabIndex = 30;
-			this->label5->Text = L"Расстояние от центра заряда\r\nдо центра наиболее удаленного\r\nэлемента в метрах";
+			this->label5->Text = L"Расстояние r от центра заряда\r\nдо центра наиболее удаленного\r\nэлемента в метрах";
 			// 
 			// distanse_textBox
 			// 
@@ -176,7 +177,7 @@ namespace IZNT {
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(177, 30);
 			this->label4->TabIndex = 26;
-			this->label4->Text = L"Диаметр наиболее\r\nудаленного элемента в см";
+			this->label4->Text = L"Диаметр D наиболее\r\nудаленного элемента в см";
 			// 
 			// diameter_log_textBox
 			// 
@@ -225,12 +226,21 @@ namespace IZNT {
 				L"тов\r\n";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Location = System::Drawing::Point(249, 373);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(451, 206);
+			this->pictureBox1->TabIndex = 34;
+			this->pictureBox1->TabStop = false;
+			// 
 			// WoodNoncontact
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->underwater_checkBox);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->type_wood_comboBox);
@@ -248,6 +258,7 @@ namespace IZNT {
 			this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Name = L"WoodNoncontact";
 			this->Size = System::Drawing::Size(719, 591);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

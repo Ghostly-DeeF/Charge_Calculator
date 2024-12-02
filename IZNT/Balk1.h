@@ -20,15 +20,14 @@ namespace IZNT {
 		Balk1(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
+			pictureBox1->Image = Image::FromFile(".\\Picture\\img1Balk.bmp");
 		}
 	private:
 		System::Windows::Forms::CheckBox^ underwater_checkBox;
 		float thickness_balk = 0.0f;
 		float width_balk = 0.0f;
-		float answer = 0.0f;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
+		   float answer = 0.0f;
 	public:
 		
 	protected:
@@ -85,6 +84,8 @@ namespace IZNT {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->type_wood_comboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->underwater_checkBox = (gcnew System::Windows::Forms::CheckBox());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -135,9 +136,9 @@ namespace IZNT {
 			this->label4->Location = System::Drawing::Point(13, 216);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(184, 15);
+			this->label4->Size = System::Drawing::Size(196, 15);
 			this->label4->TabIndex = 13;
-			this->label4->Text = L"Ширина бруса (пакета) в см";
+			this->label4->Text = L"Ширина b бруса (пакета) в см";
 			// 
 			// width_balk_textBox
 			// 
@@ -180,9 +181,9 @@ namespace IZNT {
 			this->label5->Location = System::Drawing::Point(16, 294);
 			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(191, 15);
+			this->label5->Size = System::Drawing::Size(203, 15);
 			this->label5->TabIndex = 18;
-			this->label5->Text = L"Толщина бруса (пакета) в см";
+			this->label5->Text = L"Толщина h бруса (пакета) в см";
 			// 
 			// thickness_balk_textBox
 			// 
@@ -231,12 +232,21 @@ namespace IZNT {
 			this->underwater_checkBox->Text = L"Взрыв под водой";
 			this->underwater_checkBox->UseVisualStyleBackColor = true;
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Location = System::Drawing::Point(249, 344);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(451, 228);
+			this->pictureBox1->TabIndex = 22;
+			this->pictureBox1->TabStop = false;
+			// 
 			// Balk1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->underwater_checkBox);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->type_wood_comboBox);
@@ -254,6 +264,7 @@ namespace IZNT {
 			this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Name = L"Balk1";
 			this->Size = System::Drawing::Size(719, 591);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

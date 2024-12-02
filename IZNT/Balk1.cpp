@@ -59,7 +59,7 @@ inline System::Void IZNT::Balk1::calc_button_Click(System::Object^ sender, Syste
 inline System::Void IZNT::Balk1::thickness_balk_textBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 
     if (float::TryParse(thickness_balk_textBox->Text, thickness_balk) && thickness_balk > 0) {
-        underwater_checkBox->Text = "Взрыв под водой (глубже " + (thickness_balk * 2) + " см)";
+        underwater_checkBox->Text = "Взрыв под водой\r\n(глубже " + (thickness_balk * 2) + " см)";
     } else {
         underwater_checkBox->Text = "Взрыв под водой";
     }
