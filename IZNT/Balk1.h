@@ -94,7 +94,7 @@ namespace IZNT {
 			this->label1->Location = System::Drawing::Point(58, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(877, 64);
+			this->label1->Size = System::Drawing::Size(593, 42);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nбруса или плоского пакет"
 				L"а свай\r\n";
@@ -111,6 +111,7 @@ namespace IZNT {
 			this->answer_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->answer_textBox->Multiline = true;
 			this->answer_textBox->Name = L"answer_textBox";
+			this->answer_textBox->ReadOnly = true;
 			this->answer_textBox->Size = System::Drawing::Size(451, 206);
 			this->answer_textBox->TabIndex = 15;
 			// 
@@ -134,7 +135,7 @@ namespace IZNT {
 			this->label4->Location = System::Drawing::Point(13, 216);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(276, 22);
+			this->label4->Size = System::Drawing::Size(184, 15);
 			this->label4->TabIndex = 13;
 			this->label4->Text = L"Ширина бруса (пакета) в см";
 			// 
@@ -144,7 +145,7 @@ namespace IZNT {
 			this->width_balk_textBox->Location = System::Drawing::Point(16, 234);
 			this->width_balk_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->width_balk_textBox->Name = L"width_balk_textBox";
-			this->width_balk_textBox->Size = System::Drawing::Size(211, 35);
+			this->width_balk_textBox->Size = System::Drawing::Size(211, 26);
 			this->width_balk_textBox->TabIndex = 12;
 			// 
 			// label3
@@ -154,7 +155,7 @@ namespace IZNT {
 			this->label3->Location = System::Drawing::Point(13, 139);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(222, 22);
+			this->label3->Size = System::Drawing::Size(149, 15);
 			this->label3->TabIndex = 11;
 			this->label3->Text = L"Состояние древесины";
 			// 
@@ -169,7 +170,7 @@ namespace IZNT {
 			this->condition_wood_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->condition_wood_comboBox->Name = L"condition_wood_comboBox";
 			this->condition_wood_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->condition_wood_comboBox->Size = System::Drawing::Size(211, 37);
+			this->condition_wood_comboBox->Size = System::Drawing::Size(211, 28);
 			this->condition_wood_comboBox->TabIndex = 10;
 			// 
 			// label5
@@ -179,7 +180,7 @@ namespace IZNT {
 			this->label5->Location = System::Drawing::Point(16, 294);
 			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(286, 22);
+			this->label5->Size = System::Drawing::Size(191, 15);
 			this->label5->TabIndex = 18;
 			this->label5->Text = L"Толщина бруса (пакета) в см";
 			// 
@@ -189,7 +190,7 @@ namespace IZNT {
 			this->thickness_balk_textBox->Location = System::Drawing::Point(16, 312);
 			this->thickness_balk_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->thickness_balk_textBox->Name = L"thickness_balk_textBox";
-			this->thickness_balk_textBox->Size = System::Drawing::Size(211, 35);
+			this->thickness_balk_textBox->Size = System::Drawing::Size(211, 26);
 			this->thickness_balk_textBox->TabIndex = 17;
 			this->thickness_balk_textBox->TextChanged += gcnew System::EventHandler(this, &Balk1::thickness_balk_textBox_TextChanged);
 			// 
@@ -200,7 +201,7 @@ namespace IZNT {
 			this->label2->Location = System::Drawing::Point(13, 67);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(238, 22);
+			this->label2->Size = System::Drawing::Size(159, 15);
 			this->label2->TabIndex = 20;
 			this->label2->Text = L"Тип породы древесины";
 			// 
@@ -216,7 +217,7 @@ namespace IZNT {
 			this->type_wood_comboBox->Location = System::Drawing::Point(16, 85);
 			this->type_wood_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->type_wood_comboBox->Name = L"type_wood_comboBox";
-			this->type_wood_comboBox->Size = System::Drawing::Size(211, 37);
+			this->type_wood_comboBox->Size = System::Drawing::Size(211, 28);
 			this->type_wood_comboBox->TabIndex = 19;
 			// 
 			// underwater_checkBox
@@ -225,14 +226,14 @@ namespace IZNT {
 			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->underwater_checkBox->Location = System::Drawing::Point(16, 355);
 			this->underwater_checkBox->Name = L"underwater_checkBox";
-			this->underwater_checkBox->Size = System::Drawing::Size(252, 33);
+			this->underwater_checkBox->Size = System::Drawing::Size(171, 24);
 			this->underwater_checkBox->TabIndex = 21;
 			this->underwater_checkBox->Text = L"Взрыв под водой";
 			this->underwater_checkBox->UseVisualStyleBackColor = true;
 			// 
 			// Balk1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(10, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));

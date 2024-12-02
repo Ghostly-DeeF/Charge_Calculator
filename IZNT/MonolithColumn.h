@@ -156,6 +156,7 @@ namespace IZNT {
 			this->answer_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->answer_textBox->Multiline = true;
 			this->answer_textBox->Name = L"answer_textBox";
+			this->answer_textBox->ReadOnly = true;
 			this->answer_textBox->Size = System::Drawing::Size(451, 205);
 			this->answer_textBox->TabIndex = 19;
 			// 

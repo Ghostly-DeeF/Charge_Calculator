@@ -92,7 +92,7 @@ namespace IZNT {
 			this->label1->Location = System::Drawing::Point(58, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(877, 64);
+			this->label1->Size = System::Drawing::Size(593, 42);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nбревна или сосредоточенн"
 				L"ого куста свай";
@@ -110,7 +110,7 @@ namespace IZNT {
 			this->type_wood_comboBox->Location = System::Drawing::Point(16, 85);
 			this->type_wood_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->type_wood_comboBox->Name = L"type_wood_comboBox";
-			this->type_wood_comboBox->Size = System::Drawing::Size(211, 37);
+			this->type_wood_comboBox->Size = System::Drawing::Size(211, 28);
 			this->type_wood_comboBox->TabIndex = 1;
 			// 
 			// label2
@@ -120,7 +120,7 @@ namespace IZNT {
 			this->label2->Location = System::Drawing::Point(13, 67);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(238, 22);
+			this->label2->Size = System::Drawing::Size(159, 15);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Тип породы древесины";
 			// 
@@ -131,7 +131,7 @@ namespace IZNT {
 			this->label3->Location = System::Drawing::Point(13, 139);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(222, 22);
+			this->label3->Size = System::Drawing::Size(149, 15);
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"Состояние древесины";
 			// 
@@ -146,7 +146,7 @@ namespace IZNT {
 			this->condition_wood_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->condition_wood_comboBox->Name = L"condition_wood_comboBox";
 			this->condition_wood_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->condition_wood_comboBox->Size = System::Drawing::Size(211, 37);
+			this->condition_wood_comboBox->Size = System::Drawing::Size(211, 28);
 			this->condition_wood_comboBox->TabIndex = 3;
 			// 
 			// diameter_log_textBox
@@ -155,7 +155,7 @@ namespace IZNT {
 			this->diameter_log_textBox->Location = System::Drawing::Point(16, 234);
 			this->diameter_log_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->diameter_log_textBox->Name = L"diameter_log_textBox";
-			this->diameter_log_textBox->Size = System::Drawing::Size(211, 35);
+			this->diameter_log_textBox->Size = System::Drawing::Size(211, 26);
 			this->diameter_log_textBox->TabIndex = 5;
 			this->diameter_log_textBox->TextChanged += gcnew System::EventHandler(this, &Wood1::diameter_log_textBox_TextChanged);
 			// 
@@ -166,7 +166,7 @@ namespace IZNT {
 			this->label4->Location = System::Drawing::Point(13, 216);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(281, 22);
+			this->label4->Size = System::Drawing::Size(188, 15);
 			this->label4->TabIndex = 6;
 			this->label4->Text = L"Диаметр бревна (куста) в см";
 			// 
@@ -194,6 +194,7 @@ namespace IZNT {
 			this->answer_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->answer_textBox->Multiline = true;
 			this->answer_textBox->Name = L"answer_textBox";
+			this->answer_textBox->ReadOnly = true;
 			this->answer_textBox->Size = System::Drawing::Size(451, 189);
 			this->answer_textBox->TabIndex = 8;
 			this->answer_textBox->TextChanged += gcnew System::EventHandler(this, &Wood1::answer_textBox_TextChanged);
@@ -204,7 +205,7 @@ namespace IZNT {
 			this->checkRing->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->checkRing->Location = System::Drawing::Point(16, 360);
 			this->checkRing->Name = L"checkRing";
-			this->checkRing->Size = System::Drawing::Size(252, 33);
+			this->checkRing->Size = System::Drawing::Size(171, 24);
 			this->checkRing->TabIndex = 9;
 			this->checkRing->Text = L"Кольцевой заряд";
 			this->checkRing->UseVisualStyleBackColor = true;
@@ -215,7 +216,7 @@ namespace IZNT {
 			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->underwater_checkBox->Location = System::Drawing::Point(16, 297);
 			this->underwater_checkBox->Name = L"underwater_checkBox";
-			this->underwater_checkBox->Size = System::Drawing::Size(252, 33);
+			this->underwater_checkBox->Size = System::Drawing::Size(171, 24);
 			this->underwater_checkBox->TabIndex = 10;
 			this->underwater_checkBox->Text = L"Взрыв под водой";
 			this->underwater_checkBox->UseVisualStyleBackColor = true;
