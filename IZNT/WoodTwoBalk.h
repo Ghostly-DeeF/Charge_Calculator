@@ -206,7 +206,7 @@ namespace IZNT {
 			this->heightMas_textBox->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->heightMas_textBox->Location = System::Drawing::Point(44, 314);
 			this->heightMas_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
-			this->heightMas_textBox->MaxLength = 3;
+			this->heightMas_textBox->MaxLength = 4;
 			this->heightMas_textBox->Name = L"heightMas_textBox";
 			this->heightMas_textBox->Size = System::Drawing::Size(28, 19);
 			this->heightMas_textBox->TabIndex = 29;
@@ -234,7 +234,7 @@ namespace IZNT {
 			this->heightWall_textBox->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->heightWall_textBox->Location = System::Drawing::Point(74, 375);
 			this->heightWall_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
-			this->heightWall_textBox->MaxLength = 3;
+			this->heightWall_textBox->MaxLength = 4;
 			this->heightWall_textBox->Name = L"heightWall_textBox";
 			this->heightWall_textBox->Size = System::Drawing::Size(28, 19);
 			this->heightWall_textBox->TabIndex = 31;
@@ -262,7 +262,7 @@ namespace IZNT {
 			this->widthWall_textBox->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->widthWall_textBox->Location = System::Drawing::Point(48, 427);
 			this->widthWall_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
-			this->widthWall_textBox->MaxLength = 3;
+			this->widthWall_textBox->MaxLength = 4;
 			this->widthWall_textBox->Name = L"widthWall_textBox";
 			this->widthWall_textBox->Size = System::Drawing::Size(28, 19);
 			this->widthWall_textBox->TabIndex = 33;
@@ -316,7 +316,7 @@ namespace IZNT {
 			this->widthMas_textBox->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->widthMas_textBox->Location = System::Drawing::Point(127, 235);
 			this->widthMas_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
-			this->widthMas_textBox->MaxLength = 3;
+			this->widthMas_textBox->MaxLength = 4;
 			this->widthMas_textBox->Name = L"widthMas_textBox";
 			this->widthMas_textBox->Size = System::Drawing::Size(28, 19);
 			this->widthMas_textBox->TabIndex = 37;

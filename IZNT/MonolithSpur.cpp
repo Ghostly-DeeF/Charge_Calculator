@@ -72,7 +72,7 @@ inline System::Void IZNT::MonolithSpur::calc_button_Click(System::Object^ sender
         answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг";
     }
     else if (answer / 400 >= 1) {
-        answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(answer / 400) * 2) + 1) + " по 0,2 кг";
+        answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n или\r\n " + ((floor(answer / 400) * 2) + 1) + " по 0,2 кг";
     }
     else {
         answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
