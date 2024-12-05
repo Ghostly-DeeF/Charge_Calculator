@@ -4,8 +4,6 @@
 double thickness_steel_sheets = 0.0;
 double width_steel_sheets = 0.0;
 double answer = 0.0;
-bool btnLeft = false;
-bool btnRight = false;
 
 const float coef[9][2] = {
         {0.0f, 1.0f},
@@ -18,57 +16,6 @@ const float coef[9][2] = {
         {5.0f, 0.0f},
         {9999.9f, 0.0f}
 };
-
-inline System::Void IZNT::SteelSheets::checkUnderwaterExp_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    if (checkUnderwaterExp->Checked) {
-        checkDemolitionSkin->Visible = false;
-    }
-    else {
-        checkDemolitionSkin->Visible = true;
-    }
-
-    if (checkUnderwaterExp->Checked) {
-        answer_textBox->Text = " Определите, с какой стороны от заряда у вас вода и нажмите на определенную кнопку";
-        btnWaterLeft->Visible = true;
-        btnWaterRight->Visible = true;
-    }
-    
-}
-
-inline System::Void IZNT::SteelSheets::checkDemolitionSkin_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    if (checkDemolitionSkin->Checked) {
-        checkUnderwaterExp->Visible = false;
-        checkDemolitionSkin->Location = System::Drawing::Point(16, 309);
-    }
-    else {
-        checkUnderwaterExp->Visible = true;
-        checkDemolitionSkin->Location = System::Drawing::Point(16, 353);
-    }
-}
-
-System::Void IZNT::SteelSheets::btnWaterLeft_Click(System::Object^ sender, System::EventArgs^ e)
-{
-    if (btnLeft == true) {
-        btnLeft = false;
-        btnWaterLeft->BackColor = Color::FromArgb(255, 64, 64, 64);
-    }
-    else {
-        btnLeft = true;
-        btnWaterLeft->BackColor = Color::FromArgb(255, 0, 255, 255);
-    }
-}
-
-System::Void IZNT::SteelSheets::btnWaterRight_Click(System::Object^ sender, System::EventArgs^ e)
-{
-    if (btnRight == true) {
-        btnRight = false;
-        btnWaterRight->BackColor = Color::FromArgb(255, 64, 64, 64);
-    }
-    else {
-        btnRight = true;
-        btnWaterRight->BackColor = Color::FromArgb(255, 0, 255, 255);
-    }
-}
 
 inline System::Void IZNT::SteelSheets::calc_button_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -87,6 +34,12 @@ inline System::Void IZNT::SteelSheets::calc_button_Click(System::Object^ sender,
         return;
     }
 
+    if (!checkWater->Checked && !checkUnderwaterExp->Checked && !checkWoodenStop->Checked &&
+        !checkDemolitionSkin->Checked && !checkDemolitionSkinWater->Checked) {
+        answer_textBox->Text = " Ошибка: выберите необходимое место подрыва";
+        return;
+    }
+
     if (ceil(thickness_steel_sheets) <= 2) {
         answer = 20 * ceil(thickness_steel_sheets) * width_steel_sheets;
     }
@@ -98,14 +51,26 @@ inline System::Void IZNT::SteelSheets::calc_button_Click(System::Object^ sender,
         answer *= 2;
     }
 
-    if (checkUnderwaterExp->Checked) {
+    if (checkUnderwaterExp->Checked && !checkWoodenStop->Checked) {
         answer *= 2;
+    }
+
+    if (checkUnderwaterExp->Checked && checkWoodenStop->Checked) {
+        if (ceil(thickness_steel_sheets) <= 2) {
+            answer = 20 * ceil(thickness_steel_sheets) * width_steel_sheets;
+        }
+        else if (ceil(thickness_steel_sheets) > 2) {
+            answer = 10 * ceil(thickness_steel_sheets) * (ceil(thickness_steel_sheets) * width_steel_sheets);
+        }
     }
 
     if (checkDemolitionSkin->Checked) {
         answer *= 4;
     }
 
+    if (checkDemolitionSkinWater->Checked) {
+        answer /= 1.5;
+    }
     
     if (type_charge_comboBox->SelectedIndex == 0) {
         answer = round(answer);
@@ -141,44 +106,6 @@ inline System::Void IZNT::SteelSheets::calc_button_Click(System::Object^ sender,
         }
         else {
             answer_textBox->Text = " Толщина больше 5 см!\r\n Используйте другой вид заряда";
-        }
-    }
-
-    if (btnLeft == true) {
-        answer = round(answer);
-        answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
-
-        answer = ceill(answer / 200) * 200;
-
-        answer_textBox->Text += " Вес тротиловых шашек: " + (answer / 1000).ToString() + " кг\r\n";
-
-        if ((int)answer % 400 == 0) {
-            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг";
-        }
-        else if (answer / 400 >= 1) {
-            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(answer / 400) * 2) + 1) + " по 0,2 кг";
-        }
-        else {
-            answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
-        }
-    }
-
-    if (btnRight == true) {
-        answer = round(answer);
-        answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
-
-        answer = ceill(answer / 200) * 200;
-
-        answer_textBox->Text += " Вес тротиловых шашек: " + (answer / 1000).ToString() + " кг\r\n";
-
-        if ((int)answer % 400 == 0) {
-            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг";
-        }
-        else if (answer / 400 >= 1) {
-            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(answer / 400) * 2) + 1) + " по 0,2 кг";
-        }
-        else {
-            answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
         }
     }
 }
