@@ -3,8 +3,6 @@
 
 float diameter_steel_tube;
 float thickness_steel_tube;
-#define PI 3
-
 
 inline System::Void IZNT::SteelTube::calc_button_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -22,6 +20,10 @@ inline System::Void IZNT::SteelTube::calc_button_Click(System::Object^ sender, S
 
     if (checkUnderwaterExp->Checked) {
         answerz /= 1.5;
+    }
+
+    if (checkUnderwaterExp1->Checked) {
+        answerz *= 2;
     }
 
     answerz = round(answerz);
