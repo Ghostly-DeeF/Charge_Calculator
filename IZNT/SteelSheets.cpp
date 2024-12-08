@@ -17,6 +17,127 @@ const float coef[9][2] = {
         {9999.9f, 0.0f}
 };
 
+void imageSwitch(ComboBox^ combo, RadioButton^ rad1, RadioButton^ rad2, RadioButton^ rad3, RadioButton^ rad4, RadioButton^ rad5, PictureBox^ picture1) {
+    switch (combo->SelectedIndex)
+    {
+    case 0:
+        if (rad1->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img2Plate.bmp");
+        }
+        else if (rad2->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img10Plate.bmp");
+        }
+        else if (rad3->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img18Plate.bmp");
+        }
+        else if (rad4->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img6Plate.bmp");
+        }
+        else if (rad5->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img14Plate.bmp");
+        }
+        else {
+            picture1->Image = Image::FromFile(".\\Picture\\img2Plate.bmp");
+        }
+        break;
+
+    case 1:
+        if (rad1->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img3Plate.bmp");
+        }
+        else if (rad2->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img11Plate.bmp");
+        }
+        else if (rad3->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img19Plate.bmp");
+        }
+        else if (rad4->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img7Plate.bmp");
+        }
+        else if (rad5->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img15Plate.bmp");
+        }
+        else {
+            picture1->Image = Image::FromFile(".\\Picture\\img3Plate.bmp");
+        }
+        break;
+
+    case 2:
+        if (rad1->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img4Plate.bmp");
+        }
+        else if (rad2->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img12Plate.bmp");
+        }
+        else if (rad3->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img20Plate.bmp");
+        }
+        else if (rad4->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img8Plate.bmp");
+        }
+        else if (rad5->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img16Plate.bmp");
+        }
+        else {
+            picture1->Image = Image::FromFile(".\\Picture\\img4Plate.bmp");
+        }
+        break;
+
+    case 3:
+        if (rad1->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img5Plate.bmp");
+        }
+        else if (rad2->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img13Plate.bmp");
+        }
+        else if (rad3->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img21Plate.bmp");
+        }
+        else if (rad4->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img9Plate.bmp");
+        }
+        else if (rad5->Checked) {
+            picture1->Image = Image::FromFile(".\\Picture\\img17Plate.bmp");
+        }
+        else {
+            picture1->Image = Image::FromFile(".\\Picture\\img5Plate.bmp");
+        }
+        break;
+    default:
+        break;
+    }
+}
+
+inline IZNT::SteelSheets::SteelSheets(void)
+{
+    InitializeComponent();
+    pictureBox1->Image = Image::FromFile(".\\Picture\\img1Plate.bmp");
+}
+
+inline System::Void IZNT::SteelSheets::type_charge_comboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1);
+}
+
+inline System::Void IZNT::SteelSheets::checkWater_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1);
+}
+
+inline System::Void IZNT::SteelSheets::checkUnderwaterExp_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1);
+}
+
+inline System::Void IZNT::SteelSheets::checkWoodenStop_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1);
+}
+
+inline System::Void IZNT::SteelSheets::checkDemolitionSkin_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1);
+}
+
+inline System::Void IZNT::SteelSheets::checkDemolitionSkinWater_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1);
+}
+
 inline System::Void IZNT::SteelSheets::calc_button_Click(System::Object^ sender, System::EventArgs^ e) {
 
     if (!double::TryParse(thickness_steel_sheets_textBox->Text, thickness_steel_sheets) && thickness_steel_sheets <= 0) {
@@ -109,3 +230,5 @@ inline System::Void IZNT::SteelSheets::calc_button_Click(System::Object^ sender,
         }
     }
 }
+
+
