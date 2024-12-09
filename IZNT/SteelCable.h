@@ -16,13 +16,7 @@ namespace IZNT {
 	public ref class SteelCable : public System::Windows::Forms::UserControl
 	{
 	public:
-		SteelCable(void)
-		{
-			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
-		}
+		SteelCable(void);
 
 	protected:
 		/// <summary>
@@ -50,6 +44,7 @@ namespace IZNT {
 		System::ComponentModel::Container^ components;
 	private: System::Windows::Forms::CheckBox^ checkBox_Steel_Cable;
 	private: System::Windows::Forms::CheckBox^ checkUnderwaterExp;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 		   float answerz;
 
 #pragma region Windows Form Designer generated code
@@ -66,6 +61,8 @@ namespace IZNT {
 			   this->label1 = (gcnew System::Windows::Forms::Label());
 			   this->checkBox_Steel_Cable = (gcnew System::Windows::Forms::CheckBox());
 			   this->checkUnderwaterExp = (gcnew System::Windows::Forms::CheckBox());
+			   this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			   this->SuspendLayout();
 			   // 
 			   // answer_textBox
@@ -103,9 +100,9 @@ namespace IZNT {
 			   this->label4->Location = System::Drawing::Point(13, 67);
 			   this->label4->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label4->Name = L"label4";
-			   this->label4->Size = System::Drawing::Size(133, 15);
+			   this->label4->Size = System::Drawing::Size(145, 15);
 			   this->label4->TabIndex = 33;
-			   this->label4->Text = L"Диаметр троса в см";
+			   this->label4->Text = L"Диаметр h троса в см";
 			   // 
 			   // diameter_steel_cable_textBox
 			   // 
@@ -135,16 +132,17 @@ namespace IZNT {
 			   this->checkBox_Steel_Cable->Location = System::Drawing::Point(16, 132);
 			   this->checkBox_Steel_Cable->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			   this->checkBox_Steel_Cable->Name = L"checkBox_Steel_Cable";
-			   this->checkBox_Steel_Cable->Size = System::Drawing::Size(171, 24);
+			   this->checkBox_Steel_Cable->Size = System::Drawing::Size(183, 44);
 			   this->checkBox_Steel_Cable->TabIndex = 36;
-			   this->checkBox_Steel_Cable->Text = L"Кольцевой заряд";
+			   this->checkBox_Steel_Cable->Text = L"Кольцевой заряд\r\nиз пластичного ВВ";
 			   this->checkBox_Steel_Cable->UseVisualStyleBackColor = true;
+			   this->checkBox_Steel_Cable->CheckedChanged += gcnew System::EventHandler(this, &SteelCable::checkBox_Steel_Cable_CheckedChanged);
 			   // 
 			   // checkUnderwaterExp
 			   // 
 			   this->checkUnderwaterExp->AutoSize = true;
 			   this->checkUnderwaterExp->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
-			   this->checkUnderwaterExp->Location = System::Drawing::Point(16, 173);
+			   this->checkUnderwaterExp->Location = System::Drawing::Point(16, 181);
 			   this->checkUnderwaterExp->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			   this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
 			   this->checkUnderwaterExp->Size = System::Drawing::Size(187, 24);
@@ -152,12 +150,21 @@ namespace IZNT {
 			   this->checkUnderwaterExp->Text = L"Подрыв под водой";
 			   this->checkUnderwaterExp->UseVisualStyleBackColor = true;
 			   // 
+			   // pictureBox1
+			   // 
+			   this->pictureBox1->Location = System::Drawing::Point(16, 327);
+			   this->pictureBox1->Name = L"pictureBox1";
+			   this->pictureBox1->Size = System::Drawing::Size(684, 251);
+			   this->pictureBox1->TabIndex = 38;
+			   this->pictureBox1->TabStop = false;
+			   // 
 			   // SteelCable
 			   // 
 			   this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			   this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			   this->Controls->Add(this->pictureBox1);
 			   this->Controls->Add(this->checkUnderwaterExp);
 			   this->Controls->Add(this->checkBox_Steel_Cable);
 			   this->Controls->Add(this->answer_textBox);
@@ -170,11 +177,13 @@ namespace IZNT {
 			   this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			   this->Name = L"SteelCable";
 			   this->Size = System::Drawing::Size(719, 591);
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			   this->ResumeLayout(false);
 			   this->PerformLayout();
 
 		   }
 #pragma endregion
 	private: System::Void calc_button_Click(System::Object^ sender, System::EventArgs^ e);
-	};
+	private: System::Void checkBox_Steel_Cable_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+};
 }
