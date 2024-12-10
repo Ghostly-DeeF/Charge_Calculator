@@ -18,9 +18,7 @@ namespace IZNT {
 		SteelBar(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
+			pictureBox1->Image = Image::FromFile(".\\Picture\\img1Bar.bmp");
 		}
 
 	protected:
@@ -46,6 +44,7 @@ namespace IZNT {
 	private: System::Windows::Forms::TextBox^ width_steel_bar_textBox;
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::TextBox^ thickness_steel_bar_textBox;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 	private:
 		/// <summary>
@@ -68,6 +67,8 @@ namespace IZNT {
 			this->width_steel_bar_textBox = (gcnew System::Windows::Forms::TextBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->thickness_steel_bar_textBox = (gcnew System::Windows::Forms::TextBox());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// checkUnderwaterExp
@@ -129,9 +130,9 @@ namespace IZNT {
 			this->label2->Location = System::Drawing::Point(13, 139);
 			this->label2->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(137, 15);
+			this->label2->Size = System::Drawing::Size(148, 15);
 			this->label2->TabIndex = 41;
-			this->label2->Text = L"Ширина бруска в см";
+			this->label2->Text = L"Ширина B бруска в см";
 			// 
 			// width_steel_bar_textBox
 			// 
@@ -149,9 +150,9 @@ namespace IZNT {
 			this->label5->Location = System::Drawing::Point(13, 67);
 			this->label5->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(144, 15);
+			this->label5->Size = System::Drawing::Size(156, 15);
 			this->label5->TabIndex = 39;
-			this->label5->Text = L"Толщина бруска в см";
+			this->label5->Text = L"Толщина h бруска в см";
 			// 
 			// thickness_steel_bar_textBox
 			// 
@@ -162,12 +163,21 @@ namespace IZNT {
 			this->thickness_steel_bar_textBox->Size = System::Drawing::Size(211, 26);
 			this->thickness_steel_bar_textBox->TabIndex = 38;
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Location = System::Drawing::Point(249, 330);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(451, 251);
+			this->pictureBox1->TabIndex = 42;
+			this->pictureBox1->TabStop = false;
+			// 
 			// SteelBar
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->width_steel_bar_textBox);
 			this->Controls->Add(this->label5);
@@ -181,6 +191,7 @@ namespace IZNT {
 			this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Name = L"SteelBar";
 			this->Size = System::Drawing::Size(719, 591);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
