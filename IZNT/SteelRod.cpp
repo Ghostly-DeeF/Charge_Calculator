@@ -12,11 +12,15 @@ inline System::Void IZNT::SteelRod::calc_button_Click(System::Object^ sender, Sy
 		return;
 	}
 
-	else if (diameter_steel_rod > 2) {
+	if (diameter_steel_rod > 2) {
 		answery = 10 * pow(diameter_steel_rod, 3);
 	}
 
-	else if (checkUnderwaterExp->Checked) {
+	if (checkPlastit->Checked) {
+		answery = (10 * pow(diameter_steel_rod, 3)) / 2;
+	}
+
+	if (checkUnderwaterExp->Checked) {
 		answery *= 2;
 	}
 

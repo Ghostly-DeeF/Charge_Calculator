@@ -51,6 +51,7 @@ namespace IZNT {
 		/// Обязательная переменная конструктора.
 		/// </summary>
 		System::ComponentModel::Container^ components;
+	private: System::Windows::Forms::CheckBox^ checkPlastit;
 	private: System::Windows::Forms::CheckBox^ checkUnderwaterExp;
 
 
@@ -71,6 +72,7 @@ namespace IZNT {
 			   this->diameter_steel_rod_textBox = (gcnew System::Windows::Forms::TextBox());
 			   this->label1 = (gcnew System::Windows::Forms::Label());
 			   this->checkUnderwaterExp = (gcnew System::Windows::Forms::CheckBox());
+			   this->checkPlastit = (gcnew System::Windows::Forms::CheckBox());
 			   this->SuspendLayout();
 			   // 
 			   // answer_textBox
@@ -108,7 +110,7 @@ namespace IZNT {
 			   this->label4->Location = System::Drawing::Point(13, 67);
 			   this->label4->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label4->Name = L"label4";
-			   this->label4->Size = System::Drawing::Size(149, 15);
+			   this->label4->Size = System::Drawing::Size(223, 22);
 			   this->label4->TabIndex = 28;
 			   this->label4->Text = L"Диаметр стержня в см";
 			   // 
@@ -118,7 +120,7 @@ namespace IZNT {
 			   this->diameter_steel_rod_textBox->Location = System::Drawing::Point(16, 85);
 			   this->diameter_steel_rod_textBox->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
 			   this->diameter_steel_rod_textBox->Name = L"diameter_steel_rod_textBox";
-			   this->diameter_steel_rod_textBox->Size = System::Drawing::Size(211, 26);
+			   this->diameter_steel_rod_textBox->Size = System::Drawing::Size(211, 35);
 			   this->diameter_steel_rod_textBox->TabIndex = 27;
 			   // 
 			   // label1
@@ -128,7 +130,7 @@ namespace IZNT {
 			   this->label1->Location = System::Drawing::Point(58, 21);
 			   this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label1->Name = L"label1";
-			   this->label1->Size = System::Drawing::Size(593, 42);
+			   this->label1->Size = System::Drawing::Size(877, 64);
 			   this->label1->TabIndex = 26;
 			   this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nстального стержня\r\n";
 			   this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -140,17 +142,30 @@ namespace IZNT {
 			   this->checkUnderwaterExp->Location = System::Drawing::Point(16, 131);
 			   this->checkUnderwaterExp->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			   this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
-			   this->checkUnderwaterExp->Size = System::Drawing::Size(187, 24);
+			   this->checkUnderwaterExp->Size = System::Drawing::Size(276, 33);
 			   this->checkUnderwaterExp->TabIndex = 31;
 			   this->checkUnderwaterExp->Text = L"Подрыв под водой";
 			   this->checkUnderwaterExp->UseVisualStyleBackColor = true;
 			   // 
+			   // checkPlastit
+			   // 
+			   this->checkPlastit->AutoSize = true;
+			   this->checkPlastit->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			   this->checkPlastit->Location = System::Drawing::Point(16, 184);
+			   this->checkPlastit->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			   this->checkPlastit->Name = L"checkPlastit";
+			   this->checkPlastit->Size = System::Drawing::Size(299, 33);
+			   this->checkPlastit->TabIndex = 32;
+			   this->checkPlastit->Text = L"Заряд из пластита-4";
+			   this->checkPlastit->UseVisualStyleBackColor = true;
+			   // 
 			   // SteelRod
 			   // 
-			   this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
+			   this->AutoScaleDimensions = System::Drawing::SizeF(10, 20);
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			   this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			   this->Controls->Add(this->checkPlastit);
 			   this->Controls->Add(this->checkUnderwaterExp);
 			   this->Controls->Add(this->answer_textBox);
 			   this->Controls->Add(this->calc_button);

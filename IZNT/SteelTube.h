@@ -52,11 +52,15 @@ namespace IZNT {
 		/// </summary>
 		System::ComponentModel::Container^ components;
 
+	private: System::Windows::Forms::CheckBox^ checkUnderwaterExp;
 
 
-	private: System::Windows::Forms::RadioButton^ checkUnderwaterExp;
-	private: System::Windows::Forms::RadioButton^ checkUnderwaterExp1;
-	private: System::Windows::Forms::Label^ label2;
+
+
+
+
+
+
 
 
 		   float answerz;
@@ -75,9 +79,7 @@ namespace IZNT {
 			   this->label4 = (gcnew System::Windows::Forms::Label());
 			   this->diameter_steel_tube_textBox = (gcnew System::Windows::Forms::TextBox());
 			   this->label1 = (gcnew System::Windows::Forms::Label());
-			   this->checkUnderwaterExp = (gcnew System::Windows::Forms::RadioButton());
-			   this->checkUnderwaterExp1 = (gcnew System::Windows::Forms::RadioButton());
-			   this->label2 = (gcnew System::Windows::Forms::Label());
+			   this->checkUnderwaterExp = (gcnew System::Windows::Forms::CheckBox());
 			   this->SuspendLayout();
 			   // 
 			   // label5
@@ -164,35 +166,12 @@ namespace IZNT {
 			   // 
 			   this->checkUnderwaterExp->AutoSize = true;
 			   this->checkUnderwaterExp->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
-			   this->checkUnderwaterExp->Location = System::Drawing::Point(16, 288);
+			   this->checkUnderwaterExp->Location = System::Drawing::Point(16, 211);
 			   this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
-			   this->checkUnderwaterExp->Size = System::Drawing::Size(294, 33);
-			   this->checkUnderwaterExp->TabIndex = 32;
-			   this->checkUnderwaterExp->TabStop = true;
-			   this->checkUnderwaterExp->Text = L"Не заполнена водой";
+			   this->checkUnderwaterExp->Size = System::Drawing::Size(276, 33);
+			   this->checkUnderwaterExp->TabIndex = 34;
+			   this->checkUnderwaterExp->Text = L"Подрыв под водой";
 			   this->checkUnderwaterExp->UseVisualStyleBackColor = true;
-			   // 
-			   // checkUnderwaterExp1
-			   // 
-			   this->checkUnderwaterExp1->AutoSize = true;
-			   this->checkUnderwaterExp1->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
-			   this->checkUnderwaterExp1->Location = System::Drawing::Point(16, 337);
-			   this->checkUnderwaterExp1->Name = L"checkUnderwaterExp1";
-			   this->checkUnderwaterExp1->Size = System::Drawing::Size(256, 33);
-			   this->checkUnderwaterExp1->TabIndex = 33;
-			   this->checkUnderwaterExp1->TabStop = true;
-			   this->checkUnderwaterExp1->Text = L"Заполнена водой";
-			   this->checkUnderwaterExp1->UseVisualStyleBackColor = true;
-			   // 
-			   // label2
-			   // 
-			   this->label2->AutoSize = true;
-			   this->label2->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F, System::Drawing::FontStyle::Bold));
-			   this->label2->Location = System::Drawing::Point(11, 212);
-			   this->label2->Name = L"label2";
-			   this->label2->Size = System::Drawing::Size(218, 58);
-			   this->label2->TabIndex = 34;
-			   this->label2->Text = L"Подрыв трубы \r\nпод водой";
 			   // 
 			   // SteelTube
 			   // 
@@ -201,8 +180,6 @@ namespace IZNT {
 			   this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			   this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			   this->Controls->Add(this->label2);
-			   this->Controls->Add(this->checkUnderwaterExp1);
 			   this->Controls->Add(this->checkUnderwaterExp);
 			   this->Controls->Add(this->label5);
 			   this->Controls->Add(this->thickness_steel_tube_textBox);
