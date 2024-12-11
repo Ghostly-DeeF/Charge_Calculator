@@ -1,6 +1,18 @@
 #include "SteelBeam.h"
 #include <corecrt_math.h>
 
+const float coef[9][2] = {
+        {0.0f, 1.0f},
+        {1.0f, 1.0f},
+        {1.5f, 2.0f},
+        {2.5f, 3.0f},
+        {3.5f, 4.0f},
+        {4.0f, 5.0f},
+        {4.5f, 6.0f},
+        {5.0f, 0.0f},
+        {9999.9f, 0.0f}
+};
+
 float thickness_steel_beam = 0.0f;
 float width_steel_beam = 0.0f;
 float answer = 0.0f;
@@ -35,11 +47,25 @@ void imageSwitch(ComboBox^ combo, CheckBox^ check, PictureBox^ picture1, Picture
             break;
 
         case 1:
-
+            if (check->Checked) {
+                picture1->Image = Image::FromFile(".\\Picture\\img6SteelBalk.bmp");
+                picture2->Image = Image::FromFile(".\\Picture\\img3SteelLegend.bmp");
+            }
+            else {
+                picture1->Image = Image::FromFile(".\\Picture\\img5SteelBalk.bmp");
+                picture2->Image = Image::FromFile(".\\Picture\\img3SteelLegend.bmp");
+            }
             break;
 
         case 2:
-
+            if (check->Checked) {
+                picture1->Image = Image::FromFile(".\\Picture\\img8SteelBalk.bmp");
+                picture2->Image = Image::FromFile(".\\Picture\\img3SteelLegend.bmp");
+            }
+            else {
+                picture1->Image = Image::FromFile(".\\Picture\\img7SteelBalk.bmp");
+                picture2->Image = Image::FromFile(".\\Picture\\img3SteelLegend.bmp");
+            }
             break;
 
         default:
@@ -101,32 +127,37 @@ inline System::Void IZNT::SteelBeam::calc_button_Click(System::Object^ sender, S
     width_wall /= 10;
     thickness_wall /= 10;
 
+    if (ceil(thickness_up) <= 2) {
+        answer_up_belt = 20 * ceil(thickness_up) * width_up;
+    }
+    else if (ceil(thickness_up) > 2) {
+        answer_up_belt = 10 * ceil(thickness_up) * (ceil(thickness_up) * width_up);
+    }
+    if (ceil(thickness_down) <= 2) {
+        answer_down_belt = 20 * ceil(thickness_down) * width_down;
+    }
+    else if (ceil(thickness_down) > 2) {
+        answer_down_belt = 10 * ceil(thickness_down) * (ceil(thickness_down) * width_down);
+    }
+    if (ceil(thickness_wall) <= 2) {
+        answer_wall = 20 * ceil(thickness_wall) * width_wall;
+    }
+    else if (ceil(thickness_wall) > 2) {
+        answer_wall = 10 * ceil(thickness_wall) * (ceil(thickness_wall) * width_wall);
+    }
+
+    if (checkUnderwaterExp->Checked) {
+        answer_up_belt *= 2;
+        answer_down_belt *= 2;
+        answer_wall *= 2;
+    }
+    answer_up_belt = round(answer_up_belt);
+    answer_down_belt = round(answer_down_belt);
+    answer_wall = round(answer_wall);
+
     switch (type_charge_comboBox->SelectedIndex)
     {
     case 0:
-        if (ceil(thickness_up) <= 2) {
-            answer_up_belt = 20 * ceil(thickness_up) * width_up;
-        }
-        else if (ceil(thickness_up) > 2) {
-            answer_up_belt = 10 * ceil(thickness_up) * (ceil(thickness_up) * width_up);
-        }
-        if (ceil(thickness_down) <= 2) {
-            answer_down_belt = 20 * ceil(thickness_down) * width_down;
-        }
-        else if (ceil(thickness_down) > 2) {
-            answer_down_belt = 10 * ceil(thickness_down) * (ceil(thickness_down) * width_down);
-        }
-        if (ceil(thickness_wall) <= 2) {
-            answer_wall = 20 * ceil(thickness_wall) * width_wall;
-        }
-        else if (ceil(thickness_wall) > 2) {
-            answer_wall = 10 * ceil(thickness_wall) * (ceil(thickness_wall) * width_wall);
-        }
-
-        answer_up_belt = round(answer_up_belt);
-        answer_down_belt = round(answer_down_belt);
-        answer_wall = round(answer_wall);
-
 
         answer_textBox->Text = " Точный общий вес всех зарядов: " + ((answer_up_belt + answer_down_belt + answer_wall + (conner_checkBox->Checked? 800: 0)) / 1000).ToString() + " кг\r\n\r\n";
 
@@ -174,126 +205,96 @@ inline System::Void IZNT::SteelBeam::calc_button_Click(System::Object^ sender, S
         }
 
         if (conner_checkBox->Checked) {
-            answer_textBox->Text += " Вес тротиловых шашек для 1 пары уголков: 0.4 кг\r\n";
-            answer_textBox->Text += " Требуется шашек:\r\n " + "1 по 0,4 кг\r\n";
+            answer_textBox->Text += " Вес тротиловых шашек для 1 пары уголков: " + ((checkUnderwaterExp->Checked) ? 0.8f : 0.4f) + " кг\r\n";
+            answer_textBox->Text += " Требуется шашек:\r\n " + ((checkUnderwaterExp->Checked) ? 2 : 1) + " по 0,4 кг\r\n";
         }
 
         answer_textBox->Text += " Части заряда, действующие в противоположных\r\n направлениях, должны располагаться со сдвигом одна\r\n относительно другой по длине балки\r\n";
 
-        /*answer = round(answer);
-        answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
-
-        answer = ceill(answer / 200) * 200;
-
-        answer_textBox->Text += " Вес тротиловых шашек: " + (answer / 1000).ToString() + " кг\r\n";
-
-        if (((int)answer % 400 == 0)) {
-            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг";
-        }
-        else if (answer / 400 >= 1) {
-            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(answer / 400) * 2) + 1) + " по 0,2 кг";
-        }
-        else {
-            answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
-        }*/
-
         break;
 
     case 1:
+    {
 
+        int i1 = 0;
+        for (i1 = 0; i1 < 9; i1++) {
+            if (thickness_up >= coef[i1][0] && thickness_up < coef[i1 + 1][0]) {
+                break;
+            }
+        }
+
+        int i2 = 0;
+        for (i2 = 0; i2 < 9; i2++) {
+            if (thickness_down >= coef[i2][0] && thickness_down < coef[i2 + 1][0]) {
+                break;
+            }
+        }
+
+        int i3 = 0;
+        for (i3 = 0; i3 < 9; i3++) {
+            if (thickness_wall >= coef[i3][0] && thickness_wall < coef[i3 + 1][0]) {
+                break;
+            }
+        }
+        if (i1 < 7 && i2 < 7 && i3 < 7) {
+            answer_textBox->Text = " Точный общий вес всех зарядов: " + ((answer_up_belt + answer_down_belt + answer_wall + (conner_checkBox->Checked ? 800 : 0)) / 1000).ToString() + " кг\r\n\r\n";
+            
+            answer_up_belt = ceill(answer_up_belt / 200) * 200;
+            answer_textBox->Text += " Вес заряда для верхней полки: " + (answer_up_belt / 1000).ToString() + " кг\r\n";
+            answer_up_belt = coef[i1][1];
+            answer_textBox->Text += " Требуется " + answer_up_belt + " шт нитей пластитового заряда\r\n\r\n";
+            
+            answer_down_belt = ceill(answer_down_belt / 200) * 200;
+            answer_textBox->Text += " Вес заряда для нижней полки: " + (answer_down_belt / 1000).ToString() + " кг\r\n";
+            answer_down_belt = coef[i2][1];
+            answer_textBox->Text += " Требуется " + answer_down_belt + " шт нитей пластитового заряда\r\n\r\n";
+
+            answer_wall = ceill(answer_wall / 200) * 200;
+            answer_textBox->Text += " Вес заряда для стенки: " + (answer_wall / 1000).ToString() + " кг\r\n";
+            answer_wall = coef[i3][1];
+            answer_textBox->Text += " Требуется " + answer_wall + " шт нитей пластитового заряда\r\n\r\n";
+
+            if (conner_checkBox->Checked) {
+                answer_textBox->Text += " Вес заряда для 1 пары уголков: " + ((checkUnderwaterExp->Checked) ? 0.8f : 0.4f) + " кг\r\n";
+                answer_textBox->Text += " Требуется 1 шт нитей пластитового заряда\r\n\r\n";
+            }
+
+            answer_textBox->Text += " Части заряда, действующие в противоположных\r\n направлениях, должны располагаться со сдвигом одна\r\n относительно другой по длине балки\r\n";
+        }
+        else if (i1 >= 7) {
+            answer_textBox->Text = " Толщина верхней полки больше 5 см!\r\n Используйте другой вид заряда";
+        }
+        else if (i2 >= 7) {
+            answer_textBox->Text = " Толщина нижней полки больше 5 см!\r\n Используйте другой вид заряда";
+        }
+        else if (i3 >= 7) {
+            answer_textBox->Text = " Толщина стенки больше 5 см!\r\n Используйте другой вид заряда";
+        }
+    }
         break;
 
     case 2:
+    {
+        float sum_answer = (answer_up_belt + answer_down_belt + answer_wall + (conner_checkBox->Checked ? 800 : 0)) * 2;
+        answer_textBox->Text = " Точный вес требуемого заряда: " + (sum_answer / 1000).ToString() + " кг\r\n\r\n";
 
+        sum_answer = ceill(sum_answer / 200) * 200;
+
+        answer_textBox->Text += " Вес тротиловых шашек: " + (sum_answer / 1000).ToString() + " кг\r\n";
+
+        if (((int)sum_answer % 400 == 0)) {
+            answer_textBox->Text += " Требуется шашек:\r\n " + floor(sum_answer / 400) + " по 0,4 кг";
+        }
+        else if (sum_answer / 400 >= 1) {
+            answer_textBox->Text += " Требуется шашек:\r\n " + floor(sum_answer / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(sum_answer / 400) * 2) + 1) + " по 0,2 кг";
+        }
+        else {
+            answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
+        }
+    }
         break;
     default:
         break;
     }
-
-   /* if (!float::TryParse(thickness_steel_beam_textBox->Text, thickness_steel_beam) && thickness_steel_beam <= 0) {
-        answer_textBox->Text = " Ошибка: вы некорректно ввели толщину\r\n Число должно быть больше 0\r\n Дробное число задается через запятую";
-        return;
-    }
-
-    if (!float::TryParse(width_steel_beam_textBox->Text, width_steel_beam) && width_steel_beam <= 0) {
-        answer_textBox->Text = " Ошибка: вы некорректно ввели ширину\r\n Число должно быть больше 0\r\n Дробное число задается через запятую";
-        return;
-    }
-
-    thickness_steel_beam = round(thickness_steel_beam);
-    if (ShapedCharge->Checked) {
-        if (thickness_steel_beam <= 2) {
-            answer = 20 * thickness_steel_beam * width_steel_beam;
-        }
-
-        if (thickness_steel_beam > 2) {
-            answer = 10 * thickness_steel_beam * (thickness_steel_beam * width_steel_beam);
-        }
-
-        answer = round(answer);
-        answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
-
-        answer = ceill(answer / 200) * 200;
-
-        answer_textBox->Text += " Вес тротиловых шашек: " + (answer / 1000).ToString() + " кг\r\n";
-
-        if ((int)answer % 400 == 0) {
-            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг";
-        }
-        else if (answer / 400 >= 1) {
-            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(answer / 400) * 2) + 1) + " по 0,2 кг";
-        }
-        else {
-            answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
-        }
-    }
-
-    if (ConcentratedCharge->Checked) {
-        if (thickness_steel_beam <= 2) {
-            answer = 20 * thickness_steel_beam * width_steel_beam;
-        }
-
-        if (thickness_steel_beam > 2) {
-            answer = 10 * thickness_steel_beam * (thickness_steel_beam * width_steel_beam);
-        }
-        answer *= 2;
-        answer = round(answer);
-        answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
-
-        answer = ceill(answer / 200) * 200;
-
-        answer_textBox->Text += " Вес тротиловых шашек: " + (answer / 1000).ToString() + " кг\r\n";
-
-        if ((int)answer % 400 == 0) {
-            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг";
-        }
-        else if (answer / 400 >= 1) {
-            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(answer / 400) * 2) + 1) + " по 0,2 кг";
-        }
-        else {
-            answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
-        }
-    }
-
-    if (checkUnderwaterExp->Checked) {
-        answer *= 2;
-        answer = round(answer);
-        answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
-
-        answer = ceill(answer / 200) * 200;
-
-        answer_textBox->Text += " Вес тротиловых шашек: " + (answer / 1000).ToString() + " кг\r\n";
-
-        if ((int)answer % 400 == 0) {
-            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг";
-        }
-        else if (answer / 400 >= 1) {
-            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(answer / 400) * 2) + 1) + " по 0,2 кг";
-        }
-        else {
-            answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
-        }
-    }*/
-
 }
 

@@ -249,7 +249,7 @@ inline System::Void IZNT::MonolithColumn::calc_button_Click(System::Object^ send
 	{
 	case 0:
 		answer = (masA[indexA] * coefB * pow(width * masB[location_comboBox->SelectedIndex][2], 3)) * 1000;
-		answer_textBox->Text = " Если ширина больше " + width * 2 + " м лучше использовать\r\n сосредоточенный заряд!\r\n";
+		answer_textBox->Text = " Если ширина больше " + width * 2 + " м лучше использовать\r\n удлиненный заряд!\r\n";
 		break;
 
 	case 1:
