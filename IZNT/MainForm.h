@@ -99,6 +99,7 @@ namespace IZNT {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->wood_group = (gcnew System::Windows::Forms::Button());
@@ -189,7 +190,7 @@ namespace IZNT {
 			this->btnWoodBalk->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(90)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
 				static_cast<System::Int32>(static_cast<System::Byte>(90)));
 			this->btnWoodBalk->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->btnWoodBalk->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
+			this->btnWoodBalk->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnWoodBalk->Location = System::Drawing::Point(15, 145);
 			this->btnWoodBalk->Name = L"btnWoodBalk";
 			this->btnWoodBalk->Size = System::Drawing::Size(164, 86);
@@ -201,7 +202,7 @@ namespace IZNT {
 			// 
 			// btnWoodTwoBalk
 			// 
-			this->btnWoodTwoBalk->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
+			this->btnWoodTwoBalk->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnWoodTwoBalk->Location = System::Drawing::Point(15, 237);
 			this->btnWoodTwoBalk->Name = L"btnWoodTwoBalk";
 			this->btnWoodTwoBalk->Size = System::Drawing::Size(164, 86);
@@ -213,7 +214,7 @@ namespace IZNT {
 			// 
 			// btnWoodNoncontact
 			// 
-			this->btnWoodNoncontact->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
+			this->btnWoodNoncontact->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnWoodNoncontact->Location = System::Drawing::Point(15, 329);
 			this->btnWoodNoncontact->Name = L"btnWoodNoncontact";
 			this->btnWoodNoncontact->Size = System::Drawing::Size(164, 86);
@@ -225,7 +226,7 @@ namespace IZNT {
 			// 
 			// btnWoodStump
 			// 
-			this->btnWoodStump->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
+			this->btnWoodStump->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnWoodStump->Location = System::Drawing::Point(15, 421);
 			this->btnWoodStump->Name = L"btnWoodStump";
 			this->btnWoodStump->Size = System::Drawing::Size(164, 86);
@@ -251,7 +252,7 @@ namespace IZNT {
 			// 
 			// btnSteelPlate
 			// 
-			this->btnSteelPlate->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
+			this->btnSteelPlate->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnSteelPlate->Location = System::Drawing::Point(15, 563);
 			this->btnSteelPlate->Name = L"btnSteelPlate";
 			this->btnSteelPlate->Size = System::Drawing::Size(164, 86);
@@ -263,7 +264,7 @@ namespace IZNT {
 			// 
 			// btnSteelBalk
 			// 
-			this->btnSteelBalk->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
+			this->btnSteelBalk->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnSteelBalk->Location = System::Drawing::Point(15, 655);
 			this->btnSteelBalk->Name = L"btnSteelBalk";
 			this->btnSteelBalk->Size = System::Drawing::Size(164, 86);
@@ -275,7 +276,7 @@ namespace IZNT {
 			// 
 			// btnSteelTube
 			// 
-			this->btnSteelTube->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
+			this->btnSteelTube->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnSteelTube->Location = System::Drawing::Point(15, 747);
 			this->btnSteelTube->Name = L"btnSteelTube";
 			this->btnSteelTube->Size = System::Drawing::Size(164, 86);
@@ -287,7 +288,7 @@ namespace IZNT {
 			// 
 			// btnSteelRod
 			// 
-			this->btnSteelRod->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
+			this->btnSteelRod->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnSteelRod->Location = System::Drawing::Point(15, 839);
 			this->btnSteelRod->Name = L"btnSteelRod";
 			this->btnSteelRod->Size = System::Drawing::Size(164, 86);
@@ -299,7 +300,7 @@ namespace IZNT {
 			// 
 			// btnSteelCable
 			// 
-			this->btnSteelCable->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
+			this->btnSteelCable->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnSteelCable->Location = System::Drawing::Point(15, 931);
 			this->btnSteelCable->Name = L"btnSteelCable";
 			this->btnSteelCable->Size = System::Drawing::Size(164, 86);
@@ -311,7 +312,7 @@ namespace IZNT {
 			// 
 			// btnSteelBar
 			// 
-			this->btnSteelBar->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
+			this->btnSteelBar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnSteelBar->Location = System::Drawing::Point(15, 1023);
 			this->btnSteelBar->Name = L"btnSteelBar";
 			this->btnSteelBar->Size = System::Drawing::Size(164, 86);
@@ -337,7 +338,7 @@ namespace IZNT {
 			// 
 			// btnMonolithColumn
 			// 
-			this->btnMonolithColumn->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
+			this->btnMonolithColumn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnMonolithColumn->Location = System::Drawing::Point(15, 1165);
 			this->btnMonolithColumn->Name = L"btnMonolithColumn";
 			this->btnMonolithColumn->Size = System::Drawing::Size(164, 86);
@@ -349,7 +350,7 @@ namespace IZNT {
 			// 
 			// btnMonolithSpur
 			// 
-			this->btnMonolithSpur->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
+			this->btnMonolithSpur->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnMonolithSpur->Location = System::Drawing::Point(15, 1257);
 			this->btnMonolithSpur->Name = L"btnMonolithSpur";
 			this->btnMonolithSpur->Size = System::Drawing::Size(164, 86);
@@ -361,7 +362,7 @@ namespace IZNT {
 			// 
 			// btnMonolithNoncontact
 			// 
-			this->btnMonolithNoncontact->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F, System::Drawing::FontStyle::Bold));
+			this->btnMonolithNoncontact->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold));
 			this->btnMonolithNoncontact->Location = System::Drawing::Point(15, 1349);
 			this->btnMonolithNoncontact->Name = L"btnMonolithNoncontact";
 			this->btnMonolithNoncontact->Size = System::Drawing::Size(164, 86);
@@ -384,9 +385,10 @@ namespace IZNT {
 			this->Controls->Add(this->panel1);
 			this->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MinimumSize = System::Drawing::Size(935, 630);
 			this->Name = L"MainForm";
-			this->Text = L"Расчет зарядов";
+			this->Text = L"Недотрога-1: Расчет заряда";
 			this->flowLayoutPanel1->ResumeLayout(false);
 			this->ResumeLayout(false);
 

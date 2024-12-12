@@ -60,9 +60,6 @@
     <ClInclude Include="MonolithColumn.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="MonolithHole.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="MonolithSpur.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
@@ -117,9 +114,6 @@
       <Filter>Исходные файлы\Monolith</Filter>
     </ClCompile>
     <ClCompile Include="MonolithColumn.cpp">
-      <Filter>Исходные файлы\Monolith</Filter>
-    </ClCompile>
-    <ClCompile Include="MonolithHole.cpp">
       <Filter>Исходные файлы\Monolith</Filter>
     </ClCompile>
     <ClCompile Include="MonolithNoncontact.cpp">
