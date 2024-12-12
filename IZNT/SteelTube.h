@@ -84,7 +84,7 @@ namespace IZNT {
 			   this->label5->Location = System::Drawing::Point(13, 139);
 			   this->label5->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label5->Name = L"label5";
-			   this->label5->Size = System::Drawing::Size(175, 20);
+			   this->label5->Size = System::Drawing::Size(148, 16);
 			   this->label5->TabIndex = 25;
 			   this->label5->Text = L"Толщина h трубы в см";
 			   // 
@@ -94,7 +94,7 @@ namespace IZNT {
 			   this->thickness_steel_tube_textBox->Location = System::Drawing::Point(16, 156);
 			   this->thickness_steel_tube_textBox->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
 			   this->thickness_steel_tube_textBox->Name = L"thickness_steel_tube_textBox";
-			   this->thickness_steel_tube_textBox->Size = System::Drawing::Size(211, 31);
+			   this->thickness_steel_tube_textBox->Size = System::Drawing::Size(211, 26);
 			   this->thickness_steel_tube_textBox->TabIndex = 24;
 			   // 
 			   // answer_textBox
@@ -132,8 +132,9 @@ namespace IZNT {
 			   this->label4->Location = System::Drawing::Point(13, 67);
 			   this->label4->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label4->Name = L"label4";
-			   this->label4->Size = System::Drawing::Size(0, 20);
+			   this->label4->Size = System::Drawing::Size(150, 16);
 			   this->label4->TabIndex = 21;
+			   this->label4->Text = L"Диаметр D трубы в см";
 			   // 
 			   // diameter_steel_tube_textBox
 			   // 
@@ -141,7 +142,7 @@ namespace IZNT {
 			   this->diameter_steel_tube_textBox->Location = System::Drawing::Point(16, 85);
 			   this->diameter_steel_tube_textBox->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
 			   this->diameter_steel_tube_textBox->Name = L"diameter_steel_tube_textBox";
-			   this->diameter_steel_tube_textBox->Size = System::Drawing::Size(211, 31);
+			   this->diameter_steel_tube_textBox->Size = System::Drawing::Size(211, 26);
 			   this->diameter_steel_tube_textBox->TabIndex = 20;
 			   // 
 			   // label1
@@ -151,7 +152,7 @@ namespace IZNT {
 			   this->label1->Location = System::Drawing::Point(58, 21);
 			   this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label1->Name = L"label1";
-			   this->label1->Size = System::Drawing::Size(759, 87);
+			   this->label1->Size = System::Drawing::Size(576, 66);
 			   this->label1->TabIndex = 19;
 			   this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nстальной трубы\r\n\r\n";
 			   this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -162,10 +163,11 @@ namespace IZNT {
 			   this->checkUnderwaterExp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			   this->checkUnderwaterExp->Location = System::Drawing::Point(16, 211);
 			   this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
-			   this->checkUnderwaterExp->Size = System::Drawing::Size(218, 29);
+			   this->checkUnderwaterExp->Size = System::Drawing::Size(189, 24);
 			   this->checkUnderwaterExp->TabIndex = 34;
 			   this->checkUnderwaterExp->Text = L"Подрыв под водой";
 			   this->checkUnderwaterExp->UseVisualStyleBackColor = true;
+			   this->checkUnderwaterExp->CheckedChanged += gcnew System::EventHandler(this, &SteelTube::checkUnderwaterExp_CheckedChanged);
 			   // 
 			   // pictureBox1
 			   // 
@@ -181,14 +183,16 @@ namespace IZNT {
 			   this->checkFillingWater->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			   this->checkFillingWater->Location = System::Drawing::Point(16, 256);
 			   this->checkFillingWater->Name = L"checkFillingWater";
-			   this->checkFillingWater->Size = System::Drawing::Size(272, 29);
+			   this->checkFillingWater->Size = System::Drawing::Size(227, 24);
 			   this->checkFillingWater->TabIndex = 36;
 			   this->checkFillingWater->Text = L"Труба заполнена водой";
 			   this->checkFillingWater->UseVisualStyleBackColor = true;
+			   this->checkFillingWater->Visible = false;
+			   this->checkFillingWater->CheckedChanged += gcnew System::EventHandler(this, &SteelTube::checkFillingWater_CheckedChanged);
 			   // 
 			   // SteelTube
 			   // 
-			   this->AutoScaleDimensions = System::Drawing::SizeF(8, 17);
+			   this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			   this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)));
@@ -215,5 +219,7 @@ namespace IZNT {
 		   }
 #pragma endregion
 	private: System::Void calc_button_Click(System::Object^ sender, System::EventArgs^ e);
-	};
+	private: System::Void checkUnderwaterExp_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void checkFillingWater_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+};
 }

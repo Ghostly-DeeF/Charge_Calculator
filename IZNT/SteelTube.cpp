@@ -4,6 +4,28 @@
 float diameter_steel_tube;
 float thickness_steel_tube;
 
+inline System::Void IZNT::SteelTube::checkUnderwaterExp_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    if (checkUnderwaterExp->Checked) {
+        checkFillingWater->Visible = true;
+        pictureBox1->Image = Image::FromFile(".\\Picture\\img2Tube.bmp");
+    }
+    else {
+        checkFillingWater->Visible = false;
+        checkFillingWater->Checked = false;
+        pictureBox1->Image = Image::FromFile(".\\Picture\\img1Tube.bmp");
+    }
+}
+
+inline System::Void IZNT::SteelTube::checkFillingWater_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+    if (checkFillingWater->Checked) {
+        pictureBox1->Image = Image::FromFile(".\\Picture\\img3Tube.bmp");
+    }
+    else {
+        pictureBox1->Image = Image::FromFile(".\\Picture\\img2Tube.bmp");
+    }
+}
+
+
 inline System::Void IZNT::SteelTube::calc_button_Click(System::Object^ sender, System::EventArgs^ e) {
 
     if (!float::TryParse(diameter_steel_tube_textBox->Text, diameter_steel_tube) && diameter_steel_tube <= 0) {
@@ -23,6 +45,7 @@ inline System::Void IZNT::SteelTube::calc_button_Click(System::Object^ sender, S
     }
 
     if (checkFillingWater->Checked) {
+        answerz *= 1.5;
         answerz *= 2;
     }
 

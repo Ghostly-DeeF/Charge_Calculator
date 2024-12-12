@@ -4,6 +4,15 @@
 float diameter_steel_rod = 0.0f;
 float answery = 0.0f;
 
+inline System::Void IZNT::SteelRod::checkPlastit_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	if (checkPlastit->Checked) {
+		pictureBox1->Image = Image::FromFile(".\\Picture\\img1Rod.bmp");
+	}
+	else {
+		pictureBox1->Image = Image::FromFile(".\\Picture\\img2Rod.bmp");
+	}
+}
+
 inline System::Void IZNT::SteelRod::calc_button_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	if (float::TryParse(diameter_steel_rod_textBox->Text, diameter_steel_rod) && diameter_steel_rod <= 0) {
@@ -47,3 +56,4 @@ inline System::Void IZNT::SteelRod::calc_button_Click(System::Object^ sender, Sy
 		}
 	}
 }
+

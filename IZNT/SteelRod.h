@@ -93,7 +93,7 @@ namespace IZNT {
 			   // 
 			   // calc_button
 			   // 
-			   this->calc_button->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			   this->calc_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			   this->calc_button->ForeColor = System::Drawing::SystemColors::ControlText;
 			   this->calc_button->Location = System::Drawing::Point(249, 85);
 			   this->calc_button->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
@@ -107,11 +107,11 @@ namespace IZNT {
 			   // label4
 			   // 
 			   this->label4->AutoSize = true;
-			   this->label4->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			   this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			   this->label4->Location = System::Drawing::Point(13, 67);
 			   this->label4->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label4->Name = L"label4";
-			   this->label4->Size = System::Drawing::Size(223, 22);
+			   this->label4->Size = System::Drawing::Size(151, 16);
 			   this->label4->TabIndex = 28;
 			   this->label4->Text = L"Диаметр стержня в см";
 			   // 
@@ -121,17 +121,17 @@ namespace IZNT {
 			   this->diameter_steel_rod_textBox->Location = System::Drawing::Point(16, 85);
 			   this->diameter_steel_rod_textBox->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
 			   this->diameter_steel_rod_textBox->Name = L"diameter_steel_rod_textBox";
-			   this->diameter_steel_rod_textBox->Size = System::Drawing::Size(211, 35);
+			   this->diameter_steel_rod_textBox->Size = System::Drawing::Size(211, 26);
 			   this->diameter_steel_rod_textBox->TabIndex = 27;
 			   // 
 			   // label1
 			   // 
 			   this->label1->AutoSize = true;
-			   this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 13.25F, System::Drawing::FontStyle::Bold));
+			   this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Bold));
 			   this->label1->Location = System::Drawing::Point(58, 21);
 			   this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label1->Name = L"label1";
-			   this->label1->Size = System::Drawing::Size(877, 64);
+			   this->label1->Size = System::Drawing::Size(576, 44);
 			   this->label1->TabIndex = 26;
 			   this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nстального стержня\r\n";
 			   this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -139,11 +139,11 @@ namespace IZNT {
 			   // checkUnderwaterExp
 			   // 
 			   this->checkUnderwaterExp->AutoSize = true;
-			   this->checkUnderwaterExp->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			   this->checkUnderwaterExp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			   this->checkUnderwaterExp->Location = System::Drawing::Point(16, 131);
 			   this->checkUnderwaterExp->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			   this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
-			   this->checkUnderwaterExp->Size = System::Drawing::Size(276, 33);
+			   this->checkUnderwaterExp->Size = System::Drawing::Size(189, 24);
 			   this->checkUnderwaterExp->TabIndex = 31;
 			   this->checkUnderwaterExp->Text = L"Подрыв под водой";
 			   this->checkUnderwaterExp->UseVisualStyleBackColor = true;
@@ -151,14 +151,16 @@ namespace IZNT {
 			   // checkPlastit
 			   // 
 			   this->checkPlastit->AutoSize = true;
-			   this->checkPlastit->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			   this->checkPlastit->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			   this->checkPlastit->Location = System::Drawing::Point(16, 184);
 			   this->checkPlastit->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			   this->checkPlastit->Name = L"checkPlastit";
-			   this->checkPlastit->Size = System::Drawing::Size(299, 33);
+			   this->checkPlastit->Size = System::Drawing::Size(205, 24);
 			   this->checkPlastit->TabIndex = 32;
 			   this->checkPlastit->Text = L"Заряд из пластита-4";
 			   this->checkPlastit->UseVisualStyleBackColor = true;
+			   this->checkPlastit->CheckedChanged += gcnew System::EventHandler(this, &SteelRod::checkPlastit_CheckedChanged);
+			   // 
 			   // pictureBox1
 			   // 
 			   this->pictureBox1->Location = System::Drawing::Point(249, 327);
@@ -169,7 +171,7 @@ namespace IZNT {
 			   // 
 			   // SteelRod
 			   // 
-			   this->AutoScaleDimensions = System::Drawing::SizeF(10, 20);
+			   this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			   this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)));
@@ -181,7 +183,7 @@ namespace IZNT {
 			   this->Controls->Add(this->label4);
 			   this->Controls->Add(this->diameter_steel_rod_textBox);
 			   this->Controls->Add(this->label1);
-			   this->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 8.25F));
+			   this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F));
 			   this->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			   this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			   this->Name = L"SteelRod";
@@ -193,5 +195,6 @@ namespace IZNT {
 		   }
 #pragma endregion
 	private: System::Void calc_button_Click(System::Object^ sender, System::EventArgs^ e);
-	};
+	private: System::Void checkPlastit_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+};
 }
