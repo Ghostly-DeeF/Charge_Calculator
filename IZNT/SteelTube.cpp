@@ -22,6 +22,10 @@ inline System::Void IZNT::SteelTube::calc_button_Click(System::Object^ sender, S
         answerz /= 1.5;
     }
 
+    if (checkFillingWater->Checked) {
+        answerz *= 2;
+    }
+
     answerz = round(answerz);
     answer_textBox->Text = " Точный вес требуемого заряда: " + (answerz / 1000).ToString() + " кг\r\n\r\n";
 

@@ -49,11 +49,8 @@ namespace IZNT {
 		/// Обязательная переменная конструктора.
 		/// </summary>
 		System::ComponentModel::Container^ components;
-<<<<<<< HEAD
 	private: System::Windows::Forms::CheckBox^ checkPlastit;
-=======
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
->>>>>>> 3852484958ec2df3ddd166ca3e87db03f27b64ba
 	private: System::Windows::Forms::CheckBox^ checkUnderwaterExp;
 
 
@@ -74,12 +71,9 @@ namespace IZNT {
 			   this->diameter_steel_rod_textBox = (gcnew System::Windows::Forms::TextBox());
 			   this->label1 = (gcnew System::Windows::Forms::Label());
 			   this->checkUnderwaterExp = (gcnew System::Windows::Forms::CheckBox());
-<<<<<<< HEAD
 			   this->checkPlastit = (gcnew System::Windows::Forms::CheckBox());
-=======
 			   this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
->>>>>>> 3852484958ec2df3ddd166ca3e87db03f27b64ba
 			   this->SuspendLayout();
 			   // 
 			   // answer_textBox
@@ -154,7 +148,6 @@ namespace IZNT {
 			   this->checkUnderwaterExp->Text = L"Подрыв под водой";
 			   this->checkUnderwaterExp->UseVisualStyleBackColor = true;
 			   // 
-<<<<<<< HEAD
 			   // checkPlastit
 			   // 
 			   this->checkPlastit->AutoSize = true;
@@ -166,7 +159,6 @@ namespace IZNT {
 			   this->checkPlastit->TabIndex = 32;
 			   this->checkPlastit->Text = L"Заряд из пластита-4";
 			   this->checkPlastit->UseVisualStyleBackColor = true;
-=======
 			   // pictureBox1
 			   // 
 			   this->pictureBox1->Location = System::Drawing::Point(249, 327);
@@ -174,7 +166,6 @@ namespace IZNT {
 			   this->pictureBox1->Size = System::Drawing::Size(451, 251);
 			   this->pictureBox1->TabIndex = 32;
 			   this->pictureBox1->TabStop = false;
->>>>>>> 3852484958ec2df3ddd166ca3e87db03f27b64ba
 			   // 
 			   // SteelRod
 			   // 
@@ -182,11 +173,8 @@ namespace IZNT {
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			   this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)));
-<<<<<<< HEAD
 			   this->Controls->Add(this->checkPlastit);
-=======
 			   this->Controls->Add(this->pictureBox1);
->>>>>>> 3852484958ec2df3ddd166ca3e87db03f27b64ba
 			   this->Controls->Add(this->checkUnderwaterExp);
 			   this->Controls->Add(this->answer_textBox);
 			   this->Controls->Add(this->calc_button);
