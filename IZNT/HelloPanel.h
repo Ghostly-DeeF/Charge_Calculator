@@ -70,7 +70,7 @@ namespace IZNT {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(722, 284);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"\r\nПриложение для расчета зарядов\r\n\"Недотрога-1\"";
+			this->label1->Text = L"\r\nПриложение для расчета зарядов\r\n\"Недотрога\"";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// pictureBox1

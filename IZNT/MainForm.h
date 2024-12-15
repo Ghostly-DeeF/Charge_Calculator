@@ -388,7 +388,7 @@ namespace IZNT {
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MinimumSize = System::Drawing::Size(935, 630);
 			this->Name = L"MainForm";
-			this->Text = L"Недотрога-1: Расчет заряда";
+			this->Text = L"Недотрога: Расчет заряда";
 			this->flowLayoutPanel1->ResumeLayout(false);
 			this->ResumeLayout(false);
 
