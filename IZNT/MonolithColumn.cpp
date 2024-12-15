@@ -260,7 +260,7 @@ inline System::Void IZNT::MonolithColumn::calc_button_Click(System::Object^ send
 			return;
 		}
 		if (width * 2 > length) {
-			answer_textBox->Text = " Ширина меньше " + width * 2 + " м!\r\nЛучше использовать сосредоточенный заряд!\r\n";
+			answer_textBox->Text = " Ширина меньше " + width * 2 + " м!\r\n Лучше использовать сосредоточенный заряд!\r\n";
 		}
 		else {
 			answer_textBox->Text = "";
@@ -302,7 +302,7 @@ inline System::Void IZNT::MonolithColumn::calc_button_Click(System::Object^ send
 			answer_textBox->Text += " Требуется " + answer + " шт нитей пластитового заряда";
 		}
 		else {
-			answer_textBox->Text = " Толщина больше 60 см!\r\nИспользуйте другой вид заряда";
+			answer_textBox->Text = " Толщина больше 60 см!\r\n Используйте другой вид заряда";
 		}
 	}
 	else {
