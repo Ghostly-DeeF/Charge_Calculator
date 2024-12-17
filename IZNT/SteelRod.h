@@ -51,6 +51,7 @@ namespace IZNT {
 		System::ComponentModel::Container^ components;
 	private: System::Windows::Forms::CheckBox^ checkPlastit;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Button^ btnTextVersion;
 	private: System::Windows::Forms::CheckBox^ checkUnderwaterExp;
 
 
@@ -73,6 +74,7 @@ namespace IZNT {
 			   this->checkUnderwaterExp = (gcnew System::Windows::Forms::CheckBox());
 			   this->checkPlastit = (gcnew System::Windows::Forms::CheckBox());
 			   this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			   this->btnTextVersion = (gcnew System::Windows::Forms::Button());
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			   this->SuspendLayout();
 			   // 
@@ -128,7 +130,7 @@ namespace IZNT {
 			   // 
 			   this->label1->AutoSize = true;
 			   this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Bold));
-			   this->label1->Location = System::Drawing::Point(58, 21);
+			   this->label1->Location = System::Drawing::Point(34, 21);
 			   this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label1->Name = L"label1";
 			   this->label1->Size = System::Drawing::Size(576, 44);
@@ -169,12 +171,24 @@ namespace IZNT {
 			   this->pictureBox1->TabIndex = 32;
 			   this->pictureBox1->TabStop = false;
 			   // 
+			   // btnTextVersion
+			   // 
+			   this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			   this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
+			   this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			   this->btnTextVersion->Name = L"btnTextVersion";
+			   this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			   this->btnTextVersion->TabIndex = 33;
+			   this->btnTextVersion->Text = L"Текстовая версия";
+			   this->btnTextVersion->UseVisualStyleBackColor = true;
+			   // 
 			   // SteelRod
 			   // 
 			   this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			   this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			   this->Controls->Add(this->btnTextVersion);
 			   this->Controls->Add(this->checkPlastit);
 			   this->Controls->Add(this->pictureBox1);
 			   this->Controls->Add(this->checkUnderwaterExp);

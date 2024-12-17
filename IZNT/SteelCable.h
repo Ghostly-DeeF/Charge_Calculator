@@ -45,6 +45,7 @@ namespace IZNT {
 	private: System::Windows::Forms::CheckBox^ checkBox_Steel_Cable;
 	private: System::Windows::Forms::CheckBox^ checkUnderwaterExp;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Button^ btnTextVersion;
 		   float answerz;
 
 #pragma region Windows Form Designer generated code
@@ -62,6 +63,7 @@ namespace IZNT {
 			   this->checkBox_Steel_Cable = (gcnew System::Windows::Forms::CheckBox());
 			   this->checkUnderwaterExp = (gcnew System::Windows::Forms::CheckBox());
 			   this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			   this->btnTextVersion = (gcnew System::Windows::Forms::Button());
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			   this->SuspendLayout();
 			   // 
@@ -100,7 +102,7 @@ namespace IZNT {
 			   this->label4->Location = System::Drawing::Point(13, 67);
 			   this->label4->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label4->Name = L"label4";
-			   this->label4->Size = System::Drawing::Size(145, 15);
+			   this->label4->Size = System::Drawing::Size(108, 15);
 			   this->label4->TabIndex = 33;
 			   this->label4->Text = L"Диаметр h троса в см";
 			   // 
@@ -120,7 +122,7 @@ namespace IZNT {
 			   this->label1->Location = System::Drawing::Point(58, 21);
 			   this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label1->Name = L"label1";
-			   this->label1->Size = System::Drawing::Size(593, 63);
+			   this->label1->Size = System::Drawing::Size(473, 63);
 			   this->label1->TabIndex = 31;
 			   this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nстального троса\r\n\r\n";
 			   this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -132,7 +134,7 @@ namespace IZNT {
 			   this->checkBox_Steel_Cable->Location = System::Drawing::Point(16, 132);
 			   this->checkBox_Steel_Cable->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			   this->checkBox_Steel_Cable->Name = L"checkBox_Steel_Cable";
-			   this->checkBox_Steel_Cable->Size = System::Drawing::Size(183, 44);
+			   this->checkBox_Steel_Cable->Size = System::Drawing::Size(140, 42);
 			   this->checkBox_Steel_Cable->TabIndex = 36;
 			   this->checkBox_Steel_Cable->Text = L"Кольцевой заряд\r\nиз пластичного ВВ";
 			   this->checkBox_Steel_Cable->UseVisualStyleBackColor = true;
@@ -145,7 +147,7 @@ namespace IZNT {
 			   this->checkUnderwaterExp->Location = System::Drawing::Point(16, 181);
 			   this->checkUnderwaterExp->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			   this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
-			   this->checkUnderwaterExp->Size = System::Drawing::Size(187, 24);
+			   this->checkUnderwaterExp->Size = System::Drawing::Size(140, 23);
 			   this->checkUnderwaterExp->TabIndex = 37;
 			   this->checkUnderwaterExp->Text = L"Подрыв под водой";
 			   this->checkUnderwaterExp->UseVisualStyleBackColor = true;
@@ -158,12 +160,24 @@ namespace IZNT {
 			   this->pictureBox1->TabIndex = 38;
 			   this->pictureBox1->TabStop = false;
 			   // 
+			   // btnTextVersion
+			   // 
+			   this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			   this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
+			   this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			   this->btnTextVersion->Name = L"btnTextVersion";
+			   this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			   this->btnTextVersion->TabIndex = 39;
+			   this->btnTextVersion->Text = L"Текстовая версия";
+			   this->btnTextVersion->UseVisualStyleBackColor = true;
+			   // 
 			   // SteelCable
 			   // 
-			   this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
+			   this->AutoScaleDimensions = System::Drawing::SizeF(7, 14);
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			   this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			   this->Controls->Add(this->btnTextVersion);
 			   this->Controls->Add(this->pictureBox1);
 			   this->Controls->Add(this->checkUnderwaterExp);
 			   this->Controls->Add(this->checkBox_Steel_Cable);

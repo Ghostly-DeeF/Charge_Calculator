@@ -51,6 +51,7 @@ namespace IZNT {
 	private: System::Windows::Forms::CheckBox^ underwater_checkBox;
 	private: System::Windows::Forms::CheckBox^ ammonite_checkBox;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Button^ btnTextVersion;
 
 
 	protected:
@@ -78,6 +79,7 @@ namespace IZNT {
 			this->underwater_checkBox = (gcnew System::Windows::Forms::CheckBox());
 			this->ammonite_checkBox = (gcnew System::Windows::Forms::CheckBox());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->btnTextVersion = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -88,7 +90,7 @@ namespace IZNT {
 			this->label1->Location = System::Drawing::Point(18, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(684, 63);
+			this->label1->Size = System::Drawing::Size(534, 63);
 			this->label1->TabIndex = 12;
 			this->label1->Text = L"Расчет шпурового заряда, необходимого\r\nдля перебивания кирпичных, каменных, бетон"
 				L"ных и железобетонных\r\nконструкций типа колонн, столбов, балок и т. п.";
@@ -101,7 +103,7 @@ namespace IZNT {
 			this->label2->Location = System::Drawing::Point(13, 170);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(193, 15);
+			this->label2->Size = System::Drawing::Size(141, 15);
 			this->label2->TabIndex = 21;
 			this->label2->Text = L"Толщина H объекта в метрах";
 			// 
@@ -121,7 +123,7 @@ namespace IZNT {
 			this->label3->Location = System::Drawing::Point(13, 90);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(69, 15);
+			this->label3->Size = System::Drawing::Size(51, 15);
 			this->label3->TabIndex = 23;
 			this->label3->Text = L"Материал";
 			// 
@@ -175,7 +177,7 @@ namespace IZNT {
 			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->underwater_checkBox->Location = System::Drawing::Point(16, 266);
 			this->underwater_checkBox->Name = L"underwater_checkBox";
-			this->underwater_checkBox->Size = System::Drawing::Size(171, 24);
+			this->underwater_checkBox->Size = System::Drawing::Size(131, 23);
 			this->underwater_checkBox->TabIndex = 35;
 			this->underwater_checkBox->Text = L"Взрыв под водой";
 			this->underwater_checkBox->UseVisualStyleBackColor = true;
@@ -186,7 +188,7 @@ namespace IZNT {
 			this->ammonite_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->ammonite_checkBox->Location = System::Drawing::Point(16, 230);
 			this->ammonite_checkBox->Name = L"ammonite_checkBox";
-			this->ammonite_checkBox->Size = System::Drawing::Size(104, 24);
+			this->ammonite_checkBox->Size = System::Drawing::Size(81, 23);
 			this->ammonite_checkBox->TabIndex = 36;
 			this->ammonite_checkBox->Text = L"Аммонит";
 			this->ammonite_checkBox->UseVisualStyleBackColor = true;
@@ -200,12 +202,24 @@ namespace IZNT {
 			this->pictureBox1->TabIndex = 37;
 			this->pictureBox1->TabStop = false;
 			// 
+			// btnTextVersion
+			// 
+			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			this->btnTextVersion->Name = L"btnTextVersion";
+			this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			this->btnTextVersion->TabIndex = 38;
+			this->btnTextVersion->Text = L"Текстовая версия";
+			this->btnTextVersion->UseVisualStyleBackColor = true;
+			// 
 			// MonolithSpur
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
+			this->AutoScaleDimensions = System::Drawing::SizeF(7, 14);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->btnTextVersion);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->ammonite_checkBox);
 			this->Controls->Add(this->underwater_checkBox);

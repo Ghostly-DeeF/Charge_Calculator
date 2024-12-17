@@ -45,6 +45,7 @@ namespace IZNT {
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::TextBox^ thickness_steel_bar_textBox;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Button^ btnTextVersion;
 
 	private:
 		/// <summary>
@@ -68,6 +69,7 @@ namespace IZNT {
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->thickness_steel_bar_textBox = (gcnew System::Windows::Forms::TextBox());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->btnTextVersion = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -78,7 +80,7 @@ namespace IZNT {
 			this->checkUnderwaterExp->Location = System::Drawing::Point(16, 215);
 			this->checkUnderwaterExp->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
-			this->checkUnderwaterExp->Size = System::Drawing::Size(187, 24);
+			this->checkUnderwaterExp->Size = System::Drawing::Size(140, 23);
 			this->checkUnderwaterExp->TabIndex = 37;
 			this->checkUnderwaterExp->Text = L"Подрыв под водой";
 			this->checkUnderwaterExp->UseVisualStyleBackColor = true;
@@ -118,7 +120,7 @@ namespace IZNT {
 			this->label1->Location = System::Drawing::Point(58, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(593, 42);
+			this->label1->Size = System::Drawing::Size(473, 42);
 			this->label1->TabIndex = 32;
 			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nстального бруска\r\n";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -130,7 +132,7 @@ namespace IZNT {
 			this->label2->Location = System::Drawing::Point(13, 139);
 			this->label2->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(148, 15);
+			this->label2->Size = System::Drawing::Size(111, 15);
 			this->label2->TabIndex = 41;
 			this->label2->Text = L"Ширина B бруска в см";
 			// 
@@ -150,7 +152,7 @@ namespace IZNT {
 			this->label5->Location = System::Drawing::Point(13, 67);
 			this->label5->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(156, 15);
+			this->label5->Size = System::Drawing::Size(116, 15);
 			this->label5->TabIndex = 39;
 			this->label5->Text = L"Толщина h бруска в см";
 			// 
@@ -171,12 +173,24 @@ namespace IZNT {
 			this->pictureBox1->TabIndex = 42;
 			this->pictureBox1->TabStop = false;
 			// 
+			// btnTextVersion
+			// 
+			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			this->btnTextVersion->Name = L"btnTextVersion";
+			this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			this->btnTextVersion->TabIndex = 43;
+			this->btnTextVersion->Text = L"Текстовая версия";
+			this->btnTextVersion->UseVisualStyleBackColor = true;
+			// 
 			// SteelBar
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
+			this->AutoScaleDimensions = System::Drawing::SizeF(7, 14);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->btnTextVersion);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->width_steel_bar_textBox);

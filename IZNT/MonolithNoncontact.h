@@ -51,6 +51,7 @@ namespace IZNT {
 	private: System::Windows::Forms::TextBox^ radius_textBox;
 	private: System::Windows::Forms::CheckBox^ hole_checkBox;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Button^ btnTextVersion;
 
 
 	private:
@@ -82,6 +83,7 @@ namespace IZNT {
 			this->radius_textBox = (gcnew System::Windows::Forms::TextBox());
 			this->hole_checkBox = (gcnew System::Windows::Forms::CheckBox());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->btnTextVersion = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -91,7 +93,7 @@ namespace IZNT {
 			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->underwater_checkBox->Location = System::Drawing::Point(16, 500);
 			this->underwater_checkBox->Name = L"underwater_checkBox";
-			this->underwater_checkBox->Size = System::Drawing::Size(171, 24);
+			this->underwater_checkBox->Size = System::Drawing::Size(131, 23);
 			this->underwater_checkBox->TabIndex = 46;
 			this->underwater_checkBox->Text = L"Взрыв под водой";
 			this->underwater_checkBox->UseVisualStyleBackColor = true;
@@ -103,7 +105,7 @@ namespace IZNT {
 			this->type_brick_lable->Location = System::Drawing::Point(13, 370);
 			this->type_brick_lable->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->type_brick_lable->Name = L"type_brick_lable";
-			this->type_brick_lable->Size = System::Drawing::Size(81, 15);
+			this->type_brick_lable->Size = System::Drawing::Size(57, 15);
 			this->type_brick_lable->TabIndex = 45;
 			this->type_brick_lable->Text = L"Тип кладки";
 			this->type_brick_lable->Visible = false;
@@ -159,7 +161,7 @@ namespace IZNT {
 			this->radius_label->Location = System::Drawing::Point(13, 90);
 			this->radius_label->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->radius_label->Name = L"radius_label";
-			this->radius_label->Size = System::Drawing::Size(193, 15);
+			this->radius_label->Size = System::Drawing::Size(141, 15);
 			this->radius_label->TabIndex = 41;
 			this->radius_label->Text = L"Толщина H объекта в метрах";
 			// 
@@ -179,7 +181,7 @@ namespace IZNT {
 			this->second_label->Location = System::Drawing::Point(13, 300);
 			this->second_label->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->second_label->Name = L"second_label";
-			this->second_label->Size = System::Drawing::Size(93, 15);
+			this->second_label->Size = System::Drawing::Size(65, 15);
 			this->second_label->TabIndex = 39;
 			this->second_label->Text = L"Тип раствора";
 			this->second_label->Visible = false;
@@ -206,7 +208,7 @@ namespace IZNT {
 			this->label2->Location = System::Drawing::Point(13, 230);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(172, 15);
+			this->label2->Size = System::Drawing::Size(120, 15);
 			this->label2->TabIndex = 37;
 			this->label2->Text = L"Наименование материала";
 			// 
@@ -233,7 +235,7 @@ namespace IZNT {
 			this->label1->Location = System::Drawing::Point(18, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(684, 63);
+			this->label1->Size = System::Drawing::Size(534, 63);
 			this->label1->TabIndex = 35;
 			this->label1->Text = L"Расчет контактного заряда, необходимого\r\nдля перебивания кирпичных, каменных, бет"
 				L"онных и железобетонных\r\nконструкций типа колонн, столбов, балок и т. п.";
@@ -246,7 +248,7 @@ namespace IZNT {
 			this->label3->Location = System::Drawing::Point(13, 147);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(199, 30);
+			this->label3->Size = System::Drawing::Size(145, 30);
 			this->label3->TabIndex = 48;
 			this->label3->Text = L"Растояние R от центра заряда\r\nдо оси объекта в метрах";
 			// 
@@ -266,7 +268,7 @@ namespace IZNT {
 			this->hole_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->hole_checkBox->Location = System::Drawing::Point(16, 450);
 			this->hole_checkBox->Name = L"hole_checkBox";
-			this->hole_checkBox->Size = System::Drawing::Size(196, 24);
+			this->hole_checkBox->Size = System::Drawing::Size(150, 23);
 			this->hole_checkBox->TabIndex = 49;
 			this->hole_checkBox->Text = L"Сквозное отверстие";
 			this->hole_checkBox->UseVisualStyleBackColor = true;
@@ -279,12 +281,24 @@ namespace IZNT {
 			this->pictureBox1->TabIndex = 50;
 			this->pictureBox1->TabStop = false;
 			// 
+			// btnTextVersion
+			// 
+			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			this->btnTextVersion->Name = L"btnTextVersion";
+			this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			this->btnTextVersion->TabIndex = 51;
+			this->btnTextVersion->Text = L"Текстовая версия";
+			this->btnTextVersion->UseVisualStyleBackColor = true;
+			// 
 			// MonolithNoncontact
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
+			this->AutoScaleDimensions = System::Drawing::SizeF(7, 14);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->btnTextVersion);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->hole_checkBox);
 			this->Controls->Add(this->label3);

@@ -71,6 +71,7 @@ namespace IZNT {
 
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
+	private: System::Windows::Forms::Button^ btnTextVersion;
 
 
 
@@ -109,6 +110,7 @@ namespace IZNT {
 			this->width_down_textBox = (gcnew System::Windows::Forms::TextBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->btnTextVersion = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->SuspendLayout();
@@ -148,7 +150,7 @@ namespace IZNT {
 			this->label1->Location = System::Drawing::Point(58, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(593, 42);
+			this->label1->Size = System::Drawing::Size(473, 42);
 			this->label1->TabIndex = 26;
 			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nстальной балки";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -160,7 +162,7 @@ namespace IZNT {
 			this->checkUnderwaterExp->Location = System::Drawing::Point(14, 148);
 			this->checkUnderwaterExp->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
-			this->checkUnderwaterExp->Size = System::Drawing::Size(187, 24);
+			this->checkUnderwaterExp->Size = System::Drawing::Size(140, 23);
 			this->checkUnderwaterExp->TabIndex = 35;
 			this->checkUnderwaterExp->Text = L"Подрыв под водой";
 			this->checkUnderwaterExp->UseVisualStyleBackColor = true;
@@ -172,7 +174,7 @@ namespace IZNT {
 			this->label3->Location = System::Drawing::Point(11, 68);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(79, 15);
+			this->label3->Size = System::Drawing::Size(56, 15);
 			this->label3->TabIndex = 37;
 			this->label3->Text = L"Тип заряда";
 			// 
@@ -226,7 +228,7 @@ namespace IZNT {
 			this->label8->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->label8->Location = System::Drawing::Point(49, 275);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(33, 20);
+			this->label8->Size = System::Drawing::Size(27, 19);
 			this->label8->TabIndex = 40;
 			this->label8->Text = L"мм";
 			// 
@@ -254,7 +256,7 @@ namespace IZNT {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->label2->Location = System::Drawing::Point(49, 445);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(33, 20);
+			this->label2->Size = System::Drawing::Size(27, 19);
 			this->label2->TabIndex = 42;
 			this->label2->Text = L"мм";
 			// 
@@ -282,7 +284,7 @@ namespace IZNT {
 			this->label4->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->label4->Location = System::Drawing::Point(80, 320);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(33, 20);
+			this->label4->Size = System::Drawing::Size(27, 19);
 			this->label4->TabIndex = 44;
 			this->label4->Text = L"мм";
 			// 
@@ -310,7 +312,7 @@ namespace IZNT {
 			this->label6->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->label6->Location = System::Drawing::Point(49, 410);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(33, 20);
+			this->label6->Size = System::Drawing::Size(27, 19);
 			this->label6->TabIndex = 46;
 			this->label6->Text = L"мм";
 			// 
@@ -321,7 +323,7 @@ namespace IZNT {
 			this->conner_checkBox->Location = System::Drawing::Point(14, 119);
 			this->conner_checkBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->conner_checkBox->Name = L"conner_checkBox";
-			this->conner_checkBox->Size = System::Drawing::Size(164, 24);
+			this->conner_checkBox->Size = System::Drawing::Size(122, 23);
 			this->conner_checkBox->TabIndex = 47;
 			this->conner_checkBox->Text = L"Поясные уголки";
 			this->conner_checkBox->UseVisualStyleBackColor = true;
@@ -351,7 +353,7 @@ namespace IZNT {
 			this->label5->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->label5->Location = System::Drawing::Point(123, 189);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(33, 20);
+			this->label5->Size = System::Drawing::Size(27, 19);
 			this->label5->TabIndex = 49;
 			this->label5->Text = L"мм";
 			// 
@@ -379,7 +381,7 @@ namespace IZNT {
 			this->label7->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->label7->Location = System::Drawing::Point(123, 533);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(33, 20);
+			this->label7->Size = System::Drawing::Size(27, 19);
 			this->label7->TabIndex = 51;
 			this->label7->Text = L"мм";
 			// 
@@ -391,12 +393,24 @@ namespace IZNT {
 			this->pictureBox2->TabIndex = 52;
 			this->pictureBox2->TabStop = false;
 			// 
+			// btnTextVersion
+			// 
+			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			this->btnTextVersion->Name = L"btnTextVersion";
+			this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			this->btnTextVersion->TabIndex = 53;
+			this->btnTextVersion->Text = L"Текстовая версия";
+			this->btnTextVersion->UseVisualStyleBackColor = true;
+			// 
 			// SteelBeam
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
+			this->AutoScaleDimensions = System::Drawing::SizeF(7, 14);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->btnTextVersion);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->width_down_textBox);
 			this->Controls->Add(this->label7);

@@ -60,6 +60,7 @@ namespace IZNT {
 
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::CheckBox^ underwater_checkBox;
+	private: System::Windows::Forms::Button^ btnTextVersion;
 
 	private:
 		/// <summary>
@@ -93,6 +94,7 @@ namespace IZNT {
 			this->widthMas_textBox = (gcnew System::Windows::Forms::TextBox());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->underwater_checkBox = (gcnew System::Windows::Forms::CheckBox());
+			this->btnTextVersion = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -103,7 +105,7 @@ namespace IZNT {
 			this->label2->Location = System::Drawing::Point(13, 120);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(159, 15);
+			this->label2->Size = System::Drawing::Size(109, 15);
 			this->label2->TabIndex = 27;
 			this->label2->Text = L"Тип породы древесины";
 			// 
@@ -157,7 +159,7 @@ namespace IZNT {
 			this->label3->Location = System::Drawing::Point(13, 174);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(149, 15);
+			this->label3->Size = System::Drawing::Size(104, 15);
 			this->label3->TabIndex = 23;
 			this->label3->Text = L"Состояние древесины";
 			// 
@@ -182,7 +184,7 @@ namespace IZNT {
 			this->label1->Location = System::Drawing::Point(23, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(655, 42);
+			this->label1->Size = System::Drawing::Size(523, 42);
 			this->label1->TabIndex = 21;
 			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания балок\r\nдвутаврового сечен"
 				L"ия";
@@ -220,7 +222,7 @@ namespace IZNT {
 			this->label4->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->label4->Location = System::Drawing::Point(70, 317);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(30, 20);
+			this->label4->Size = System::Drawing::Size(24, 19);
 			this->label4->TabIndex = 30;
 			this->label4->Text = L"см";
 			// 
@@ -248,7 +250,7 @@ namespace IZNT {
 			this->label5->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->label5->Location = System::Drawing::Point(100, 378);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(30, 20);
+			this->label5->Size = System::Drawing::Size(24, 19);
 			this->label5->TabIndex = 32;
 			this->label5->Text = L"см";
 			// 
@@ -276,7 +278,7 @@ namespace IZNT {
 			this->label6->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->label6->Location = System::Drawing::Point(74, 430);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(30, 20);
+			this->label6->Size = System::Drawing::Size(24, 19);
 			this->label6->TabIndex = 34;
 			this->label6->Text = L"см";
 			// 
@@ -287,7 +289,7 @@ namespace IZNT {
 			this->label7->Location = System::Drawing::Point(13, 67);
 			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(79, 15);
+			this->label7->Size = System::Drawing::Size(56, 15);
 			this->label7->TabIndex = 36;
 			this->label7->Text = L"Тип заряда";
 			// 
@@ -330,7 +332,7 @@ namespace IZNT {
 			this->label8->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->label8->Location = System::Drawing::Point(153, 238);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(30, 20);
+			this->label8->Size = System::Drawing::Size(24, 19);
 			this->label8->TabIndex = 38;
 			this->label8->Text = L"см";
 			// 
@@ -340,17 +342,29 @@ namespace IZNT {
 			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->underwater_checkBox->Location = System::Drawing::Point(249, 426);
 			this->underwater_checkBox->Name = L"underwater_checkBox";
-			this->underwater_checkBox->Size = System::Drawing::Size(171, 24);
+			this->underwater_checkBox->Size = System::Drawing::Size(131, 23);
 			this->underwater_checkBox->TabIndex = 39;
 			this->underwater_checkBox->Text = L"Взрыв под водой";
 			this->underwater_checkBox->UseVisualStyleBackColor = true;
 			// 
+			// btnTextVersion
+			// 
+			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			this->btnTextVersion->Name = L"btnTextVersion";
+			this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			this->btnTextVersion->TabIndex = 40;
+			this->btnTextVersion->Text = L"Текстовая версия";
+			this->btnTextVersion->UseVisualStyleBackColor = true;
+			// 
 			// WoodTwoBalk
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
+			this->AutoScaleDimensions = System::Drawing::SizeF(7, 14);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->btnTextVersion);
 			this->Controls->Add(this->underwater_checkBox);
 			this->Controls->Add(this->widthMas_textBox);
 			this->Controls->Add(this->label8);

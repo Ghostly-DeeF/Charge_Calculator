@@ -52,6 +52,7 @@ namespace IZNT {
 	private: System::Windows::Forms::ComboBox^ condition_wood_comboBox;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Button^ btnTextVersion;
 
 	private:
 		/// <summary>
@@ -79,6 +80,7 @@ namespace IZNT {
 			this->condition_wood_comboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->btnTextVersion = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -88,7 +90,7 @@ namespace IZNT {
 			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->underwater_checkBox->Location = System::Drawing::Point(16, 397);
 			this->underwater_checkBox->Name = L"underwater_checkBox";
-			this->underwater_checkBox->Size = System::Drawing::Size(171, 24);
+			this->underwater_checkBox->Size = System::Drawing::Size(131, 23);
 			this->underwater_checkBox->TabIndex = 33;
 			this->underwater_checkBox->Text = L"Взрыв под водой";
 			this->underwater_checkBox->UseVisualStyleBackColor = true;
@@ -100,7 +102,7 @@ namespace IZNT {
 			this->label2->Location = System::Drawing::Point(13, 67);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(159, 15);
+			this->label2->Size = System::Drawing::Size(109, 15);
 			this->label2->TabIndex = 32;
 			this->label2->Text = L"Тип породы древесины";
 			// 
@@ -126,7 +128,7 @@ namespace IZNT {
 			this->label5->Location = System::Drawing::Point(13, 293);
 			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(218, 45);
+			this->label5->Size = System::Drawing::Size(148, 45);
 			this->label5->TabIndex = 30;
 			this->label5->Text = L"Расстояние r от центра заряда\r\nдо центра наиболее удаленного\r\nэлемента в метрах";
 			// 
@@ -175,7 +177,7 @@ namespace IZNT {
 			this->label4->Location = System::Drawing::Point(13, 212);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(177, 30);
+			this->label4->Size = System::Drawing::Size(125, 30);
 			this->label4->TabIndex = 26;
 			this->label4->Text = L"Диаметр D наиболее\r\nудаленного элемента в см";
 			// 
@@ -195,7 +197,7 @@ namespace IZNT {
 			this->label3->Location = System::Drawing::Point(13, 139);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(149, 15);
+			this->label3->Size = System::Drawing::Size(104, 15);
 			this->label3->TabIndex = 24;
 			this->label3->Text = L"Состояние древесины";
 			// 
@@ -220,7 +222,7 @@ namespace IZNT {
 			this->label1->Location = System::Drawing::Point(58, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(611, 42);
+			this->label1->Size = System::Drawing::Size(483, 42);
 			this->label1->TabIndex = 22;
 			this->label1->Text = L"Расчет неконтактного заряда, необходимого для подрывания\r\nгрупп деревянных элемен"
 				L"тов\r\n";
@@ -234,12 +236,24 @@ namespace IZNT {
 			this->pictureBox1->TabIndex = 34;
 			this->pictureBox1->TabStop = false;
 			// 
+			// btnTextVersion
+			// 
+			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			this->btnTextVersion->Name = L"btnTextVersion";
+			this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			this->btnTextVersion->TabIndex = 35;
+			this->btnTextVersion->Text = L"Текстовая версия";
+			this->btnTextVersion->UseVisualStyleBackColor = true;
+			// 
 			// WoodNoncontact
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
+			this->AutoScaleDimensions = System::Drawing::SizeF(7, 14);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->btnTextVersion);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->underwater_checkBox);
 			this->Controls->Add(this->label2);

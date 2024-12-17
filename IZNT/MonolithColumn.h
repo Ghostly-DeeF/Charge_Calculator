@@ -27,6 +27,7 @@ namespace IZNT {
 	private: System::Windows::Forms::ComboBox^ type_charge_comboBox;
 	private: System::Windows::Forms::CheckBox^ hole_checkBox;
 	private: System::Windows::Forms::CheckBox^ underwater_checkBox;
+	private: System::Windows::Forms::Button^ btnTextVersion;
 
 
 
@@ -120,6 +121,7 @@ namespace IZNT {
 			this->type_charge_comboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->hole_checkBox = (gcnew System::Windows::Forms::CheckBox());
 			this->underwater_checkBox = (gcnew System::Windows::Forms::CheckBox());
+			this->btnTextVersion = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -129,7 +131,7 @@ namespace IZNT {
 			this->scoring_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->scoring_checkBox->Location = System::Drawing::Point(249, 450);
 			this->scoring_checkBox->Name = L"scoring_checkBox";
-			this->scoring_checkBox->Size = System::Drawing::Size(123, 24);
+			this->scoring_checkBox->Size = System::Drawing::Size(95, 23);
 			this->scoring_checkBox->TabIndex = 21;
 			this->scoring_checkBox->Text = L"С забивкой";
 			this->scoring_checkBox->UseVisualStyleBackColor = true;
@@ -140,7 +142,7 @@ namespace IZNT {
 			this->anti_slip_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->anti_slip_checkBox->Location = System::Drawing::Point(249, 420);
 			this->anti_slip_checkBox->Name = L"anti_slip_checkBox";
-			this->anti_slip_checkBox->Size = System::Drawing::Size(253, 24);
+			this->anti_slip_checkBox->Size = System::Drawing::Size(190, 23);
 			this->anti_slip_checkBox->TabIndex = 20;
 			this->anti_slip_checkBox->Text = L"Противооткольная одежда";
 			this->anti_slip_checkBox->UseVisualStyleBackColor = true;
@@ -181,7 +183,7 @@ namespace IZNT {
 			this->radius_label->Location = System::Drawing::Point(13, 370);
 			this->radius_label->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->radius_label->Name = L"radius_label";
-			this->radius_label->Size = System::Drawing::Size(179, 15);
+			this->radius_label->Size = System::Drawing::Size(128, 15);
 			this->radius_label->TabIndex = 17;
 			this->radius_label->Text = L"Толщина объекта в метрах";
 			// 
@@ -201,7 +203,7 @@ namespace IZNT {
 			this->label1->Location = System::Drawing::Point(18, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(684, 63);
+			this->label1->Size = System::Drawing::Size(534, 63);
 			this->label1->TabIndex = 11;
 			this->label1->Text = L"Расчет контактного заряда, необходимого\r\nдля перебивания кирпичных, каменных, бет"
 				L"онных и железобетонных\r\nконструкций типа колонн, столбов, балок и т. п.";
@@ -229,7 +231,7 @@ namespace IZNT {
 			this->second_label->Location = System::Drawing::Point(13, 230);
 			this->second_label->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->second_label->Name = L"second_label";
-			this->second_label->Size = System::Drawing::Size(93, 15);
+			this->second_label->Size = System::Drawing::Size(65, 15);
 			this->second_label->TabIndex = 15;
 			this->second_label->Text = L"Тип раствора";
 			this->second_label->Visible = false;
@@ -241,7 +243,7 @@ namespace IZNT {
 			this->label2->Location = System::Drawing::Point(13, 160);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(172, 15);
+			this->label2->Size = System::Drawing::Size(120, 15);
 			this->label2->TabIndex = 13;
 			this->label2->Text = L"Наименование материала";
 			// 
@@ -268,7 +270,7 @@ namespace IZNT {
 			this->type_brick_lable->Location = System::Drawing::Point(13, 300);
 			this->type_brick_lable->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->type_brick_lable->Name = L"type_brick_lable";
-			this->type_brick_lable->Size = System::Drawing::Size(81, 15);
+			this->type_brick_lable->Size = System::Drawing::Size(57, 15);
 			this->type_brick_lable->TabIndex = 23;
 			this->type_brick_lable->Text = L"Тип кладки";
 			this->type_brick_lable->Visible = false;
@@ -295,7 +297,7 @@ namespace IZNT {
 			this->location_label->Location = System::Drawing::Point(13, 440);
 			this->location_label->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->location_label->Name = L"location_label";
-			this->location_label->Size = System::Drawing::Size(144, 15);
+			this->location_label->Size = System::Drawing::Size(103, 15);
 			this->location_label->TabIndex = 25;
 			this->location_label->Text = L"Схема расположения";
 			// 
@@ -341,7 +343,7 @@ namespace IZNT {
 			this->elongated_label->Location = System::Drawing::Point(246, 370);
 			this->elongated_label->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->elongated_label->Name = L"elongated_label";
-			this->elongated_label->Size = System::Drawing::Size(172, 15);
+			this->elongated_label->Size = System::Drawing::Size(123, 15);
 			this->elongated_label->TabIndex = 29;
 			this->elongated_label->Text = L"Ширина объекта в метрах";
 			this->elongated_label->Visible = false;
@@ -352,7 +354,7 @@ namespace IZNT {
 			this->plastic_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->plastic_checkBox->Location = System::Drawing::Point(249, 480);
 			this->plastic_checkBox->Name = L"plastic_checkBox";
-			this->plastic_checkBox->Size = System::Drawing::Size(152, 24);
+			this->plastic_checkBox->Size = System::Drawing::Size(119, 23);
 			this->plastic_checkBox->TabIndex = 30;
 			this->plastic_checkBox->Text = L"Пластичное ВВ";
 			this->plastic_checkBox->UseVisualStyleBackColor = true;
@@ -365,7 +367,7 @@ namespace IZNT {
 			this->label3->Location = System::Drawing::Point(13, 90);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(79, 15);
+			this->label3->Size = System::Drawing::Size(56, 15);
 			this->label3->TabIndex = 32;
 			this->label3->Text = L"Тип заряда";
 			// 
@@ -388,7 +390,7 @@ namespace IZNT {
 			this->hole_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->hole_checkBox->Location = System::Drawing::Point(249, 510);
 			this->hole_checkBox->Name = L"hole_checkBox";
-			this->hole_checkBox->Size = System::Drawing::Size(196, 24);
+			this->hole_checkBox->Size = System::Drawing::Size(150, 23);
 			this->hole_checkBox->TabIndex = 33;
 			this->hole_checkBox->Text = L"Сквозное отверстие";
 			this->hole_checkBox->UseVisualStyleBackColor = true;
@@ -400,17 +402,29 @@ namespace IZNT {
 			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->underwater_checkBox->Location = System::Drawing::Point(249, 540);
 			this->underwater_checkBox->Name = L"underwater_checkBox";
-			this->underwater_checkBox->Size = System::Drawing::Size(171, 24);
+			this->underwater_checkBox->Size = System::Drawing::Size(131, 23);
 			this->underwater_checkBox->TabIndex = 34;
 			this->underwater_checkBox->Text = L"Взрыв под водой";
 			this->underwater_checkBox->UseVisualStyleBackColor = true;
 			// 
+			// btnTextVersion
+			// 
+			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			this->btnTextVersion->Name = L"btnTextVersion";
+			this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			this->btnTextVersion->TabIndex = 35;
+			this->btnTextVersion->Text = L"Текстовая версия";
+			this->btnTextVersion->UseVisualStyleBackColor = true;
+			// 
 			// MonolithColumn
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
+			this->AutoScaleDimensions = System::Drawing::SizeF(7, 14);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->btnTextVersion);
 			this->Controls->Add(this->underwater_checkBox);
 			this->Controls->Add(this->hole_checkBox);
 			this->Controls->Add(this->label3);

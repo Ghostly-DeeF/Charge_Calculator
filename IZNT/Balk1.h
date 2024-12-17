@@ -27,6 +27,7 @@ namespace IZNT {
 		float thickness_balk = 0.0f;
 		float width_balk = 0.0f;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Button^ btnTextVersion;
 		   float answer = 0.0f;
 	public:
 		
@@ -85,6 +86,7 @@ namespace IZNT {
 			this->type_wood_comboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->underwater_checkBox = (gcnew System::Windows::Forms::CheckBox());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->btnTextVersion = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -95,7 +97,7 @@ namespace IZNT {
 			this->label1->Location = System::Drawing::Point(58, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(593, 42);
+			this->label1->Size = System::Drawing::Size(473, 42);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nбруса или плоского пакет"
 				L"а свай\r\n";
@@ -136,7 +138,7 @@ namespace IZNT {
 			this->label4->Location = System::Drawing::Point(13, 216);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(196, 15);
+			this->label4->Size = System::Drawing::Size(147, 15);
 			this->label4->TabIndex = 13;
 			this->label4->Text = L"Ширина b бруса (пакета) в см";
 			// 
@@ -156,7 +158,7 @@ namespace IZNT {
 			this->label3->Location = System::Drawing::Point(13, 139);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(149, 15);
+			this->label3->Size = System::Drawing::Size(104, 15);
 			this->label3->TabIndex = 11;
 			this->label3->Text = L"Состояние древесины";
 			// 
@@ -181,7 +183,7 @@ namespace IZNT {
 			this->label5->Location = System::Drawing::Point(16, 294);
 			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(203, 15);
+			this->label5->Size = System::Drawing::Size(152, 15);
 			this->label5->TabIndex = 18;
 			this->label5->Text = L"Толщина h бруса (пакета) в см";
 			// 
@@ -202,7 +204,7 @@ namespace IZNT {
 			this->label2->Location = System::Drawing::Point(13, 67);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(159, 15);
+			this->label2->Size = System::Drawing::Size(109, 15);
 			this->label2->TabIndex = 20;
 			this->label2->Text = L"Тип породы древесины";
 			// 
@@ -227,7 +229,7 @@ namespace IZNT {
 			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
 			this->underwater_checkBox->Location = System::Drawing::Point(16, 355);
 			this->underwater_checkBox->Name = L"underwater_checkBox";
-			this->underwater_checkBox->Size = System::Drawing::Size(171, 24);
+			this->underwater_checkBox->Size = System::Drawing::Size(131, 23);
 			this->underwater_checkBox->TabIndex = 21;
 			this->underwater_checkBox->Text = L"Взрыв под водой";
 			this->underwater_checkBox->UseVisualStyleBackColor = true;
@@ -240,12 +242,24 @@ namespace IZNT {
 			this->pictureBox1->TabIndex = 22;
 			this->pictureBox1->TabStop = false;
 			// 
+			// btnTextVersion
+			// 
+			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			this->btnTextVersion->Name = L"btnTextVersion";
+			this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			this->btnTextVersion->TabIndex = 23;
+			this->btnTextVersion->Text = L"Текстовая версия";
+			this->btnTextVersion->UseVisualStyleBackColor = true;
+			// 
 			// Balk1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
+			this->AutoScaleDimensions = System::Drawing::SizeF(7, 14);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->btnTextVersion);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->underwater_checkBox);
 			this->Controls->Add(this->label2);
