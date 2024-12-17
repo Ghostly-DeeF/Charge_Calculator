@@ -1,6 +1,6 @@
 #pragma once
 #include <corecrt_math.h>
-
+#include "TextVersion.h"
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -26,6 +26,7 @@ namespace IZNT {
 	private: System::Windows::Forms::CheckBox^ underwater_checkBox;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Button^ btnTextVersion;
+
 
 	public:
 
@@ -234,14 +235,15 @@ namespace IZNT {
 			// 
 			// btnTextVersion
 			// 
-			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			this->btnTextVersion->Location = System::Drawing::Point(611, 34);
 			this->btnTextVersion->Name = L"btnTextVersion";
-			this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			this->btnTextVersion->Size = System::Drawing::Size(89, 45);
 			this->btnTextVersion->TabIndex = 24;
 			this->btnTextVersion->Text = L"Текстовая версия";
 			this->btnTextVersion->UseVisualStyleBackColor = true;
+			this->btnTextVersion->Click += gcnew System::EventHandler(this, &Wood1::btnTextVersion_Click);
 			// 
 			// Wood1
 			// 
@@ -277,5 +279,66 @@ namespace IZNT {
 private: System::Void answer_textBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void diameter_log_textBox_TextChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void btnTextVersion_Click(System::Object^ sender, System::EventArgs^ e) {
+	TextVersion^ form = gcnew TextVersion;
+
+	System::Windows::Forms::TextBox^ textBox1 = (gcnew System::Windows::Forms::TextBox());
+	System::Windows::Forms::PictureBox^ pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+
+
+	System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(TextVersion::typeid));
+	this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+	(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+	this->SuspendLayout();
+
+	// 
+	// pictureBox1
+	// 
+	pictureBox1->Image = Image::FromFile(".\\Picture\\Screenshot 2024-12-17 205638.png");//(cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+	pictureBox1->Location = System::Drawing::Point(13, 13);
+	pictureBox1->Name = L"pictureBox1";
+	pictureBox1->Size = System::Drawing::Size(417, 192);
+	pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+	pictureBox1->TabIndex = 0;
+	pictureBox1->TabStop = false;
+	// 
+	// textBox1
+	// 
+	textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+	textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+	textBox1->Location = System::Drawing::Point(13, 212);
+	textBox1->Multiline = true;
+	textBox1->Name = L"textBox1";
+	textBox1->ReadOnly = true;
+	textBox1->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
+	textBox1->Size = System::Drawing::Size(417, 507);
+	textBox1->TabIndex = 1;
+	textBox1->TabStop = false;
+	textBox1->BackColor = System::Drawing::Color::White;
+	textBox1->Text = "Заряды, применяемые для подрывания деревянных элементов,  могут быть как контактными, так и неконтактными;  первые  по своей форме могут быть сосредоточенными, удлиненными и фигурными,  вторые - только сосредоточенными Вес контактного  заряда, необходимого для перебивания бревна, куста свай определяется по формуле\r\n                             C = KD^2,                          (5.1)\r\n" +
+		"где C - вес заряда в граммах\r\n" +
+		"D - диаметр бревна в сантиметрах\r\n" +
+		"K - коэффициент, зависящий от породы(крепости) и влажности древесины\r\n" +
+		"Заряд должен прочно прикрепляться к подрываемому бревну  вплотную без зазора При подрывании бревен  пластичным  ВВ(пластит - 4) целесообразно применять кольцевые  заряды в оболочках, охватывающие бревно по всему периметру.В этом случае вес  заряда, определенный  по  формуле(4.1), уменьшается на 1 / 3. При подрывании одиночных бревен(сосредоточенных кустов свай) контактными зарядами под водой величины этих зарядов, определенные по формулам(4.1) и(4.2), уменьшаются в два раза. Указанное правило справедливо лишь в  тех  случаях, когда  глубина    погружения заряда в воду равна или больше удвоенной толщины подрываемого элемента.При меньших заглублениях зарядов их величина определяется по условиям подрывания элементов в воздухе.";
+	// 
+	// TextVersion
+	// 
+	form->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+	form->AutoSize = true;
+	form->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+	form->ClientSize = System::Drawing::Size(442, 731);
+	form->Controls->Add(textBox1);
+	form->Controls->Add(pictureBox1);
+	form->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+	form->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+	form->Name = L"TextVersion";
+	form->Text = L"TextVersion";
+	(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(pictureBox1))->EndInit();
+	form->ResumeLayout(false);
+	form->PerformLayout();
+
+
+	form->Show();
+}
 };
 }

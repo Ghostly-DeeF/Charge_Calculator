@@ -135,6 +135,7 @@
     <ClCompile Include="SteelRod.cpp" />
     <ClCompile Include="SteelSheets.cpp" />
     <ClCompile Include="SteelTube.cpp" />
+    <ClCompile Include="TextVersion.cpp" />
     <ClCompile Include="Wood1.cpp" />
     <ClCompile Include="WoodNoncontact.cpp" />
     <ClCompile Include="WoodStump.cpp" />
@@ -176,6 +177,9 @@
     </ClInclude>
     <ClInclude Include="SteelTube.h">
       <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="TextVersion.h">
+      <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Wood1.h">
       <FileType>CppControl</FileType>
@@ -219,6 +223,9 @@
     <EmbeddedResource Include="SteelRod.resx" />
     <EmbeddedResource Include="SteelSheets.resx" />
     <EmbeddedResource Include="SteelTube.resx" />
+    <EmbeddedResource Include="TextVersion.resx">
+      <DependentUpon>TextVersion.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wood1.resx">
       <DependentUpon>Wood1.h</DependentUpon>
     </EmbeddedResource>

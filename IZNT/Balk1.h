@@ -1,5 +1,6 @@
 #pragma once
 #include <corecrt_math.h>
+#include "TextVersion.h"
 
 using namespace System;
 using namespace System::ComponentModel;
@@ -94,7 +95,7 @@ namespace IZNT {
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Bold));
-			this->label1->Location = System::Drawing::Point(58, 21);
+			this->label1->Location = System::Drawing::Point(27, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(576, 44);
@@ -246,12 +247,13 @@ namespace IZNT {
 			// 
 			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			this->btnTextVersion->Location = System::Drawing::Point(611, 38);
 			this->btnTextVersion->Name = L"btnTextVersion";
-			this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			this->btnTextVersion->Size = System::Drawing::Size(89, 45);
 			this->btnTextVersion->TabIndex = 23;
 			this->btnTextVersion->Text = L"Текстовая версия";
 			this->btnTextVersion->UseVisualStyleBackColor = true;
+			this->btnTextVersion->Click += gcnew System::EventHandler(this, &Balk1::btnTextVersion_Click);
 			// 
 			// Balk1
 			// 
@@ -286,5 +288,6 @@ namespace IZNT {
 	private: System::Void calc_button_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void thickness_balk_textBox_TextChanged(System::Object^ sender, System::EventArgs^ e);
 	
+private: System::Void btnTextVersion_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

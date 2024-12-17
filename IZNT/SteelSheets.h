@@ -1,5 +1,5 @@
 #pragma once
-
+#include "TextVersion.h"
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -71,6 +71,7 @@ namespace IZNT {
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Button^ btnTextVersion;
+
 
 
 
@@ -170,7 +171,7 @@ namespace IZNT {
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Bold));
-			this->label1->Location = System::Drawing::Point(58, 21);
+			this->label1->Location = System::Drawing::Point(33, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(576, 66);
@@ -325,12 +326,13 @@ namespace IZNT {
 			// 
 			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			this->btnTextVersion->Location = System::Drawing::Point(611, 34);
 			this->btnTextVersion->Name = L"btnTextVersion";
-			this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			this->btnTextVersion->Size = System::Drawing::Size(89, 45);
 			this->btnTextVersion->TabIndex = 47;
 			this->btnTextVersion->Text = L"Текстовая версия";
 			this->btnTextVersion->UseVisualStyleBackColor = true;
+			this->btnTextVersion->Click += gcnew System::EventHandler(this, &SteelSheets::btnTextVersion_Click);
 			// 
 			// SteelSheets
 			// 
@@ -376,5 +378,96 @@ private: System::Void checkUnderwaterExp_CheckedChanged(System::Object^ sender, 
 private: System::Void checkWoodenStop_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
 private: System::Void checkDemolitionSkin_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
 private: System::Void checkDemolitionSkinWater_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void btnTextVersion_Click(System::Object^ sender, System::EventArgs^ e) {
+	TextVersion^ form = gcnew TextVersion;
+
+	System::Windows::Forms::TextBox^ textBox1 = (gcnew System::Windows::Forms::TextBox());
+	System::Windows::Forms::PictureBox^ pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+
+
+	System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(TextVersion::typeid));
+	this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+	(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+	this->SuspendLayout();
+
+	// 
+	// textBox1
+	// 
+	textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+	textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+	textBox1->Location = System::Drawing::Point(13, 12);
+	textBox1->Multiline = true;
+	textBox1->Name = L"textBox1";
+	textBox1->ReadOnly = true;
+	textBox1->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
+	textBox1->Size = System::Drawing::Size(417, 707);
+	textBox1->TabIndex = 1;
+	textBox1->TabStop = false;
+	textBox1->BackColor = System::Drawing::Color::White;
+	textBox1->Text = "Стальные листы подрываются(перебиваются) удлиненными зарядами, перекрывающими листы по всей ширине.В случае устройства пробоин в стальных листах зарядом перекрывают только часть ширины листа, равную расчетной длине пробоины. \r\n" +
+		"а) Подрывание стальных листов толщиной до 2 сантиметров. \r\n"
+		"Масса заряда, необходимого для перебивания листа определяется по формуле : \r\n"
+		"С = 20F(5.4) \r\n"
+		"где : С - масса заряда в граммах; \r\n"
+		"h - расчетная толщина листа в сантиметрах; \r\n"
+		"F - площадь поперечного сечения листа по плоскости перебивания в квадратных сантиметрах. \r\n"
+		"По толщине листа - на каждый сантиметр толщины листа - один ряд малых тротиловых шашек. \r\n"
+		"б) Подрывание стальных листов толщиной более 2 см. \r\n"
+		"Масса заряда, необходимого для перебивания листа определяется по формуле : \r\n"
+		"С = 10hF  F(5.5) \r\n"
+		"где : С - масса заряда в граммах\r\n"
+		"h - расчетная толщина листа в см\r\n"
+		"F - площадь поперечного сечения листа по плоскости перебивания в квадратных сантиметрах. \r\n"
+		"По толщине листа : количество рядов малых шашек равно : \r\n"
+
+		"Удлиненные заряды для перебивания стальных листов могут изготовляться и из пластичного ВВ(Пластита - 4).Масса зарядов из пластита - 4 определяется по тем же формулам : \r\n"
+		"С = 20F    и С = 10hF\r\n"
+		"Для перебивания и пробивания стальных листов толщиной более 2 см целесообразно применять кумулятивные удлиненные и сосредоточенные заряды. \r\n"
+		"Масса кумулятивных удлиненных зарядов из пластита - 4 определяется по формуле"
+		"С = 10hF, но с уменьшением в два раза т.е. \r\n"
+
+		"Масса сосредоточенных кумулятивных зарядов из пластита - 4 определяется по формуле : \r\n"
+		"С = 2.5h^3(5.6) \r\n"
+		"где :\r\nС - масса заряда в граммах\r\n"
+		"h - толщина листа в сантиметрах\r\n"
+
+		"в) Перебивание и пробивание броневых листов. \r\n"
+		"При перебивании и пробивании броневых листов масса как кумулятивных, так и некумулятивных определяется по правилам расчета зарядов для подрывания обычных листов, но с увеличением в два раза, т.е. \r\n"
+		"С = 2·20F; С = 2·10hF; С = 2·2.5h^3  \r\n"
+
+
+		"Подрывание стальных элементов под водой. \r\n"
+		"Масса контактных зарядов берется в 2 раза большей \r\n"
+
+		"Подрывание стальной обшивки судов и стальных элементов гидротехнических сооружений, омываемых водой только со стороны приложения зарядов\r\n"
+		"Масса контактных зарядов берется в 1,5 раза меньше \r\n"
+
+		"Подрывание стальной обшивки судов зарядами, расположенными с внутренней стороны конструкции(в трюме). \r\n"
+		"Масса контактных зарядов берется в 4 раза больше \r\n"
+
+		"Перебивание стальных листов(полос, плит) под водой может быть обеспечено контактными зарядами без увеличения, если со стороны, противоположной заряду, к подрываемому элементу прикрепить деревянный брусок, а лучше - полую водонепроницаемую коробку. \r\n"
+		"Масса контактных зарядов берется без увеличения \r\n"
+		"Размеры деревянного бруска(полой водонепроницаемой коробкой) должны быть не меньше размера заряда. \r\n"
+		"Для перебивания толстых(свыше 5 см) стальных  и броневых листов под водой целесообразно применять кумулятивные удлиненные заряды с полостями, защищенными от заполнения водой . \r\n";
+
+
+	// 
+	// TextVersion
+	// 
+	form->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+	form->AutoSize = true;
+	form->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+	form->ClientSize = System::Drawing::Size(442, 731);
+	form->Controls->Add(textBox1);
+	form->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+	form->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+	form->Name = L"TextVersion";
+	form->Text = L"TextVersion";
+	form->ResumeLayout(false);
+	form->PerformLayout();
+
+
+	form->Show();
+}
 };
 }

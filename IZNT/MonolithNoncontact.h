@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cmath>
+#include "TextVersion.h"
 
 using namespace System;
 using namespace System::ComponentModel;
@@ -52,6 +53,7 @@ namespace IZNT {
 	private: System::Windows::Forms::CheckBox^ hole_checkBox;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Button^ btnTextVersion;
+
 
 
 	private:
@@ -232,7 +234,7 @@ namespace IZNT {
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Bold));
-			this->label1->Location = System::Drawing::Point(18, 21);
+			this->label1->Location = System::Drawing::Point(18, 14);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(661, 66);
@@ -285,12 +287,13 @@ namespace IZNT {
 			// 
 			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			this->btnTextVersion->Location = System::Drawing::Point(611, 57);
 			this->btnTextVersion->Name = L"btnTextVersion";
-			this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			this->btnTextVersion->Size = System::Drawing::Size(89, 45);
 			this->btnTextVersion->TabIndex = 51;
 			this->btnTextVersion->Text = L"“екстова€ верси€";
 			this->btnTextVersion->UseVisualStyleBackColor = true;
+			this->btnTextVersion->Click += gcnew System::EventHandler(this, &MonolithNoncontact::btnTextVersion_Click);
 			// 
 			// MonolithNoncontact
 			// 
@@ -329,5 +332,72 @@ namespace IZNT {
 private: System::Void radius_textBox_TextChanged(System::Object^ sender, System::EventArgs^ e);
 private: System::Void type_material_comboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e);
 private: System::Void second_comboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void btnTextVersion_Click(System::Object^ sender, System::EventArgs^ e) {
+	TextVersion^ form = gcnew TextVersion;
+
+	System::Windows::Forms::TextBox^ textBox1 = (gcnew System::Windows::Forms::TextBox());
+	System::Windows::Forms::PictureBox^ pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+
+
+	System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(TextVersion::typeid));
+	this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+	(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+	this->SuspendLayout();
+
+	// 
+	// pictureBox1
+	// 
+	pictureBox1->Image = Image::FromFile(".\\Picture\\Screenshot 2024-12-17 214216.png");//(cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+	pictureBox1->Location = System::Drawing::Point(13, 13);
+	pictureBox1->Name = L"pictureBox1";
+	pictureBox1->Size = System::Drawing::Size(417, 192);
+	pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+	pictureBox1->TabIndex = 0;
+	pictureBox1->TabStop = false;
+	// 
+	// textBox1
+	// 
+	textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+	textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+	textBox1->Location = System::Drawing::Point(13, 212);
+	textBox1->Multiline = true;
+	textBox1->Name = L"textBox1";
+	textBox1->ReadOnly = true;
+	textBox1->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
+	textBox1->Size = System::Drawing::Size(417, 507);
+	textBox1->TabIndex = 1;
+	textBox1->TabStop = false;
+	textBox1->BackColor = System::Drawing::Color::White;
+	textBox1->Text = "Ќеконтактные зар€ды дл€ подрывани€ кирпичных, каменных, бетонных и железобетонных колонн(столбов) и балок рассчитываютс€ по формуле :"
+		"C = 10 Ahr^2 (29) \r\n"
+		"где — Ч вес зар€да в килограммах; \r\n"
+		"ј Ч коэффициент, завис€щий от свойств подрываемого материала и примен€емого ¬¬ \r\n"
+		"h Ч толщина подрываемого элемента в метрах; \r\n"
+		"r Ч рассто€ние между центром зар€да и осью подрываемого элемента в метрах. \r\n"
+
+		"Ќеконтактные зар€ды дл€ пробивани€ отверстий в плитах и стенах из кирпича, камн€ и неармированного бетона рассчитываютс€ по формуле(29) с увеличением в три раза."
+
+		"ѕри подрывании конструкций из кирпича, камн€и бетона под водой контактными зар€дами вес последних, определ€етс€ по ст. 147 и 148 без изменений. онтактные зар€ды дл€ подрывани€ под водой железобетонных элементов - рассчитываютс€ по указани€м тех же статей, но с увеличением в полтора раза.ѕри этом зар€ды считаютс€ подводными независимо от глубины их погружени€ в воду.Ќеконтактные зар€ды дл€ подрывани€ под водой конструкций из кирпича, камн€, бетона и железобетона рассчитываютс€ по формуле(29) с уменьшением в полтора раза, если глубина погружени€ зар€дов составл€ет не менее половины расчетного рассто€ни€ (рассто€ни€ от центра зар€да до оси подрываемого элемента) .";
+
+	// 
+	// TextVersion
+	// 
+	form->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+	form->AutoSize = true;
+	form->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+	form->ClientSize = System::Drawing::Size(442, 731);
+	form->Controls->Add(textBox1);
+	form->Controls->Add(pictureBox1);
+	form->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+	form->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+	form->Name = L"TextVersion";
+	form->Text = L"TextVersion";
+	(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(pictureBox1))->EndInit();
+	form->ResumeLayout(false);
+	form->PerformLayout();
+
+
+	form->Show();
+}
 };
 }

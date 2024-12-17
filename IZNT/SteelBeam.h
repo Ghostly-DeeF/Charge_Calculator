@@ -1,5 +1,5 @@
 #pragma once
-
+#include "TextVersion.h"
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -76,6 +76,7 @@ namespace IZNT {
 
 
 
+
 	private:
 		/// <summary>
 		/// Обязательная переменная конструктора.
@@ -147,7 +148,7 @@ namespace IZNT {
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Bold));
-			this->label1->Location = System::Drawing::Point(58, 21);
+			this->label1->Location = System::Drawing::Point(33, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(576, 44);
@@ -397,12 +398,13 @@ namespace IZNT {
 			// 
 			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			this->btnTextVersion->Location = System::Drawing::Point(614, 34);
 			this->btnTextVersion->Name = L"btnTextVersion";
-			this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			this->btnTextVersion->Size = System::Drawing::Size(89, 45);
 			this->btnTextVersion->TabIndex = 53;
 			this->btnTextVersion->Text = L"Текстовая версия";
 			this->btnTextVersion->UseVisualStyleBackColor = true;
+			this->btnTextVersion->Click += gcnew System::EventHandler(this, &SteelBeam::btnTextVersion_Click);
 			// 
 			// SteelBeam
 			// 
@@ -446,5 +448,73 @@ namespace IZNT {
 	private: System::Void calc_button_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void conner_checkBox_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
 private: System::Void type_charge_comboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void btnTextVersion_Click(System::Object^ sender, System::EventArgs^ e) {
+	TextVersion^ form = gcnew TextVersion;
+
+	System::Windows::Forms::TextBox^ textBox1 = (gcnew System::Windows::Forms::TextBox());
+	System::Windows::Forms::PictureBox^ pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+
+
+	System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(TextVersion::typeid));
+	this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+	(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+	this->SuspendLayout();
+
+	// 
+	// textBox1
+	// 
+	textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+	textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+	textBox1->Location = System::Drawing::Point(13, 12);
+	textBox1->Multiline = true;
+	textBox1->Name = L"textBox1";
+	textBox1->ReadOnly = true;
+	textBox1->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
+	textBox1->Size = System::Drawing::Size(417, 707);
+	textBox1->TabIndex = 1;
+	textBox1->TabStop = false;
+	textBox1->BackColor = System::Drawing::Color::White;
+	textBox1->Text = "Стальные балки подрываются преимущественно фигурными зарядами. При проведении работ в сокращенные сроки применяются сосредоточенные заряды.\r\n"
+
+		"А) Подрывание стальных балок фигурными зарядами. \r\n"
+
+		"С = 20F при h <= 2\r\n"
+		"С = 10hF при h > 2\r\n"
+
+		"Фигурные заряды размещаются на подрываемых балках так, чтобы они охватывали их поперечное сечение с нескольких сторон.При этом части заряда, действующие в противоположных направлениях, должны располагаться сопротивление сдвигом одна относительно другой по длине балки. \r\n"
+		"Каждая составная часть фигурного заряда, предназначенная для перебивания той или иной части балки, рассчитывается отдельно, как в случае перебивания отдельных листов.При расчете частей заряда по толщине листов на каждую пару поясных уголков в составных балках добавляют по 2 - 3 больших шашки. \r\n"
+
+		"Составные части фигурного заряда изготавливаются(вяжутся) отдельно одна от другой, а при укладке на подрываемую балку объединяются в общий заряд при помощи соединительных шашек, масса этих шашек в расчетную массу заряда не включается. \r\n"
+
+		"Крепление фигурных зарядов к подрываемым балкам осуществляется при помощи  веревок, мягкой проволоки, дощатых накладок и распорок.Крепление производится в следующем порядке : веревку или проволоку обводят два раза вокруг перебиваемого сечения и завязывают ее сопротивление слабиной; затем под веревку(проволоку) подводят привязанные к дощатым накладкам части заряда и прижимают их к балке при помощи распорок. \r\n"
+		"Для подрывания стальных балок целесообразно применять заряды из пластичного ВВ в мягкой оболочке. \r\n"
+
+
+		"Б) Подрывание стальных балок сосредоточенными зарядами. \r\n"
+		"Сосредоточенные заряды обычно размещаются во внутренних углах и полостях, образуемых полками и стенками подрываемых балок, где сечение их является наиболее мощным.Масса сосредоточенного заряда принимается в два раза больше по сравнению с массой фигурного заряда, рассчитанного на перебивание балки того же поперечного сечения, т.е. \r\n"
+		"С = 40F при h <= 2\r\n"
+		"С = 20hF при h > 2\r\n"
+		"Для перебивания стальных балок, имеющих большую площадь поперечного сечения, могут применяться удлиненные заряды КЗУ, КЗУ - 2, ЛКЗ - 80; способы их укладки на подрываемых балках выбираются в зависимости от формы поперечного сечения этих балок и типа применяемых зарядов. \r\n"
+
+		"Для подрывания под водой стальных балок применять фигурные заряды, охватывающие подрываемые элементы с нескольких сторон нецелесообразно.Для балок небольших поперечных размеров  наиболее целесообразно применять сосредоточенные заряды, а для крупных балок - фигурные заряды, перекрывающие их только с одной стороны.Масса таких зарядов определяется по правилам расчета сосредоточенных зарядов\r\n";
+
+	// 
+	// TextVersion
+	// 
+	form->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+	form->AutoSize = true;
+	form->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+	form->ClientSize = System::Drawing::Size(442, 731);
+	form->Controls->Add(textBox1);
+	form->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+	form->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+	form->Name = L"TextVersion";
+	form->Text = L"TextVersion";
+	form->ResumeLayout(false);
+	form->PerformLayout();
+
+
+	form->Show();
+}
 };
 }

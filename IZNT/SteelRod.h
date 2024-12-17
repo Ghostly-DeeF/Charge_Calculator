@@ -1,5 +1,5 @@
 #pragma once
-
+#include "TextVersion.h"
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -52,6 +52,7 @@ namespace IZNT {
 	private: System::Windows::Forms::CheckBox^ checkPlastit;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Button^ btnTextVersion;
+
 	private: System::Windows::Forms::CheckBox^ checkUnderwaterExp;
 
 
@@ -175,12 +176,13 @@ namespace IZNT {
 			   // 
 			   this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			   this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
-			   this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			   this->btnTextVersion->Location = System::Drawing::Point(611, 34);
 			   this->btnTextVersion->Name = L"btnTextVersion";
-			   this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			   this->btnTextVersion->Size = System::Drawing::Size(89, 45);
 			   this->btnTextVersion->TabIndex = 33;
 			   this->btnTextVersion->Text = L"Текстовая версия";
 			   this->btnTextVersion->UseVisualStyleBackColor = true;
+			   this->btnTextVersion->Click += gcnew System::EventHandler(this, &SteelRod::btnTextVersion_Click);
 			   // 
 			   // SteelRod
 			   // 
@@ -209,5 +211,60 @@ namespace IZNT {
 #pragma endregion
 	private: System::Void calc_button_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void checkPlastit_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void btnTextVersion_Click(System::Object^ sender, System::EventArgs^ e) {
+	TextVersion^ form = gcnew TextVersion;
+
+	System::Windows::Forms::TextBox^ textBox1 = (gcnew System::Windows::Forms::TextBox());
+	System::Windows::Forms::PictureBox^ pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+
+
+	System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(TextVersion::typeid));
+	this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+	(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+	this->SuspendLayout();
+
+	// 
+	// textBox1
+	// 
+	textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+	textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+	textBox1->Location = System::Drawing::Point(13, 12);
+	textBox1->Multiline = true;
+	textBox1->Name = L"textBox1";
+	textBox1->ReadOnly = true;
+	textBox1->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
+	textBox1->Size = System::Drawing::Size(417, 707);
+	textBox1->TabIndex = 1;
+	textBox1->TabStop = false;
+	textBox1->BackColor = System::Drawing::Color::White;
+	textBox1->Text = "Стальные стержни, прутья, бруски и т.п.подрываются сосредоточенными зарядами, масса которых в зависимости от толщины подрываемых элементов определяется по формулам :\r\nС = 20F; С = 10hF\r\nПеребивание стержней круглого сечения диаметром до 2 см включительно целесообразно производить зарядами из тротила массой 200 г(одна малая шашка) или зарядами из пластичного ВВ массой 100 г.\r\n"
+		"Масса заряда для перебивания стержней диаметром более 2 см определяется по формуле : \r\n"
+		"С = 10·D^3	   (5.8)\r\n"
+		"где : С - масса заряда в граммах;"
+		"D - диаметр стержня в сантиметрах. \r\n"
+
+		"Примечания: \r\n"
+		"1.	Заряд должен располагаться так, чтобы он перекрывал всю ширину(диаметр) стержня . \r\n"
+		"2. Заряд должен иметь высоту не менее 2.5 толщины(диаметра) стержня . \r\n"
+		"В случае применения пластита - 4 для перебивания стальных стержней заряды рассчитываются как заряды из тротиловых шашек, с уменьшением в два раза";
+
+	// 
+	// TextVersion
+	// 
+	form->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+	form->AutoSize = true;
+	form->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+	form->ClientSize = System::Drawing::Size(442, 731);
+	form->Controls->Add(textBox1);
+	form->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+	form->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+	form->Name = L"TextVersion";
+	form->Text = L"TextVersion";
+	form->ResumeLayout(false);
+	form->PerformLayout();
+
+
+	form->Show();
+}
 };
 }

@@ -68,4 +68,72 @@ inline System::Void IZNT::Balk1::thickness_balk_textBox_TextChanged(System::Obje
 
 }
 
+inline System::Void IZNT::Balk1::btnTextVersion_Click(System::Object^ sender, System::EventArgs^ e) {
+    TextVersion^ form = gcnew TextVersion;
+    
+    System::Windows::Forms::TextBox^ textBox1 = (gcnew System::Windows::Forms::TextBox());
+    System::Windows::Forms::PictureBox^ pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+
+
+    System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(TextVersion::typeid));
+    this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+    (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+    this->SuspendLayout();
+
+    // 
+    // pictureBox1
+    // 
+    pictureBox1->Image = Image::FromFile(".\\Picture\\Screenshot 2024-12-17 205638.png");//(cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+    pictureBox1->Location = System::Drawing::Point(13, 13);
+    pictureBox1->Name = L"pictureBox1";
+    pictureBox1->Size = System::Drawing::Size(417, 192);
+    pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+    pictureBox1->TabIndex = 0;
+    pictureBox1->TabStop = false;
+    // 
+    // textBox1
+    // 
+    textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+    textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+    textBox1->Location = System::Drawing::Point(13, 212);
+    textBox1->Multiline = true;
+    textBox1->Name = L"textBox1";
+    textBox1->ReadOnly = true;
+    textBox1->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
+    textBox1->Size = System::Drawing::Size(417, 507);
+    textBox1->TabIndex = 1;
+    textBox1->TabStop = false;
+    textBox1->BackColor = System::Drawing::Color::White;
+    textBox1->Text = "¬ес контактного зар€да, необходимого дл€ перебивани€ бруса или пакета бревен, определ€етс€ по формуле\r\n" +
+        "C = KF, \r\n" +
+        "где C - вес зар€да в граммах; \r\n" +
+        "K - коэффициент, завис€щий от породы(крепости) и влажности древесины\r\n" +
+        "F - площадь поперечного сечени€ бруса или пакета в квадратных сантиметрах. \r\n" +
+        "¬ качестве расчетного диаметра принимаетс€ общий наибольший  диаметр пакета в сантиметрах. \r\n" +
+        "ѕодрывание пакетов бревен производитс€ сосредоточенными зар€дами. \r\n" +
+        "ѕри толщине бруса h более 30 см вес зар€да умножаетс€ на величину h / 30. —оставные брусь€ при расчете зар€дов принимаютс€ за целые. \r\n" +
+        "«ар€д располагаетс€ на брусе обычно поперек его широкой грани.   \r\n";
+
+
+    // 
+    // TextVersion
+    // 
+    form->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+    form->AutoSize = true;
+    form->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+    form->ClientSize = System::Drawing::Size(442, 731);
+    form->Controls->Add(textBox1);
+    form->Controls->Add(pictureBox1);
+    form->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+    form->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+    form->Name = L"TextVersion";
+    form->Text = L"TextVersion";
+    (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(pictureBox1))->EndInit();
+    form->ResumeLayout(false);
+    form->PerformLayout();
+
+
+    form->Show();
+}
+
 

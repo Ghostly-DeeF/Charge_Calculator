@@ -1,5 +1,5 @@
 #pragma once
-
+#include "TextVersion.h"
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -54,6 +54,7 @@ namespace IZNT {
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::CheckBox^ checkFillingWater;
 	private: System::Windows::Forms::Button^ btnTextVersion;
+
 
 
 		   float answerz;
@@ -196,12 +197,13 @@ namespace IZNT {
 			   // 
 			   this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			   this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
-			   this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			   this->btnTextVersion->Location = System::Drawing::Point(611, 34);
 			   this->btnTextVersion->Name = L"btnTextVersion";
-			   this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			   this->btnTextVersion->Size = System::Drawing::Size(89, 45);
 			   this->btnTextVersion->TabIndex = 37;
 			   this->btnTextVersion->Text = L"Текстовая версия";
 			   this->btnTextVersion->UseVisualStyleBackColor = true;
+			   this->btnTextVersion->Click += gcnew System::EventHandler(this, &SteelTube::btnTextVersion_Click);
 			   // 
 			   // SteelTube
 			   // 
@@ -234,5 +236,69 @@ namespace IZNT {
 	private: System::Void calc_button_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void checkUnderwaterExp_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
 private: System::Void checkFillingWater_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void btnTextVersion_Click(System::Object^ sender, System::EventArgs^ e) {
+	TextVersion^ form = gcnew TextVersion;
+
+	System::Windows::Forms::TextBox^ textBox1 = (gcnew System::Windows::Forms::TextBox());
+	System::Windows::Forms::PictureBox^ pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+
+
+	System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(TextVersion::typeid));
+	this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+	(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+	this->SuspendLayout();
+
+
+	// 
+	// textBox1
+	// 
+	textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+	textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+	textBox1->Location = System::Drawing::Point(13, 12);
+	textBox1->Multiline = true;
+	textBox1->Name = L"textBox1";
+	textBox1->ReadOnly = true;
+	textBox1->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
+	textBox1->Size = System::Drawing::Size(417, 707);
+	textBox1->TabIndex = 1;
+	textBox1->TabStop = false;
+	textBox1->BackColor = System::Drawing::Color::White;
+	textBox1->Text = "Стальные трубы и пустотелые колонны подрваются зарядами, располагаемыми по наружной поверхности труб(колонн) на протяжении не менее 3/4 их окружности. Расчет зарядов производится по площади поперечного сечения стенок или по их толщине. Для подрывания стальных труб и пустотелых колонн удобнее применять кольцевые заряды из пластичного ВВ.Вес кольцевого заряда из пластита - 4 принимается равным весу заряда из тротиловых шашек. \r\n"
+
+		"Формула расчета:\r\n"
+		"C = 20F\r\n"
+
+		"Подрывание стальных элементов под водой. \r\n"
+		"Масса контактных зарядов берется в 2 раза большей \r\n"
+
+		"Подрывание стальной обшивки судов и стальных элементов гидротехнических сооружений, омываемых водой только со стороны приложения зарядов\r\n"
+		"Масса контактных зарядов берется в 1,5 раза меньше \r\n"
+
+		"Подрывание стальной обшивки судов зарядами, расположенными с внутренней стороны конструкции(в трюме). \r\n"
+		"Масса контактных зарядов берется в 4 раза больше \r\n"
+
+		"Перебивание стальных листов(полос, плит) под водой может быть обеспечено контактными зарядами без увеличения, если со стороны, противоположной заряду, к подрываемому элементу прикрепить деревянный брусок, а лучше - полую водонепроницаемую коробку. \r\n"
+		"Масса контактных зарядов берется без увеличения \r\n"
+		"Размеры деревянного бруска(полой водонепроницаемой коробкой) должны быть не меньше размера заряда. \r\n"
+		"Для перебивания толстых(свыше 5 см) стальных  и броневых листов под водой целесообразно применять кумулятивные удлиненные заряды с полостями, защищенными от заполнения водой . \r\n";
+
+	// 
+	// TextVersion
+	// 
+	form->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+	form->AutoSize = true;
+	form->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+	form->ClientSize = System::Drawing::Size(442, 731);
+	form->Controls->Add(textBox1);
+	form->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+	form->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+	form->Name = L"TextVersion";
+	form->Text = L"TextVersion";
+	form->ResumeLayout(false);
+	form->PerformLayout();
+
+
+	form->Show();
+}
 };
 }

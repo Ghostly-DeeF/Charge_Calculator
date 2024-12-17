@@ -1,5 +1,5 @@
 #pragma once
-
+#include "TextVersion.h"
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -46,6 +46,7 @@ namespace IZNT {
 	private: System::Windows::Forms::CheckBox^ checkUnderwaterExp;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Button^ btnTextVersion;
+
 		   float answerz;
 
 #pragma region Windows Form Designer generated code
@@ -119,7 +120,7 @@ namespace IZNT {
 			   // 
 			   this->label1->AutoSize = true;
 			   this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Bold));
-			   this->label1->Location = System::Drawing::Point(58, 21);
+			   this->label1->Location = System::Drawing::Point(34, 21);
 			   this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label1->Name = L"label1";
 			   this->label1->Size = System::Drawing::Size(576, 66);
@@ -164,12 +165,13 @@ namespace IZNT {
 			   // 
 			   this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			   this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
-			   this->btnTextVersion->Location = System::Drawing::Point(629, 20);
+			   this->btnTextVersion->Location = System::Drawing::Point(611, 34);
 			   this->btnTextVersion->Name = L"btnTextVersion";
-			   this->btnTextVersion->Size = System::Drawing::Size(71, 43);
+			   this->btnTextVersion->Size = System::Drawing::Size(89, 45);
 			   this->btnTextVersion->TabIndex = 39;
 			   this->btnTextVersion->Text = L"“екстова€ верси€";
 			   this->btnTextVersion->UseVisualStyleBackColor = true;
+			   this->btnTextVersion->Click += gcnew System::EventHandler(this, &SteelCable::btnTextVersion_Click);
 			   // 
 			   // SteelCable
 			   // 
@@ -198,5 +200,59 @@ namespace IZNT {
 #pragma endregion
 	private: System::Void calc_button_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void checkBox_Steel_Cable_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void btnTextVersion_Click(System::Object^ sender, System::EventArgs^ e) {
+	TextVersion^ form = gcnew TextVersion;
+
+	System::Windows::Forms::TextBox^ textBox1 = (gcnew System::Windows::Forms::TextBox());
+	System::Windows::Forms::PictureBox^ pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+
+
+	System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(TextVersion::typeid));
+	this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+	(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+	this->SuspendLayout();
+
+	// 
+	// textBox1
+	// 
+	textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+	textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+	textBox1->Location = System::Drawing::Point(13, 12);
+	textBox1->Multiline = true;
+	textBox1->Name = L"textBox1";
+	textBox1->ReadOnly = true;
+	textBox1->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
+	textBox1->Size = System::Drawing::Size(417, 707);
+	textBox1->TabIndex = 1;
+	textBox1->TabStop = false;
+	textBox1->BackColor = System::Drawing::Color::White;
+	textBox1->Text = "—тальные тросы перебиваютс€ парными сосредоточенными зар€дами из тротиловых шашек, прикрепл€емыми с противоположных сторон троса, сопротивление сдвигом одного по отношению к другому.¬зрыв обоих зар€дов должен производитьс€ одновременно при помощи детонирующего шнура. . \r\n"
+		"ћасса каждого из двух зар€дов, предназначенных дл€ перебивани€ троса определ€етс€ по формуле :\r\n— = 10ЈD^3	(5.9) \r\n"
+		"ѕримечани€ : \r\n"
+		"1.	«ар€д должен располагатьс€ так, чтобы он перекрывал весь диаметр троса. \r\n"
+		"2.	«ар€д должен иметь высоту не менее 2.5 диаметра троса. \r\n"
+		"3.	ƒл€ перебивани€ троса примен€етс€ два зар€да. \r\n"
+		"4.	«ар€ды располагаютс€ с противоположных сторон троса сопротивление сдвигом одного по отношению к другому. \r\n"
+		"5.	¬зрыв зар€дов производитс€ одновременно. \r\n"
+		"ƒл€ перебивани€ тросов целесообразно примен€ть кольцевые зар€ды из пластичного ¬¬.“рос перебиваетс€ одним кольцевым зар€дом, масса которого определ€етс€ по формуле — = 10ЈD^3, но с уменьшением на 1/4";
+
+	// 
+	// TextVersion
+	// 
+	form->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+	form->AutoSize = true;
+	form->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+	form->ClientSize = System::Drawing::Size(442, 731);
+	form->Controls->Add(textBox1);
+	form->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+	form->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+	form->Name = L"TextVersion";
+	form->Text = L"TextVersion";
+	form->ResumeLayout(false);
+	form->PerformLayout();
+
+
+	form->Show();
+}
 };
 }

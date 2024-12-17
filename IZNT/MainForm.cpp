@@ -13,6 +13,7 @@ void IZNT::MainForm::SetForm(System::Windows::Forms::Panel^ panel, System::Windo
 {
     panel->Controls->Clear();
     panel->Controls->Add(form);
+
 }
 
 
