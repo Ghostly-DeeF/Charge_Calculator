@@ -86,11 +86,11 @@ namespace IZNT {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 13.25F, System::Drawing::FontStyle::Bold));
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Bold));
 			this->label1->Location = System::Drawing::Point(18, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(534, 63);
+			this->label1->Size = System::Drawing::Size(661, 66);
 			this->label1->TabIndex = 12;
 			this->label1->Text = L"Расчет шпурового заряда, необходимого\r\nдля перебивания кирпичных, каменных, бетон"
 				L"ных и железобетонных\r\nконструкций типа колонн, столбов, балок и т. п.";
@@ -99,11 +99,11 @@ namespace IZNT {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->label2->Location = System::Drawing::Point(13, 170);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(141, 15);
+			this->label2->Size = System::Drawing::Size(196, 16);
 			this->label2->TabIndex = 21;
 			this->label2->Text = L"Толщина H объекта в метрах";
 			// 
@@ -119,11 +119,11 @@ namespace IZNT {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->label3->Location = System::Drawing::Point(13, 90);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(51, 15);
+			this->label3->Size = System::Drawing::Size(73, 16);
 			this->label3->TabIndex = 23;
 			this->label3->Text = L"Материал";
 			// 
@@ -160,7 +160,7 @@ namespace IZNT {
 			// calc_button
 			// 
 			this->calc_button->BackColor = System::Drawing::Color::White;
-			this->calc_button->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->calc_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->calc_button->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->calc_button->Location = System::Drawing::Point(249, 108);
 			this->calc_button->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
@@ -174,10 +174,10 @@ namespace IZNT {
 			// underwater_checkBox
 			// 
 			this->underwater_checkBox->AutoSize = true;
-			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->underwater_checkBox->Location = System::Drawing::Point(16, 266);
 			this->underwater_checkBox->Name = L"underwater_checkBox";
-			this->underwater_checkBox->Size = System::Drawing::Size(131, 23);
+			this->underwater_checkBox->Size = System::Drawing::Size(175, 24);
 			this->underwater_checkBox->TabIndex = 35;
 			this->underwater_checkBox->Text = L"Взрыв под водой";
 			this->underwater_checkBox->UseVisualStyleBackColor = true;
@@ -185,10 +185,10 @@ namespace IZNT {
 			// ammonite_checkBox
 			// 
 			this->ammonite_checkBox->AutoSize = true;
-			this->ammonite_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->ammonite_checkBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->ammonite_checkBox->Location = System::Drawing::Point(16, 230);
 			this->ammonite_checkBox->Name = L"ammonite_checkBox";
-			this->ammonite_checkBox->Size = System::Drawing::Size(81, 23);
+			this->ammonite_checkBox->Size = System::Drawing::Size(104, 24);
 			this->ammonite_checkBox->TabIndex = 36;
 			this->ammonite_checkBox->Text = L"Аммонит";
 			this->ammonite_checkBox->UseVisualStyleBackColor = true;
@@ -204,7 +204,7 @@ namespace IZNT {
 			// 
 			// btnTextVersion
 			// 
-			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
 			this->btnTextVersion->Name = L"btnTextVersion";
@@ -215,8 +215,7 @@ namespace IZNT {
 			// 
 			// MonolithSpur
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 14);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->Controls->Add(this->btnTextVersion);
@@ -230,7 +229,7 @@ namespace IZNT {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->thickness_textBox);
 			this->Controls->Add(this->label1);
-			this->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 8.25F));
+			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F));
 			this->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Name = L"MonolithSpur";

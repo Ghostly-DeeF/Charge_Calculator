@@ -121,11 +121,11 @@ namespace IZNT {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->label5->Location = System::Drawing::Point(13, 67);
 			this->label5->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(111, 15);
+			this->label5->Size = System::Drawing::Size(146, 16);
 			this->label5->TabIndex = 23;
 			this->label5->Text = L"Толщина h листа в см";
 			// 
@@ -155,7 +155,7 @@ namespace IZNT {
 			// 
 			// calc_button
 			// 
-			this->calc_button->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->calc_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->calc_button->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->calc_button->Location = System::Drawing::Point(249, 85);
 			this->calc_button->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
@@ -169,11 +169,11 @@ namespace IZNT {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 13.25F, System::Drawing::FontStyle::Bold));
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Bold));
 			this->label1->Location = System::Drawing::Point(58, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(473, 63);
+			this->label1->Size = System::Drawing::Size(576, 66);
 			this->label1->TabIndex = 19;
 			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nстального листа\r\n\r\n";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -181,11 +181,11 @@ namespace IZNT {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->label4->Location = System::Drawing::Point(13, 139);
 			this->label4->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(108, 15);
+			this->label4->Size = System::Drawing::Size(142, 16);
 			this->label4->TabIndex = 25;
 			this->label4->Text = L"Ширина D листа в см";
 			// 
@@ -219,21 +219,21 @@ namespace IZNT {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->label2->Location = System::Drawing::Point(13, 201);
 			this->label2->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(56, 15);
+			this->label2->Size = System::Drawing::Size(82, 16);
 			this->label2->TabIndex = 33;
 			this->label2->Text = L"Тип заряда";
 			// 
 			// checkUnderwaterExp
 			// 
 			this->checkUnderwaterExp->AutoSize = true;
-			this->checkUnderwaterExp->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->checkUnderwaterExp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->checkUnderwaterExp->Location = System::Drawing::Point(14, 419);
 			this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
-			this->checkUnderwaterExp->Size = System::Drawing::Size(231, 23);
+			this->checkUnderwaterExp->Size = System::Drawing::Size(309, 24);
 			this->checkUnderwaterExp->TabIndex = 39;
 			this->checkUnderwaterExp->TabStop = true;
 			this->checkUnderwaterExp->Text = L"Под водой (вода с обеих сторон)";
@@ -243,10 +243,10 @@ namespace IZNT {
 			// checkWoodenStop
 			// 
 			this->checkWoodenStop->AutoSize = true;
-			this->checkWoodenStop->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->checkWoodenStop->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->checkWoodenStop->Location = System::Drawing::Point(15, 458);
 			this->checkWoodenStop->Name = L"checkWoodenStop";
-			this->checkWoodenStop->Size = System::Drawing::Size(215, 23);
+			this->checkWoodenStop->Size = System::Drawing::Size(289, 24);
 			this->checkWoodenStop->TabIndex = 40;
 			this->checkWoodenStop->TabStop = true;
 			this->checkWoodenStop->Text = L"Вода с обеих сторон с бруском";
@@ -256,10 +256,10 @@ namespace IZNT {
 			// checkDemolitionSkin
 			// 
 			this->checkDemolitionSkin->AutoSize = true;
-			this->checkDemolitionSkin->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->checkDemolitionSkin->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->checkDemolitionSkin->Location = System::Drawing::Point(15, 497);
 			this->checkDemolitionSkin->Name = L"checkDemolitionSkin";
-			this->checkDemolitionSkin->Size = System::Drawing::Size(175, 23);
+			this->checkDemolitionSkin->Size = System::Drawing::Size(237, 24);
 			this->checkDemolitionSkin->TabIndex = 41;
 			this->checkDemolitionSkin->TabStop = true;
 			this->checkDemolitionSkin->Text = L"Вода со стороны заряда";
@@ -269,10 +269,10 @@ namespace IZNT {
 			// checkDemolitionSkinWater
 			// 
 			this->checkDemolitionSkinWater->AutoSize = true;
-			this->checkDemolitionSkinWater->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->checkDemolitionSkinWater->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->checkDemolitionSkinWater->Location = System::Drawing::Point(15, 536);
 			this->checkDemolitionSkinWater->Name = L"checkDemolitionSkinWater";
-			this->checkDemolitionSkinWater->Size = System::Drawing::Size(290, 23);
+			this->checkDemolitionSkinWater->Size = System::Drawing::Size(396, 24);
 			this->checkDemolitionSkinWater->TabIndex = 42;
 			this->checkDemolitionSkinWater->TabStop = true;
 			this->checkDemolitionSkinWater->Text = L"Вода со стороны, противоположной заряду";
@@ -282,10 +282,10 @@ namespace IZNT {
 			// checkArm
 			// 
 			this->checkArm->AutoSize = true;
-			this->checkArm->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->checkArm->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->checkArm->Location = System::Drawing::Point(14, 288);
 			this->checkArm->Name = L"checkArm";
-			this->checkArm->Size = System::Drawing::Size(117, 23);
+			this->checkArm->Size = System::Drawing::Size(154, 24);
 			this->checkArm->TabIndex = 43;
 			this->checkArm->Text = L"Броневой лист";
 			this->checkArm->UseVisualStyleBackColor = true;
@@ -293,10 +293,10 @@ namespace IZNT {
 			// checkWater
 			// 
 			this->checkWater->AutoSize = true;
-			this->checkWater->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->checkWater->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->checkWater->Location = System::Drawing::Point(14, 380);
 			this->checkWater->Name = L"checkWater";
-			this->checkWater->Size = System::Drawing::Size(88, 23);
+			this->checkWater->Size = System::Drawing::Size(112, 24);
 			this->checkWater->TabIndex = 44;
 			this->checkWater->TabStop = true;
 			this->checkWater->Text = L"Не в воде";
@@ -306,10 +306,10 @@ namespace IZNT {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 14.25F, System::Drawing::FontStyle::Bold));
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
 			this->label3->Location = System::Drawing::Point(10, 336);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(143, 22);
+			this->label3->Size = System::Drawing::Size(165, 24);
 			this->label3->TabIndex = 45;
 			this->label3->Text = L"Место подрыва";
 			// 
@@ -323,7 +323,7 @@ namespace IZNT {
 			// 
 			// btnTextVersion
 			// 
-			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
 			this->btnTextVersion->Name = L"btnTextVersion";
@@ -334,8 +334,7 @@ namespace IZNT {
 			// 
 			// SteelSheets
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 14);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->Controls->Add(this->btnTextVersion);
@@ -356,7 +355,7 @@ namespace IZNT {
 			this->Controls->Add(this->answer_textBox);
 			this->Controls->Add(this->calc_button);
 			this->Controls->Add(this->label1);
-			this->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 8.25F));
+			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F));
 			this->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Name = L"SteelSheets";

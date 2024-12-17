@@ -194,7 +194,7 @@ namespace IZNT {
 			   // 
 			   // btnTextVersion
 			   // 
-			   this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			   this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			   this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
 			   this->btnTextVersion->Location = System::Drawing::Point(629, 20);
 			   this->btnTextVersion->Name = L"btnTextVersion";
@@ -205,8 +205,7 @@ namespace IZNT {
 			   // 
 			   // SteelTube
 			   // 
-			   this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
-			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			   this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			   this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;

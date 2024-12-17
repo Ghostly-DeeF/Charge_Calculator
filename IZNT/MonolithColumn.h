@@ -128,10 +128,10 @@ namespace IZNT {
 			// scoring_checkBox
 			// 
 			this->scoring_checkBox->AutoSize = true;
-			this->scoring_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->scoring_checkBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->scoring_checkBox->Location = System::Drawing::Point(249, 450);
 			this->scoring_checkBox->Name = L"scoring_checkBox";
-			this->scoring_checkBox->Size = System::Drawing::Size(95, 23);
+			this->scoring_checkBox->Size = System::Drawing::Size(123, 24);
 			this->scoring_checkBox->TabIndex = 21;
 			this->scoring_checkBox->Text = L"С забивкой";
 			this->scoring_checkBox->UseVisualStyleBackColor = true;
@@ -139,10 +139,10 @@ namespace IZNT {
 			// anti_slip_checkBox
 			// 
 			this->anti_slip_checkBox->AutoSize = true;
-			this->anti_slip_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->anti_slip_checkBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->anti_slip_checkBox->Location = System::Drawing::Point(249, 420);
 			this->anti_slip_checkBox->Name = L"anti_slip_checkBox";
-			this->anti_slip_checkBox->Size = System::Drawing::Size(190, 23);
+			this->anti_slip_checkBox->Size = System::Drawing::Size(261, 24);
 			this->anti_slip_checkBox->TabIndex = 20;
 			this->anti_slip_checkBox->Text = L"Противооткольная одежда";
 			this->anti_slip_checkBox->UseVisualStyleBackColor = true;
@@ -165,7 +165,7 @@ namespace IZNT {
 			// calc_button
 			// 
 			this->calc_button->BackColor = System::Drawing::Color::White;
-			this->calc_button->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->calc_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->calc_button->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->calc_button->Location = System::Drawing::Point(249, 108);
 			this->calc_button->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
@@ -179,11 +179,11 @@ namespace IZNT {
 			// radius_label
 			// 
 			this->radius_label->AutoSize = true;
-			this->radius_label->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->radius_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->radius_label->Location = System::Drawing::Point(13, 370);
 			this->radius_label->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->radius_label->Name = L"radius_label";
-			this->radius_label->Size = System::Drawing::Size(128, 15);
+			this->radius_label->Size = System::Drawing::Size(183, 16);
 			this->radius_label->TabIndex = 17;
 			this->radius_label->Text = L"Толщина объекта в метрах";
 			// 
@@ -199,11 +199,11 @@ namespace IZNT {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 13.25F, System::Drawing::FontStyle::Bold));
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Bold));
 			this->label1->Location = System::Drawing::Point(18, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(534, 63);
+			this->label1->Size = System::Drawing::Size(661, 66);
 			this->label1->TabIndex = 11;
 			this->label1->Text = L"Расчет контактного заряда, необходимого\r\nдля перебивания кирпичных, каменных, бет"
 				L"онных и железобетонных\r\nконструкций типа колонн, столбов, балок и т. п.";
@@ -227,11 +227,11 @@ namespace IZNT {
 			// second_label
 			// 
 			this->second_label->AutoSize = true;
-			this->second_label->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->second_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->second_label->Location = System::Drawing::Point(13, 230);
 			this->second_label->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->second_label->Name = L"second_label";
-			this->second_label->Size = System::Drawing::Size(65, 15);
+			this->second_label->Size = System::Drawing::Size(97, 16);
 			this->second_label->TabIndex = 15;
 			this->second_label->Text = L"Тип раствора";
 			this->second_label->Visible = false;
@@ -239,11 +239,11 @@ namespace IZNT {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->label2->Location = System::Drawing::Point(13, 160);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(120, 15);
+			this->label2->Size = System::Drawing::Size(181, 16);
 			this->label2->TabIndex = 13;
 			this->label2->Text = L"Наименование материала";
 			// 
@@ -266,11 +266,11 @@ namespace IZNT {
 			// type_brick_lable
 			// 
 			this->type_brick_lable->AutoSize = true;
-			this->type_brick_lable->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->type_brick_lable->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->type_brick_lable->Location = System::Drawing::Point(13, 300);
 			this->type_brick_lable->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->type_brick_lable->Name = L"type_brick_lable";
-			this->type_brick_lable->Size = System::Drawing::Size(57, 15);
+			this->type_brick_lable->Size = System::Drawing::Size(81, 16);
 			this->type_brick_lable->TabIndex = 23;
 			this->type_brick_lable->Text = L"Тип кладки";
 			this->type_brick_lable->Visible = false;
@@ -293,11 +293,11 @@ namespace IZNT {
 			// location_label
 			// 
 			this->location_label->AutoSize = true;
-			this->location_label->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->location_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->location_label->Location = System::Drawing::Point(13, 440);
 			this->location_label->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->location_label->Name = L"location_label";
-			this->location_label->Size = System::Drawing::Size(103, 15);
+			this->location_label->Size = System::Drawing::Size(145, 16);
 			this->location_label->TabIndex = 25;
 			this->location_label->Text = L"Схема расположения";
 			// 
@@ -339,11 +339,11 @@ namespace IZNT {
 			// elongated_label
 			// 
 			this->elongated_label->AutoSize = true;
-			this->elongated_label->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->elongated_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->elongated_label->Location = System::Drawing::Point(246, 370);
 			this->elongated_label->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->elongated_label->Name = L"elongated_label";
-			this->elongated_label->Size = System::Drawing::Size(123, 15);
+			this->elongated_label->Size = System::Drawing::Size(176, 16);
 			this->elongated_label->TabIndex = 29;
 			this->elongated_label->Text = L"Ширина объекта в метрах";
 			this->elongated_label->Visible = false;
@@ -351,10 +351,10 @@ namespace IZNT {
 			// plastic_checkBox
 			// 
 			this->plastic_checkBox->AutoSize = true;
-			this->plastic_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->plastic_checkBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->plastic_checkBox->Location = System::Drawing::Point(249, 480);
 			this->plastic_checkBox->Name = L"plastic_checkBox";
-			this->plastic_checkBox->Size = System::Drawing::Size(119, 23);
+			this->plastic_checkBox->Size = System::Drawing::Size(159, 24);
 			this->plastic_checkBox->TabIndex = 30;
 			this->plastic_checkBox->Text = L"Пластичное ВВ";
 			this->plastic_checkBox->UseVisualStyleBackColor = true;
@@ -363,11 +363,11 @@ namespace IZNT {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->label3->Location = System::Drawing::Point(13, 90);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(56, 15);
+			this->label3->Size = System::Drawing::Size(82, 16);
 			this->label3->TabIndex = 32;
 			this->label3->Text = L"Тип заряда";
 			// 
@@ -387,10 +387,10 @@ namespace IZNT {
 			// hole_checkBox
 			// 
 			this->hole_checkBox->AutoSize = true;
-			this->hole_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->hole_checkBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->hole_checkBox->Location = System::Drawing::Point(249, 510);
 			this->hole_checkBox->Name = L"hole_checkBox";
-			this->hole_checkBox->Size = System::Drawing::Size(150, 23);
+			this->hole_checkBox->Size = System::Drawing::Size(202, 24);
 			this->hole_checkBox->TabIndex = 33;
 			this->hole_checkBox->Text = L"Сквозное отверстие";
 			this->hole_checkBox->UseVisualStyleBackColor = true;
@@ -399,17 +399,17 @@ namespace IZNT {
 			// underwater_checkBox
 			// 
 			this->underwater_checkBox->AutoSize = true;
-			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->underwater_checkBox->Location = System::Drawing::Point(249, 540);
 			this->underwater_checkBox->Name = L"underwater_checkBox";
-			this->underwater_checkBox->Size = System::Drawing::Size(131, 23);
+			this->underwater_checkBox->Size = System::Drawing::Size(175, 24);
 			this->underwater_checkBox->TabIndex = 34;
 			this->underwater_checkBox->Text = L"Взрыв под водой";
 			this->underwater_checkBox->UseVisualStyleBackColor = true;
 			// 
 			// btnTextVersion
 			// 
-			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
 			this->btnTextVersion->Name = L"btnTextVersion";
@@ -420,8 +420,7 @@ namespace IZNT {
 			// 
 			// MonolithColumn
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 14);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->Controls->Add(this->btnTextVersion);
@@ -448,7 +447,7 @@ namespace IZNT {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->type_material_comboBox);
 			this->Controls->Add(this->label1);
-			this->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 8.25F));
+			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F));
 			this->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Name = L"MonolithColumn";

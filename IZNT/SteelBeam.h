@@ -132,7 +132,7 @@ namespace IZNT {
 			// 
 			// calc_button
 			// 
-			this->calc_button->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->calc_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->calc_button->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->calc_button->Location = System::Drawing::Point(249, 85);
 			this->calc_button->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
@@ -146,11 +146,11 @@ namespace IZNT {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 13.25F, System::Drawing::FontStyle::Bold));
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Bold));
 			this->label1->Location = System::Drawing::Point(58, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(473, 42);
+			this->label1->Size = System::Drawing::Size(576, 44);
 			this->label1->TabIndex = 26;
 			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nстальной балки";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -158,11 +158,11 @@ namespace IZNT {
 			// checkUnderwaterExp
 			// 
 			this->checkUnderwaterExp->AutoSize = true;
-			this->checkUnderwaterExp->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->checkUnderwaterExp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->checkUnderwaterExp->Location = System::Drawing::Point(14, 148);
 			this->checkUnderwaterExp->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
-			this->checkUnderwaterExp->Size = System::Drawing::Size(140, 23);
+			this->checkUnderwaterExp->Size = System::Drawing::Size(189, 24);
 			this->checkUnderwaterExp->TabIndex = 35;
 			this->checkUnderwaterExp->Text = L"Подрыв под водой";
 			this->checkUnderwaterExp->UseVisualStyleBackColor = true;
@@ -170,11 +170,11 @@ namespace IZNT {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->label3->Location = System::Drawing::Point(11, 68);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(56, 15);
+			this->label3->Size = System::Drawing::Size(82, 16);
 			this->label3->TabIndex = 37;
 			this->label3->Text = L"Тип заряда";
 			// 
@@ -225,10 +225,10 @@ namespace IZNT {
 			this->label8->AutoSize = true;
 			this->label8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->label8->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->label8->Location = System::Drawing::Point(49, 275);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(27, 19);
+			this->label8->Size = System::Drawing::Size(33, 20);
 			this->label8->TabIndex = 40;
 			this->label8->Text = L"мм";
 			// 
@@ -253,10 +253,10 @@ namespace IZNT {
 			this->label2->AutoSize = true;
 			this->label2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->label2->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->label2->Location = System::Drawing::Point(49, 445);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(27, 19);
+			this->label2->Size = System::Drawing::Size(33, 20);
 			this->label2->TabIndex = 42;
 			this->label2->Text = L"мм";
 			// 
@@ -281,10 +281,10 @@ namespace IZNT {
 			this->label4->AutoSize = true;
 			this->label4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->label4->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->label4->Location = System::Drawing::Point(80, 320);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(27, 19);
+			this->label4->Size = System::Drawing::Size(33, 20);
 			this->label4->TabIndex = 44;
 			this->label4->Text = L"мм";
 			// 
@@ -309,21 +309,21 @@ namespace IZNT {
 			this->label6->AutoSize = true;
 			this->label6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->label6->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->label6->Location = System::Drawing::Point(49, 410);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(27, 19);
+			this->label6->Size = System::Drawing::Size(33, 20);
 			this->label6->TabIndex = 46;
 			this->label6->Text = L"мм";
 			// 
 			// conner_checkBox
 			// 
 			this->conner_checkBox->AutoSize = true;
-			this->conner_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->conner_checkBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->conner_checkBox->Location = System::Drawing::Point(14, 119);
 			this->conner_checkBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->conner_checkBox->Name = L"conner_checkBox";
-			this->conner_checkBox->Size = System::Drawing::Size(122, 23);
+			this->conner_checkBox->Size = System::Drawing::Size(162, 24);
 			this->conner_checkBox->TabIndex = 47;
 			this->conner_checkBox->Text = L"Поясные уголки";
 			this->conner_checkBox->UseVisualStyleBackColor = true;
@@ -350,10 +350,10 @@ namespace IZNT {
 			this->label5->AutoSize = true;
 			this->label5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->label5->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->label5->Location = System::Drawing::Point(123, 189);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(27, 19);
+			this->label5->Size = System::Drawing::Size(33, 20);
 			this->label5->TabIndex = 49;
 			this->label5->Text = L"мм";
 			// 
@@ -378,10 +378,10 @@ namespace IZNT {
 			this->label7->AutoSize = true;
 			this->label7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->label7->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->label7->Location = System::Drawing::Point(123, 533);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(27, 19);
+			this->label7->Size = System::Drawing::Size(33, 20);
 			this->label7->TabIndex = 51;
 			this->label7->Text = L"мм";
 			// 
@@ -395,7 +395,7 @@ namespace IZNT {
 			// 
 			// btnTextVersion
 			// 
-			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
 			this->btnTextVersion->Name = L"btnTextVersion";
@@ -406,8 +406,7 @@ namespace IZNT {
 			// 
 			// SteelBeam
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 14);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->Controls->Add(this->btnTextVersion);
@@ -432,7 +431,7 @@ namespace IZNT {
 			this->Controls->Add(this->answer_textBox);
 			this->Controls->Add(this->calc_button);
 			this->Controls->Add(this->label1);
-			this->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 8.25F));
+			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F));
 			this->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Name = L"SteelBeam";

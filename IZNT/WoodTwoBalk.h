@@ -101,11 +101,11 @@ namespace IZNT {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->label2->Location = System::Drawing::Point(13, 120);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(109, 15);
+			this->label2->Size = System::Drawing::Size(159, 16);
 			this->label2->TabIndex = 27;
 			this->label2->Text = L"Тип породы древесины";
 			// 
@@ -141,7 +141,7 @@ namespace IZNT {
 			// 
 			// calc_button
 			// 
-			this->calc_button->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->calc_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->calc_button->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->calc_button->Location = System::Drawing::Point(249, 85);
 			this->calc_button->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
@@ -155,11 +155,11 @@ namespace IZNT {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->label3->Location = System::Drawing::Point(13, 174);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(104, 15);
+			this->label3->Size = System::Drawing::Size(152, 16);
 			this->label3->TabIndex = 23;
 			this->label3->Text = L"Состояние древесины";
 			// 
@@ -180,11 +180,11 @@ namespace IZNT {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 13.25F, System::Drawing::FontStyle::Bold));
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Bold));
 			this->label1->Location = System::Drawing::Point(23, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(523, 42);
+			this->label1->Size = System::Drawing::Size(636, 44);
 			this->label1->TabIndex = 21;
 			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания балок\r\nдвутаврового сечен"
 				L"ия";
@@ -219,10 +219,10 @@ namespace IZNT {
 			this->label4->AutoSize = true;
 			this->label4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->label4->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->label4->Location = System::Drawing::Point(70, 317);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(24, 19);
+			this->label4->Size = System::Drawing::Size(30, 20);
 			this->label4->TabIndex = 30;
 			this->label4->Text = L"см";
 			// 
@@ -247,10 +247,10 @@ namespace IZNT {
 			this->label5->AutoSize = true;
 			this->label5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->label5->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->label5->Location = System::Drawing::Point(100, 378);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(24, 19);
+			this->label5->Size = System::Drawing::Size(30, 20);
 			this->label5->TabIndex = 32;
 			this->label5->Text = L"см";
 			// 
@@ -275,21 +275,21 @@ namespace IZNT {
 			this->label6->AutoSize = true;
 			this->label6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->label6->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->label6->Location = System::Drawing::Point(74, 430);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(24, 19);
+			this->label6->Size = System::Drawing::Size(30, 20);
 			this->label6->TabIndex = 34;
 			this->label6->Text = L"см";
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->label7->Location = System::Drawing::Point(13, 67);
 			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(56, 15);
+			this->label7->Size = System::Drawing::Size(82, 16);
 			this->label7->TabIndex = 36;
 			this->label7->Text = L"Тип заряда";
 			// 
@@ -329,27 +329,27 @@ namespace IZNT {
 			this->label8->AutoSize = true;
 			this->label8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->label8->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->label8->Location = System::Drawing::Point(153, 238);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(24, 19);
+			this->label8->Size = System::Drawing::Size(30, 20);
 			this->label8->TabIndex = 38;
 			this->label8->Text = L"см";
 			// 
 			// underwater_checkBox
 			// 
 			this->underwater_checkBox->AutoSize = true;
-			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->underwater_checkBox->Location = System::Drawing::Point(249, 426);
 			this->underwater_checkBox->Name = L"underwater_checkBox";
-			this->underwater_checkBox->Size = System::Drawing::Size(131, 23);
+			this->underwater_checkBox->Size = System::Drawing::Size(175, 24);
 			this->underwater_checkBox->TabIndex = 39;
 			this->underwater_checkBox->Text = L"Взрыв под водой";
 			this->underwater_checkBox->UseVisualStyleBackColor = true;
 			// 
 			// btnTextVersion
 			// 
-			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->btnTextVersion->Location = System::Drawing::Point(629, 20);
 			this->btnTextVersion->Name = L"btnTextVersion";
@@ -360,8 +360,7 @@ namespace IZNT {
 			// 
 			// WoodTwoBalk
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 14);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->Controls->Add(this->btnTextVersion);
@@ -384,7 +383,7 @@ namespace IZNT {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->condition_wood_comboBox);
 			this->Controls->Add(this->label1);
-			this->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 8.25F));
+			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F));
 			this->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->Name = L"WoodTwoBalk";
 			this->Size = System::Drawing::Size(719, 591);
