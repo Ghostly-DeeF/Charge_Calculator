@@ -391,7 +391,6 @@ private: System::Void btnTextVersion_Click(System::Object^ sender, System::Event
 	form->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 	form->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 	form->Name = L"TextVersion";
-	form->Text = L"TextVersion";
 	(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(pictureBox1))->EndInit();
 	form->ResumeLayout(false);
 	form->PerformLayout();

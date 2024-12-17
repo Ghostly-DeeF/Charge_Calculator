@@ -92,11 +92,11 @@ namespace IZNT {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 13.25F, System::Drawing::FontStyle::Bold));
-			this->label1->Location = System::Drawing::Point(58, 21);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Bold));
+			this->label1->Location = System::Drawing::Point(30, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(473, 42);
+			this->label1->Size = System::Drawing::Size(576, 44);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nбревна или сосредоточенн"
 				L"ого куста свай";
@@ -120,22 +120,22 @@ namespace IZNT {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->label2->Location = System::Drawing::Point(13, 67);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(109, 15);
+			this->label2->Size = System::Drawing::Size(159, 16);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Тип породы древесины";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->label3->Location = System::Drawing::Point(13, 139);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(104, 15);
+			this->label3->Size = System::Drawing::Size(152, 16);
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"Состояние древесины";
 			// 
@@ -166,17 +166,17 @@ namespace IZNT {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.25F));
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
 			this->label4->Location = System::Drawing::Point(13, 216);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(152, 15);
+			this->label4->Size = System::Drawing::Size(206, 16);
 			this->label4->TabIndex = 6;
 			this->label4->Text = L"Диаметр D бревна (куста) в см";
 			// 
 			// calc_button
 			// 
-			this->calc_button->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 11.25F));
+			this->calc_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->calc_button->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->calc_button->Location = System::Drawing::Point(249, 85);
 			this->calc_button->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
@@ -206,10 +206,10 @@ namespace IZNT {
 			// checkRing
 			// 
 			this->checkRing->AutoSize = true;
-			this->checkRing->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->checkRing->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->checkRing->Location = System::Drawing::Point(16, 360);
 			this->checkRing->Name = L"checkRing";
-			this->checkRing->Size = System::Drawing::Size(131, 23);
+			this->checkRing->Size = System::Drawing::Size(175, 24);
 			this->checkRing->TabIndex = 9;
 			this->checkRing->Text = L"Кольцевой заряд";
 			this->checkRing->UseVisualStyleBackColor = true;
@@ -217,10 +217,10 @@ namespace IZNT {
 			// underwater_checkBox
 			// 
 			this->underwater_checkBox->AutoSize = true;
-			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12.25F));
+			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->underwater_checkBox->Location = System::Drawing::Point(16, 297);
 			this->underwater_checkBox->Name = L"underwater_checkBox";
-			this->underwater_checkBox->Size = System::Drawing::Size(131, 23);
+			this->underwater_checkBox->Size = System::Drawing::Size(175, 24);
 			this->underwater_checkBox->TabIndex = 10;
 			this->underwater_checkBox->Text = L"Взрыв под водой";
 			this->underwater_checkBox->UseVisualStyleBackColor = true;
@@ -264,7 +264,7 @@ namespace IZNT {
 			this->Controls->Add(this->type_wood_comboBox);
 			this->Controls->Add(this->label1);
 			this->Cursor = System::Windows::Forms::Cursors::Default;
-			this->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 8.25F));
+			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F));
 			this->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Name = L"Wood1";
@@ -332,7 +332,6 @@ private: System::Void btnTextVersion_Click(System::Object^ sender, System::Event
 	form->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 	form->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 	form->Name = L"TextVersion";
-	form->Text = L"TextVersion";
 	(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(pictureBox1))->EndInit();
 	form->ResumeLayout(false);
 	form->PerformLayout();

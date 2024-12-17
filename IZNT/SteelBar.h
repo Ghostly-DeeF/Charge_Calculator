@@ -253,7 +253,6 @@ namespace IZNT {
 		form->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 		form->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 		form->Name = L"TextVersion";
-		form->Text = L"TextVersion";
 		form->ResumeLayout(false);
 		form->PerformLayout();
 

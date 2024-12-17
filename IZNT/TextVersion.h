@@ -67,7 +67,7 @@ namespace IZNT {
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"TextVersion";
-			this->Text = L"TextVersion";
+			this->Text = L"Текстовая версия";
 			this->ResumeLayout(false);
 
 		}
