@@ -161,12 +161,43 @@ inline System::Void IZNT::SteelSheets::calc_button_Click(System::Object^ sender,
         return;
     }
 
-    if (ceil(thickness_steel_sheets) <= 2) {
-        answer = 20 * ceil(thickness_steel_sheets) * width_steel_sheets;
+    switch (type_charge_comboBox->SelectedIndex)
+    {
+    case 0:
+        if (ceil(thickness_steel_sheets) <= 2) {
+            answer = 20 * ceil(thickness_steel_sheets) * width_steel_sheets;
+        }
+        else if (ceil(thickness_steel_sheets) > 2) {
+            answer = 10 * ceil(thickness_steel_sheets) * (ceil(thickness_steel_sheets) * width_steel_sheets);
+        }
+        break;
+
+    case 1:
+        if (ceil(thickness_steel_sheets) <= 2) {
+            answer = 20 * ceil(thickness_steel_sheets) * width_steel_sheets;
+        }
+        else if (ceil(thickness_steel_sheets) > 2) {
+            answer = 10 * ceil(thickness_steel_sheets) * (ceil(thickness_steel_sheets) * width_steel_sheets);
+        }
+        break;
+
+    case 2:
+        if (ceil(thickness_steel_sheets) <= 2) {
+            answer = 10 * ceil(thickness_steel_sheets) * width_steel_sheets;
+        }
+        else if (ceil(thickness_steel_sheets) > 2) {
+            answer = 5 * ceil(thickness_steel_sheets) * (ceil(thickness_steel_sheets) * width_steel_sheets);
+        }
+        break;
+
+    case 3:
+        answer = 2.5 * pow(ceil(thickness_steel_sheets), 3);
+        break;
+
+    default:
+        break;
     }
-    else if (ceil(thickness_steel_sheets) > 2) {
-        answer = 10 * ceil(thickness_steel_sheets) * (ceil(thickness_steel_sheets) * width_steel_sheets);
-    }
+ 
 
     if (checkArm->Checked) {
         answer *= 2;
@@ -193,7 +224,8 @@ inline System::Void IZNT::SteelSheets::calc_button_Click(System::Object^ sender,
         answer /= 1.5;
     }
     
-    if (type_charge_comboBox->SelectedIndex == 0) {
+    switch (type_charge_comboBox->SelectedIndex) {
+    case 0:
         answer = round(answer);
         answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
 
@@ -210,9 +242,10 @@ inline System::Void IZNT::SteelSheets::calc_button_Click(System::Object^ sender,
         else {
             answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
         }
-    }
+        break;
 
-    if (type_charge_comboBox->SelectedIndex == 1) {
+    case 1:
+    {
         int i = 0;
         for (i = 0; i < 9; i++) {
             if (thickness_steel_sheets >= coef[i][0] && thickness_steel_sheets < coef[i + 1][0]) {
@@ -228,6 +261,21 @@ inline System::Void IZNT::SteelSheets::calc_button_Click(System::Object^ sender,
         else {
             answer_textBox->Text = " Толщина больше 5 см!\r\n Используйте другой вид заряда";
         }
+    }
+        break;
+
+    case 2:
+        answer = round(answer);
+        answer_textBox->Text = " Точный вес требуемого заряда из пластита: " + (answer / 1000).ToString() + " кг\r\n\r\n";
+        break;
+
+    case 3:
+        answer = round(answer);
+        answer_textBox->Text = " Точный вес требуемого заряда из пластита: " + (answer / 1000).ToString() + " кг\r\n\r\n";
+        break;
+
+    default:
+        break;
     }
 }
 

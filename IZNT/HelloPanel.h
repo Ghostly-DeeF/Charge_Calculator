@@ -38,6 +38,7 @@ namespace IZNT {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label4;
 	protected:
 
 	private:
@@ -57,6 +58,7 @@ namespace IZNT {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -89,11 +91,22 @@ namespace IZNT {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label2->Location = System::Drawing::Point(73, 499);
+			this->label2->Location = System::Drawing::Point(73, 445);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(577, 29);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Выберите объект для подрыва в панели справа";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.75F));
+			this->label4->Location = System::Drawing::Point(147, 528);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(403, 48);
+			this->label4->TabIndex = 4;
+			this->label4->Text = L"Создано на основе\r\nруководства по подрывным работам 1968 г";
+			this->label4->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// HelloPanel
 			// 
@@ -102,6 +115,7 @@ namespace IZNT {
 			this->AutoSize = true;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label1);
