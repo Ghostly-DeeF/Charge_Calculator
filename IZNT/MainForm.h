@@ -48,7 +48,7 @@ namespace IZNT {
 	private: System::Windows::Forms::Button^ btnWoodBalk;
 	private: System::Windows::Forms::Button^ btnWoodTwoBalk;
 
-
+		   int selected_panel = 0;
 
 
 
@@ -126,11 +126,11 @@ namespace IZNT {
 			// 
 			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
+			this->panel1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F));
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(719, 591);
+			this->panel1->Size = System::Drawing::Size(919, 591);
 			this->panel1->TabIndex = 0;
 			// 
 			// flowLayoutPanel1
@@ -332,7 +332,7 @@ namespace IZNT {
 			this->monolith_group->Name = L"monolith_group";
 			this->monolith_group->Size = System::Drawing::Size(174, 44);
 			this->monolith_group->TabIndex = 20;
-			this->monolith_group->Text = L"Монолиты";
+			this->monolith_group->Text = L"Элементы конструкций";
 			this->monolith_group->UseVisualStyleBackColor = false;
 			this->monolith_group->Click += gcnew System::EventHandler(this, &MainForm::monolith_group_Click);
 			// 
@@ -376,24 +376,39 @@ namespace IZNT {
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->AutoSize = true;
-			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
 			this->ClientSize = System::Drawing::Size(919, 591);
 			this->Controls->Add(this->flowLayoutPanel1);
 			this->Controls->Add(this->panel1);
 			this->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MinimumSize = System::Drawing::Size(935, 630);
 			this->Name = L"MainForm";
 			this->Text = L"Недотрога: Расчет заряда";
+			this->SizeChanged += gcnew System::EventHandler(this, &MainForm::MainForm_SizeChanged);
 			this->flowLayoutPanel1->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 	
+		private:
+			IZNT::Wood1^ Wood1;
+			IZNT::Balk1^ Balk1;
+			IZNT::WoodTwoBalk^ WoodTwoBalk;
+			IZNT::WoodNoncontact^ WoodNoncontact;
+			IZNT::WoodStump^ WoodStump;
+			IZNT::SteelSheets^ SteelSheets;
+			IZNT::SteelTube^ SteelTube;
+			IZNT::SteelRod^ SteelRod;
+			IZNT::SteelCable^ SteelCable;
+			IZNT::MonolithColumn^ MonolithColumn;
+			IZNT::MonolithSpur^ MonolithSpur;
+			IZNT::MonolithNoncontact^ MonolithNoncontact;
+			IZNT::SteelBar^ SteelBar;
+			IZNT::SteelBeam^ SteelBeam;
+
 
 private: System::Void wood_group_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void steel_group_Click(System::Object^ sender, System::EventArgs^ e);
@@ -416,5 +431,6 @@ private: System::Void btnMonolithColumn_Click(System::Object^ sender, System::Ev
 private: System::Void btnMonolithSpur_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void btnMonolithNoncontact_Click(System::Object^ sender, System::EventArgs^ e);
 
+private: System::Void MainForm_SizeChanged(System::Object^ sender, System::EventArgs^ e);
 };
 }

@@ -5,23 +5,32 @@ float diameter_steel_tube;
 float thickness_steel_tube;
 
 inline System::Void IZNT::SteelTube::checkUnderwaterExp_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    if (checkUnderwaterExp->Checked) {
-        checkFillingWater->Visible = true;
+    if (checkUnderwaterExp->Checked && !checkFillingWater->Checked) {
         pictureBox1->Image = Image::FromFile(".\\Picture\\img2Tube.bmp");
     }
-    else {
-        checkFillingWater->Visible = false;
-        checkFillingWater->Checked = false;
+    else if (checkUnderwaterExp->Checked && checkFillingWater->Checked) {
+        pictureBox1->Image = Image::FromFile(".\\Picture\\img3Tube.bmp");
+    }
+    else if (!checkUnderwaterExp->Checked && checkFillingWater->Checked) {
+        pictureBox1->Image = Image::FromFile(".\\Picture\\img4Tube.bmp");
+    }
+    else if (!checkUnderwaterExp->Checked && !checkFillingWater->Checked) {
         pictureBox1->Image = Image::FromFile(".\\Picture\\img1Tube.bmp");
     }
 }
 
 inline System::Void IZNT::SteelTube::checkFillingWater_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    if (checkFillingWater->Checked) {
+    if (checkUnderwaterExp->Checked && !checkFillingWater->Checked) {
+        pictureBox1->Image = Image::FromFile(".\\Picture\\img2Tube.bmp");
+    }
+    else if (checkUnderwaterExp->Checked && checkFillingWater->Checked) {
         pictureBox1->Image = Image::FromFile(".\\Picture\\img3Tube.bmp");
     }
-    else {
-        pictureBox1->Image = Image::FromFile(".\\Picture\\img2Tube.bmp");
+    else if (!checkUnderwaterExp->Checked && checkFillingWater->Checked) {
+        pictureBox1->Image = Image::FromFile(".\\Picture\\img4Tube.bmp");
+    }
+    else if (!checkUnderwaterExp->Checked && !checkFillingWater->Checked) {
+        pictureBox1->Image = Image::FromFile(".\\Picture\\img1Tube.bmp");
     }
 }
 
@@ -38,16 +47,18 @@ inline System::Void IZNT::SteelTube::calc_button_Click(System::Object^ sender, S
         return;
     }
 
-    answerz = 20 * diameter_steel_tube * thickness_steel_tube * 3;
+    answerz = 20 * diameter_steel_tube * thickness_steel_tube * 3.14;
 
-    if (checkUnderwaterExp->Checked) {
-        answerz /= 1.5;
+    if (checkUnderwaterExp->Checked && !checkFillingWater->Checked) {
+        answerz /= 1.5f;
     }
-
-    if (checkFillingWater->Checked) {
-        answerz *= 1.5;
+    else if (checkUnderwaterExp->Checked && checkFillingWater->Checked) {
         answerz *= 2;
     }
+    else if (!checkUnderwaterExp->Checked && checkFillingWater->Checked) {
+        answerz *= 4;
+    }
+
 
     answerz = round(answerz);
     answer_textBox->Text = " Точный вес требуемого заряда: " + (answerz / 1000).ToString() + " кг\r\n\r\n";

@@ -48,11 +48,11 @@ inline System::Void IZNT::MonolithColumn::type_charge_comboBox_SelectedIndexChan
 		plastic_checkBox->Visible = true;
 		plastic_checkBox->Checked = false;
 		hole_checkBox->Visible = false;
-		anti_slip_checkBox->Location = System::Drawing::Point(249, 420);
-		scoring_checkBox->Location = System::Drawing::Point(249, 450);
-		plastic_checkBox->Location = System::Drawing::Point(249, 480);
-		hole_checkBox->Location = System::Drawing::Point(249, 450);
-		underwater_checkBox->Location = System::Drawing::Point(249, 480);
+		anti_slip_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 420);
+		scoring_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 450);
+		plastic_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 480);
+		hole_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 450);
+		underwater_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 480);
 	}
 	else {
 		elongated_label->Visible = false;
@@ -61,12 +61,12 @@ inline System::Void IZNT::MonolithColumn::type_charge_comboBox_SelectedIndexChan
 		plastic_checkBox->Checked = false;
 		hole_checkBox->Visible = true;
 		hole_checkBox->Checked = false;
-		anti_slip_checkBox->Location = System::Drawing::Point(249, 360);
-		scoring_checkBox->Location = System::Drawing::Point(249, 390);
-		plastic_checkBox->Location = System::Drawing::Point(249, 420);
-		hole_checkBox->Location = System::Drawing::Point(249, 450);
-		hole_checkBox->Location = System::Drawing::Point(249, 420);
-		underwater_checkBox->Location = System::Drawing::Point(249, 450);
+		anti_slip_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 360);
+		scoring_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 390);
+		plastic_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 420);
+		hole_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 450);
+		hole_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 420);
+		underwater_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 450);
 	}
 }
 
@@ -80,6 +80,7 @@ inline System::Void IZNT::MonolithColumn::type_material_comboBox_SelectedIndexCh
 		second_comboBox->Items->Clear();
 		second_comboBox->Items->Add("Известковый");
 		second_comboBox->Items->Add("Цементный");
+		//719; 591
 		radius_label->Location = System::Drawing::Point(13, 300);
 		radius_textBox->Location = System::Drawing::Point(16, 318);
 		location_label->Location = System::Drawing::Point(13, 370);

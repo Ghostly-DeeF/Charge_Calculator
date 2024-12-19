@@ -141,6 +141,9 @@ namespace IZNT {
 			// 
 			// answer_textBox
 			// 
+			this->answer_textBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
 			this->answer_textBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(80)), static_cast<System::Int32>(static_cast<System::Byte>(80)),
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->answer_textBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
@@ -156,6 +159,8 @@ namespace IZNT {
 			// 
 			// calc_button
 			// 
+			this->calc_button->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
 			this->calc_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->calc_button->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->calc_button->Location = System::Drawing::Point(249, 85);
@@ -230,6 +235,7 @@ namespace IZNT {
 			// 
 			// checkUnderwaterExp
 			// 
+			this->checkUnderwaterExp->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->checkUnderwaterExp->AutoSize = true;
 			this->checkUnderwaterExp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->checkUnderwaterExp->Location = System::Drawing::Point(14, 419);
@@ -243,6 +249,7 @@ namespace IZNT {
 			// 
 			// checkWoodenStop
 			// 
+			this->checkWoodenStop->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->checkWoodenStop->AutoSize = true;
 			this->checkWoodenStop->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->checkWoodenStop->Location = System::Drawing::Point(15, 458);
@@ -256,6 +263,7 @@ namespace IZNT {
 			// 
 			// checkDemolitionSkin
 			// 
+			this->checkDemolitionSkin->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->checkDemolitionSkin->AutoSize = true;
 			this->checkDemolitionSkin->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->checkDemolitionSkin->Location = System::Drawing::Point(15, 497);
@@ -269,6 +277,7 @@ namespace IZNT {
 			// 
 			// checkDemolitionSkinWater
 			// 
+			this->checkDemolitionSkinWater->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->checkDemolitionSkinWater->AutoSize = true;
 			this->checkDemolitionSkinWater->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->checkDemolitionSkinWater->Location = System::Drawing::Point(15, 536);
@@ -293,6 +302,7 @@ namespace IZNT {
 			// 
 			// checkWater
 			// 
+			this->checkWater->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->checkWater->AutoSize = true;
 			this->checkWater->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->checkWater->Location = System::Drawing::Point(14, 380);
@@ -306,6 +316,7 @@ namespace IZNT {
 			// 
 			// label3
 			// 
+			this->label3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
 			this->label3->Location = System::Drawing::Point(10, 336);
@@ -316,6 +327,7 @@ namespace IZNT {
 			// 
 			// pictureBox1
 			// 
+			this->pictureBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->pictureBox1->Location = System::Drawing::Point(415, 327);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(285, 250);
@@ -324,6 +336,7 @@ namespace IZNT {
 			// 
 			// btnTextVersion
 			// 
+			this->btnTextVersion->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->btnTextVersion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->btnTextVersion->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->btnTextVersion->Location = System::Drawing::Point(611, 34);
