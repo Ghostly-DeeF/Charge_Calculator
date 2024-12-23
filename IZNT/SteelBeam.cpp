@@ -1,5 +1,6 @@
 #include "SteelBeam.h"
 #include <corecrt_math.h>
+#include "ExRecalc.h"
 
 const float coef[9][2] = {
         {0.0f, 1.0f},
@@ -154,6 +155,14 @@ inline System::Void IZNT::SteelBeam::calc_button_Click(System::Object^ sender, S
     answer_up_belt = round(answer_up_belt);
     answer_down_belt = round(answer_down_belt);
     answer_wall = round(answer_wall);
+
+    if (explosive_material_comboBox->SelectedIndex == -1) {
+        answer_textBox->Text = " Ошибка: выберите тип ВВ из списка";
+        return;
+    }
+    answer_up_belt = recalculation(explosive_material_comboBox, answer_textBox, answer_up_belt);
+    answer_down_belt = recalculation(explosive_material_comboBox, answer_textBox, answer_down_belt);
+    answer_wall = recalculation(explosive_material_comboBox, answer_textBox, answer_wall);
 
     switch (type_charge_comboBox->SelectedIndex)
     {

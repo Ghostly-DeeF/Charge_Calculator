@@ -72,6 +72,9 @@ namespace IZNT {
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::Button^ btnTextVersion;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::ComboBox^ explosive_material_comboBox;
+
 
 
 
@@ -113,6 +116,8 @@ namespace IZNT {
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->btnTextVersion = (gcnew System::Windows::Forms::Button());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->explosive_material_comboBox = (gcnew System::Windows::Forms::ComboBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->SuspendLayout();
@@ -132,7 +137,7 @@ namespace IZNT {
 			this->answer_textBox->Multiline = true;
 			this->answer_textBox->Name = L"answer_textBox";
 			this->answer_textBox->ReadOnly = true;
-			this->answer_textBox->Size = System::Drawing::Size(454, 401);
+			this->answer_textBox->Size = System::Drawing::Size(454, 528);
 			this->answer_textBox->TabIndex = 28;
 			// 
 			// calc_button
@@ -166,7 +171,7 @@ namespace IZNT {
 			// 
 			this->checkUnderwaterExp->AutoSize = true;
 			this->checkUnderwaterExp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->checkUnderwaterExp->Location = System::Drawing::Point(14, 148);
+			this->checkUnderwaterExp->Location = System::Drawing::Point(14, 205);
 			this->checkUnderwaterExp->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
 			this->checkUnderwaterExp->Size = System::Drawing::Size(189, 24);
@@ -178,7 +183,7 @@ namespace IZNT {
 			// 
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->label3->Location = System::Drawing::Point(11, 68);
+			this->label3->Location = System::Drawing::Point(11, 125);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(82, 16);
@@ -192,10 +197,10 @@ namespace IZNT {
 			this->type_charge_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->type_charge_comboBox->FormattingEnabled = true;
 			this->type_charge_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
-				L"Фигурный из шашек", L"Фигурный из пластита-4",
+				L"Фигурный из шашек", L"Фигурный из пластита",
 					L"Сосредоточенный"
 			});
-			this->type_charge_comboBox->Location = System::Drawing::Point(14, 85);
+			this->type_charge_comboBox->Location = System::Drawing::Point(14, 142);
 			this->type_charge_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->type_charge_comboBox->Name = L"type_charge_comboBox";
 			this->type_charge_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
@@ -207,9 +212,9 @@ namespace IZNT {
 			// 
 			this->pictureBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				| System::Windows::Forms::AnchorStyles::Left));
-			this->pictureBox1->Location = System::Drawing::Point(14, 178);
+			this->pictureBox1->Location = System::Drawing::Point(14, 235);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(211, 410);
+			this->pictureBox1->Size = System::Drawing::Size(211, 483);
 			this->pictureBox1->TabIndex = 38;
 			this->pictureBox1->TabStop = false;
 			// 
@@ -221,7 +226,7 @@ namespace IZNT {
 			this->thickness_up_textBox->CharacterCasing = System::Windows::Forms::CharacterCasing::Upper;
 			this->thickness_up_textBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->thickness_up_textBox->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->thickness_up_textBox->Location = System::Drawing::Point(23, 272);
+			this->thickness_up_textBox->Location = System::Drawing::Point(23, 329);
 			this->thickness_up_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->thickness_up_textBox->MaxLength = 4;
 			this->thickness_up_textBox->Name = L"thickness_up_textBox";
@@ -235,7 +240,7 @@ namespace IZNT {
 			this->label8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
 			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->label8->Location = System::Drawing::Point(49, 275);
+			this->label8->Location = System::Drawing::Point(49, 332);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(33, 20);
 			this->label8->TabIndex = 40;
@@ -249,7 +254,7 @@ namespace IZNT {
 			this->thickness_down_textBox->CharacterCasing = System::Windows::Forms::CharacterCasing::Upper;
 			this->thickness_down_textBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->thickness_down_textBox->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->thickness_down_textBox->Location = System::Drawing::Point(23, 442);
+			this->thickness_down_textBox->Location = System::Drawing::Point(23, 499);
 			this->thickness_down_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->thickness_down_textBox->MaxLength = 4;
 			this->thickness_down_textBox->Name = L"thickness_down_textBox";
@@ -263,7 +268,7 @@ namespace IZNT {
 			this->label2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->label2->Location = System::Drawing::Point(49, 445);
+			this->label2->Location = System::Drawing::Point(49, 502);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(33, 20);
 			this->label2->TabIndex = 42;
@@ -277,7 +282,7 @@ namespace IZNT {
 			this->width_wall_textBox->CharacterCasing = System::Windows::Forms::CharacterCasing::Upper;
 			this->width_wall_textBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->width_wall_textBox->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->width_wall_textBox->Location = System::Drawing::Point(54, 317);
+			this->width_wall_textBox->Location = System::Drawing::Point(54, 374);
 			this->width_wall_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->width_wall_textBox->MaxLength = 4;
 			this->width_wall_textBox->Name = L"width_wall_textBox";
@@ -291,7 +296,7 @@ namespace IZNT {
 			this->label4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->label4->Location = System::Drawing::Point(80, 320);
+			this->label4->Location = System::Drawing::Point(80, 377);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(33, 20);
 			this->label4->TabIndex = 44;
@@ -305,7 +310,7 @@ namespace IZNT {
 			this->thickness_wall_textBox->CharacterCasing = System::Windows::Forms::CharacterCasing::Upper;
 			this->thickness_wall_textBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->thickness_wall_textBox->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->thickness_wall_textBox->Location = System::Drawing::Point(23, 407);
+			this->thickness_wall_textBox->Location = System::Drawing::Point(23, 464);
 			this->thickness_wall_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->thickness_wall_textBox->MaxLength = 4;
 			this->thickness_wall_textBox->Name = L"thickness_wall_textBox";
@@ -319,7 +324,7 @@ namespace IZNT {
 			this->label6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->label6->Location = System::Drawing::Point(49, 410);
+			this->label6->Location = System::Drawing::Point(49, 467);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(33, 20);
 			this->label6->TabIndex = 46;
@@ -329,7 +334,7 @@ namespace IZNT {
 			// 
 			this->conner_checkBox->AutoSize = true;
 			this->conner_checkBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->conner_checkBox->Location = System::Drawing::Point(14, 119);
+			this->conner_checkBox->Location = System::Drawing::Point(14, 176);
 			this->conner_checkBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->conner_checkBox->Name = L"conner_checkBox";
 			this->conner_checkBox->Size = System::Drawing::Size(162, 24);
@@ -346,7 +351,7 @@ namespace IZNT {
 			this->width_up_textBox->CharacterCasing = System::Windows::Forms::CharacterCasing::Upper;
 			this->width_up_textBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->width_up_textBox->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->width_up_textBox->Location = System::Drawing::Point(97, 186);
+			this->width_up_textBox->Location = System::Drawing::Point(97, 243);
 			this->width_up_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->width_up_textBox->MaxLength = 4;
 			this->width_up_textBox->Name = L"width_up_textBox";
@@ -360,7 +365,7 @@ namespace IZNT {
 			this->label5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->label5->Location = System::Drawing::Point(123, 189);
+			this->label5->Location = System::Drawing::Point(123, 246);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(33, 20);
 			this->label5->TabIndex = 49;
@@ -374,7 +379,7 @@ namespace IZNT {
 			this->width_down_textBox->CharacterCasing = System::Windows::Forms::CharacterCasing::Upper;
 			this->width_down_textBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->width_down_textBox->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->width_down_textBox->Location = System::Drawing::Point(97, 530);
+			this->width_down_textBox->Location = System::Drawing::Point(97, 587);
 			this->width_down_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->width_down_textBox->MaxLength = 4;
 			this->width_down_textBox->Name = L"width_down_textBox";
@@ -388,7 +393,7 @@ namespace IZNT {
 			this->label7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->label7->Location = System::Drawing::Point(123, 533);
+			this->label7->Location = System::Drawing::Point(123, 590);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(33, 20);
 			this->label7->TabIndex = 51;
@@ -399,9 +404,9 @@ namespace IZNT {
 			this->pictureBox2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->pictureBox2->Location = System::Drawing::Point(225, 539);
+			this->pictureBox2->Location = System::Drawing::Point(225, 596);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(478, 49);
+			this->pictureBox2->Size = System::Drawing::Size(478, 122);
 			this->pictureBox2->TabIndex = 52;
 			this->pictureBox2->TabStop = false;
 			// 
@@ -418,11 +423,41 @@ namespace IZNT {
 			this->btnTextVersion->UseVisualStyleBackColor = true;
 			this->btnTextVersion->Click += gcnew System::EventHandler(this, &SteelBeam::btnTextVersion_Click);
 			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
+			this->label9->Location = System::Drawing::Point(11, 68);
+			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(104, 16);
+			this->label9->TabIndex = 55;
+			this->label9->Text = L"Расчет для ВВ:";
+			// 
+			// explosive_material_comboBox
+			// 
+			this->explosive_material_comboBox->Cursor = System::Windows::Forms::Cursors::Default;
+			this->explosive_material_comboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->explosive_material_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->explosive_material_comboBox->FormattingEnabled = true;
+			this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(7) {
+				L"Тротил", L"Пластид - 4", L"Тетрил",
+					L"Гексоген", L"ТЭН", L"ТНРС", L"Тритонал"
+			});
+			this->explosive_material_comboBox->Location = System::Drawing::Point(14, 85);
+			this->explosive_material_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			this->explosive_material_comboBox->Name = L"explosive_material_comboBox";
+			this->explosive_material_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->explosive_material_comboBox->Size = System::Drawing::Size(211, 28);
+			this->explosive_material_comboBox->TabIndex = 54;
+			// 
 			// SteelBeam
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->explosive_material_comboBox);
 			this->Controls->Add(this->btnTextVersion);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->width_down_textBox);
@@ -449,7 +484,7 @@ namespace IZNT {
 			this->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Name = L"SteelBeam";
-			this->Size = System::Drawing::Size(719, 591);
+			this->Size = System::Drawing::Size(719, 718);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			this->ResumeLayout(false);

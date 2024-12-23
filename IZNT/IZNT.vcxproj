@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Balk1.cpp" />
+    <ClCompile Include="ExRecalc.cpp" />
     <ClCompile Include="HelloPanel.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainForm.cpp" />
@@ -145,6 +146,7 @@
     <ClInclude Include="Balk1.h">
       <FileType>CppControl</FileType>
     </ClInclude>
+    <ClInclude Include="ExRecalc.h" />
     <ClInclude Include="HelloPanel.h">
       <FileType>CppControl</FileType>
     </ClInclude>

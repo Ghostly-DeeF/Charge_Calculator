@@ -75,6 +75,9 @@
     <ClInclude Include="TextVersion.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="ExRecalc.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainForm.cpp">
@@ -129,6 +132,9 @@
       <Filter>Исходные файлы\StealGroup</Filter>
     </ClCompile>
     <ClCompile Include="TextVersion.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="ExRecalc.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

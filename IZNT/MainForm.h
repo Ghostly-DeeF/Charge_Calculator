@@ -130,7 +130,7 @@ namespace IZNT {
 			this->panel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F));
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(919, 591);
+			this->panel1->Size = System::Drawing::Size(919, 666);
 			this->panel1->TabIndex = 0;
 			// 
 			// flowLayoutPanel1
@@ -157,7 +157,7 @@ namespace IZNT {
 			this->flowLayoutPanel1->FlowDirection = System::Windows::Forms::FlowDirection::RightToLeft;
 			this->flowLayoutPanel1->Location = System::Drawing::Point(720, 0);
 			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
-			this->flowLayoutPanel1->Size = System::Drawing::Size(199, 591);
+			this->flowLayoutPanel1->Size = System::Drawing::Size(199, 666);
 			this->flowLayoutPanel1->TabIndex = 1;
 			// 
 			// wood_group
@@ -378,7 +378,7 @@ namespace IZNT {
 			this->AutoSize = true;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
-			this->ClientSize = System::Drawing::Size(919, 591);
+			this->ClientSize = System::Drawing::Size(919, 666);
 			this->Controls->Add(this->flowLayoutPanel1);
 			this->Controls->Add(this->panel1);
 			this->ForeColor = System::Drawing::SystemColors::ControlText;
