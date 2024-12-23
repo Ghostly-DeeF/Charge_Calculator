@@ -1,4 +1,5 @@
 #include "WoodStump.h"
+#include "ExRecalc.h"
 
 const float coef[3][2] = {
 		{0.8f, 1.0f},
@@ -16,6 +17,12 @@ inline System::Void IZNT::WoodStump::calc_button_Click(System::Object^ sender, S
     else {
 
         answer = 15 * diameter_log;
+
+        if (explosive_material_comboBox->SelectedIndex == -1) {
+            answer_textBox->Text = " Ошибка: выберите тип ВВ из списка";
+            return;
+        }
+        answer = recalculation(explosive_material_comboBox, answer_textBox, answer);
 
         answer = round(answer);
         answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";

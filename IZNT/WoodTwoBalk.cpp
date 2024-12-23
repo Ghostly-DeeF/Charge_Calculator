@@ -1,4 +1,5 @@
 #include "WoodTwoBalk.h"
+#include "ExRecalc.h"
 
 const float coef[3][2] = {
 		{0.8f, 1.0f},
@@ -79,6 +80,13 @@ inline System::Void IZNT::WoodTwoBalk::calc_button_Click(System::Object^ sender,
 			answerMas /= 2;
 			answerWall /= 2;
 		}
+
+		if (explosive_material_comboBox->SelectedIndex == -1) {
+			answer_textBox->Text = " Ошибка: выберите тип ВВ из списка";
+			return;
+		}
+		answerMas = recalculation(explosive_material_comboBox, answer_textBox, answerMas);
+		answerWall = recalculation(explosive_material_comboBox, answer_textBox, answerWall);
 
 		answerMas = round(answerMas);
 		answerWall = round(answerWall);

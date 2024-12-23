@@ -1,5 +1,6 @@
 #include "SteelRod.h"
 #include <cmath>
+#include "ExRecalc.h"
 
 float diameter_steel_rod = 0.0f;
 float answery = 0.0f;
@@ -32,6 +33,12 @@ inline System::Void IZNT::SteelRod::calc_button_Click(System::Object^ sender, Sy
 	}
 
 	answery = round(answery);
+
+	if (explosive_material_comboBox->SelectedIndex == -1) {
+		answer_textBox->Text = " Ошибка: выберите тип ВВ из списка";
+		return;
+	}
+	answery = recalculation(explosive_material_comboBox, answer_textBox, answery);
 
 
 	if (diameter_steel_rod <= 2) {

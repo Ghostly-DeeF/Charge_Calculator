@@ -1,4 +1,5 @@
 #include "Balk1.h"
+#include "ExRecalc.h"
 
 
 const float coef[3][2] = {
@@ -37,6 +38,13 @@ inline System::Void IZNT::Balk1::calc_button_Click(System::Object^ sender, Syste
     if (underwater_checkBox->Checked) {
         answer /= 2;
     }
+
+    if (explosive_material_comboBox->SelectedIndex == -1) {
+        answer_textBox->Text = " Ошибка: выберите тип ВВ из списка";
+        return;
+    }
+    answer = recalculation(explosive_material_comboBox, answer_textBox, answer);
+
     answer = round(answer);
     answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
 

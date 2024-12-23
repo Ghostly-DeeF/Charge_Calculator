@@ -26,6 +26,8 @@ namespace IZNT {
 	private: System::Windows::Forms::CheckBox^ underwater_checkBox;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Button^ btnTextVersion;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::ComboBox^ explosive_material_comboBox;
 
 
 	public:
@@ -86,6 +88,8 @@ namespace IZNT {
 			this->underwater_checkBox = (gcnew System::Windows::Forms::CheckBox());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->btnTextVersion = (gcnew System::Windows::Forms::Button());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->explosive_material_comboBox = (gcnew System::Windows::Forms::ComboBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -96,7 +100,7 @@ namespace IZNT {
 			this->label1->Location = System::Drawing::Point(30, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(576, 44);
+			this->label1->Size = System::Drawing::Size(759, 58);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nбревна или сосредоточенн"
 				L"ого куста свай";
@@ -111,20 +115,20 @@ namespace IZNT {
 				L"Слабые породы", L"Породы средней крепости",
 					L"Крепкие породы"
 			});
-			this->type_wood_comboBox->Location = System::Drawing::Point(16, 85);
+			this->type_wood_comboBox->Location = System::Drawing::Point(13, 168);
 			this->type_wood_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->type_wood_comboBox->Name = L"type_wood_comboBox";
-			this->type_wood_comboBox->Size = System::Drawing::Size(211, 28);
+			this->type_wood_comboBox->Size = System::Drawing::Size(211, 33);
 			this->type_wood_comboBox->TabIndex = 1;
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->label2->Location = System::Drawing::Point(13, 67);
+			this->label2->Location = System::Drawing::Point(10, 150);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(159, 16);
+			this->label2->Size = System::Drawing::Size(186, 20);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Тип породы древесины";
 			// 
@@ -132,10 +136,10 @@ namespace IZNT {
 			// 
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->label3->Location = System::Drawing::Point(13, 139);
+			this->label3->Location = System::Drawing::Point(10, 214);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(152, 16);
+			this->label3->Size = System::Drawing::Size(179, 20);
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"Состояние древесины";
 			// 
@@ -146,20 +150,20 @@ namespace IZNT {
 			this->condition_wood_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->condition_wood_comboBox->FormattingEnabled = true;
 			this->condition_wood_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Сухая", L"Влажная" });
-			this->condition_wood_comboBox->Location = System::Drawing::Point(16, 156);
+			this->condition_wood_comboBox->Location = System::Drawing::Point(13, 231);
 			this->condition_wood_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->condition_wood_comboBox->Name = L"condition_wood_comboBox";
 			this->condition_wood_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->condition_wood_comboBox->Size = System::Drawing::Size(211, 28);
+			this->condition_wood_comboBox->Size = System::Drawing::Size(211, 33);
 			this->condition_wood_comboBox->TabIndex = 3;
 			// 
 			// diameter_log_textBox
 			// 
 			this->diameter_log_textBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->diameter_log_textBox->Location = System::Drawing::Point(16, 234);
+			this->diameter_log_textBox->Location = System::Drawing::Point(13, 309);
 			this->diameter_log_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->diameter_log_textBox->Name = L"diameter_log_textBox";
-			this->diameter_log_textBox->Size = System::Drawing::Size(211, 26);
+			this->diameter_log_textBox->Size = System::Drawing::Size(211, 31);
 			this->diameter_log_textBox->TabIndex = 5;
 			this->diameter_log_textBox->TextChanged += gcnew System::EventHandler(this, &Wood1::diameter_log_textBox_TextChanged);
 			// 
@@ -167,10 +171,10 @@ namespace IZNT {
 			// 
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->label4->Location = System::Drawing::Point(13, 216);
+			this->label4->Location = System::Drawing::Point(10, 291);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(206, 16);
+			this->label4->Size = System::Drawing::Size(242, 20);
 			this->label4->TabIndex = 6;
 			this->label4->Text = L"Диаметр D бревна (куста) в см";
 			// 
@@ -212,9 +216,9 @@ namespace IZNT {
 			// 
 			this->checkRing->AutoSize = true;
 			this->checkRing->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->checkRing->Location = System::Drawing::Point(16, 360);
+			this->checkRing->Location = System::Drawing::Point(13, 435);
 			this->checkRing->Name = L"checkRing";
-			this->checkRing->Size = System::Drawing::Size(175, 24);
+			this->checkRing->Size = System::Drawing::Size(206, 29);
 			this->checkRing->TabIndex = 9;
 			this->checkRing->Text = L"Кольцевой заряд";
 			this->checkRing->UseVisualStyleBackColor = true;
@@ -223,9 +227,9 @@ namespace IZNT {
 			// 
 			this->underwater_checkBox->AutoSize = true;
 			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->underwater_checkBox->Location = System::Drawing::Point(16, 297);
+			this->underwater_checkBox->Location = System::Drawing::Point(13, 372);
 			this->underwater_checkBox->Name = L"underwater_checkBox";
-			this->underwater_checkBox->Size = System::Drawing::Size(175, 24);
+			this->underwater_checkBox->Size = System::Drawing::Size(204, 29);
 			this->underwater_checkBox->TabIndex = 10;
 			this->underwater_checkBox->Text = L"Взрыв под водой";
 			this->underwater_checkBox->UseVisualStyleBackColor = true;
@@ -252,11 +256,41 @@ namespace IZNT {
 			this->btnTextVersion->UseVisualStyleBackColor = true;
 			this->btnTextVersion->Click += gcnew System::EventHandler(this, &Wood1::btnTextVersion_Click);
 			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
+			this->label9->Location = System::Drawing::Point(10, 88);
+			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(127, 20);
+			this->label9->TabIndex = 61;
+			this->label9->Text = L"Расчет для ВВ:";
+			// 
+			// explosive_material_comboBox
+			// 
+			this->explosive_material_comboBox->Cursor = System::Windows::Forms::Cursors::Default;
+			this->explosive_material_comboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->explosive_material_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->explosive_material_comboBox->FormattingEnabled = true;
+			this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(7) {
+				L"Тротил", L"Пластид - 4", L"Тетрил",
+					L"Гексоген", L"ТЭН", L"ТНРС", L"Тритонал"
+			});
+			this->explosive_material_comboBox->Location = System::Drawing::Point(13, 105);
+			this->explosive_material_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			this->explosive_material_comboBox->Name = L"explosive_material_comboBox";
+			this->explosive_material_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->explosive_material_comboBox->Size = System::Drawing::Size(211, 33);
+			this->explosive_material_comboBox->TabIndex = 60;
+			// 
 			// Wood1
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->explosive_material_comboBox);
 			this->Controls->Add(this->btnTextVersion);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->underwater_checkBox);

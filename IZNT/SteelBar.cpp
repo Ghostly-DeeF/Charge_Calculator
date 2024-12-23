@@ -1,5 +1,6 @@
 #include "SteelBar.h"
 #include <corecrt_math.h>
+#include "ExRecalc.h"
 
 inline System::Void IZNT::SteelBar::calc_button_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -29,6 +30,12 @@ inline System::Void IZNT::SteelBar::calc_button_Click(System::Object^ sender, Sy
     if (checkUnderwaterExp->Checked) {
         answer *= 2;
     }
+
+    if (explosive_material_comboBox->SelectedIndex == -1) {
+        answer_textBox->Text = " Ошибка: выберите тип ВВ из списка";
+        return;
+    }
+    answer = recalculation(explosive_material_comboBox, answer_textBox, answer);
 
     answer = round(answer);
     answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";

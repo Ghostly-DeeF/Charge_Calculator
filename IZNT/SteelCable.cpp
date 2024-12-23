@@ -1,5 +1,6 @@
 #include "SteelCable.h"
 #include <cmath>
+#include "ExRecalc.h"
 
 
 float diameter_steel_cable;
@@ -43,6 +44,12 @@ inline System::Void IZNT::SteelCable::calc_button_Click(System::Object^ sender, 
     if (checkUnderwaterExp->Checked) {
         answerz *= 2;
     }
+
+    if (explosive_material_comboBox->SelectedIndex == -1) {
+        answer_textBox->Text = " Ошибка: выберите тип ВВ из списка";
+        return;
+    }
+    answerz = recalculation(explosive_material_comboBox, answer_textBox, answerz);
 
     answerz = round(answerz);
     answer_textBox->Text = " Точный общий вес требуемого заряда: " + ((2 * answerz) / 1000).ToString() + " кг\r\n\r\n";

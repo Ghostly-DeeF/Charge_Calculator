@@ -1,4 +1,5 @@
 #include "Wood1.h"
+#include "ExRecalc.h"
 
 
 const float coef[3][2] = {
@@ -38,6 +39,12 @@ inline System::Void IZNT::Wood1::button1_Click(System::Object^ sender, System::E
         if (underwater_checkBox->Checked) {
             answer /= 2;
         }
+
+        if (explosive_material_comboBox->SelectedIndex == -1) {
+            answer_textBox->Text = " Ошибка: выберите тип ВВ из списка";
+            return;
+        }
+        answer = recalculation(explosive_material_comboBox, answer_textBox, answer);
 
         answer = round(answer);
         answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";

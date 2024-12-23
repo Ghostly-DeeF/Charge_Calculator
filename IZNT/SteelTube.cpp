@@ -1,5 +1,6 @@
 #include "SteelTube.h"
 #include <cmath>
+#include "ExRecalc.h"
 
 float diameter_steel_tube;
 float thickness_steel_tube;
@@ -59,6 +60,11 @@ inline System::Void IZNT::SteelTube::calc_button_Click(System::Object^ sender, S
         answerz *= 4;
     }
 
+    if (explosive_material_comboBox->SelectedIndex == -1) {
+        answer_textBox->Text = " Ошибка: выберите тип ВВ из списка";
+        return;
+    }
+    answerz = recalculation(explosive_material_comboBox, answer_textBox, answerz);
 
     answerz = round(answerz);
     answer_textBox->Text = " Точный вес требуемого заряда: " + (answerz / 1000).ToString() + " кг\r\n\r\n";

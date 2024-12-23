@@ -71,6 +71,8 @@ namespace IZNT {
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Button^ btnTextVersion;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::ComboBox^ explosive_material_comboBox;
 
 
 
@@ -116,6 +118,8 @@ namespace IZNT {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->btnTextVersion = (gcnew System::Windows::Forms::Button());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->explosive_material_comboBox = (gcnew System::Windows::Forms::ComboBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -123,20 +127,20 @@ namespace IZNT {
 			// 
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->label5->Location = System::Drawing::Point(13, 67);
+			this->label5->Location = System::Drawing::Point(11, 123);
 			this->label5->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(146, 16);
+			this->label5->Size = System::Drawing::Size(175, 20);
 			this->label5->TabIndex = 23;
 			this->label5->Text = L"Толщина h листа в см";
 			// 
 			// thickness_steel_sheets_textBox
 			// 
 			this->thickness_steel_sheets_textBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->thickness_steel_sheets_textBox->Location = System::Drawing::Point(16, 85);
+			this->thickness_steel_sheets_textBox->Location = System::Drawing::Point(14, 141);
 			this->thickness_steel_sheets_textBox->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
 			this->thickness_steel_sheets_textBox->Name = L"thickness_steel_sheets_textBox";
-			this->thickness_steel_sheets_textBox->Size = System::Drawing::Size(211, 26);
+			this->thickness_steel_sheets_textBox->Size = System::Drawing::Size(211, 31);
 			this->thickness_steel_sheets_textBox->TabIndex = 22;
 			// 
 			// answer_textBox
@@ -179,7 +183,7 @@ namespace IZNT {
 			this->label1->Location = System::Drawing::Point(33, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(576, 66);
+			this->label1->Size = System::Drawing::Size(759, 87);
 			this->label1->TabIndex = 19;
 			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nстального листа\r\n\r\n";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -188,20 +192,20 @@ namespace IZNT {
 			// 
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->label4->Location = System::Drawing::Point(13, 139);
+			this->label4->Location = System::Drawing::Point(11, 195);
 			this->label4->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(142, 16);
+			this->label4->Size = System::Drawing::Size(168, 20);
 			this->label4->TabIndex = 25;
 			this->label4->Text = L"Ширина D листа в см";
 			// 
 			// width_steel_sheets_textBox
 			// 
 			this->width_steel_sheets_textBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->width_steel_sheets_textBox->Location = System::Drawing::Point(16, 156);
+			this->width_steel_sheets_textBox->Location = System::Drawing::Point(14, 212);
 			this->width_steel_sheets_textBox->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
 			this->width_steel_sheets_textBox->Name = L"width_steel_sheets_textBox";
-			this->width_steel_sheets_textBox->Size = System::Drawing::Size(211, 26);
+			this->width_steel_sheets_textBox->Size = System::Drawing::Size(211, 31);
 			this->width_steel_sheets_textBox->TabIndex = 24;
 			// 
 			// type_charge_comboBox
@@ -214,11 +218,11 @@ namespace IZNT {
 				L"Удлиненный из шашек", L"Удлиненный из пластита",
 					L"Кумулятивный удлиненный ", L"Кумулятивный сосредоточенный"
 			});
-			this->type_charge_comboBox->Location = System::Drawing::Point(16, 219);
+			this->type_charge_comboBox->Location = System::Drawing::Point(14, 275);
 			this->type_charge_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->type_charge_comboBox->Name = L"type_charge_comboBox";
 			this->type_charge_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->type_charge_comboBox->Size = System::Drawing::Size(211, 28);
+			this->type_charge_comboBox->Size = System::Drawing::Size(211, 33);
 			this->type_charge_comboBox->TabIndex = 31;
 			this->type_charge_comboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &SteelSheets::type_charge_comboBox_SelectedIndexChanged);
 			// 
@@ -226,10 +230,10 @@ namespace IZNT {
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->label2->Location = System::Drawing::Point(13, 201);
+			this->label2->Location = System::Drawing::Point(11, 257);
 			this->label2->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(82, 16);
+			this->label2->Size = System::Drawing::Size(95, 20);
 			this->label2->TabIndex = 33;
 			this->label2->Text = L"Тип заряда";
 			// 
@@ -238,9 +242,9 @@ namespace IZNT {
 			this->checkUnderwaterExp->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->checkUnderwaterExp->AutoSize = true;
 			this->checkUnderwaterExp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->checkUnderwaterExp->Location = System::Drawing::Point(14, 419);
+			this->checkUnderwaterExp->Location = System::Drawing::Point(14, 433);
 			this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
-			this->checkUnderwaterExp->Size = System::Drawing::Size(309, 24);
+			this->checkUnderwaterExp->Size = System::Drawing::Size(361, 29);
 			this->checkUnderwaterExp->TabIndex = 39;
 			this->checkUnderwaterExp->TabStop = true;
 			this->checkUnderwaterExp->Text = L"Под водой (вода с обеих сторон)";
@@ -252,9 +256,9 @@ namespace IZNT {
 			this->checkWoodenStop->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->checkWoodenStop->AutoSize = true;
 			this->checkWoodenStop->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->checkWoodenStop->Location = System::Drawing::Point(15, 458);
+			this->checkWoodenStop->Location = System::Drawing::Point(15, 472);
 			this->checkWoodenStop->Name = L"checkWoodenStop";
-			this->checkWoodenStop->Size = System::Drawing::Size(289, 24);
+			this->checkWoodenStop->Size = System::Drawing::Size(347, 29);
 			this->checkWoodenStop->TabIndex = 40;
 			this->checkWoodenStop->TabStop = true;
 			this->checkWoodenStop->Text = L"Вода с обеих сторон с бруском";
@@ -266,9 +270,9 @@ namespace IZNT {
 			this->checkDemolitionSkin->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->checkDemolitionSkin->AutoSize = true;
 			this->checkDemolitionSkin->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->checkDemolitionSkin->Location = System::Drawing::Point(15, 497);
+			this->checkDemolitionSkin->Location = System::Drawing::Point(15, 511);
 			this->checkDemolitionSkin->Name = L"checkDemolitionSkin";
-			this->checkDemolitionSkin->Size = System::Drawing::Size(237, 24);
+			this->checkDemolitionSkin->Size = System::Drawing::Size(278, 29);
 			this->checkDemolitionSkin->TabIndex = 41;
 			this->checkDemolitionSkin->TabStop = true;
 			this->checkDemolitionSkin->Text = L"Вода со стороны заряда";
@@ -280,9 +284,9 @@ namespace IZNT {
 			this->checkDemolitionSkinWater->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->checkDemolitionSkinWater->AutoSize = true;
 			this->checkDemolitionSkinWater->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->checkDemolitionSkinWater->Location = System::Drawing::Point(15, 536);
+			this->checkDemolitionSkinWater->Location = System::Drawing::Point(15, 550);
 			this->checkDemolitionSkinWater->Name = L"checkDemolitionSkinWater";
-			this->checkDemolitionSkinWater->Size = System::Drawing::Size(396, 24);
+			this->checkDemolitionSkinWater->Size = System::Drawing::Size(469, 29);
 			this->checkDemolitionSkinWater->TabIndex = 42;
 			this->checkDemolitionSkinWater->TabStop = true;
 			this->checkDemolitionSkinWater->Text = L"Вода со стороны, противоположной заряду";
@@ -293,9 +297,9 @@ namespace IZNT {
 			// 
 			this->checkArm->AutoSize = true;
 			this->checkArm->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->checkArm->Location = System::Drawing::Point(14, 288);
+			this->checkArm->Location = System::Drawing::Point(14, 314);
 			this->checkArm->Name = L"checkArm";
-			this->checkArm->Size = System::Drawing::Size(154, 24);
+			this->checkArm->Size = System::Drawing::Size(182, 29);
 			this->checkArm->TabIndex = 43;
 			this->checkArm->Text = L"Броневой лист";
 			this->checkArm->UseVisualStyleBackColor = true;
@@ -305,9 +309,9 @@ namespace IZNT {
 			this->checkWater->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->checkWater->AutoSize = true;
 			this->checkWater->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->checkWater->Location = System::Drawing::Point(14, 380);
+			this->checkWater->Location = System::Drawing::Point(14, 394);
 			this->checkWater->Name = L"checkWater";
-			this->checkWater->Size = System::Drawing::Size(112, 24);
+			this->checkWater->Size = System::Drawing::Size(130, 29);
 			this->checkWater->TabIndex = 44;
 			this->checkWater->TabStop = true;
 			this->checkWater->Text = L"Не в воде";
@@ -319,9 +323,9 @@ namespace IZNT {
 			this->label3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
-			this->label3->Location = System::Drawing::Point(10, 336);
+			this->label3->Location = System::Drawing::Point(10, 355);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(165, 24);
+			this->label3->Size = System::Drawing::Size(204, 29);
 			this->label3->TabIndex = 45;
 			this->label3->Text = L"Место подрыва";
 			// 
@@ -347,11 +351,41 @@ namespace IZNT {
 			this->btnTextVersion->UseVisualStyleBackColor = true;
 			this->btnTextVersion->Click += gcnew System::EventHandler(this, &SteelSheets::btnTextVersion_Click);
 			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
+			this->label9->Location = System::Drawing::Point(12, 70);
+			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(127, 20);
+			this->label9->TabIndex = 57;
+			this->label9->Text = L"Расчет для ВВ:";
+			// 
+			// explosive_material_comboBox
+			// 
+			this->explosive_material_comboBox->Cursor = System::Windows::Forms::Cursors::Default;
+			this->explosive_material_comboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->explosive_material_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->explosive_material_comboBox->FormattingEnabled = true;
+			this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(7) {
+				L"Тротил", L"Пластид - 4", L"Тетрил",
+					L"Гексоген", L"ТЭН", L"ТНРС", L"Тритонал"
+			});
+			this->explosive_material_comboBox->Location = System::Drawing::Point(15, 87);
+			this->explosive_material_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			this->explosive_material_comboBox->Name = L"explosive_material_comboBox";
+			this->explosive_material_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->explosive_material_comboBox->Size = System::Drawing::Size(211, 33);
+			this->explosive_material_comboBox->TabIndex = 56;
+			// 
 			// SteelSheets
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->explosive_material_comboBox);
 			this->Controls->Add(this->btnTextVersion);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label3);

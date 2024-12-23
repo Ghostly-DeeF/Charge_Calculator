@@ -46,6 +46,8 @@ namespace IZNT {
 	private: System::Windows::Forms::CheckBox^ checkUnderwaterExp;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Button^ btnTextVersion;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::ComboBox^ explosive_material_comboBox;
 
 		   float answerz;
 
@@ -65,6 +67,8 @@ namespace IZNT {
 			   this->checkUnderwaterExp = (gcnew System::Windows::Forms::CheckBox());
 			   this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			   this->btnTextVersion = (gcnew System::Windows::Forms::Button());
+			   this->label9 = (gcnew System::Windows::Forms::Label());
+			   this->explosive_material_comboBox = (gcnew System::Windows::Forms::ComboBox());
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			   this->SuspendLayout();
 			   // 
@@ -105,20 +109,20 @@ namespace IZNT {
 			   // 
 			   this->label4->AutoSize = true;
 			   this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			   this->label4->Location = System::Drawing::Point(13, 67);
+			   this->label4->Location = System::Drawing::Point(13, 123);
 			   this->label4->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label4->Name = L"label4";
-			   this->label4->Size = System::Drawing::Size(145, 16);
+			   this->label4->Size = System::Drawing::Size(174, 20);
 			   this->label4->TabIndex = 33;
 			   this->label4->Text = L"Диаметр h троса в см";
 			   // 
 			   // diameter_steel_cable_textBox
 			   // 
 			   this->diameter_steel_cable_textBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			   this->diameter_steel_cable_textBox->Location = System::Drawing::Point(16, 85);
+			   this->diameter_steel_cable_textBox->Location = System::Drawing::Point(16, 141);
 			   this->diameter_steel_cable_textBox->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
 			   this->diameter_steel_cable_textBox->Name = L"diameter_steel_cable_textBox";
-			   this->diameter_steel_cable_textBox->Size = System::Drawing::Size(211, 26);
+			   this->diameter_steel_cable_textBox->Size = System::Drawing::Size(211, 31);
 			   this->diameter_steel_cable_textBox->TabIndex = 32;
 			   // 
 			   // label1
@@ -128,7 +132,7 @@ namespace IZNT {
 			   this->label1->Location = System::Drawing::Point(34, 21);
 			   this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label1->Name = L"label1";
-			   this->label1->Size = System::Drawing::Size(576, 66);
+			   this->label1->Size = System::Drawing::Size(759, 87);
 			   this->label1->TabIndex = 31;
 			   this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nстального троса\r\n\r\n";
 			   this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -137,10 +141,10 @@ namespace IZNT {
 			   // 
 			   this->checkBox_Steel_Cable->AutoSize = true;
 			   this->checkBox_Steel_Cable->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			   this->checkBox_Steel_Cable->Location = System::Drawing::Point(16, 132);
+			   this->checkBox_Steel_Cable->Location = System::Drawing::Point(16, 188);
 			   this->checkBox_Steel_Cable->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			   this->checkBox_Steel_Cable->Name = L"checkBox_Steel_Cable";
-			   this->checkBox_Steel_Cable->Size = System::Drawing::Size(188, 44);
+			   this->checkBox_Steel_Cable->Size = System::Drawing::Size(221, 54);
 			   this->checkBox_Steel_Cable->TabIndex = 36;
 			   this->checkBox_Steel_Cable->Text = L"Кольцевой заряд\r\nиз пластичного ВВ";
 			   this->checkBox_Steel_Cable->UseVisualStyleBackColor = true;
@@ -150,10 +154,10 @@ namespace IZNT {
 			   // 
 			   this->checkUnderwaterExp->AutoSize = true;
 			   this->checkUnderwaterExp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			   this->checkUnderwaterExp->Location = System::Drawing::Point(16, 181);
+			   this->checkUnderwaterExp->Location = System::Drawing::Point(16, 237);
 			   this->checkUnderwaterExp->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			   this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
-			   this->checkUnderwaterExp->Size = System::Drawing::Size(189, 24);
+			   this->checkUnderwaterExp->Size = System::Drawing::Size(218, 29);
 			   this->checkUnderwaterExp->TabIndex = 37;
 			   this->checkUnderwaterExp->Text = L"Подрыв под водой";
 			   this->checkUnderwaterExp->UseVisualStyleBackColor = true;
@@ -180,11 +184,41 @@ namespace IZNT {
 			   this->btnTextVersion->UseVisualStyleBackColor = true;
 			   this->btnTextVersion->Click += gcnew System::EventHandler(this, &SteelCable::btnTextVersion_Click);
 			   // 
+			   // label9
+			   // 
+			   this->label9->AutoSize = true;
+			   this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
+			   this->label9->Location = System::Drawing::Point(13, 68);
+			   this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			   this->label9->Name = L"label9";
+			   this->label9->Size = System::Drawing::Size(127, 20);
+			   this->label9->TabIndex = 61;
+			   this->label9->Text = L"Расчет для ВВ:";
+			   // 
+			   // explosive_material_comboBox
+			   // 
+			   this->explosive_material_comboBox->Cursor = System::Windows::Forms::Cursors::Default;
+			   this->explosive_material_comboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			   this->explosive_material_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			   this->explosive_material_comboBox->FormattingEnabled = true;
+			   this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(7) {
+				   L"Тротил", L"Пластид - 4", L"Тетрил",
+					   L"Гексоген", L"ТЭН", L"ТНРС", L"Тритонал"
+			   });
+			   this->explosive_material_comboBox->Location = System::Drawing::Point(16, 85);
+			   this->explosive_material_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			   this->explosive_material_comboBox->Name = L"explosive_material_comboBox";
+			   this->explosive_material_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			   this->explosive_material_comboBox->Size = System::Drawing::Size(211, 33);
+			   this->explosive_material_comboBox->TabIndex = 60;
+			   // 
 			   // SteelCable
 			   // 
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			   this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			   this->Controls->Add(this->label9);
+			   this->Controls->Add(this->explosive_material_comboBox);
 			   this->Controls->Add(this->btnTextVersion);
 			   this->Controls->Add(this->pictureBox1);
 			   this->Controls->Add(this->checkUnderwaterExp);

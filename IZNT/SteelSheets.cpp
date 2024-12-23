@@ -1,5 +1,6 @@
 #include "SteelSheets.h"
 #include <cmath>
+#include "ExRecalc.h"
 
 double thickness_steel_sheets = 0.0;
 double width_steel_sheets = 0.0;
@@ -223,6 +224,12 @@ inline System::Void IZNT::SteelSheets::calc_button_Click(System::Object^ sender,
     if (checkDemolitionSkinWater->Checked) {
         answer /= 1.5;
     }
+
+    if (explosive_material_comboBox->SelectedIndex == -1) {
+        answer_textBox->Text = " Ошибка: выберите тип ВВ из списка";
+        return;
+    }
+    answer = recalculation(explosive_material_comboBox, answer_textBox, answer);
     
     switch (type_charge_comboBox->SelectedIndex) {
     case 0:
