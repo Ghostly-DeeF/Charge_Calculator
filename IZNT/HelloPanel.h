@@ -64,46 +64,51 @@ namespace IZNT {
 			// 
 			// label1
 			// 
-			this->label1->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label1->Location = System::Drawing::Point(0, 310);
+			this->label1->Location = System::Drawing::Point(108, 304);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(722, 284);
+			this->label1->Size = System::Drawing::Size(508, 109);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"\r\nПриложение для расчета зарядов\r\n\"Недотрога\"";
-			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// pictureBox1
 			// 
-			this->pictureBox1->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->pictureBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(0, 18);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(722, 292);
+			this->pictureBox1->Size = System::Drawing::Size(722, 300);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 1;
 			this->pictureBox1->TabStop = false;
 			// 
 			// label2
 			// 
-			this->label2->AutoSize = true;
+			this->label2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label2->Location = System::Drawing::Point(73, 445);
+			this->label2->Location = System::Drawing::Point(73, 441);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(577, 29);
+			this->label2->Size = System::Drawing::Size(583, 78);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Выберите объект для подрыва в панели справа";
+			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label4
 			// 
-			this->label4->AutoSize = true;
+			this->label4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.75F));
-			this->label4->Location = System::Drawing::Point(147, 528);
+			this->label4->Location = System::Drawing::Point(136, 536);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(403, 48);
+			this->label4->Size = System::Drawing::Size(428, 57);
 			this->label4->TabIndex = 4;
 			this->label4->Text = L"Создано на основе\r\nруководства по подрывным работам 1968 г";
 			this->label4->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -122,10 +127,9 @@ namespace IZNT {
 			this->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Name = L"HelloPanel";
-			this->Size = System::Drawing::Size(722, 594);
+			this->Size = System::Drawing::Size(726, 602);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 #pragma endregion

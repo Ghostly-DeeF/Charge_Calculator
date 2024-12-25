@@ -92,35 +92,40 @@ inline System::Void IZNT::WoodTwoBalk::calc_button_Click(System::Object^ sender,
 		answerWall = round(answerWall);
 
 		answer_textBox->Text = " Точный общий вес всех зарядов: " + ((answerMas + answerWall) / 1000).ToString() + " кг\r\n\r\n";
+		if (explosive_material_comboBox->SelectedIndex == 0) {
+			answerMas = ceill(answerMas / 200) * 200;
 
-		answerMas = ceill(answerMas / 200) * 200;
+			answer_textBox->Text += " Вес тротиловых шашек для каждого пояса: " + (answerMas / 1000).ToString() + " кг\r\n";
 
-		answer_textBox->Text += " Вес тротиловых шашек для каждого пояса: " + (answerMas / 1000).ToString() + " кг\r\n";
+			if (((int)answerMas % 400 == 0)) {
+				answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerMas / 400) + " по 0,4 кг\r\n\r\n";
+			}
+			else if (answerMas / 400 >= 1) {
+				answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerMas / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n";
+			}
+			else {
+				answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг\r\n\r\n";
+			}
 
-		if (((int)answerMas % 400 == 0)) {
-			answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerMas / 400) + " по 0,4 кг\r\n\r\n";
-		}
-		else if (answerMas / 400 >= 1) {
-			answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerMas / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n";
+			answerWall = ceill(answerWall / 200) * 200;
+
+			answer_textBox->Text += " Вес тротиловых шашек для стенки: " + (answerWall / 1000).ToString() + " кг\r\n";
+
+			if (((int)answerWall % 400 == 0)) {
+				answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerWall / 400) + " по 0,4 кг\r\n";
+			}
+			else if (answerWall / 400 >= 1) {
+				answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerWall / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n";
+			}
+			else {
+				answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг\r\n";
+			}
+			answer_textBox->Text += " Или перекройте стенку по всей высоте 1 рядом\r\n малых шашек по 200г";
 		}
 		else {
-			answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг\r\n\r\n";
+			answer_textBox->Text += " Вес заряда для каждого из двух поясов: " + (answerMas / 1000).ToString() + " кг\r\n";
+			answer_textBox->Text += " Вес заряда для стенки: " + (answerWall / 1000).ToString() + " кг\r\n";
 		}
-
-		answerWall = ceill(answerWall / 200) * 200;
-
-		answer_textBox->Text += " Вес тротиловых шашек для стенки: " + (answerWall / 1000).ToString() + " кг\r\n";
-
-		if (((int)answerWall % 400 == 0)) {
-			answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerWall / 400) + " по 0,4 кг\r\n";
-		}
-		else if (answerWall / 400 >= 1) {
-			answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerWall / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n";
-		}
-		else {
-			answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг\r\n";
-		}
-		answer_textBox->Text += " Или перекройте стенку по всей высоте 1 рядом\r\n малых шашек по 200г";
 		break;
 
 	case 1:
@@ -139,20 +144,21 @@ inline System::Void IZNT::WoodTwoBalk::calc_button_Click(System::Object^ sender,
 
 		answerMas = round(answerMas);
 
-		answer_textBox->Text = " Точный вес каждого заряда: " + (answerMas / 1000).ToString() + " кг\r\n\r\n";
+		answer_textBox->Text = " Точный вес каждого из двух зарядов: " + (answerMas / 1000).ToString() + " кг\r\n\r\n";
+		if (explosive_material_comboBox->SelectedIndex == 0) {
+			answerMas = ceill(answerMas / 200) * 200;
 
-		answerMas = ceill(answerMas / 200) * 200;
+			answer_textBox->Text += " Вес тротиловых шашек: " + (answerMas / 1000).ToString() + " кг\r\n";
 
-		answer_textBox->Text += " Вес тротиловых шашек: " + (answerMas / 1000).ToString() + " кг\r\n";
-
-		if (((int)answerMas % 400 == 0)) {
-			answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerMas / 400) + " по 0,4 кг";
-		}
-		else if (answerMas / 400 >= 1) {
-			answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerMas / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(answerMas / 400) * 2) + 1) + " по 0,2 кг";
-		}
-		else {
-			answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
+			if (((int)answerMas % 400 == 0)) {
+				answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerMas / 400) + " по 0,4 кг";
+			}
+			else if (answerMas / 400 >= 1) {
+				answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerMas / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(answerMas / 400) * 2) + 1) + " по 0,2 кг";
+			}
+			else {
+				answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
+			}
 		}
 		break;
 

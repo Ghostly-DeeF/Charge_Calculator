@@ -4,8 +4,10 @@
 IZNT::MainForm::MainForm(void)
 {
     InitializeComponent();
-
-    SetForm(panel1, gcnew IZNT::HelloPanel());
+    HelloPanel = gcnew IZNT::HelloPanel();
+    HelloPanel->Size = this->panel1->Size - System::Drawing::Size(199, 0);
+    SetForm(panel1, HelloPanel);
+    selected_panel = 0;
 
 }
 
@@ -226,6 +228,9 @@ inline System::Void IZNT::MainForm::btnSteelBalk_Click(System::Object^ sender, S
 inline System::Void IZNT::MainForm::MainForm_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
     switch (selected_panel)
     {
+    case 0:
+        HelloPanel->Size = this->panel1->Size - System::Drawing::Size(199, 0);
+        break;
     case 1:
         Wood1->Size = this->panel1->Size - System::Drawing::Size(199, 0);
         break;

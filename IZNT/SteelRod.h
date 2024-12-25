@@ -49,7 +49,7 @@ namespace IZNT {
 		/// Обязательная переменная конструктора.
 		/// </summary>
 		System::ComponentModel::Container^ components;
-	private: System::Windows::Forms::CheckBox^ checkPlastit;
+
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Button^ btnTextVersion;
 	private: System::Windows::Forms::Label^ label9;
@@ -75,7 +75,6 @@ namespace IZNT {
 			   this->diameter_steel_rod_textBox = (gcnew System::Windows::Forms::TextBox());
 			   this->label1 = (gcnew System::Windows::Forms::Label());
 			   this->checkUnderwaterExp = (gcnew System::Windows::Forms::CheckBox());
-			   this->checkPlastit = (gcnew System::Windows::Forms::CheckBox());
 			   this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			   this->btnTextVersion = (gcnew System::Windows::Forms::Button());
 			   this->label9 = (gcnew System::Windows::Forms::Label());
@@ -123,7 +122,7 @@ namespace IZNT {
 			   this->label4->Location = System::Drawing::Point(13, 135);
 			   this->label4->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label4->Name = L"label4";
-			   this->label4->Size = System::Drawing::Size(181, 20);
+			   this->label4->Size = System::Drawing::Size(151, 16);
 			   this->label4->TabIndex = 28;
 			   this->label4->Text = L"Диаметр стержня в см";
 			   // 
@@ -133,7 +132,7 @@ namespace IZNT {
 			   this->diameter_steel_rod_textBox->Location = System::Drawing::Point(16, 153);
 			   this->diameter_steel_rod_textBox->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
 			   this->diameter_steel_rod_textBox->Name = L"diameter_steel_rod_textBox";
-			   this->diameter_steel_rod_textBox->Size = System::Drawing::Size(211, 31);
+			   this->diameter_steel_rod_textBox->Size = System::Drawing::Size(211, 26);
 			   this->diameter_steel_rod_textBox->TabIndex = 27;
 			   // 
 			   // label1
@@ -143,7 +142,7 @@ namespace IZNT {
 			   this->label1->Location = System::Drawing::Point(34, 21);
 			   this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label1->Name = L"label1";
-			   this->label1->Size = System::Drawing::Size(759, 58);
+			   this->label1->Size = System::Drawing::Size(576, 44);
 			   this->label1->TabIndex = 26;
 			   this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nстального стержня\r\n";
 			   this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -155,23 +154,10 @@ namespace IZNT {
 			   this->checkUnderwaterExp->Location = System::Drawing::Point(16, 199);
 			   this->checkUnderwaterExp->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			   this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
-			   this->checkUnderwaterExp->Size = System::Drawing::Size(218, 29);
+			   this->checkUnderwaterExp->Size = System::Drawing::Size(189, 24);
 			   this->checkUnderwaterExp->TabIndex = 31;
 			   this->checkUnderwaterExp->Text = L"Подрыв под водой";
 			   this->checkUnderwaterExp->UseVisualStyleBackColor = true;
-			   // 
-			   // checkPlastit
-			   // 
-			   this->checkPlastit->AutoSize = true;
-			   this->checkPlastit->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			   this->checkPlastit->Location = System::Drawing::Point(16, 252);
-			   this->checkPlastit->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
-			   this->checkPlastit->Name = L"checkPlastit";
-			   this->checkPlastit->Size = System::Drawing::Size(239, 29);
-			   this->checkPlastit->TabIndex = 32;
-			   this->checkPlastit->Text = L"Заряд из пластита-4";
-			   this->checkPlastit->UseVisualStyleBackColor = true;
-			   this->checkPlastit->CheckedChanged += gcnew System::EventHandler(this, &SteelRod::checkPlastit_CheckedChanged);
 			   // 
 			   // pictureBox1
 			   // 
@@ -202,7 +188,7 @@ namespace IZNT {
 			   this->label9->Location = System::Drawing::Point(13, 71);
 			   this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			   this->label9->Name = L"label9";
-			   this->label9->Size = System::Drawing::Size(127, 20);
+			   this->label9->Size = System::Drawing::Size(104, 16);
 			   this->label9->TabIndex = 59;
 			   this->label9->Text = L"Расчет для ВВ:";
 			   // 
@@ -212,16 +198,14 @@ namespace IZNT {
 			   this->explosive_material_comboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			   this->explosive_material_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			   this->explosive_material_comboBox->FormattingEnabled = true;
-			   this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(7) {
-				   L"Тротил", L"Пластид - 4", L"Тетрил",
-					   L"Гексоген", L"ТЭН", L"ТНРС", L"Тритонал"
-			   });
+			   this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Тротил", L"Пластид - 4", L"Аммонал" });
 			   this->explosive_material_comboBox->Location = System::Drawing::Point(16, 88);
 			   this->explosive_material_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			   this->explosive_material_comboBox->Name = L"explosive_material_comboBox";
 			   this->explosive_material_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			   this->explosive_material_comboBox->Size = System::Drawing::Size(211, 33);
+			   this->explosive_material_comboBox->Size = System::Drawing::Size(211, 28);
 			   this->explosive_material_comboBox->TabIndex = 58;
+			   this->explosive_material_comboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &SteelRod::checkPlastit_CheckedChanged);
 			   // 
 			   // SteelRod
 			   // 
@@ -231,7 +215,6 @@ namespace IZNT {
 			   this->Controls->Add(this->label9);
 			   this->Controls->Add(this->explosive_material_comboBox);
 			   this->Controls->Add(this->btnTextVersion);
-			   this->Controls->Add(this->checkPlastit);
 			   this->Controls->Add(this->pictureBox1);
 			   this->Controls->Add(this->checkUnderwaterExp);
 			   this->Controls->Add(this->answer_textBox);

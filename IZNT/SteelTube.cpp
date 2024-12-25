@@ -65,22 +65,23 @@ inline System::Void IZNT::SteelTube::calc_button_Click(System::Object^ sender, S
         return;
     }
     answerz = recalculation(explosive_material_comboBox, answer_textBox, answerz);
-
     answerz = round(answerz);
     answer_textBox->Text = " Точный вес требуемого заряда: " + (answerz / 1000).ToString() + " кг\r\n\r\n";
 
-    answerz = ceill(answerz / 200) * 200;
+        if (explosive_material_comboBox->SelectedIndex == 0) {
+        answerz = ceill(answerz / 200) * 200;
 
-    answer_textBox->Text += " Вес тротиловых шашек: " + (answerz / 1000).ToString() + " кг\r\n";
+        answer_textBox->Text += " Вес тротиловых шашек: " + (answerz / 1000).ToString() + " кг\r\n";
 
-    if (((int)answerz % 400 == 0)) {
-        answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerz / 400) + " по 0,4 кг";
-    }
-    else if (answerz / 400 >= 1) {
-        answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerz / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(answerz / 400) * 2) + 1) + " по 0,2 кг";
-    }
-    else {
-        answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
+        if (((int)answerz % 400 == 0)) {
+            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerz / 400) + " по 0,4 кг";
+        }
+        else if (answerz / 400 >= 1) {
+            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answerz / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(answerz / 400) * 2) + 1) + " по 0,2 кг";
+        }
+        else {
+            answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
+        }
     }
 }
 

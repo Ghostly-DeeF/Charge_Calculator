@@ -383,7 +383,7 @@ namespace IZNT {
 			this->Controls->Add(this->panel1);
 			this->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->MinimumSize = System::Drawing::Size(935, 630);
+			this->MinimumSize = System::Drawing::Size(935, 705);
 			this->Name = L"MainForm";
 			this->Text = L"Недотрога: Расчет заряда";
 			this->SizeChanged += gcnew System::EventHandler(this, &MainForm::MainForm_SizeChanged);
@@ -394,6 +394,7 @@ namespace IZNT {
 #pragma endregion
 	
 		private:
+			IZNT::HelloPanel^ HelloPanel;
 			IZNT::Wood1^ Wood1;
 			IZNT::Balk1^ Balk1;
 			IZNT::WoodTwoBalk^ WoodTwoBalk;

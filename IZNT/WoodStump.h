@@ -92,7 +92,7 @@ namespace IZNT {
 			this->label2->Location = System::Drawing::Point(13, 114);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(160, 20);
+			this->label2->Size = System::Drawing::Size(133, 16);
 			this->label2->TabIndex = 41;
 			this->label2->Text = L"Диаметр D пня в см";
 			// 
@@ -135,7 +135,7 @@ namespace IZNT {
 			this->diameter_log_textBox->Location = System::Drawing::Point(16, 132);
 			this->diameter_log_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->diameter_log_textBox->Name = L"diameter_log_textBox";
-			this->diameter_log_textBox->Size = System::Drawing::Size(211, 31);
+			this->diameter_log_textBox->Size = System::Drawing::Size(211, 26);
 			this->diameter_log_textBox->TabIndex = 36;
 			// 
 			// label1
@@ -145,7 +145,7 @@ namespace IZNT {
 			this->label1->Location = System::Drawing::Point(15, 10);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(868, 29);
+			this->label1->Size = System::Drawing::Size(661, 22);
 			this->label1->TabIndex = 33;
 			this->label1->Text = L"Расчет сосредоточенного заряда, необходимого для корчевания пня";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -179,7 +179,7 @@ namespace IZNT {
 			this->label9->Location = System::Drawing::Point(13, 61);
 			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(127, 20);
+			this->label9->Size = System::Drawing::Size(104, 16);
 			this->label9->TabIndex = 65;
 			this->label9->Text = L"Расчет для ВВ:";
 			// 
@@ -189,15 +189,12 @@ namespace IZNT {
 			this->explosive_material_comboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->explosive_material_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->explosive_material_comboBox->FormattingEnabled = true;
-			this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(7) {
-				L"Тротил", L"Пластид - 4", L"Тетрил",
-					L"Гексоген", L"ТЭН", L"ТНРС", L"Тритонал"
-			});
+			this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Тротил", L"Пластид - 4", L"Аммонал" });
 			this->explosive_material_comboBox->Location = System::Drawing::Point(16, 78);
 			this->explosive_material_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->explosive_material_comboBox->Name = L"explosive_material_comboBox";
 			this->explosive_material_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->explosive_material_comboBox->Size = System::Drawing::Size(211, 33);
+			this->explosive_material_comboBox->Size = System::Drawing::Size(211, 28);
 			this->explosive_material_comboBox->TabIndex = 64;
 			// 
 			// WoodStump

@@ -6,11 +6,11 @@ float diameter_steel_rod = 0.0f;
 float answery = 0.0f;
 
 inline System::Void IZNT::SteelRod::checkPlastit_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	if (checkPlastit->Checked) {
-		pictureBox1->Image = Image::FromFile(".\\Picture\\img1Rod.bmp");
+	if (explosive_material_comboBox->SelectedIndex == 0) {
+		pictureBox1->Image = Image::FromFile(".\\Picture\\img2Rod.bmp");
 	}
 	else {
-		pictureBox1->Image = Image::FromFile(".\\Picture\\img2Rod.bmp");
+		pictureBox1->Image = Image::FromFile(".\\Picture\\img1Rod.bmp");
 	}
 }
 
@@ -21,35 +21,25 @@ inline System::Void IZNT::SteelRod::calc_button_Click(System::Object^ sender, Sy
 		return;
 	}
 
-	if (checkPlastit->Checked) {
-		answery = (10 * pow(diameter_steel_rod, 3)) / 2;
-	}
-	else {
-		answery = 10 * pow(diameter_steel_rod, 3);
-	}
 
+	answery = 10 * pow(diameter_steel_rod, 3);
+	
 	if (checkUnderwaterExp->Checked) {
 		answery *= 2;
 	}
 
-	answery = round(answery);
-
+	
 	if (explosive_material_comboBox->SelectedIndex == -1) {
 		answer_textBox->Text = " Ошибка: выберите тип ВВ из списка";
 		return;
 	}
 	answery = recalculation(explosive_material_comboBox, answer_textBox, answery);
 
+	answery = round(answery);
 
-	if (diameter_steel_rod <= 2) {
-		answer_textBox->Text = " Точный вес требуемого заряда: " + (answery / 1000).ToString() + " кг\r\n\r\n";
-		answery = ceil(answery / 200) * 200;
-		answer_textBox->Text += " Вес тротиловых шашек: " + (answery / 1000).ToString() + " кг\r\n";
-		int num_of_02kg_charges = (int)ceil(answery / 200);
-		answer_textBox->Text += " Требуется шашек:\r\n " + num_of_02kg_charges.ToString() + " по 0,2 кг";
-	}
-	else {
-		answer_textBox->Text = " Точный вес требуемого заряда: " + (answery / 1000).ToString() + " кг\r\n\r\n";
+	answer_textBox->Text = " Точный вес требуемого заряда: " + (answery / 1000).ToString() + " кг\r\n\r\n";
+
+	if (explosive_material_comboBox->SelectedIndex == 0) {
 		answery = ceil(answery / 200) * 200;
 		answer_textBox->Text += " Вес тротиловых шашек: " + (answery / 1000).ToString() + " кг\r\n";
 		if (((int)answery % 400 == 0)) {

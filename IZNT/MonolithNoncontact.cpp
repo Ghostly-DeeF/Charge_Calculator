@@ -1,4 +1,5 @@
 #include "MonolithNoncontact.h"
+#include "ExRecalc.h"
 
 const float masA[8]{ 0.75f, 1.0f, 1.2f, 1.4f, 1.5f, 1.8f, 5.0f, 20.0f };
 
@@ -6,8 +7,8 @@ inline IZNT::MonolithNoncontact::MonolithNoncontact(void)
 {
 	InitializeComponent();
 	pictureBox1->Image = Image::FromFile(".\\Picture\\img1NonContact.bmp");
-	hole_checkBox->Location = System::Drawing::Point(16, 310);
-	underwater_checkBox->Location = System::Drawing::Point(16, 360);
+	hole_checkBox->Location = System::Drawing::Point(16, 370);
+	underwater_checkBox->Location = System::Drawing::Point(16, 420);
 }
 
 inline System::Void IZNT::MonolithNoncontact::type_material_comboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -20,8 +21,8 @@ inline System::Void IZNT::MonolithNoncontact::type_material_comboBox_SelectedInd
 		second_comboBox->Items->Clear();
 		second_comboBox->Items->Add("Известковый");
 		second_comboBox->Items->Add("Цементный");
-		hole_checkBox->Location = System::Drawing::Point(16, 380);
-		underwater_checkBox->Location = System::Drawing::Point(16, 430);
+		hole_checkBox->Location = System::Drawing::Point(16, 440);
+		underwater_checkBox->Location = System::Drawing::Point(16, 490);
 		break;
 
 	case 1:
@@ -32,8 +33,8 @@ inline System::Void IZNT::MonolithNoncontact::type_material_comboBox_SelectedInd
 		second_comboBox->Items->Add("Цементный");
 		type_brick_lable->Visible = false;
 		type_brickwork_comboBox->Visible = false;
-		hole_checkBox->Location = System::Drawing::Point(16, 380);
-		underwater_checkBox->Location = System::Drawing::Point(16, 430);
+		hole_checkBox->Location = System::Drawing::Point(16, 440);
+		underwater_checkBox->Location = System::Drawing::Point(16, 490);
 		break;
 
 	case 2:
@@ -45,8 +46,8 @@ inline System::Void IZNT::MonolithNoncontact::type_material_comboBox_SelectedInd
 		second_comboBox->Items->Add("Фортификационный");
 		type_brick_lable->Visible = false;
 		type_brickwork_comboBox->Visible = false;
-		hole_checkBox->Location = System::Drawing::Point(16, 380);
-		underwater_checkBox->Location = System::Drawing::Point(16, 430);
+		hole_checkBox->Location = System::Drawing::Point(16, 440);
+		underwater_checkBox->Location = System::Drawing::Point(16, 490);
 		break;
 
 	case 3:
@@ -58,8 +59,8 @@ inline System::Void IZNT::MonolithNoncontact::type_material_comboBox_SelectedInd
 		second_comboBox->Items->Add("Бетона и частично арматуры");
 		type_brick_lable->Visible = false;
 		type_brickwork_comboBox->Visible = false;
-		hole_checkBox->Location = System::Drawing::Point(16, 380);
-		underwater_checkBox->Location = System::Drawing::Point(16, 430);
+		hole_checkBox->Location = System::Drawing::Point(16, 440);
+		underwater_checkBox->Location = System::Drawing::Point(16, 490);
 		break;
 
 	default:
@@ -71,14 +72,14 @@ inline System::Void IZNT::MonolithNoncontact::second_comboBox_SelectedIndexChang
 	if (type_material_comboBox->SelectedIndex == 0 && second_comboBox->SelectedIndex == 0) {
 		type_brick_lable->Visible = true;
 		type_brickwork_comboBox->Visible = true;
-		hole_checkBox->Location = System::Drawing::Point(16, 450);
-		underwater_checkBox->Location = System::Drawing::Point(16, 500);
+		hole_checkBox->Location = System::Drawing::Point(16, 510);
+		underwater_checkBox->Location = System::Drawing::Point(16, 560);
 	}
 	else {
 		type_brick_lable->Visible = false;
 		type_brickwork_comboBox->Visible = false;
-		hole_checkBox->Location = System::Drawing::Point(16, 380);
-		underwater_checkBox->Location = System::Drawing::Point(16, 430);
+		hole_checkBox->Location = System::Drawing::Point(16, 440);
+		underwater_checkBox->Location = System::Drawing::Point(16, 490);
 	}
 }
 
@@ -141,21 +142,24 @@ inline System::Void IZNT::MonolithNoncontact::calc_button_Click(System::Object^ 
 		answer /= 1.5f;
 	}
 
+	answer = recalculation(explosive_material_comboBox, answer_textBox, answer);
 	answer = round(answer);
 	answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
 
-	answer = ceill(answer / 200) * 200;
+	if (explosive_material_comboBox->SelectedIndex == 0) {
+		answer = ceill(answer / 200) * 200;
 
-	answer_textBox->Text += " Вес тротиловых шашек: " + (answer / 1000).ToString() + " кг\r\n";
+		answer_textBox->Text += " Вес тротиловых шашек: " + (answer / 1000).ToString() + " кг\r\n";
 
-	if (((int)answer % 400 == 0)) {
-		answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг";
-	}
-	else if (answer / 400 >= 1) {
-		answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(answer / 400) * 2) + 1) + " по 0,2 кг";
-	}
-	else {
-		answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
+		if (((int)answer % 400 == 0)) {
+			answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг";
+		}
+		else if (answer / 400 >= 1) {
+			answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(answer / 400) * 2) + 1) + " по 0,2 кг";
+		}
+		else {
+			answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
+		}
 	}
 }
 

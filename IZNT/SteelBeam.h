@@ -196,10 +196,7 @@ namespace IZNT {
 			this->type_charge_comboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->type_charge_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->type_charge_comboBox->FormattingEnabled = true;
-			this->type_charge_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
-				L"Фигурный из шашек", L"Фигурный из пластита",
-					L"Сосредоточенный"
-			});
+			this->type_charge_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Фигурный", L"Сосредоточенный" });
 			this->type_charge_comboBox->Location = System::Drawing::Point(14, 142);
 			this->type_charge_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->type_charge_comboBox->Name = L"type_charge_comboBox";
@@ -440,16 +437,14 @@ namespace IZNT {
 			this->explosive_material_comboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->explosive_material_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->explosive_material_comboBox->FormattingEnabled = true;
-			this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(7) {
-				L"Тротил", L"Пластид - 4", L"Тетрил",
-					L"Гексоген", L"ТЭН", L"ТНРС", L"Тритонал"
-			});
+			this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Тротил", L"Пластид - 4", L"Аммонал" });
 			this->explosive_material_comboBox->Location = System::Drawing::Point(14, 85);
 			this->explosive_material_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->explosive_material_comboBox->Name = L"explosive_material_comboBox";
 			this->explosive_material_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->explosive_material_comboBox->Size = System::Drawing::Size(211, 28);
 			this->explosive_material_comboBox->TabIndex = 54;
+			this->explosive_material_comboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &SteelBeam::explosive_material_comboBox_SelectedIndexChanged);
 			// 
 			// SteelBeam
 			// 
@@ -562,5 +557,6 @@ private: System::Void btnTextVersion_Click(System::Object^ sender, System::Event
 
 	form->Show();
 }
+private: System::Void explosive_material_comboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e);
 };
 }

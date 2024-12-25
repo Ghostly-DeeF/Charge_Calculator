@@ -2,18 +2,6 @@
 #include <corecrt_math.h>
 #include "ExRecalc.h"
 
-const float coef[9][2] = {
-        {0.0f, 1.0f},
-        {1.0f, 1.0f},
-        {1.5f, 2.0f},
-        {2.5f, 3.0f},
-        {3.5f, 4.0f},
-        {4.0f, 5.0f},
-        {4.5f, 6.0f},
-        {5.0f, 0.0f},
-        {9999.9f, 0.0f}
-};
-
 float thickness_steel_beam = 0.0f;
 float width_steel_beam = 0.0f;
 float answer = 0.0f;
@@ -24,7 +12,7 @@ inline IZNT::SteelBeam::SteelBeam(void)
     pictureBox1->Image = Image::FromFile(".\\Picture\\img1SteelBalk.bmp");
 }
 
-void imageSwitch(ComboBox^ combo, CheckBox^ check, PictureBox^ picture1, PictureBox^ picture2) {
+void imageSwitch(ComboBox^ combo, CheckBox^ check, PictureBox^ picture1, PictureBox^ picture2, ComboBox^ combo2) {
     switch (combo->SelectedIndex)
         {
         case -1:
@@ -37,35 +25,48 @@ void imageSwitch(ComboBox^ combo, CheckBox^ check, PictureBox^ picture1, Picture
             break;
 
         case 0:
-            if (check->Checked) {
-                picture1->Image = Image::FromFile(".\\Picture\\img3SteelBalk.bmp");
-                picture2->Image = Image::FromFile(".\\Picture\\img2SteelLegend.bmp");
+            if (combo2->SelectedIndex == 0) {
+                if (check->Checked) {
+                    picture1->Image = Image::FromFile(".\\Picture\\img3SteelBalk.bmp");
+                    picture2->Image = Image::FromFile(".\\Picture\\img2SteelLegend.bmp");
+                }
+                else {
+                    picture1->Image = Image::FromFile(".\\Picture\\img4SteelBalk.bmp");
+                    picture2->Image = Image::FromFile(".\\Picture\\img1SteelLegend.bmp");
+                }
             }
             else {
-                picture1->Image = Image::FromFile(".\\Picture\\img4SteelBalk.bmp");
-                picture2->Image = Image::FromFile(".\\Picture\\img1SteelLegend.bmp");
+                if (check->Checked) {
+                    picture1->Image = Image::FromFile(".\\Picture\\img6SteelBalk.bmp");
+                    picture2->Image = Image::FromFile(".\\Picture\\img3SteelLegend.bmp");
+                }
+                else {
+                    picture1->Image = Image::FromFile(".\\Picture\\img5SteelBalk.bmp");
+                    picture2->Image = Image::FromFile(".\\Picture\\img3SteelLegend.bmp");
+                }
             }
             break;
 
         case 1:
-            if (check->Checked) {
-                picture1->Image = Image::FromFile(".\\Picture\\img6SteelBalk.bmp");
-                picture2->Image = Image::FromFile(".\\Picture\\img3SteelLegend.bmp");
+            if (combo2->SelectedIndex == 0) {
+                if (check->Checked) {
+                    picture1->Image = Image::FromFile(".\\Picture\\img8SteelBalk.bmp");
+                    picture2->Image = Image::FromFile(".\\Picture\\img3SteelLegend.bmp");
+                }
+                else {
+                    picture1->Image = Image::FromFile(".\\Picture\\img7SteelBalk.bmp");
+                    picture2->Image = Image::FromFile(".\\Picture\\img3SteelLegend.bmp");
+                }
             }
             else {
-                picture1->Image = Image::FromFile(".\\Picture\\img5SteelBalk.bmp");
-                picture2->Image = Image::FromFile(".\\Picture\\img3SteelLegend.bmp");
-            }
-            break;
-
-        case 2:
-            if (check->Checked) {
-                picture1->Image = Image::FromFile(".\\Picture\\img8SteelBalk.bmp");
-                picture2->Image = Image::FromFile(".\\Picture\\img3SteelLegend.bmp");
-            }
-            else {
-                picture1->Image = Image::FromFile(".\\Picture\\img7SteelBalk.bmp");
-                picture2->Image = Image::FromFile(".\\Picture\\img3SteelLegend.bmp");
+                if (check->Checked) {
+                    picture1->Image = Image::FromFile(".\\Picture\\img10SteelBalk.bmp");
+                    picture2->Image = Image::FromFile(".\\Picture\\img0SteelLegend.bmp");
+                }
+                else {
+                    picture1->Image = Image::FromFile(".\\Picture\\img9SteelBalk.bmp");
+                    picture2->Image = Image::FromFile(".\\Picture\\img0SteelLegend.bmp");
+                }
             }
             break;
 
@@ -75,11 +76,15 @@ void imageSwitch(ComboBox^ combo, CheckBox^ check, PictureBox^ picture1, Picture
 }
 
 inline System::Void IZNT::SteelBeam::conner_checkBox_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    imageSwitch(type_charge_comboBox, conner_checkBox, pictureBox1, pictureBox2);
+    imageSwitch(type_charge_comboBox, conner_checkBox, pictureBox1, pictureBox2, explosive_material_comboBox);
 }
 
 inline System::Void IZNT::SteelBeam::type_charge_comboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-    imageSwitch(type_charge_comboBox, conner_checkBox, pictureBox1, pictureBox2);
+    imageSwitch(type_charge_comboBox, conner_checkBox, pictureBox1, pictureBox2, explosive_material_comboBox);
+}
+
+inline System::Void IZNT::SteelBeam::explosive_material_comboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+    imageSwitch(type_charge_comboBox, conner_checkBox, pictureBox1, pictureBox2, explosive_material_comboBox);
 }
 
 inline System::Void IZNT::SteelBeam::calc_button_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -164,12 +169,22 @@ inline System::Void IZNT::SteelBeam::calc_button_Click(System::Object^ sender, S
     answer_down_belt = recalculation(explosive_material_comboBox, answer_textBox, answer_down_belt);
     answer_wall = recalculation(explosive_material_comboBox, answer_textBox, answer_wall);
 
+
     switch (type_charge_comboBox->SelectedIndex)
     {
     case 0:
 
-        answer_textBox->Text = " Точный общий вес всех зарядов: " + ((answer_up_belt + answer_down_belt + answer_wall + (conner_checkBox->Checked? 800: 0)) / 1000).ToString() + " кг\r\n\r\n";
+        answer_textBox->Text = " Точный общий вес всех зарядов: " + ((answer_up_belt + answer_down_belt + answer_wall + (conner_checkBox->Checked ? 800 : 0)) / 1000).ToString() + " кг\r\n\r\n";
 
+        if (explosive_material_comboBox->SelectedIndex != 0) {
+            answer_textBox->Text += " Вес для верхней полки: " + (answer_up_belt / 1000).ToString() + " кг\r\n";
+            answer_textBox->Text += " Вес для нижней полки: " + (answer_down_belt / 1000).ToString() + " кг\r\n";
+            answer_textBox->Text += " Вес для стенки: " + (answer_wall / 1000).ToString() + " кг\r\n";
+            if (conner_checkBox->Checked) {
+                answer_textBox->Text += " Вес для 1 пары уголков: " + ((checkUnderwaterExp->Checked) ? 0.8f : 0.4f) + " кг\r\n";
+            }
+            break;
+        }
         answer_up_belt = ceill(answer_up_belt / 200) * 200;
 
         answer_textBox->Text += " Вес тротиловых шашек для верхней полки: " + (answer_up_belt / 1000).ToString() + " кг\r\n";
@@ -224,69 +239,12 @@ inline System::Void IZNT::SteelBeam::calc_button_Click(System::Object^ sender, S
 
     case 1:
     {
-
-        int i1 = 0;
-        for (i1 = 0; i1 < 9; i1++) {
-            if (thickness_up >= coef[i1][0] && thickness_up < coef[i1 + 1][0]) {
-                break;
-            }
-        }
-
-        int i2 = 0;
-        for (i2 = 0; i2 < 9; i2++) {
-            if (thickness_down >= coef[i2][0] && thickness_down < coef[i2 + 1][0]) {
-                break;
-            }
-        }
-
-        int i3 = 0;
-        for (i3 = 0; i3 < 9; i3++) {
-            if (thickness_wall >= coef[i3][0] && thickness_wall < coef[i3 + 1][0]) {
-                break;
-            }
-        }
-        if (i1 < 7 && i2 < 7 && i3 < 7) {
-            answer_textBox->Text = " Точный общий вес всех зарядов: " + ((answer_up_belt + answer_down_belt + answer_wall + (conner_checkBox->Checked ? 800 : 0)) / 1000).ToString() + " кг\r\n\r\n";
-            
-            answer_up_belt = ceill(answer_up_belt / 200) * 200;
-            answer_textBox->Text += " Вес заряда для верхней полки: " + (answer_up_belt / 1000).ToString() + " кг\r\n";
-            answer_up_belt = coef[i1][1];
-            answer_textBox->Text += " Требуется " + answer_up_belt + " шт нитей пластитового заряда\r\n\r\n";
-            
-            answer_down_belt = ceill(answer_down_belt / 200) * 200;
-            answer_textBox->Text += " Вес заряда для нижней полки: " + (answer_down_belt / 1000).ToString() + " кг\r\n";
-            answer_down_belt = coef[i2][1];
-            answer_textBox->Text += " Требуется " + answer_down_belt + " шт нитей пластитового заряда\r\n\r\n";
-
-            answer_wall = ceill(answer_wall / 200) * 200;
-            answer_textBox->Text += " Вес заряда для стенки: " + (answer_wall / 1000).ToString() + " кг\r\n";
-            answer_wall = coef[i3][1];
-            answer_textBox->Text += " Требуется " + answer_wall + " шт нитей пластитового заряда\r\n\r\n";
-
-            if (conner_checkBox->Checked) {
-                answer_textBox->Text += " Вес заряда для 1 пары уголков: " + ((checkUnderwaterExp->Checked) ? 0.8f : 0.4f) + " кг\r\n";
-                answer_textBox->Text += " Требуется 1 шт нитей пластитового заряда\r\n\r\n";
-            }
-
-            answer_textBox->Text += " Части заряда, действующие в противоположных\r\n направлениях, должны располагаться со сдвигом одна\r\n относительно другой по длине балки\r\n";
-        }
-        else if (i1 >= 7) {
-            answer_textBox->Text = " Толщина верхней полки больше 5 см!\r\n Используйте другой вид заряда";
-        }
-        else if (i2 >= 7) {
-            answer_textBox->Text = " Толщина нижней полки больше 5 см!\r\n Используйте другой вид заряда";
-        }
-        else if (i3 >= 7) {
-            answer_textBox->Text = " Толщина стенки больше 5 см!\r\n Используйте другой вид заряда";
-        }
-    }
-        break;
-
-    case 2:
-    {
         float sum_answer = (answer_up_belt + answer_down_belt + answer_wall + (conner_checkBox->Checked ? 800 : 0)) * 2;
         answer_textBox->Text = " Точный вес требуемого заряда: " + (sum_answer / 1000).ToString() + " кг\r\n\r\n";
 
+        if (explosive_material_comboBox->SelectedIndex != 0) {
+            break;
+        }
         sum_answer = ceill(sum_answer / 200) * 200;
 
         answer_textBox->Text += " Вес тротиловых шашек: " + (sum_answer / 1000).ToString() + " кг\r\n";
@@ -301,7 +259,7 @@ inline System::Void IZNT::SteelBeam::calc_button_Click(System::Object^ sender, S
             answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
         }
     }
-        break;
+    break;
     default:
         break;
     }

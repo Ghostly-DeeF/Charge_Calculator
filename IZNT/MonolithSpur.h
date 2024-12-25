@@ -49,9 +49,11 @@ namespace IZNT {
 	private: System::Windows::Forms::TextBox^ answer_textBox;
 	private: System::Windows::Forms::Button^ calc_button;
 	private: System::Windows::Forms::CheckBox^ underwater_checkBox;
-	private: System::Windows::Forms::CheckBox^ ammonite_checkBox;
+
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Button^ btnTextVersion;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::ComboBox^ explosive_material_comboBox;
 
 
 
@@ -78,9 +80,10 @@ namespace IZNT {
 			this->answer_textBox = (gcnew System::Windows::Forms::TextBox());
 			this->calc_button = (gcnew System::Windows::Forms::Button());
 			this->underwater_checkBox = (gcnew System::Windows::Forms::CheckBox());
-			this->ammonite_checkBox = (gcnew System::Windows::Forms::CheckBox());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->btnTextVersion = (gcnew System::Windows::Forms::Button());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->explosive_material_comboBox = (gcnew System::Windows::Forms::ComboBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -101,7 +104,7 @@ namespace IZNT {
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->label2->Location = System::Drawing::Point(13, 170);
+			this->label2->Location = System::Drawing::Point(19, 231);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(196, 16);
@@ -111,7 +114,7 @@ namespace IZNT {
 			// thickness_textBox
 			// 
 			this->thickness_textBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->thickness_textBox->Location = System::Drawing::Point(16, 188);
+			this->thickness_textBox->Location = System::Drawing::Point(22, 249);
 			this->thickness_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->thickness_textBox->Name = L"thickness_textBox";
 			this->thickness_textBox->Size = System::Drawing::Size(211, 26);
@@ -121,7 +124,7 @@ namespace IZNT {
 			// 
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->label3->Location = System::Drawing::Point(13, 90);
+			this->label3->Location = System::Drawing::Point(19, 159);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(73, 16);
@@ -137,7 +140,7 @@ namespace IZNT {
 				L"Кирпичная кладка", L"Каменная кладка",
 					L"Бетон", L"Железобетон"
 			});
-			this->type_material_comboBox->Location = System::Drawing::Point(16, 108);
+			this->type_material_comboBox->Location = System::Drawing::Point(22, 177);
 			this->type_material_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->type_material_comboBox->Name = L"type_material_comboBox";
 			this->type_material_comboBox->Size = System::Drawing::Size(211, 28);
@@ -181,23 +184,12 @@ namespace IZNT {
 			// 
 			this->underwater_checkBox->AutoSize = true;
 			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->underwater_checkBox->Location = System::Drawing::Point(16, 266);
+			this->underwater_checkBox->Location = System::Drawing::Point(22, 301);
 			this->underwater_checkBox->Name = L"underwater_checkBox";
 			this->underwater_checkBox->Size = System::Drawing::Size(175, 24);
 			this->underwater_checkBox->TabIndex = 35;
 			this->underwater_checkBox->Text = L"Взрыв под водой";
 			this->underwater_checkBox->UseVisualStyleBackColor = true;
-			// 
-			// ammonite_checkBox
-			// 
-			this->ammonite_checkBox->AutoSize = true;
-			this->ammonite_checkBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->ammonite_checkBox->Location = System::Drawing::Point(16, 230);
-			this->ammonite_checkBox->Name = L"ammonite_checkBox";
-			this->ammonite_checkBox->Size = System::Drawing::Size(104, 24);
-			this->ammonite_checkBox->TabIndex = 36;
-			this->ammonite_checkBox->Text = L"Аммонит";
-			this->ammonite_checkBox->UseVisualStyleBackColor = true;
 			// 
 			// pictureBox1
 			// 
@@ -222,14 +214,40 @@ namespace IZNT {
 			this->btnTextVersion->UseVisualStyleBackColor = true;
 			this->btnTextVersion->Click += gcnew System::EventHandler(this, &MonolithSpur::btnTextVersion_Click);
 			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
+			this->label9->Location = System::Drawing::Point(19, 91);
+			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(104, 16);
+			this->label9->TabIndex = 59;
+			this->label9->Text = L"Расчет для ВВ:";
+			// 
+			// explosive_material_comboBox
+			// 
+			this->explosive_material_comboBox->Cursor = System::Windows::Forms::Cursors::Default;
+			this->explosive_material_comboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->explosive_material_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->explosive_material_comboBox->FormattingEnabled = true;
+			this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Тротил", L"Пластид - 4", L"Аммонал" });
+			this->explosive_material_comboBox->Location = System::Drawing::Point(22, 108);
+			this->explosive_material_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			this->explosive_material_comboBox->Name = L"explosive_material_comboBox";
+			this->explosive_material_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->explosive_material_comboBox->Size = System::Drawing::Size(211, 28);
+			this->explosive_material_comboBox->TabIndex = 58;
+			// 
 			// MonolithSpur
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->explosive_material_comboBox);
 			this->Controls->Add(this->btnTextVersion);
 			this->Controls->Add(this->pictureBox1);
-			this->Controls->Add(this->ammonite_checkBox);
 			this->Controls->Add(this->underwater_checkBox);
 			this->Controls->Add(this->answer_textBox);
 			this->Controls->Add(this->calc_button);

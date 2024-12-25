@@ -91,7 +91,7 @@ namespace IZNT {
 			   this->label5->Location = System::Drawing::Point(12, 209);
 			   this->label5->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label5->Name = L"label5";
-			   this->label5->Size = System::Drawing::Size(175, 20);
+			   this->label5->Size = System::Drawing::Size(148, 16);
 			   this->label5->TabIndex = 25;
 			   this->label5->Text = L"Толщина h трубы в см";
 			   // 
@@ -101,7 +101,7 @@ namespace IZNT {
 			   this->thickness_steel_tube_textBox->Location = System::Drawing::Point(15, 226);
 			   this->thickness_steel_tube_textBox->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
 			   this->thickness_steel_tube_textBox->Name = L"thickness_steel_tube_textBox";
-			   this->thickness_steel_tube_textBox->Size = System::Drawing::Size(211, 31);
+			   this->thickness_steel_tube_textBox->Size = System::Drawing::Size(211, 26);
 			   this->thickness_steel_tube_textBox->TabIndex = 24;
 			   // 
 			   // answer_textBox
@@ -144,7 +144,7 @@ namespace IZNT {
 			   this->label4->Location = System::Drawing::Point(12, 137);
 			   this->label4->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label4->Name = L"label4";
-			   this->label4->Size = System::Drawing::Size(178, 20);
+			   this->label4->Size = System::Drawing::Size(150, 16);
 			   this->label4->TabIndex = 21;
 			   this->label4->Text = L"Диаметр D трубы в см";
 			   // 
@@ -154,7 +154,7 @@ namespace IZNT {
 			   this->diameter_steel_tube_textBox->Location = System::Drawing::Point(15, 155);
 			   this->diameter_steel_tube_textBox->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
 			   this->diameter_steel_tube_textBox->Name = L"diameter_steel_tube_textBox";
-			   this->diameter_steel_tube_textBox->Size = System::Drawing::Size(211, 31);
+			   this->diameter_steel_tube_textBox->Size = System::Drawing::Size(211, 26);
 			   this->diameter_steel_tube_textBox->TabIndex = 20;
 			   // 
 			   // label1
@@ -164,7 +164,7 @@ namespace IZNT {
 			   this->label1->Location = System::Drawing::Point(35, 21);
 			   this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label1->Name = L"label1";
-			   this->label1->Size = System::Drawing::Size(759, 87);
+			   this->label1->Size = System::Drawing::Size(576, 66);
 			   this->label1->TabIndex = 19;
 			   this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nстальной трубы\r\n\r\n";
 			   this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -175,7 +175,7 @@ namespace IZNT {
 			   this->checkUnderwaterExp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			   this->checkUnderwaterExp->Location = System::Drawing::Point(15, 281);
 			   this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
-			   this->checkUnderwaterExp->Size = System::Drawing::Size(218, 29);
+			   this->checkUnderwaterExp->Size = System::Drawing::Size(189, 24);
 			   this->checkUnderwaterExp->TabIndex = 34;
 			   this->checkUnderwaterExp->Text = L"Подрыв под водой";
 			   this->checkUnderwaterExp->UseVisualStyleBackColor = true;
@@ -196,7 +196,7 @@ namespace IZNT {
 			   this->checkFillingWater->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			   this->checkFillingWater->Location = System::Drawing::Point(15, 326);
 			   this->checkFillingWater->Name = L"checkFillingWater";
-			   this->checkFillingWater->Size = System::Drawing::Size(272, 29);
+			   this->checkFillingWater->Size = System::Drawing::Size(227, 24);
 			   this->checkFillingWater->TabIndex = 36;
 			   this->checkFillingWater->Text = L"Труба заполнена водой";
 			   this->checkFillingWater->UseVisualStyleBackColor = true;
@@ -222,7 +222,7 @@ namespace IZNT {
 			   this->label9->Location = System::Drawing::Point(12, 71);
 			   this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			   this->label9->Name = L"label9";
-			   this->label9->Size = System::Drawing::Size(127, 20);
+			   this->label9->Size = System::Drawing::Size(104, 16);
 			   this->label9->TabIndex = 61;
 			   this->label9->Text = L"Расчет для ВВ:";
 			   // 
@@ -232,15 +232,12 @@ namespace IZNT {
 			   this->explosive_material_comboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			   this->explosive_material_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			   this->explosive_material_comboBox->FormattingEnabled = true;
-			   this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(7) {
-				   L"Тротил", L"Пластид - 4", L"Тетрил",
-					   L"Гексоген", L"ТЭН", L"ТНРС", L"Тритонал"
-			   });
+			   this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Тротил", L"Пластид - 4", L"Аммонал" });
 			   this->explosive_material_comboBox->Location = System::Drawing::Point(15, 88);
 			   this->explosive_material_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			   this->explosive_material_comboBox->Name = L"explosive_material_comboBox";
 			   this->explosive_material_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			   this->explosive_material_comboBox->Size = System::Drawing::Size(211, 33);
+			   this->explosive_material_comboBox->Size = System::Drawing::Size(211, 28);
 			   this->explosive_material_comboBox->TabIndex = 60;
 			   // 
 			   // SteelTube

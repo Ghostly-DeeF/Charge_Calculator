@@ -18,52 +18,53 @@ const float coef[9][2] = {
         {9999.9f, 0.0f}
 };
 
-void imageSwitch(ComboBox^ combo, RadioButton^ rad1, RadioButton^ rad2, RadioButton^ rad3, RadioButton^ rad4, RadioButton^ rad5, PictureBox^ picture1) {
+void imageSwitch(ComboBox^ combo, RadioButton^ rad1, RadioButton^ rad2, RadioButton^ rad3, RadioButton^ rad4, RadioButton^ rad5, PictureBox^ picture1, ComboBox^ combo2) {
     switch (combo->SelectedIndex)
     {
     case 0:
-        if (rad1->Checked) {
-            picture1->Image = Image::FromFile(".\\Picture\\img2Plate.bmp");
-        }
-        else if (rad2->Checked) {
-            picture1->Image = Image::FromFile(".\\Picture\\img10Plate.bmp");
-        }
-        else if (rad3->Checked) {
-            picture1->Image = Image::FromFile(".\\Picture\\img18Plate.bmp");
-        }
-        else if (rad4->Checked) {
-            picture1->Image = Image::FromFile(".\\Picture\\img6Plate.bmp");
-        }
-        else if (rad5->Checked) {
-            picture1->Image = Image::FromFile(".\\Picture\\img14Plate.bmp");
+        if (combo2->SelectedIndex == 0) {
+            if (rad1->Checked) {
+                picture1->Image = Image::FromFile(".\\Picture\\img2Plate.bmp");
+            }
+            else if (rad2->Checked) {
+                picture1->Image = Image::FromFile(".\\Picture\\img10Plate.bmp");
+            }
+            else if (rad3->Checked) {
+                picture1->Image = Image::FromFile(".\\Picture\\img18Plate.bmp");
+            }
+            else if (rad4->Checked) {
+                picture1->Image = Image::FromFile(".\\Picture\\img6Plate.bmp");
+            }
+            else if (rad5->Checked) {
+                picture1->Image = Image::FromFile(".\\Picture\\img14Plate.bmp");
+            }
+            else {
+                picture1->Image = Image::FromFile(".\\Picture\\img2Plate.bmp");
+            }
         }
         else {
-            picture1->Image = Image::FromFile(".\\Picture\\img2Plate.bmp");
+            if (rad1->Checked) {
+                picture1->Image = Image::FromFile(".\\Picture\\img3Plate.bmp");
+            }
+            else if (rad2->Checked) {
+                picture1->Image = Image::FromFile(".\\Picture\\img11Plate.bmp");
+            }
+            else if (rad3->Checked) {
+                picture1->Image = Image::FromFile(".\\Picture\\img19Plate.bmp");
+            }
+            else if (rad4->Checked) {
+                picture1->Image = Image::FromFile(".\\Picture\\img7Plate.bmp");
+            }
+            else if (rad5->Checked) {
+                picture1->Image = Image::FromFile(".\\Picture\\img15Plate.bmp");
+            }
+            else {
+                picture1->Image = Image::FromFile(".\\Picture\\img3Plate.bmp");
+            }
         }
         break;
 
     case 1:
-        if (rad1->Checked) {
-            picture1->Image = Image::FromFile(".\\Picture\\img3Plate.bmp");
-        }
-        else if (rad2->Checked) {
-            picture1->Image = Image::FromFile(".\\Picture\\img11Plate.bmp");
-        }
-        else if (rad3->Checked) {
-            picture1->Image = Image::FromFile(".\\Picture\\img19Plate.bmp");
-        }
-        else if (rad4->Checked) {
-            picture1->Image = Image::FromFile(".\\Picture\\img7Plate.bmp");
-        }
-        else if (rad5->Checked) {
-            picture1->Image = Image::FromFile(".\\Picture\\img15Plate.bmp");
-        }
-        else {
-            picture1->Image = Image::FromFile(".\\Picture\\img3Plate.bmp");
-        }
-        break;
-
-    case 2:
         if (rad1->Checked) {
             picture1->Image = Image::FromFile(".\\Picture\\img4Plate.bmp");
         }
@@ -84,7 +85,7 @@ void imageSwitch(ComboBox^ combo, RadioButton^ rad1, RadioButton^ rad2, RadioBut
         }
         break;
 
-    case 3:
+    case 2:
         if (rad1->Checked) {
             picture1->Image = Image::FromFile(".\\Picture\\img5Plate.bmp");
         }
@@ -116,27 +117,31 @@ inline IZNT::SteelSheets::SteelSheets(void)
 }
 
 inline System::Void IZNT::SteelSheets::type_charge_comboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1);
+    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1, explosive_material_comboBox);
 }
 
 inline System::Void IZNT::SteelSheets::checkWater_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1);
+    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1, explosive_material_comboBox);
 }
 
 inline System::Void IZNT::SteelSheets::checkUnderwaterExp_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1);
+    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1, explosive_material_comboBox);
 }
 
 inline System::Void IZNT::SteelSheets::checkWoodenStop_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1);
+    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1, explosive_material_comboBox);
 }
 
 inline System::Void IZNT::SteelSheets::checkDemolitionSkin_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1);
+    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1, explosive_material_comboBox);
 }
 
 inline System::Void IZNT::SteelSheets::checkDemolitionSkinWater_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1);
+    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1, explosive_material_comboBox);
+}
+
+inline System::Void IZNT::SteelSheets::explosive_material_comboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+    imageSwitch(type_charge_comboBox, checkWater, checkUnderwaterExp, checkWoodenStop, checkDemolitionSkin, checkDemolitionSkinWater, pictureBox1, explosive_material_comboBox);
 }
 
 inline System::Void IZNT::SteelSheets::calc_button_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -175,15 +180,6 @@ inline System::Void IZNT::SteelSheets::calc_button_Click(System::Object^ sender,
 
     case 1:
         if (ceil(thickness_steel_sheets) <= 2) {
-            answer = 20 * ceil(thickness_steel_sheets) * width_steel_sheets;
-        }
-        else if (ceil(thickness_steel_sheets) > 2) {
-            answer = 10 * ceil(thickness_steel_sheets) * (ceil(thickness_steel_sheets) * width_steel_sheets);
-        }
-        break;
-
-    case 2:
-        if (ceil(thickness_steel_sheets) <= 2) {
             answer = 10 * ceil(thickness_steel_sheets) * width_steel_sheets;
         }
         else if (ceil(thickness_steel_sheets) > 2) {
@@ -191,7 +187,7 @@ inline System::Void IZNT::SteelSheets::calc_button_Click(System::Object^ sender,
         }
         break;
 
-    case 3:
+    case 2:
         answer = 2.5 * pow(ceil(thickness_steel_sheets), 3);
         break;
 
@@ -235,50 +231,31 @@ inline System::Void IZNT::SteelSheets::calc_button_Click(System::Object^ sender,
     case 0:
         answer = round(answer);
         answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
+        if (explosive_material_comboBox->SelectedIndex == 0) {
+            answer = ceill(answer / 200) * 200;
 
-        answer = ceill(answer / 200) * 200;
+            answer_textBox->Text += " Вес тротиловых шашек: " + (answer / 1000).ToString() + " кг\r\n";
 
-        answer_textBox->Text += " Вес тротиловых шашек: " + (answer / 1000).ToString() + " кг\r\n";
-
-        if ((int)answer % 400 == 0) {
-            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг";
-        }
-        else if (answer / 400 >= 1) {
-            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(answer / 400) * 2) + 1) + " по 0,2 кг";
-        }
-        else {
-            answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
+            if ((int)answer % 400 == 0) {
+                answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг";
+            }
+            else if (answer / 400 >= 1) {
+                answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n\r\n или\r\n " + ((floor(answer / 400) * 2) + 1) + " по 0,2 кг";
+            }
+            else {
+                answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
+            }
         }
         break;
 
     case 1:
-    {
-        int i = 0;
-        for (i = 0; i < 9; i++) {
-            if (thickness_steel_sheets >= coef[i][0] && thickness_steel_sheets < coef[i + 1][0]) {
-                break;
-            }
-        }
-        if (i < 7) {
-            answer = round(answer);
-            answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
-            answer = coef[i][1];
-            answer_textBox->Text += " Требуется " + answer + " шт нитей пластитового заряда";
-        }
-        else {
-            answer_textBox->Text = " Толщина больше 5 см!\r\n Используйте другой вид заряда";
-        }
-    }
+        answer = round(answer);
+        answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
         break;
 
     case 2:
         answer = round(answer);
-        answer_textBox->Text = " Точный вес требуемого заряда из пластита: " + (answer / 1000).ToString() + " кг\r\n\r\n";
-        break;
-
-    case 3:
-        answer = round(answer);
-        answer_textBox->Text = " Точный вес требуемого заряда из пластита: " + (answer / 1000).ToString() + " кг\r\n\r\n";
+        answer_textBox->Text = " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
         break;
 
     default:

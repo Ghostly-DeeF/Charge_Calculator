@@ -85,7 +85,7 @@ namespace IZNT {
 			this->checkUnderwaterExp->Location = System::Drawing::Point(13, 276);
 			this->checkUnderwaterExp->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
-			this->checkUnderwaterExp->Size = System::Drawing::Size(218, 29);
+			this->checkUnderwaterExp->Size = System::Drawing::Size(189, 24);
 			this->checkUnderwaterExp->TabIndex = 37;
 			this->checkUnderwaterExp->Text = L"Подрыв под водой";
 			this->checkUnderwaterExp->UseVisualStyleBackColor = true;
@@ -130,7 +130,7 @@ namespace IZNT {
 			this->label1->Location = System::Drawing::Point(32, 21);
 			this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(759, 58);
+			this->label1->Size = System::Drawing::Size(576, 44);
 			this->label1->TabIndex = 32;
 			this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nстального бруска\r\n";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -142,7 +142,7 @@ namespace IZNT {
 			this->label2->Location = System::Drawing::Point(10, 200);
 			this->label2->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(172, 20);
+			this->label2->Size = System::Drawing::Size(149, 16);
 			this->label2->TabIndex = 41;
 			this->label2->Text = L"Ширина B бруска в см";
 			// 
@@ -152,7 +152,7 @@ namespace IZNT {
 			this->width_steel_bar_textBox->Location = System::Drawing::Point(13, 218);
 			this->width_steel_bar_textBox->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
 			this->width_steel_bar_textBox->Name = L"width_steel_bar_textBox";
-			this->width_steel_bar_textBox->Size = System::Drawing::Size(211, 31);
+			this->width_steel_bar_textBox->Size = System::Drawing::Size(211, 26);
 			this->width_steel_bar_textBox->TabIndex = 40;
 			// 
 			// label5
@@ -162,7 +162,7 @@ namespace IZNT {
 			this->label5->Location = System::Drawing::Point(10, 128);
 			this->label5->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(180, 20);
+			this->label5->Size = System::Drawing::Size(154, 16);
 			this->label5->TabIndex = 39;
 			this->label5->Text = L"Толщина h бруска в см";
 			// 
@@ -172,7 +172,7 @@ namespace IZNT {
 			this->thickness_steel_bar_textBox->Location = System::Drawing::Point(13, 146);
 			this->thickness_steel_bar_textBox->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
 			this->thickness_steel_bar_textBox->Name = L"thickness_steel_bar_textBox";
-			this->thickness_steel_bar_textBox->Size = System::Drawing::Size(211, 31);
+			this->thickness_steel_bar_textBox->Size = System::Drawing::Size(211, 26);
 			this->thickness_steel_bar_textBox->TabIndex = 38;
 			// 
 			// pictureBox1
@@ -204,7 +204,7 @@ namespace IZNT {
 			this->label9->Location = System::Drawing::Point(11, 70);
 			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(127, 20);
+			this->label9->Size = System::Drawing::Size(104, 16);
 			this->label9->TabIndex = 59;
 			this->label9->Text = L"Расчет для ВВ:";
 			// 
@@ -214,15 +214,12 @@ namespace IZNT {
 			this->explosive_material_comboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->explosive_material_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->explosive_material_comboBox->FormattingEnabled = true;
-			this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(7) {
-				L"Тротил", L"Пластид - 4", L"Тетрил",
-					L"Гексоген", L"ТЭН", L"ТНРС", L"Тритонал"
-			});
+			this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Тротил", L"Пластид - 4", L"Аммонал" });
 			this->explosive_material_comboBox->Location = System::Drawing::Point(14, 87);
 			this->explosive_material_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->explosive_material_comboBox->Name = L"explosive_material_comboBox";
 			this->explosive_material_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->explosive_material_comboBox->Size = System::Drawing::Size(211, 33);
+			this->explosive_material_comboBox->Size = System::Drawing::Size(211, 28);
 			this->explosive_material_comboBox->TabIndex = 58;
 			// 
 			// SteelBar

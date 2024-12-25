@@ -1,4 +1,5 @@
 #include "MonolithColumn.h"
+#include "ExRecalc.h"
 
 
 const float masA[8]{ 0.75f, 1.0f, 1.2f, 1.4f, 1.5f, 1.8f, 5.0f, 20.0f };
@@ -28,16 +29,15 @@ inline IZNT::MonolithColumn::MonolithColumn(void)
 {
 	InitializeComponent();
 	
-	radius_label->Location = System::Drawing::Point(13, 230);
-	radius_textBox->Location = System::Drawing::Point(16, 248);
-	location_label->Location = System::Drawing::Point(13, 300);
-	location_comboBox->Location = System::Drawing::Point(16, 318);
-	pictureBox1->Location = System::Drawing::Point(16, 350);
-	anti_slip_checkBox->Location = System::Drawing::Point(249, 360);
-	scoring_checkBox->Location = System::Drawing::Point(249, 390);
-	plastic_checkBox->Location = System::Drawing::Point(249, 420);
-	hole_checkBox->Location = System::Drawing::Point(249, 450);
-	underwater_checkBox->Location = System::Drawing::Point(249, 420);
+	radius_label->Location = System::Drawing::Point(13, 300);
+	radius_textBox->Location = System::Drawing::Point(16, 318);
+	location_label->Location = System::Drawing::Point(13, 370);
+	location_comboBox->Location = System::Drawing::Point(16, 388);
+	pictureBox1->Location = System::Drawing::Point(16, 420);
+	anti_slip_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 360);
+	scoring_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 390);
+	hole_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 450);
+	underwater_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 420);
 
 }
 
@@ -45,25 +45,19 @@ inline System::Void IZNT::MonolithColumn::type_charge_comboBox_SelectedIndexChan
 	if (type_charge_comboBox->SelectedIndex == 1) {
 		elongated_label->Visible = true;
 		elongated_textBox->Visible = true;
-		plastic_checkBox->Visible = true;
-		plastic_checkBox->Checked = false;
 		hole_checkBox->Visible = false;
 		anti_slip_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 420);
 		scoring_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 450);
-		plastic_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 480);
 		hole_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 450);
 		underwater_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 480);
 	}
 	else {
 		elongated_label->Visible = false;
 		elongated_textBox->Visible = false;
-		plastic_checkBox->Visible = false;
-		plastic_checkBox->Checked = false;
 		hole_checkBox->Visible = true;
 		hole_checkBox->Checked = false;
 		anti_slip_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 360);
 		scoring_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 390);
-		plastic_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 420);
 		hole_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 450);
 		hole_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 420);
 		underwater_checkBox->Location = System::Drawing::Point(249, this->Height - 591 + 450);
@@ -81,11 +75,11 @@ inline System::Void IZNT::MonolithColumn::type_material_comboBox_SelectedIndexCh
 		second_comboBox->Items->Add("Известковый");
 		second_comboBox->Items->Add("Цементный");
 		//719; 591
-		radius_label->Location = System::Drawing::Point(13, 300);
-		radius_textBox->Location = System::Drawing::Point(16, 318);
-		location_label->Location = System::Drawing::Point(13, 370);
-		location_comboBox->Location = System::Drawing::Point(16, 388);
-		pictureBox1->Location = System::Drawing::Point(16, 420);
+		radius_label->Location = System::Drawing::Point(13, 370);
+		radius_textBox->Location = System::Drawing::Point(16, 388);
+		location_label->Location = System::Drawing::Point(13, 440);
+		location_comboBox->Location = System::Drawing::Point(16, 458);
+		pictureBox1->Location = System::Drawing::Point(16, 490);
 		break;
 
 	case 1:
@@ -96,11 +90,11 @@ inline System::Void IZNT::MonolithColumn::type_material_comboBox_SelectedIndexCh
 		second_comboBox->Items->Add("Цементный");
 		type_brick_lable->Visible = false;
 		type_brickwork_comboBox->Visible = false;
-		radius_label->Location = System::Drawing::Point(13, 300);
-		radius_textBox->Location = System::Drawing::Point(16, 318);
-		location_label->Location = System::Drawing::Point(13, 370);
-		location_comboBox->Location = System::Drawing::Point(16, 388);
-		pictureBox1->Location = System::Drawing::Point(16, 420);
+		radius_label->Location = System::Drawing::Point(13, 370);
+		radius_textBox->Location = System::Drawing::Point(16, 388);
+		location_label->Location = System::Drawing::Point(13, 440);
+		location_comboBox->Location = System::Drawing::Point(16, 458);
+		pictureBox1->Location = System::Drawing::Point(16, 490);
 		break;
 
 	case 2:
@@ -112,11 +106,11 @@ inline System::Void IZNT::MonolithColumn::type_material_comboBox_SelectedIndexCh
 		second_comboBox->Items->Add("Фортификационный");
 		type_brick_lable->Visible = false;
 		type_brickwork_comboBox->Visible = false;
-		radius_label->Location = System::Drawing::Point(13, 300);
-		radius_textBox->Location = System::Drawing::Point(16, 318);
-		location_label->Location = System::Drawing::Point(13, 370);
-		location_comboBox->Location = System::Drawing::Point(16, 388);
-		pictureBox1->Location = System::Drawing::Point(16, 420);
+		radius_label->Location = System::Drawing::Point(13, 370);
+		radius_textBox->Location = System::Drawing::Point(16, 388);
+		location_label->Location = System::Drawing::Point(13, 440);
+		location_comboBox->Location = System::Drawing::Point(16, 458);
+		pictureBox1->Location = System::Drawing::Point(16, 490);
 		break;
 
 	case 3:
@@ -128,19 +122,19 @@ inline System::Void IZNT::MonolithColumn::type_material_comboBox_SelectedIndexCh
 		second_comboBox->Items->Add("Бетона и частично арматуры");
 		type_brick_lable->Visible = false;
 		type_brickwork_comboBox->Visible = false;
-		radius_label->Location = System::Drawing::Point(13, 300);
-		radius_textBox->Location = System::Drawing::Point(16, 318);
-		location_label->Location = System::Drawing::Point(13, 370);
-		location_comboBox->Location = System::Drawing::Point(16, 388);
-		pictureBox1->Location = System::Drawing::Point(16, 420);
+		radius_label->Location = System::Drawing::Point(13, 370);
+		radius_textBox->Location = System::Drawing::Point(16, 388);
+		location_label->Location = System::Drawing::Point(13, 440);
+		location_comboBox->Location = System::Drawing::Point(16, 458);
+		pictureBox1->Location = System::Drawing::Point(16, 490);
 		break;
 
 	default:
-		radius_label->Location = System::Drawing::Point(13, 300);
-		radius_textBox->Location = System::Drawing::Point(16, 318);
-		location_label->Location = System::Drawing::Point(13, 370);
-		location_comboBox->Location = System::Drawing::Point(16, 388);
-		pictureBox1->Location = System::Drawing::Point(16, 420);
+		radius_label->Location = System::Drawing::Point(13, 370);
+		radius_textBox->Location = System::Drawing::Point(16, 388);
+		location_label->Location = System::Drawing::Point(13, 440);
+		location_comboBox->Location = System::Drawing::Point(16, 458);
+		pictureBox1->Location = System::Drawing::Point(16, 490);
 		break;
 	};
 }
@@ -149,20 +143,20 @@ inline System::Void IZNT::MonolithColumn::second_comboBox_SelectedIndexChanged(S
 	if (type_material_comboBox->SelectedIndex == 0 && second_comboBox->SelectedIndex == 0) {
 		type_brick_lable->Visible = true;
 		type_brickwork_comboBox->Visible = true;
+		radius_label->Location = System::Drawing::Point(13, 440);
+		radius_textBox->Location = System::Drawing::Point(16, 458);
+		location_label->Location = System::Drawing::Point(13, 510);
+		location_comboBox->Location = System::Drawing::Point(16, 528);
+		pictureBox1->Location = System::Drawing::Point(16, 560);
+	}
+	else {
+		type_brick_lable->Visible = false;
+		type_brickwork_comboBox->Visible = false;
 		radius_label->Location = System::Drawing::Point(13, 370);
 		radius_textBox->Location = System::Drawing::Point(16, 388);
 		location_label->Location = System::Drawing::Point(13, 440);
 		location_comboBox->Location = System::Drawing::Point(16, 458);
 		pictureBox1->Location = System::Drawing::Point(16, 490);
-	}
-	else {
-		type_brick_lable->Visible = false;
-		type_brickwork_comboBox->Visible = false;
-		radius_label->Location = System::Drawing::Point(13, 300);
-		radius_textBox->Location = System::Drawing::Point(16, 318);
-		location_label->Location = System::Drawing::Point(13, 370);
-		location_comboBox->Location = System::Drawing::Point(16, 388);
-		pictureBox1->Location = System::Drawing::Point(16, 420);
 	}
 }
 
@@ -257,7 +251,7 @@ inline System::Void IZNT::MonolithColumn::calc_button_Click(System::Object^ send
 	{
 		float length = 0.0f;
 		if (!float::TryParse(elongated_textBox->Text, length) && length <= 0) {
-			answer_textBox->Text = " Ошибка: вы некорректно ввели длину\r\n Число должно быть больше 0\r\n Дробное число задается через запятую";
+			answer_textBox->Text = " Ошибка: вы некорректно ввели ширину\r\n Число должно быть больше 0\r\n Дробное число задается через запятую";
 			return;
 		}
 		if (width * 2 > length) {
@@ -287,29 +281,13 @@ inline System::Void IZNT::MonolithColumn::calc_button_Click(System::Object^ send
 		answer *= 1.5;
 	}
 
+
+	answer = recalculation(explosive_material_comboBox, answer_textBox, answer);
 	answer = round(answer);
 
-	if (plastic_checkBox->Checked) {
+	answer_textBox->Text += " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
 
-		int i = 0;
-		for (i = 0; i < 8; i++) {
-			if ((width > count_line[i][0]) && (width <= count_line[i + 1][0])) {
-				break;
-			}
-		}
-		if (i+1 <= 7) {
-			answer_textBox->Text += " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
-			answer = count_line[i + 1][indexA <= 6 ? 1 : 2];
-			answer_textBox->Text += " Требуется " + answer + " шт нитей пластитового заряда";
-		}
-		else {
-			answer_textBox->Text = " Толщина больше 60 см!\r\n Используйте другой вид заряда";
-		}
-	}
-	else {
-		
-		answer_textBox->Text += " Точный вес требуемого заряда: " + (answer / 1000).ToString() + " кг\r\n\r\n";
-
+	if (explosive_material_comboBox->SelectedIndex == 0) {
 		answer = ceill(answer / 200) * 200;
 
 		answer_textBox->Text += " Вес тротиловых шашек: " + (answer / 1000).ToString() + " кг\r\n";
@@ -323,7 +301,7 @@ inline System::Void IZNT::MonolithColumn::calc_button_Click(System::Object^ send
 		else {
 			answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг\r\n";
 		}
-		
+
 		if (hole_checkBox->Checked) {
 			answer_textBox->Text += "Диаметр отверстия равен примерно " + width * 2 + " м";
 		}

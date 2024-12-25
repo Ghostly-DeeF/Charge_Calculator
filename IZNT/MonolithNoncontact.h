@@ -53,6 +53,8 @@ namespace IZNT {
 	private: System::Windows::Forms::CheckBox^ hole_checkBox;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Button^ btnTextVersion;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::ComboBox^ explosive_material_comboBox;
 
 
 
@@ -86,6 +88,8 @@ namespace IZNT {
 			this->hole_checkBox = (gcnew System::Windows::Forms::CheckBox());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->btnTextVersion = (gcnew System::Windows::Forms::Button());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->explosive_material_comboBox = (gcnew System::Windows::Forms::ComboBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -93,7 +97,7 @@ namespace IZNT {
 			// 
 			this->underwater_checkBox->AutoSize = true;
 			this->underwater_checkBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->underwater_checkBox->Location = System::Drawing::Point(16, 500);
+			this->underwater_checkBox->Location = System::Drawing::Point(16, 548);
 			this->underwater_checkBox->Name = L"underwater_checkBox";
 			this->underwater_checkBox->Size = System::Drawing::Size(175, 24);
 			this->underwater_checkBox->TabIndex = 46;
@@ -104,7 +108,7 @@ namespace IZNT {
 			// 
 			this->type_brick_lable->AutoSize = true;
 			this->type_brick_lable->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->type_brick_lable->Location = System::Drawing::Point(13, 370);
+			this->type_brick_lable->Location = System::Drawing::Point(13, 430);
 			this->type_brick_lable->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->type_brick_lable->Name = L"type_brick_lable";
 			this->type_brick_lable->Size = System::Drawing::Size(81, 16);
@@ -119,7 +123,7 @@ namespace IZNT {
 			this->type_brickwork_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->type_brickwork_comboBox->FormattingEnabled = true;
 			this->type_brickwork_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Слабая", L"Прочная" });
-			this->type_brickwork_comboBox->Location = System::Drawing::Point(16, 388);
+			this->type_brickwork_comboBox->Location = System::Drawing::Point(16, 448);
 			this->type_brickwork_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->type_brickwork_comboBox->Name = L"type_brickwork_comboBox";
 			this->type_brickwork_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
@@ -165,7 +169,7 @@ namespace IZNT {
 			// 
 			this->radius_label->AutoSize = true;
 			this->radius_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->radius_label->Location = System::Drawing::Point(13, 90);
+			this->radius_label->Location = System::Drawing::Point(13, 150);
 			this->radius_label->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->radius_label->Name = L"radius_label";
 			this->radius_label->Size = System::Drawing::Size(196, 16);
@@ -175,7 +179,7 @@ namespace IZNT {
 			// thikness_textBox
 			// 
 			this->thikness_textBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->thikness_textBox->Location = System::Drawing::Point(16, 108);
+			this->thikness_textBox->Location = System::Drawing::Point(16, 168);
 			this->thikness_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->thikness_textBox->Name = L"thikness_textBox";
 			this->thikness_textBox->Size = System::Drawing::Size(211, 26);
@@ -185,7 +189,7 @@ namespace IZNT {
 			// 
 			this->second_label->AutoSize = true;
 			this->second_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->second_label->Location = System::Drawing::Point(13, 300);
+			this->second_label->Location = System::Drawing::Point(13, 360);
 			this->second_label->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->second_label->Name = L"second_label";
 			this->second_label->Size = System::Drawing::Size(97, 16);
@@ -199,7 +203,7 @@ namespace IZNT {
 			this->second_comboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->second_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->second_comboBox->FormattingEnabled = true;
-			this->second_comboBox->Location = System::Drawing::Point(16, 318);
+			this->second_comboBox->Location = System::Drawing::Point(16, 378);
 			this->second_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->second_comboBox->Name = L"second_comboBox";
 			this->second_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
@@ -212,7 +216,7 @@ namespace IZNT {
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->label2->Location = System::Drawing::Point(13, 230);
+			this->label2->Location = System::Drawing::Point(13, 290);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(181, 16);
@@ -228,7 +232,7 @@ namespace IZNT {
 				L"Кирпичная кладка", L"Каменная кладка",
 					L"Бетон", L"Железобетон"
 			});
-			this->type_material_comboBox->Location = System::Drawing::Point(16, 248);
+			this->type_material_comboBox->Location = System::Drawing::Point(16, 308);
 			this->type_material_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->type_material_comboBox->Name = L"type_material_comboBox";
 			this->type_material_comboBox->Size = System::Drawing::Size(211, 28);
@@ -252,7 +256,7 @@ namespace IZNT {
 			// 
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->label3->Location = System::Drawing::Point(13, 147);
+			this->label3->Location = System::Drawing::Point(13, 207);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(208, 32);
@@ -262,7 +266,7 @@ namespace IZNT {
 			// radius_textBox
 			// 
 			this->radius_textBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->radius_textBox->Location = System::Drawing::Point(16, 178);
+			this->radius_textBox->Location = System::Drawing::Point(16, 238);
 			this->radius_textBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->radius_textBox->Name = L"radius_textBox";
 			this->radius_textBox->Size = System::Drawing::Size(211, 26);
@@ -273,7 +277,7 @@ namespace IZNT {
 			// 
 			this->hole_checkBox->AutoSize = true;
 			this->hole_checkBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->hole_checkBox->Location = System::Drawing::Point(16, 450);
+			this->hole_checkBox->Location = System::Drawing::Point(16, 518);
 			this->hole_checkBox->Name = L"hole_checkBox";
 			this->hole_checkBox->Size = System::Drawing::Size(202, 24);
 			this->hole_checkBox->TabIndex = 49;
@@ -302,11 +306,38 @@ namespace IZNT {
 			this->btnTextVersion->UseVisualStyleBackColor = true;
 			this->btnTextVersion->Click += gcnew System::EventHandler(this, &MonolithNoncontact::btnTextVersion_Click);
 			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
+			this->label9->Location = System::Drawing::Point(13, 91);
+			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(104, 16);
+			this->label9->TabIndex = 61;
+			this->label9->Text = L"Расчет для ВВ:";
+			// 
+			// explosive_material_comboBox
+			// 
+			this->explosive_material_comboBox->Cursor = System::Windows::Forms::Cursors::Default;
+			this->explosive_material_comboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->explosive_material_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->explosive_material_comboBox->FormattingEnabled = true;
+			this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Тротил", L"Пластид - 4", L"Аммонал" });
+			this->explosive_material_comboBox->Location = System::Drawing::Point(16, 108);
+			this->explosive_material_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			this->explosive_material_comboBox->Name = L"explosive_material_comboBox";
+			this->explosive_material_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->explosive_material_comboBox->Size = System::Drawing::Size(211, 28);
+			this->explosive_material_comboBox->TabIndex = 60;
+			// 
 			// MonolithNoncontact
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->explosive_material_comboBox);
 			this->Controls->Add(this->btnTextVersion);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->hole_checkBox);

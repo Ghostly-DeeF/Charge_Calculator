@@ -1,4 +1,5 @@
 #include "MonolithSpur.h"
+#include "ExRecalc.h"
 
 const float coef[13][6] = {
     {0.50f, 0.35f, 1.50f, 1.65f, 1.80f, 1.95f},
@@ -50,31 +51,31 @@ inline System::Void IZNT::MonolithSpur::calc_button_Click(System::Object^ sender
         }
     }
 
-    if (ammonite_checkBox->Checked) {
-        coefK *= 1.2f;
-    }
-
     answer = (coefK * pow(lengthH, 3)) * 1000;
 
     if (underwater_checkBox->Checked && type_material_comboBox->SelectedIndex == 3) {
         answer *= 1.5f;
     }
 
+
+    answer = recalculation(explosive_material_comboBox, answer_textBox, answer);
     answer = round(answer);
     answer_textBox->Text = " Длина шпура: " + ceil(lengthH * 100).ToString() + " см\r\n\r\n";
     answer_textBox->Text += " Точный вес требуемого заряда: " + (answer / 1000) .ToString() + " кг\r\n\r\n";
 
-    answer = ceill(answer / 200) * 200;
+    if (explosive_material_comboBox->SelectedIndex == 0) {
+        answer = ceill(answer / 200) * 200;
 
-    answer_textBox->Text += " Вес тротиловых шашек: " + (answer / 1000).ToString() + " кг\r\n";
+        answer_textBox->Text += " Вес тротиловых шашек: " + (answer / 1000).ToString() + " кг\r\n";
 
-    if (((int)answer % 400 == 0)) {
-        answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг";
-    }
-    else if (answer / 400 >= 1) {
-        answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n или\r\n " + ((floor(answer / 400) * 2) + 1) + " по 0,2 кг";
-    }
-    else {
-        answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
+        if (((int)answer % 400 == 0)) {
+            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг";
+        }
+        else if (answer / 400 >= 1) {
+            answer_textBox->Text += " Требуется шашек:\r\n " + floor(answer / 400) + " по 0,4 кг\r\n 1 по 0,2 кг\r\n или\r\n " + ((floor(answer / 400) * 2) + 1) + " по 0,2 кг";
+        }
+        else {
+            answer_textBox->Text += " Требуется шашек:\r\n 1 по 0,2 кг";
+        }
     }
 }

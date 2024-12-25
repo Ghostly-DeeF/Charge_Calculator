@@ -112,7 +112,7 @@ namespace IZNT {
 			   this->label4->Location = System::Drawing::Point(13, 123);
 			   this->label4->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label4->Name = L"label4";
-			   this->label4->Size = System::Drawing::Size(174, 20);
+			   this->label4->Size = System::Drawing::Size(145, 16);
 			   this->label4->TabIndex = 33;
 			   this->label4->Text = L"Диаметр h троса в см";
 			   // 
@@ -122,7 +122,7 @@ namespace IZNT {
 			   this->diameter_steel_cable_textBox->Location = System::Drawing::Point(16, 141);
 			   this->diameter_steel_cable_textBox->Margin = System::Windows::Forms::Padding(5, 3, 5, 3);
 			   this->diameter_steel_cable_textBox->Name = L"diameter_steel_cable_textBox";
-			   this->diameter_steel_cable_textBox->Size = System::Drawing::Size(211, 31);
+			   this->diameter_steel_cable_textBox->Size = System::Drawing::Size(211, 26);
 			   this->diameter_steel_cable_textBox->TabIndex = 32;
 			   // 
 			   // label1
@@ -132,7 +132,7 @@ namespace IZNT {
 			   this->label1->Location = System::Drawing::Point(34, 21);
 			   this->label1->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			   this->label1->Name = L"label1";
-			   this->label1->Size = System::Drawing::Size(759, 87);
+			   this->label1->Size = System::Drawing::Size(576, 66);
 			   this->label1->TabIndex = 31;
 			   this->label1->Text = L"Расчет контактного заряда, необходимого для перебивания\r\nстального троса\r\n\r\n";
 			   this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -141,23 +141,24 @@ namespace IZNT {
 			   // 
 			   this->checkBox_Steel_Cable->AutoSize = true;
 			   this->checkBox_Steel_Cable->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			   this->checkBox_Steel_Cable->Location = System::Drawing::Point(16, 188);
+			   this->checkBox_Steel_Cable->Location = System::Drawing::Point(16, 227);
 			   this->checkBox_Steel_Cable->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			   this->checkBox_Steel_Cable->Name = L"checkBox_Steel_Cable";
-			   this->checkBox_Steel_Cable->Size = System::Drawing::Size(221, 54);
+			   this->checkBox_Steel_Cable->Size = System::Drawing::Size(175, 24);
 			   this->checkBox_Steel_Cable->TabIndex = 36;
-			   this->checkBox_Steel_Cable->Text = L"Кольцевой заряд\r\nиз пластичного ВВ";
+			   this->checkBox_Steel_Cable->Text = L"Кольцевой заряд";
 			   this->checkBox_Steel_Cable->UseVisualStyleBackColor = true;
+			   this->checkBox_Steel_Cable->Visible = false;
 			   this->checkBox_Steel_Cable->CheckedChanged += gcnew System::EventHandler(this, &SteelCable::checkBox_Steel_Cable_CheckedChanged);
 			   // 
 			   // checkUnderwaterExp
 			   // 
 			   this->checkUnderwaterExp->AutoSize = true;
 			   this->checkUnderwaterExp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			   this->checkUnderwaterExp->Location = System::Drawing::Point(16, 237);
+			   this->checkUnderwaterExp->Location = System::Drawing::Point(16, 187);
 			   this->checkUnderwaterExp->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			   this->checkUnderwaterExp->Name = L"checkUnderwaterExp";
-			   this->checkUnderwaterExp->Size = System::Drawing::Size(218, 29);
+			   this->checkUnderwaterExp->Size = System::Drawing::Size(189, 24);
 			   this->checkUnderwaterExp->TabIndex = 37;
 			   this->checkUnderwaterExp->Text = L"Подрыв под водой";
 			   this->checkUnderwaterExp->UseVisualStyleBackColor = true;
@@ -191,7 +192,7 @@ namespace IZNT {
 			   this->label9->Location = System::Drawing::Point(13, 68);
 			   this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			   this->label9->Name = L"label9";
-			   this->label9->Size = System::Drawing::Size(127, 20);
+			   this->label9->Size = System::Drawing::Size(104, 16);
 			   this->label9->TabIndex = 61;
 			   this->label9->Text = L"Расчет для ВВ:";
 			   // 
@@ -201,16 +202,14 @@ namespace IZNT {
 			   this->explosive_material_comboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			   this->explosive_material_comboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			   this->explosive_material_comboBox->FormattingEnabled = true;
-			   this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(7) {
-				   L"Тротил", L"Пластид - 4", L"Тетрил",
-					   L"Гексоген", L"ТЭН", L"ТНРС", L"Тритонал"
-			   });
+			   this->explosive_material_comboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Тротил", L"Пластид - 4", L"Аммонал" });
 			   this->explosive_material_comboBox->Location = System::Drawing::Point(16, 85);
 			   this->explosive_material_comboBox->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			   this->explosive_material_comboBox->Name = L"explosive_material_comboBox";
 			   this->explosive_material_comboBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			   this->explosive_material_comboBox->Size = System::Drawing::Size(211, 33);
+			   this->explosive_material_comboBox->Size = System::Drawing::Size(211, 28);
 			   this->explosive_material_comboBox->TabIndex = 60;
+			   this->explosive_material_comboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &SteelCable::explosive_material_comboBox_SelectedIndexChanged);
 			   // 
 			   // SteelCable
 			   // 
@@ -294,5 +293,6 @@ private: System::Void btnTextVersion_Click(System::Object^ sender, System::Event
 
 	form->Show();
 }
+private: System::Void explosive_material_comboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e);
 };
 }
