@@ -6,13 +6,6 @@ const float ExCoef[3]{
     {0.99f},
 };
 
-
-ref class ExRecalc
-{
-public:
-    float recalc(System::Windows::Forms::ComboBox^ explosive_material_comboBox, System::Windows::Forms::TextBox^ answer_textBox,  float answer);
-};
-
 float recalculation(System::Windows::Forms::ComboBox^ explosive_material_comboBox, System::Windows::Forms::TextBox^ answer_textBox, float answer);
 
 
