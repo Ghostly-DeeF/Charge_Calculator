@@ -1,12 +1,12 @@
 #pragma once
 #include <cmath>
-const float ExCoef[6][2]{
-    {0.0f, 1.0f},
-    {1.0f, 1.35f},
-    {2.0f, 1.1f},
-    {3.0f, 1.3f},
-    {4.0f, 1.4f},
-    {5.0f, 0.39f}
+const float ExCoef[6]{
+    {1.0f},
+    {1.35f},
+    {1.1f},
+    {1.3f},
+    {1.4f},
+    {0.39f}
 };
 
 
